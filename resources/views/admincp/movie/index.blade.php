@@ -14,7 +14,7 @@
                         <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Hình Ảnh Phim</th>
+                            <th scope="col">Hình Ảnh Phim abc</th>
                             <th scope="col">Tên Phim</th>
                             <th scope="col">Định Dạng</th>
                             <th scope="col">Danh Mục Phim</th>
