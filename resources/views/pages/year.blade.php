@@ -10,7 +10,8 @@
                             <span>
                                 <span>Phim Thuộc Năm »
                                     @for($year_bread=2000; $year_bread<=2023; $year_bread++)
-                                    <span class="breadcrumb_last" aria-current="page"><a href="{{ url('nam',$year_bread) }}">{{ $year_bread }}</a></span> »
+                                        <span class="breadcrumb_last" aria-current="page"><a
+                                                href="{{ url('nam',$year_bread) }}">{{ $year_bread }}</a></span> »
                                     @endfor
                                 </span>
                             </span>
@@ -32,9 +33,11 @@
                         <article class="col-md-3 col-sm-3 col-xs-6 thumb grid-item post-27021">
                             <div class="halim-item">
                                 <a class="halim-thumb" href="{{ route('movie',$cate->slug) }}" title="{{$cate->title}}">
-                                    <figure><img class="lazy img-responsive" src="{{asset('uploads/movie/'.$cate->image)}}" alt="{{$cate->title}}" title="{{$cate->title}}"></figure>
+                                    <figure><img class="lazy img-responsive"
+                                                 src="{{asset('uploads/movie/'.$cate->image)}}" alt="{{$cate->title}}"
+                                                 title="{{$cate->title}}"></figure>
                                     <span class="status">
-                                    @if($cate->resolution == 0)
+                                        @if($cate->resolution == 0)
                                             HD
                                         @elseif($cate->resolution == 1)
                                             SD
@@ -42,17 +45,27 @@
                                             HDCam
                                         @elseif($cate->resolution == 3)
                                             Cam
-                                        @else
+                                        @elseif($cate->resolution == 4)
                                             FullHD
-                                        @endif
-                                </span>
-                                    <span class="episode"><i class="fa fa-play" aria-hidden="true"></i>
-                                    @if($cate->phude == 0)
-                                            Phụ Đề
                                         @else
-                                            Thuyết Minh
+                                            Trailer
                                         @endif
-                                </span>
+                                    </span>
+                                    @if($cate->resolution != 5)
+                                        <span class="episode"><i class="fa fa-play" aria-hidden="true"></i>
+                                        @if($cate->phude == 0)
+                                                Phụ Đề
+                                                @if($cate->season != 0)
+                                                    - Season {{ $cate->season }}
+                                                @endif
+                                            @else
+                                                Thuyết Minh
+                                                @if($cate->season != 0)
+                                                    - Season {{ $cate->season }}
+                                                @endif
+                                            @endif
+                                        </span>
+                                    @endif
                                     <div class="icon_overlay"></div>
                                     <div class="halim-post-title-box">
                                         <div class="halim-post-title ">

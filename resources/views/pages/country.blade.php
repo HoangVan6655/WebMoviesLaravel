@@ -6,7 +6,10 @@
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-xs-6">
-                        <div class="yoast_breadcrumb hidden-xs"><span><span><a href="">{{$country_slug->title}}</a> » <span class="breadcrumb_last" aria-current="page">2023</span></span></span></div>
+                        <div class="yoast_breadcrumb hidden-xs"><span><span><a
+                                        href="">{{$country_slug->title}}</a> » <span class="breadcrumb_last"
+                                                                                     aria-current="page">2023</span></span></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -23,8 +26,11 @@
                     @foreach($movie as $key => $country)
                         <article class="col-md-3 col-sm-3 col-xs-6 thumb grid-item post-27021">
                             <div class="halim-item">
-                                <a class="halim-thumb" href="{{ route('movie',$country->slug) }}" title="{{$country->title}}">
-                                    <figure><img class="lazy img-responsive" src="{{asset('uploads/movie/'.$country->image)}}" alt="{{$country->title}}" title="{{$country->title}}"></figure>
+                                <a class="halim-thumb" href="{{ route('movie',$country->slug) }}"
+                                   title="{{$country->title}}">
+                                    <figure><img class="lazy img-responsive"
+                                                 src="{{asset('uploads/movie/'.$country->image)}}"
+                                                 alt="{{$country->title}}" title="{{$country->title}}"></figure>
                                     <span class="status">
                                         @if($country->resolution == 0)
                                             HD
@@ -34,17 +40,27 @@
                                             HDCam
                                         @elseif($country->resolution == 3)
                                             Cam
-                                        @else
+                                        @elseif($country->resolution == 4)
                                             FullHD
-                                        @endif
-                                    </span>
-                                    <span class="episode"><i class="fa fa-play" aria-hidden="true"></i>
-                                        @if($country->phude == 0)
-                                            Phụ Đề
                                         @else
-                                            Thuyết Minh
+                                            Trailer
                                         @endif
                                     </span>
+                                    @if($country->resolution != 5)
+                                        <span class="episode"><i class="fa fa-play" aria-hidden="true"></i>
+                                            @if($country->phude == 0)
+                                                Phụ Đề
+                                                @if($country->season != 0)
+                                                    - Season {{ $country->season }}
+                                                @endif
+                                            @else
+                                                Thuyết Minh
+                                                @if($country->season != 0)
+                                                    - Season {{ $country->season }}
+                                                @endif
+                                            @endif
+                                        </span>
+                                    @endif
                                     <div class="icon_overlay"></div>
                                     <div class="halim-post-title-box">
                                         <div class="halim-post-title ">
@@ -59,14 +75,14 @@
                 </div>
                 <div class="clearfix"></div>
                 <div class="text-center">
-{{--                    <ul class='page-numbers'>--}}
-{{--                        <li><span aria-current="page" class="page-numbers current">1</span></li>--}}
-{{--                        <li><a class="page-numbers" href="">2</a></li>--}}
-{{--                        <li><a class="page-numbers" href="">3</a></li>--}}
-{{--                        <li><span class="page-numbers dots">&hellip;</span></li>--}}
-{{--                        <li><a class="page-numbers" href="">55</a></li>--}}
-{{--                        <li><a class="next page-numbers" href=""><i class="hl-down-open rotate-right"></i></a></li>--}}
-{{--                    </ul>--}}
+                    {{--                    <ul class='page-numbers'>--}}
+                    {{--                        <li><span aria-current="page" class="page-numbers current">1</span></li>--}}
+                    {{--                        <li><a class="page-numbers" href="">2</a></li>--}}
+                    {{--                        <li><a class="page-numbers" href="">3</a></li>--}}
+                    {{--                        <li><span class="page-numbers dots">&hellip;</span></li>--}}
+                    {{--                        <li><a class="page-numbers" href="">55</a></li>--}}
+                    {{--                        <li><a class="next page-numbers" href=""><i class="hl-down-open rotate-right"></i></a></li>--}}
+                    {{--                    </ul>--}}
                     {!! $movie->links("pagination::bootstrap-4") !!}
                 </div>
             </section>

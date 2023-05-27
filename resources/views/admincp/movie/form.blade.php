@@ -7,7 +7,8 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8" style="background-color: rgb(17 24 39 / var(--tw-bg-opacity)); color: black">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8"
+             style="background-color: rgb(17 24 39 / var(--tw-bg-opacity)); color: black">
             <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     @if(!isset($movie))
@@ -45,6 +46,14 @@
                     </div>
                     <div style="display: flex; margin-bottom: 10pt">
                         {!! Form::text('slug', isset($movie) ? $movie->slug : '', ['class' => 'form-control', 'placeholder' => 'Slug tên phim...', 'style' => 'width: 100%; color: black', 'id' => 'convert_slug']) !!}
+                    </div>
+
+                    {{--Trailer--}}
+                    <div style="margin-bottom: 10pt">
+                        {!! Form::label('trailer', 'Trailer Phim ', []) !!}
+                    </div>
+                    <div style="display: flex; margin-bottom: 10pt">
+                        {!! Form::text('trailer', isset($movie) ? $movie->trailer : '', ['class' => 'form-control', 'placeholder' => 'Nhập vào trailer phim...', 'style' => 'width: 100%; color: black']) !!}
                     </div>
 
                     {{--Description--}}
@@ -105,7 +114,7 @@
                     </div>
 
                     <div style="display: flex; margin-bottom: 10pt; ">
-                        {!! Form::select('resolution', ['0'=>'HD', '1'=>'SD', '2'=>'HDCam', '3'=>'Cam', '4'=>'FullHD'], isset($movie) ? $movie->resolution : '', ['class'=>'form-control']) !!}
+                        {!! Form::select('resolution', ['0'=>'HD', '1'=>'SD', '2'=>'HDCam', '3'=>'Cam', '4'=>'FullHD', '5'=>'Trailer'], isset($movie) ? $movie->resolution : '', ['class'=>'form-control']) !!}
                     </div>
 
                     {{--Sub--}}
@@ -137,7 +146,7 @@
 
                     <div style="margin-bottom: 10pt;">
                         @if(isset($movie))
-                            <img width="20%" src="{{ asset('uploads/movie/'.$movie->image) }}" >
+                            <img width="20%" src="{{ asset('uploads/movie/'.$movie->image) }}">
                         @else
                         @endif
                     </div>

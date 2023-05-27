@@ -8,7 +8,8 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8" style="background-color: rgb(17 24 39 / var(--tw-bg-opacity)); color: black">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8"
+             style="background-color: rgb(17 24 39 / var(--tw-bg-opacity)); color: black">
             <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="text-gray-900 dark:text-gray-100">
                     <table class="table text-gray-900 dark:text-gray-100" id="tableTheLoaiPhim">
@@ -50,12 +51,14 @@
                 </div>
 
                 <!-- Confirm Modal -->
-                <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+                <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel"
+                     aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content bg-gray-100 dark:bg-gray-800 text-white">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="confirmModalLabel">Xác nhận thao tác</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <p>Bạn có chắc chắn muốn xoá thể loại phim này?</p>
@@ -80,25 +83,25 @@
         $('#confirmModal').modal('show');
     }
 
-    $(document).ready( function () {
+    $(document).ready(function () {
         $('#tableTheLoaiPhim').DataTable();
-    } );
+    });
 
     $('.order_position').sortable({
-        placeholder : 'ui-state-highlight',
-        update: function(event,ui){
+        placeholder: 'ui-state-highlight',
+        update: function (event, ui) {
             var array_id = [];
-            $('.order_position tr').each(function(){
+            $('.order_position tr').each(function () {
                 array_id.push($(this).attr('id'));
             })
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
-                url:"{{route('resortingGenre')}}",
-                method:"POST",
-                data:{array_id:array_id},
-                success:function(data){
+                url: "{{route('resortingGenre')}}",
+                method: "POST",
+                data: {array_id: array_id},
+                success: function (data) {
                     alert('Sắp xếp thứ tự thành công');
                 }
             })

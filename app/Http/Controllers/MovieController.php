@@ -52,12 +52,25 @@ class MovieController extends Controller
             if($mov->resolution==0)
             {
                 $text = 'HD';
-            }elseif ($mov->resolution==1){
+            }
+            elseif ($mov->resolution==1)
+            {
                 $text = 'SD';
-            }elseif ($mov->resolution==2){
+            }
+            elseif ($mov->resolution==2)
+            {
                 $text = 'HDCam';
-            }else{
-                $text = 'Cam';
+            }
+            elseif ($mov->resolution==3)
+            {
+                $text = 'CAM';
+            }
+            elseif ($mov->resolution==4)
+            {
+                $text = 'FullHD';
+            }
+            else{
+                $text = 'Trailer';
             }
 
             $output.='<div class="item">
@@ -68,7 +81,7 @@ class MovieController extends Controller
                                     '.$text.'
                                 </span>
                             </div>
-                            <p class="title">'.$mov->image.'</p>
+                            <p class="title">'.$mov->title.'</p>
                         </a>
                         <div class="viewsCount" style="color: #9d9d9d;">3.2k lượt xem</div>
                         <div style="float: left;">
@@ -89,12 +102,25 @@ class MovieController extends Controller
             if($mov->resolution==0)
             {
                 $text = 'HD';
-            }elseif ($mov->resolution==1){
+            }
+            elseif ($mov->resolution==1)
+            {
                 $text = 'SD';
-            }elseif ($mov->resolution==2){
+            }
+            elseif ($mov->resolution==2)
+            {
                 $text = 'HDCam';
-            }else{
-                $text = 'Cam';
+            }
+            elseif ($mov->resolution==3)
+            {
+                $text = 'CAM';
+            }
+            elseif ($mov->resolution==4)
+            {
+                $text = 'FullHD';
+            }
+            else{
+                $text = 'Trailer';
             }
 
             $output.='<div class="item">
@@ -105,7 +131,7 @@ class MovieController extends Controller
                                     '.$text.'
                                 </span>
                             </div>
-                            <p class="title">'.$mov->image.'</p>
+                            <p class="title">'.$mov->title.'</p>
                         </a>
                         <div class="viewsCount" style="color: #9d9d9d;">3.2k lượt xem</div>
                         <div style="float: left;">
@@ -139,6 +165,7 @@ class MovieController extends Controller
         $movie->title = $data['title'];
         $movie->ThoiLuong = $data['ThoiLuong'];
         $movie->name_original = $data['name_original'];
+        $movie->trailer = $data['trailer'];
         $movie->slug = $data['slug'];
         $movie->tags = $data['tags'];
         $movie->description = $data['description'];
@@ -196,6 +223,7 @@ class MovieController extends Controller
         $movie->title = $data['title'];
         $movie->ThoiLuong = $data['ThoiLuong'];
         $movie->name_original = $data['name_original'];
+        $movie->trailer = $data['trailer'];
         $movie->slug = $data['slug'];
         $movie->tags = $data['tags'];
         $movie->description = $data['description'];
