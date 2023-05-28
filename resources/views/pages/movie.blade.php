@@ -45,7 +45,8 @@
                                         </a>
                                     </div>
                                 @else
-                                    <a href="#watch_trailer" class="watch_trailer btn btn-primary" style="display: block">Xem Trailer</a>
+                                    <a href="#watch_trailer" class="watch_trailer btn btn-primary"
+                                       style="display: block">Xem Trailer</a>
                                 @endif
                             </div>
 
@@ -163,6 +164,23 @@
                             </article>
                         </div>
                     </div>
+
+                    {{--Comments Phim--}}
+                    <div class="section-bar clearfix">
+                        <h2 class="section-title"><span style="color:#ffed4d">Bình Luận Phim</span></h2>
+                    </div>
+                    <div class="entry-content htmlwrap clearfix" style="background-color: white">
+                        <div class="video-item halim-entry-box">
+                            @php
+                                $current_url = Request::url();
+                            @endphp
+                            <article id="post-38424" class="item-content">
+                                <div class="fb-comments" data-href="{{ $current_url }}" data-width="100%"
+                                     data-numposts="10" ></div>
+                            </article>
+                        </div>
+                    </div>
+
 
                 </div>
             </section>

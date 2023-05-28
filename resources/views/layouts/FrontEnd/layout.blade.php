@@ -136,6 +136,63 @@
     })
 </script>
 
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v17.0"
+        nonce="vZ6TOkxT"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#timkiem').keyup(function () {
+            $('#result').html('');
+            var search = $('#timkiem').val();
+            if (search != '') {
+                var expression = new RegExp(search, "i");
+                $.getJSON('json_file/movies.json', function (data) {
+                    //vòng lặp
+                    $.each(data, function (key, value) {
+                        if (value.title.search(expression) != -1 || value.description.search(expression) != -1) {
+                            $('#result').css('display', 'inherit');
+                            $('#result').append('<li style="cursor:pointer" class="list-group-item link-class"> ' +
+                                '<img src ="/uploads/movie/' + value.image + '" height="40" width="40" class="" /> ' + value.title +
+                                '<br> | <span class="text-muted" style="color:#cbd5e0;">' + value.description + '</span> ' +
+                                '</li>');
+                        }
+                    });
+                });
+            } else {
+                $('#result').css('display', 'none');
+            }
+        })
+        $('#result').on('click', 'li', function () {
+            var click_text = $(this).text().split('|');
+            $('#timkiem').val($.trim(click_text[0]));
+            $('#result').html('');
+            $('#result').css('display', 'none');
+        });
+    })
+</script>
+
+<style>
+    .search-result {
+        position: absolute;
+        z-index: 9999;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        width: 93.5%;
+        margin-top: 35px;
+        padding: 10px;
+        list-style: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+    }
+
+    .search-result .list-group-item {
+        padding: 5px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+    }
+</style>
+
 <style>#overlay_mb {
         position: fixed;
         display: none;

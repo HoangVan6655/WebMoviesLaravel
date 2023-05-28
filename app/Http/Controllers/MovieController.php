@@ -8,6 +8,8 @@ use App\Models\Category;
 use App\Models\Genre;
 use App\Models\Country;
 use Carbon\Carbon;
+use Storage;
+use File;
 
 class MovieController extends Controller
 {
@@ -17,6 +19,13 @@ class MovieController extends Controller
     public function index()
     {
         $list = Movie::with('category', 'genre', 'country')->orderBy('id', 'DESC')->get();
+
+        $path = public_path() . "/json_file/";
+        if (!is_dir($path)) {
+            mkdir($path, 0777, true);
+        }
+        File::put($path . 'movies.json', json_encode($list));
+
         return view('admincp.movie.index', compact('list'));
     }
 
@@ -44,44 +53,35 @@ class MovieController extends Controller
         $movie->save();
     }
 
-    public function filter_topview(Request $request){
+    public function filter_topview(Request $request)
+    {
         $data = $request->all();
-        $movie = Movie::where('topview',$data['value'])->orderBy('ngaycapnhat','DESC')->take(20)->get();
+        $movie = Movie::where('topview', $data['value'])->orderBy('ngaycapnhat', 'DESC')->take(20)->get();
         $output = '';
-        foreach ($movie as $key => $mov){
-            if($mov->resolution==0)
-            {
+        foreach ($movie as $key => $mov) {
+            if ($mov->resolution == 0) {
                 $text = 'HD';
-            }
-            elseif ($mov->resolution==1)
-            {
+            } elseif ($mov->resolution == 1) {
                 $text = 'SD';
-            }
-            elseif ($mov->resolution==2)
-            {
+            } elseif ($mov->resolution == 2) {
                 $text = 'HDCam';
-            }
-            elseif ($mov->resolution==3)
-            {
+            } elseif ($mov->resolution == 3) {
                 $text = 'CAM';
-            }
-            elseif ($mov->resolution==4)
-            {
+            } elseif ($mov->resolution == 4) {
                 $text = 'FullHD';
-            }
-            else{
+            } else {
                 $text = 'Trailer';
             }
 
-            $output.='<div class="item">
-                        <a href="'.url('phim/'.$mov->slug).'" title="'.$mov->title.'">
+            $output .= '<div class="item">
+                        <a href="' . url('phim/' . $mov->slug) . '" title="' . $mov->title . '">
                             <div class="item-link">
-                                <img src="'.url('uploads/movie/'.$mov->image).'" class="lazy post-thumb" alt="'.$mov->title.'" title="'.$mov->title.'"/>
+                                <img src="' . url('uploads/movie/' . $mov->image) . '" class="lazy post-thumb" alt="' . $mov->title . '" title="' . $mov->title . '"/>
                                 <span class="is_trailer">
-                                    '.$text.'
+                                    ' . $text . '
                                 </span>
                             </div>
-                            <p class="title">'.$mov->title.'</p>
+                            <p class="title">' . $mov->title . '</p>
                         </a>
                         <div class="viewsCount" style="color: #9d9d9d;">3.2k lượt xem</div>
                         <div style="float: left;">
@@ -94,44 +94,35 @@ class MovieController extends Controller
         echo $output;
     }
 
-    public function filter_default(Request $request){
+    public function filter_default(Request $request)
+    {
         $data = $request->all();
-        $movie = Movie::where('topview',0)->orderBy('ngaycapnhat','DESC')->take(20)->get();
+        $movie = Movie::where('topview', 0)->orderBy('ngaycapnhat', 'DESC')->take(20)->get();
         $output = '';
-        foreach ($movie as $key => $mov){
-            if($mov->resolution==0)
-            {
+        foreach ($movie as $key => $mov) {
+            if ($mov->resolution == 0) {
                 $text = 'HD';
-            }
-            elseif ($mov->resolution==1)
-            {
+            } elseif ($mov->resolution == 1) {
                 $text = 'SD';
-            }
-            elseif ($mov->resolution==2)
-            {
+            } elseif ($mov->resolution == 2) {
                 $text = 'HDCam';
-            }
-            elseif ($mov->resolution==3)
-            {
+            } elseif ($mov->resolution == 3) {
                 $text = 'CAM';
-            }
-            elseif ($mov->resolution==4)
-            {
+            } elseif ($mov->resolution == 4) {
                 $text = 'FullHD';
-            }
-            else{
+            } else {
                 $text = 'Trailer';
             }
 
-            $output.='<div class="item">
-                        <a href="'.url('phim/'.$mov->slug).'" title="'.$mov->title.'">
+            $output .= '<div class="item">
+                        <a href="' . url('phim/' . $mov->slug) . '" title="' . $mov->title . '">
                             <div class="item-link">
-                                <img src="'.url('uploads/movie/'.$mov->image).'" class="lazy post-thumb" alt="'.$mov->title.'" title="'.$mov->title.'"/>
+                                <img src="' . url('uploads/movie/' . $mov->image) . '" class="lazy post-thumb" alt="' . $mov->title . '" title="' . $mov->title . '"/>
                                 <span class="is_trailer">
-                                    '.$text.'
+                                    ' . $text . '
                                 </span>
                             </div>
-                            <p class="title">'.$mov->title.'</p>
+                            <p class="title">' . $mov->title . '</p>
                         </a>
                         <div class="viewsCount" style="color: #9d9d9d;">3.2k lượt xem</div>
                         <div style="float: left;">
@@ -184,7 +175,7 @@ class MovieController extends Controller
         if ($get_image) {
             $get_name_image = $get_image->getClientOriginalName();
             $name_image = current(explode('.', $get_name_image));
-            $new_image = $name_image.rand(0,9999).'.'.$get_image->getClientOriginalExtension();
+            $new_image = $name_image . rand(0, 9999) . '.' . $get_image->getClientOriginalExtension();
             $get_image->move('uploads/movie/', $new_image);
             $movie->image = $new_image;
         }
@@ -239,12 +230,12 @@ class MovieController extends Controller
         //Thêm hình ảnh
         $get_image = $request->file('image');
         if ($get_image) {
-            if (file_exists('uploads/movie/'.$movie->image)) {
-                unlink('uploads/movie/'.$movie->image);
+            if (file_exists('uploads/movie/' . $movie->image)) {
+                unlink('uploads/movie/' . $movie->image);
             } else {
                 $get_name_image = $get_image->getClientOriginalName();
                 $name_image = current(explode('.', $get_name_image));
-                $new_image = $name_image.rand(0,9999).'.'.$get_image->getClientOriginalExtension();
+                $new_image = $name_image . rand(0, 9999) . '.' . $get_image->getClientOriginalExtension();
                 $get_image->move('uploads/movie/', $new_image);
                 $movie->image = $new_image;
             }
@@ -259,8 +250,8 @@ class MovieController extends Controller
     public function destroy(string $id)
     {
         $movie = Movie::find($id);
-        if (file_exists('uploads/movie/'.$movie->image)) {
-            unlink('uploads/movie/'.$movie->image);
+        if (file_exists('uploads/movie/' . $movie->image)) {
+            unlink('uploads/movie/' . $movie->image);
         }
         $movie->delete();
         return redirect()->back();
