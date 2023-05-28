@@ -57,7 +57,12 @@
                                 {{--Danh Mục Phim--}}
                                 <td>{{$movie->category->title}}</td>
                                 {{--Thể Loại Phim--}}
-                                <td>{{$movie->genre->title}}</td>
+
+                                <td>
+                                    @foreach($movie->movie_genre as $gen)
+                                        <span class="badge badge-dark" style="background-color: #5a6870">{{$gen->title}}</span>
+                                    @endforeach
+                                </td>
                                 {{--Quốc Gia Phim--}}
                                 <td>{{$movie->country->title}}</td>
                                 {{--Phim Hot--}}

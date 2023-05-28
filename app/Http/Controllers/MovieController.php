@@ -18,7 +18,7 @@ class MovieController extends Controller
      */
     public function index()
     {
-        $list = Movie::with('category', 'genre', 'country')->orderBy('id', 'DESC')->get();
+        $list = Movie::with('category', 'movie_genre', 'country', 'genre')->orderBy('id', 'DESC')->get();
 
         $path = public_path() . "/json_file/";
         if (!is_dir($path)) {
@@ -142,8 +142,9 @@ class MovieController extends Controller
     {
         $category = Category::pluck('title', 'id');
         $genre = Genre::pluck('title', 'id');
+        $list_genre = Genre::all();
         $country = Country::pluck('title', 'id');
-        return view('admincp.movie.form', compact('genre', 'country', 'category'));
+        return view('admincp.movie.form', compact('genre', 'country', 'category', 'list_genre'));
     }
 
     /**
@@ -157,11 +158,11 @@ class MovieController extends Controller
         $movie->ThoiLuong = $data['ThoiLuong'];
         $movie->name_original = $data['name_original'];
         $movie->trailer = $data['trailer'];
+        $movie->season = $data['0'] ?? 0;
         $movie->slug = $data['slug'];
         $movie->tags = $data['tags'];
         $movie->description = $data['description'];
         $movie->category_id = $data['category_id'];
-        $movie->genre_id = $data['genre_id'];
         $movie->country_id = $data['country_id'];
         $movie->status = $data['status'];
         $movie->movie_hot = $data['movie_hot'];
@@ -169,6 +170,10 @@ class MovieController extends Controller
         $movie->phude = $data['phude'];
         $movie->NgayTao = Carbon::now('Asia/Ho_Chi_Minh');
         $movie->NgayCapNhat = Carbon::now('Asia/Ho_Chi_Minh');
+
+        foreach($data['genre'] as $key => $gen) {
+            $movie->genre_id = $gen[0];
+        }
 
         //Thêm hình ảnh
         $get_image = $request->file('image');
@@ -180,7 +185,11 @@ class MovieController extends Controller
             $movie->image = $new_image;
         }
         $movie->save();
-        return redirect()->back();
+
+        //thêm nhiều thể loại phim
+        $movie->movie_genre()->attach($data['genre']);
+
+        return redirect()->route('movie.index');
     }
 
     /**
@@ -199,8 +208,10 @@ class MovieController extends Controller
         $category = Category::pluck('title', 'id');
         $genre = Genre::pluck('title', 'id');
         $country = Country::pluck('title', 'id');
+        $list_genre = Genre::all();
         $movie = Movie::find($id);
-        return view('admincp.movie.form', compact('genre', 'country', 'category', 'movie'));
+        $movie_genre = $movie->movie_genre;
+        return view('admincp.movie.form', compact('genre', 'country', 'category', 'movie', 'list_genre', 'movie_genre'));
     }
 
     /**
@@ -219,7 +230,6 @@ class MovieController extends Controller
         $movie->tags = $data['tags'];
         $movie->description = $data['description'];
         $movie->category_id = $data['category_id'];
-        $movie->genre_id = $data['genre_id'];
         $movie->country_id = $data['country_id'];
         $movie->status = $data['status'];
         $movie->movie_hot = $data['movie_hot'];
@@ -227,7 +237,11 @@ class MovieController extends Controller
         $movie->phude = $data['phude'];
         $movie->NgayCapNhat = Carbon::now('Asia/Ho_Chi_Minh');
 
-        //Thêm hình ảnh
+        foreach($data['genre'] as $key => $gen) {
+            $movie->genre_id = $gen[0];
+        }
+
+        //cập nhật hình ảnh
         $get_image = $request->file('image');
         if ($get_image) {
             if (file_exists('uploads/movie/' . $movie->image)) {
@@ -241,7 +255,11 @@ class MovieController extends Controller
             }
         }
         $movie->save();
-        return redirect()->back();
+
+        //thêm nhiều thể loại phim
+        $movie->movie_genre()->sync($data['genre']);
+
+        return redirect()->route('movie.index');
     }
 
     /**
