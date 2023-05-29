@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Genre;
 use App\Models\Country;
 use App\Models\Movie;
+use App\Models\Movie_Genre;
 use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
@@ -85,10 +86,16 @@ class IndexController extends Controller
         $QuocGia = Country::orderBy('position', 'ASC')->where('status', 1)->get();
 
         $genre_slug = Genre::where('slug', $slug)->first();
-        $movie = Movie::where('genre_id', $genre_slug->id)->orderBy('NgayCapNhat', 'DESC')->paginate(40);
         $movieHot_sidebar = Movie::where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
         $trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
 
+        // nhiều thể loại
+        $movie_genre = Movie_Genre::where('genre_id', $genre_slug->id)->get();
+        $many_genre = [];
+        foreach($movie_genre as $key => $movi) {
+            $many_genre[] = $movi->movie_id;
+        }
+        $movie = Movie::whereIn('id', $many_genre)->orderBy('NgayCapNhat', 'DESC')->paginate(40);
         return view('pages.genre', compact('category', 'TheLoai', 'QuocGia', 'genre_slug', 'movie', 'movieHot_sidebar', 'trailer'));
     }
 
@@ -97,7 +104,7 @@ class IndexController extends Controller
         $category = Category::orderBy('position', 'ASC')->where('status', 1)->get();
         $TheLoai = Genre::orderBy('position', 'ASC')->where('status', 1)->get();
         $QuocGia = Country::orderBy('position', 'ASC')->where('status', 1)->get();
-        $movie = Movie::with('category', 'genre', 'country')->where('slug', $slug)->where('status', 1)->first();
+        $movie = Movie::with('category', 'genre', 'country', 'movie_genre')->where('slug', $slug)->where('status', 1)->first();
         $related = Movie::with('category', 'genre', 'country')->where('category_id', $movie->category->id)->orderBy(DB::raw('RAND()'))->whereNotIn('slug', [$slug])->get();
         $movieHot_sidebar = Movie::where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
         $trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();

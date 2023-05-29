@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Movie_Genre;
 use Illuminate\Http\Request;
 use App\Models\Movie;
 use App\Models\Category;
@@ -171,7 +172,7 @@ class MovieController extends Controller
         $movie->NgayTao = Carbon::now('Asia/Ho_Chi_Minh');
         $movie->NgayCapNhat = Carbon::now('Asia/Ho_Chi_Minh');
 
-        foreach($data['genre'] as $key => $gen) {
+        foreach ($data['genre'] as $key => $gen) {
             $movie->genre_id = $gen[0];
         }
 
@@ -237,7 +238,7 @@ class MovieController extends Controller
         $movie->phude = $data['phude'];
         $movie->NgayCapNhat = Carbon::now('Asia/Ho_Chi_Minh');
 
-        foreach($data['genre'] as $key => $gen) {
+        foreach ($data['genre'] as $key => $gen) {
             $movie->genre_id = $gen[0];
         }
 
@@ -268,9 +269,13 @@ class MovieController extends Controller
     public function destroy(string $id)
     {
         $movie = Movie::find($id);
+        // xoá hình ảnh phim
         if (file_exists('uploads/movie/' . $movie->image)) {
             unlink('uploads/movie/' . $movie->image);
         }
+        // xoá thể loại phim
+        Movie_Genre::whereIn('movie_id', [$movie->id])->delete();
+
         $movie->delete();
         return redirect()->back();
     }
