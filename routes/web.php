@@ -39,15 +39,17 @@ Route::post('/filter-topview-phim', [MovieController::class, 'filter_topview']);
 Route::get('/filter-topview-default', [MovieController::class, 'filter_default']);
 
 //route admin
-Route::resource('category',CategoryController::class);
-Route::post('resortingCategory', [CategoryController::class,'resorting'])->name('resortingCategory');
-Route::post('resortingCountry', [CountryController::class,'resorting'])->name('resortingCountry');
-Route::post('resortingGenre', [GenreController::class,'resorting'])->name('resortingGenre');
+Route::resource('category', CategoryController::class);
+Route::post('resortingCategory', [CategoryController::class, 'resorting'])->name('resortingCategory');
+Route::post('resortingCountry', [CountryController::class, 'resorting'])->name('resortingCountry');
+Route::post('resortingGenre', [GenreController::class, 'resorting'])->name('resortingGenre');
 
 Route::resource('genre', GenreController::class);
-Route::resource('country',CountryController::class);
-Route::resource('episode',EpisodeController::class);
-Route::resource('movie',MovieController::class);
+Route::resource('country', CountryController::class);
+Route::resource('movie', MovieController::class);
+
+//Thêm tập phim
+Route::resource('episode', EpisodeController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

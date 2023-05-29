@@ -22,6 +22,7 @@
                             <th scope="col">Thể Loại Phim</th>
                             <th scope="col">Quốc Gia Phim</th>
                             <th scope="col">Phim Hot</th>
+                            <th scope="col">Số Tập</th>
                             <th scope="col">Năm Phim</th>
                             <th scope="col">Mùa Phim</th>
                             <th scope="col">Top Views</th>
@@ -57,7 +58,6 @@
                                 {{--Danh Mục Phim--}}
                                 <td>{{$movie->category->title}}</td>
                                 {{--Thể Loại Phim--}}
-
                                 <td>
                                     @foreach($movie->movie_genre as $gen)
                                         <span class="badge badge-dark" style="background-color: #5a6870">{{$gen->title}}</span>
@@ -73,6 +73,8 @@
                                         Không
                                     @endif
                                 </td>
+                                {{--Số Tập Phim--}}
+                                <td>{{$movie->SoTap}}</td>
                                 {{--Năm Phim--}}
                                 <td>
                                     <div class="text-bg-light" style="width: 0px">

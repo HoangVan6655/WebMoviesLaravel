@@ -54,12 +54,12 @@
                                     @if($cate->resolution != 5)
                                         <span class="episode"><i class="fa fa-play" aria-hidden="true"></i>
                                         @if($cate->phude == 0)
-                                                Phụ Đề
+                                                Phụ Đề - Tập 1/{{ $cate->SoTap }}
                                                 @if($cate->season != 0)
                                                     - Season {{ $cate->season }}
                                                 @endif
                                             @else
-                                                Thuyết Minh
+                                                Thuyết Minh - Tập 1/{{ $cate->SoTap }}
                                                 @if($cate->season != 0)
                                                     - Season {{ $cate->season }}
                                                 @endif

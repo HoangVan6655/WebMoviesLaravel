@@ -32,23 +32,31 @@
                         {!! Form::text('name_original', isset($movie) ? $movie->name_original : '', ['class' => 'form-control', 'placeholder' => 'Nhập vào tên phim gốc...', 'style' => 'width: 100%; color: black', 'id' => 'slug', 'onkeyup'=>'ChangeToSlug()']) !!}
                     </div>
 
-                    {{--Thoi Luong--}}
-                    <div style="margin-bottom: 10pt">
-                        {!! Form::label('ThoiLuong', 'Thời Lượng Phim ', []) !!}
-                    </div>
-                    <div style="display: flex; margin-bottom: 10pt">
-                        {!! Form::text('ThoiLuong', isset($movie) ? $movie->ThoiLuong : '', ['class' => 'form-control', 'placeholder' => 'Nhập vào thời lượng phim...', 'style' => 'width: 100%; color: black']) !!}
-                    </div>
+                        {{--Thoi Luong--}}
+                        <div style="margin-bottom: 10pt">
+                            {!! Form::label('ThoiLuong', 'Thời Lượng Phim ', []) !!}
+                        </div>
+                        <div style="display: flex; margin-bottom: 10pt">
+                            {!! Form::text('ThoiLuong', isset($movie) ? $movie->ThoiLuong : '', ['class' => 'form-control', 'placeholder' => 'Nhập vào thời lượng phim...', 'style' => 'width: 100%; color: black']) !!}
+                        </div>
 
-                    {{--Slug--}}
-                    <div style="margin-bottom: 10pt">
-                        {!! Form::label('slug', 'Slug ', []) !!}
-                    </div>
-                    <div style="display: flex; margin-bottom: 10pt">
-                        {!! Form::text('slug', isset($movie) ? $movie->slug : '', ['class' => 'form-control', 'placeholder' => 'Slug tên phim...', 'style' => 'width: 100%; color: black', 'id' => 'convert_slug']) !!}
-                    </div>
+                        {{--So Tap Phim--}}
+                        <div style="margin-bottom: 10pt">
+                            {!! Form::label('SoTap', 'Số Tập Phim ', []) !!}
+                        </div>
+                        <div style="display: flex; margin-bottom: 10pt">
+                            {!! Form::text('SoTap', isset($movie) ? $movie->SoTap : '', ['class' => 'form-control', 'placeholder' => 'Nhập vào số tập phim...', 'style' => 'width: 100%; color: black']) !!}
+                        </div>
 
-                    {{--Trailer--}}
+                        {{--Slug--}}
+                        <div style="margin-bottom: 10pt">
+                            {!! Form::label('slug', 'Slug ', []) !!}
+                        </div>
+                        <div style="display: flex; margin-bottom: 10pt">
+                            {!! Form::text('slug', isset($movie) ? $movie->slug : '', ['class' => 'form-control', 'placeholder' => 'Slug tên phim...', 'style' => 'width: 100%; color: black', 'id' => 'convert_slug']) !!}
+                        </div>
+
+                        {{--Trailer--}}
                     <div style="margin-bottom: 10pt">
                         {!! Form::label('trailer', 'Trailer Phim ', []) !!}
                     </div>

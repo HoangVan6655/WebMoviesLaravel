@@ -6,10 +6,19 @@
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-xs-6">
-                        <div class="yoast_breadcrumb hidden-xs"><span><span>
-                           <a href="{{route('category',[$movie->category->slug])}}">{{$movie->category->title}}</a> »
-                        <span><a href="{{route('country',[$movie->country->slug])}}">{{$movie->country->title}}</a> »
-                        <span class="breadcrumb_last" aria-current="page">{{$movie->title}}</span></span></span></span>
+                        <div class="yoast_breadcrumb hidden-xs">
+                            <span>
+                                <span>
+                                    <a href="{{route('category',[$movie->category->slug])}}">{{$movie->category->title}}</a> »
+                                    <span>
+                                        <a href="{{route('country',[$movie->country->slug])}}">{{$movie->country->title}}</a> »
+                                        @foreach($movie->movie_genre as $gen)
+                                            <a href="{{route('genre',[$gen->slug])}}">{{$gen->title}}</a> »
+                                        @endforeach
+                                        <span class="breadcrumb_last" aria-current="page">{{$movie->title}}</span>
+                                    </span>
+                                </span>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -83,7 +92,11 @@
                                         @endif
                                     </li>
 
-                                    <li class="list-info-group-item"><span>Thời lượng</span> : {{$movie->ThoiLuong}}
+                                    <li class="list-info-group-item">
+                                        <span>Thời lượng</span> : {{$movie->ThoiLuong}}
+                                    </li>
+                                    <li class="list-info-group-item">
+                                        <span>Số Tập</span> : {{$movie->SoTap}}/{{$movie->SoTap}} - Hoàn Thành
                                     </li>
                                     @if($movie->season != 0)
                                         <li class="list-info-group-item"><span>Season</span> : {{$movie->season}}</li>
@@ -179,7 +192,7 @@
                             @endphp
                             <article id="post-38424" class="item-content">
                                 <div class="fb-comments" data-href="{{ $current_url }}" data-width="100%"
-                                     data-numposts="10" ></div>
+                                     data-numposts="10"></div>
                             </article>
                         </div>
                     </div>
@@ -218,9 +231,15 @@
                                         @if($hot->resolution != 5)
                                             <span class="episode"><i class="fa fa-play" aria-hidden="true"></i>
                                                 @if($hot->phude == 0)
-                                                    Phụ Đề
+                                                    Phụ Đề - Tập 1/{{ $hot->SoTap }}
+                                                    @if($hot->season != 0)
+                                                        - Season {{ $hot->season }}
+                                                    @endif
                                                 @else
-                                                    Thuyết Minh
+                                                    Thuyết Minh - Tập 1/{{ $hot->SoTap }}
+                                                    @if($hot->season != 0)
+                                                        - Season {{ $hot->season }}
+                                                    @endif
                                                 @endif
                                             </span>
                                         @endif

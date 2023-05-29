@@ -159,6 +159,7 @@ class MovieController extends Controller
         $movie->ThoiLuong = $data['ThoiLuong'];
         $movie->name_original = $data['name_original'];
         $movie->trailer = $data['trailer'];
+        $movie->SoTap = $data['SoTap'];
         $movie->season = $data['0'] ?? 0;
         $movie->slug = $data['slug'];
         $movie->tags = $data['tags'];
@@ -227,6 +228,7 @@ class MovieController extends Controller
         $movie->ThoiLuong = $data['ThoiLuong'];
         $movie->name_original = $data['name_original'];
         $movie->trailer = $data['trailer'];
+        $movie->SoTap = $data['SoTap'];
         $movie->slug = $data['slug'];
         $movie->tags = $data['tags'];
         $movie->description = $data['description'];
