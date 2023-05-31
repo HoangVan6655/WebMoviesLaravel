@@ -23,34 +23,34 @@
                     </div>
 
                     <div style="display: flex; margin-bottom: 10pt; ">
-                        {!! Form::select('movie_id', $list_movie, isset($episode) ? $episode->movie_id : '', ['class'=>'form-control']) !!}
+                        {!! Form::select('movie_id', ['0'=>'Chọn Phim', 'Phim'=>$list_movie], isset($episode) ? $episode->movie_id : '', ['class'=>'form-control select-movie']) !!}
                     </div>
 
                     {{--Link Tập Phim--}}
-                    <div style="margin-bottom: 10pt">
-                        {!! Form::label('link', 'Link Phim ', []) !!}
-                    </div>
-                    <div style="display: flex; margin-bottom: 10pt">
-                        {!! Form::text('link', isset($episode) ? $episode->linkphim : '', ['class' => 'form-control', 'placeholder' => 'Nhập vào link phim...', 'style' => 'width: 100%; color: black']) !!}
-                    </div>
-
-                    {{--Tập Phim--}}
-                    <div style="margin-bottom: 10pt;">
-                        {!! Form::label('episode', 'Tập Phim ', []) !!}
-                    </div>
-
-                    <div style="display: flex; margin-bottom: 10pt; ">
-                        {!! Form::select('episode', $list_movie, isset($episode) ? $episode->movie_id : '', ['class'=>'form-control']) !!}
-                    </div>
-
-                    {{--Submit--}}
-                    @if(!isset($movie))
-                        <div>
-                            {!! Form::submit('Thêm Tập Phim Mới', ['class' => 'btn btn-success']) !!}
+                        <div style="margin-bottom: 10pt">
+                            {!! Form::label('link', 'Link Phim ', []) !!}
                         </div>
-                    @else
-                        <div>
-                            {!! Form::submit('Cập Nhật Tập Phim', ['class' => 'btn btn-success']) !!}
+                        <div style="display: flex; margin-bottom: 10pt">
+                            {!! Form::text('link', isset($episode) ? $episode->linkphim : '', ['class' => 'form-control', 'placeholder' => 'Nhập vào link phim...', 'style' => 'width: 100%; color: black']) !!}
+                        </div>
+
+                        {{--Tập Phim--}}
+                        <div style="margin-bottom: 10pt;">
+                            {!! Form::label('episode', 'Tập Phim ', []) !!}
+                            <select name="episode" class="form-control"
+                                    style="display: flex; margin-bottom: 10pt; margin-top: 10pt; " id="show_movie">
+
+                            </select>
+                        </div>
+
+                        {{--Submit--}}
+                        @if(!isset($movie))
+                            <div>
+                                {!! Form::submit('Thêm Tập Phim Mới', ['class' => 'btn btn-success']) !!}
+                            </div>
+                        @else
+                            <div>
+                                {!! Form::submit('Cập Nhật Tập Phim', ['class' => 'btn btn-success']) !!}
                         </div>
                     @endif
                     {!! Form::close() !!}

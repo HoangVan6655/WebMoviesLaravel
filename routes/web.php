@@ -50,6 +50,7 @@ Route::resource('movie', MovieController::class);
 
 //Thêm tập phim
 Route::resource('episode', EpisodeController::class);
+Route::get('select-movie', [EpisodeController::class, 'select_movie'])->name('select-movie');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

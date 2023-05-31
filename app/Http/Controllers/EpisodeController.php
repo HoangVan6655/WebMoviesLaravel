@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Movie;
+
 class EpisodeController extends Controller
 {
     /**
@@ -61,5 +62,17 @@ class EpisodeController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function select_movie()
+    {
+        $id = $_GET['id'];
+        $movie = Movie::find($id);
+        $output = '<option>Chọn Tập Phim</option>';
+
+        for ($i = 1; $i <= $movie->SoTap; $i++) {
+            $output .= '<option value = "' . $i . '" > ' . $i . '</option >';
+        }
+        echo $output;
     }
 }
