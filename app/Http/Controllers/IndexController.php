@@ -112,14 +112,28 @@ class IndexController extends Controller
         return view('pages.movie', compact('category', 'TheLoai', 'QuocGia', 'movie', 'related', 'movieHot_sidebar', 'trailer'));
     }
 
-    public function watch()
+    public function watch($slug)
     {
-        return view('pages.watch');
+        $category = Category::orderBy('position', 'ASC')->where('status', 1)->get();
+        $TheLoai = Genre::orderBy('position', 'ASC')->where('status', 1)->get();
+        $QuocGia = Country::orderBy('position', 'ASC')->where('status', 1)->get();
+        $movie = Movie::with('category', 'genre', 'country', 'movie_genre', 'episode')->where('slug', $slug)->where('status', 1)->first();
+        $related = Movie::with('category', 'genre', 'country')->where('category_id', $movie->category->id)->orderBy(DB::raw('RAND()'))->whereNotIn('slug', [$slug])->get();
+        $movieHot_sidebar = Movie::where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
+        $trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
+        return view('pages.watch', compact('category', 'TheLoai', 'QuocGia', 'movie', 'related', 'movieHot_sidebar', 'trailer'));
     }
 
     public function episode()
     {
-        return view('pages.episode');
+        $category = Category::orderBy('position', 'ASC')->where('status', 1)->get();
+        $TheLoai = Genre::orderBy('position', 'ASC')->where('status', 1)->get();
+        $QuocGia = Country::orderBy('position', 'ASC')->where('status', 1)->get();
+        $movie = Movie::with('category', 'genre', 'country', 'movie_genre')->where('slug', $slug)->where('status', 1)->first();
+        $related = Movie::with('category', 'genre', 'country')->where('category_id', $movie->category->id)->orderBy(DB::raw('RAND()'))->whereNotIn('slug', [$slug])->get();
+        $movieHot_sidebar = Movie::where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
+        $trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
+        return view('pages.episode', compact('category', 'TheLoai', 'QuocGia', 'movie', 'related', 'movieHot_sidebar', 'trailer'));
     }
 
     public function search()

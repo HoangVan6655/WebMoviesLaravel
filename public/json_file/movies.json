@@ -210,21 +210,21 @@
     {
         "id": 49,
         "title": "ho\u00e0ng v\u0103n",
-        "ThoiLuong": "",
+        "ThoiLuong": null,
         "name_original": "hoang van",
         "trailer": null,
         "description": "ho\u00e0ng v\u0103n",
         "status": 1,
         "image": "meg-28566.jpg",
         "category_id": 1,
-        "genre_id": 1,
+        "genre_id": 5,
         "country_id": 1,
         "slug": "hoang-van",
         "movie_hot": 1,
         "resolution": 4,
         "phude": 1,
         "NgayTao": null,
-        "NgayCapNhat": null,
+        "NgayCapNhat": "2023-05-31 18:05:14",
         "year": null,
         "tags": null,
         "topview": 0,
@@ -238,7 +238,44 @@
             "slug": "phim-moi",
             "position": 0
         },
-        "movie_genre": [],
+        "movie_genre": [
+            {
+                "id": 1,
+                "title": "H\u00e0nh \u0110\u1ed9ng",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00e0nh \u0111\u1ed9ng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hanh-dong",
+                "position": 0,
+                "pivot": {
+                    "movie_id": 49,
+                    "genre_id": 1
+                }
+            },
+            {
+                "id": 3,
+                "title": "T\u00e2m L\u00fd",
+                "description": "Nh\u1eefng b\u1ed9 phim t\u00e2m l\u00fd \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "tam-ly",
+                "position": 1,
+                "pivot": {
+                    "movie_id": 49,
+                    "genre_id": 3
+                }
+            },
+            {
+                "id": 5,
+                "title": "Vi\u1ec5n T\u01b0\u1edfng",
+                "description": "Nh\u1eefng b\u1ed9 phim vi\u1ec5n t\u01b0\u1edfng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "vien-tuong",
+                "position": 2,
+                "pivot": {
+                    "movie_id": 49,
+                    "genre_id": 5
+                }
+            }
+        ],
         "country": {
             "id": 1,
             "title": "Vi\u1ec7t Nam",
@@ -248,12 +285,12 @@
             "position": 0
         },
         "genre": {
-            "id": 1,
-            "title": "H\u00e0nh \u0110\u1ed9ng",
-            "description": "Nh\u1eefng b\u1ed9 phim h\u00e0nh \u0111\u1ed9ng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+            "id": 5,
+            "title": "Vi\u1ec5n T\u01b0\u1edfng",
+            "description": "Nh\u1eefng b\u1ed9 phim vi\u1ec5n t\u01b0\u1edfng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
             "status": 1,
-            "slug": "hanh-dong",
-            "position": 0
+            "slug": "vien-tuong",
+            "position": 2
         }
     },
     {
@@ -556,7 +593,7 @@
         "ThoiLuong": null,
         "name_original": "Duty After School 2023",
         "trailer": "BbH2bLqRaDc",
-        "description": "T\u00f3m t\u1eaft\r\nH\u1ecdc K\u1ef3 Sinh T\u1eed \u2013 Duty After School (2023) d\u1ef1a tr\u00ean webcomic \u201cDuty After School\u201d c\u1ee7a Ha Il-Kwon, l\u1ea5y b\u1ed1i c\u1ea3nh H\u00e0n Qu\u1ed1c b\u1ecb t\u1ea5n c\u00f4ng b\u1edfi nh\u1eefng sinh v\u1eadt l\u1ea1 t\u1eeb tr\u00ean tr\u1eddi r\u01a1i xu\u1ed1ng, g\u00e2y ra th\u1ea3m h\u1ecda th\u01b0\u01a1ng vong to\u00e0n qu\u1ed1c. \u0110\u1ec3 gi\u00fap \u0111\u1ee1 c\u00e1c l\u1ef1c l\u01b0\u1ee3ng qu\u00e2n s\u1ef1, ch\u00ednh ph\u1ee7 H\u00e0n ch\u1ec9 \u0111\u1ecbnh t\u1ea5t c\u1ea3 c\u00e1c sinh vi\u00ean c\u0169ng nh\u01b0 h\u1ecdc sinh trung h\u1ecdc ph\u1ea3i tr\u1edf th\u00e0nh qu\u00e2n d\u1ef1 b\u1ecb. Thay v\u00ec ng\u00f2i b\u00fat, nay h\u1ecdc sinh H\u00e0n Qu\u1ed1c ph\u1ea3i c\u1ea7m v\u0169 kh\u00ed \u0111\u1ec3 ti\u00eau di\u1ec7t nh\u1eefng sinh v\u1eadt n\u00e0y.",
+        "description": "H\u1ecdc K\u1ef3 Sinh T\u1eed \u2013 Duty After School (2023) d\u1ef1a tr\u00ean webcomic \u201cDuty After School\u201d c\u1ee7a Ha Il-Kwon, l\u1ea5y b\u1ed1i c\u1ea3nh H\u00e0n Qu\u1ed1c b\u1ecb t\u1ea5n c\u00f4ng b\u1edfi nh\u1eefng sinh v\u1eadt l\u1ea1 t\u1eeb tr\u00ean tr\u1eddi r\u01a1i xu\u1ed1ng, g\u00e2y ra th\u1ea3m h\u1ecda th\u01b0\u01a1ng vong to\u00e0n qu\u1ed1c. \u0110\u1ec3 gi\u00fap \u0111\u1ee1 c\u00e1c l\u1ef1c l\u01b0\u1ee3ng qu\u00e2n s\u1ef1, ch\u00ednh ph\u1ee7 H\u00e0n ch\u1ec9 \u0111\u1ecbnh t\u1ea5t c\u1ea3 c\u00e1c sinh vi\u00ean c\u0169ng nh\u01b0 h\u1ecdc sinh trung h\u1ecdc ph\u1ea3i tr\u1edf th\u00e0nh qu\u00e2n d\u1ef1 b\u1ecb. Thay v\u00ec ng\u00f2i b\u00fat, nay h\u1ecdc sinh H\u00e0n Qu\u1ed1c ph\u1ea3i c\u1ea7m v\u0169 kh\u00ed \u0111\u1ec3 ti\u00eau di\u1ec7t nh\u1eefng sinh v\u1eadt n\u00e0y.",
         "status": 1,
         "image": "Duty-After-School8702.jpg",
         "category_id": 4,
@@ -564,15 +601,15 @@
         "country_id": 8,
         "slug": "hoc-ky-sinh-tu",
         "movie_hot": 1,
-        "resolution": 1,
+        "resolution": 0,
         "phude": 0,
         "NgayTao": null,
-        "NgayCapNhat": "2023-05-27 23:11:45",
-        "year": null,
+        "NgayCapNhat": "2023-05-31 17:25:35",
+        "year": "2023",
         "tags": null,
         "topview": null,
-        "season": 0,
-        "SoTap": 1,
+        "season": 1,
+        "SoTap": 16,
         "category": {
             "id": 4,
             "title": "Phim B\u1ed9",
@@ -581,7 +618,56 @@
             "slug": "phim-bo",
             "position": 2
         },
-        "movie_genre": [],
+        "movie_genre": [
+            {
+                "id": 1,
+                "title": "H\u00e0nh \u0110\u1ed9ng",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00e0nh \u0111\u1ed9ng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hanh-dong",
+                "position": 0,
+                "pivot": {
+                    "movie_id": 32,
+                    "genre_id": 1
+                }
+            },
+            {
+                "id": 3,
+                "title": "T\u00e2m L\u00fd",
+                "description": "Nh\u1eefng b\u1ed9 phim t\u00e2m l\u00fd \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "tam-ly",
+                "position": 1,
+                "pivot": {
+                    "movie_id": 32,
+                    "genre_id": 3
+                }
+            },
+            {
+                "id": 8,
+                "title": "H\u00e0i H\u01b0\u1edbc",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00e0i h\u01b0\u1edbc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hai-huoc",
+                "position": 5,
+                "pivot": {
+                    "movie_id": 32,
+                    "genre_id": 8
+                }
+            },
+            {
+                "id": 13,
+                "title": "T\u00ecnh C\u1ea3m",
+                "description": "Nh\u1eefng b\u1ed9 phim t\u00ecnh c\u1ea3m \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "tinh-cam",
+                "position": 10,
+                "pivot": {
+                    "movie_id": 32,
+                    "genre_id": 13
+                }
+            }
+        ],
         "country": {
             "id": 8,
             "title": "H\u00e0n Qu\u1ed1c",
