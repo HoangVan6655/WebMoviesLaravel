@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Genre;
 use App\Models\Country;
 use App\Models\Movie;
+use App\Models\Episode;
 use App\Models\Movie_Genre;
 use Illuminate\Support\Facades\DB;
 
@@ -108,12 +109,14 @@ class IndexController extends Controller
         $related = Movie::with('category', 'genre', 'country')->where('category_id', $movie->category->id)->orderBy(DB::raw('RAND()'))->whereNotIn('slug', [$slug])->get();
         $movieHot_sidebar = Movie::where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
         $trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
-
-        return view('pages.movie', compact('category', 'TheLoai', 'QuocGia', 'movie', 'related', 'movieHot_sidebar', 'trailer'));
+        $episode = Episode::with('movie')->where('movie_id', $movie->id)->orderBy('episode', 'DESC')->take(3)->get();
+        $episode_tapdau = Episode::with('movie')->where('movie_id', $movie->id)->orderBy('episode', 'ASC')->take(1)->first();
+        return view('pages.movie', compact('category', 'TheLoai', 'QuocGia', 'movie', 'related', 'movieHot_sidebar', 'trailer', 'episode', 'episode_tapdau'));
     }
 
-    public function watch($slug)
+    public function watch($slug, $tap)
     {
+//        $tapphim = substr($tapphim, 4, 1);
         $category = Category::orderBy('position', 'ASC')->where('status', 1)->get();
         $TheLoai = Genre::orderBy('position', 'ASC')->where('status', 1)->get();
         $QuocGia = Country::orderBy('position', 'ASC')->where('status', 1)->get();
@@ -121,7 +124,18 @@ class IndexController extends Controller
         $related = Movie::with('category', 'genre', 'country')->where('category_id', $movie->category->id)->orderBy(DB::raw('RAND()'))->whereNotIn('slug', [$slug])->get();
         $movieHot_sidebar = Movie::where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
         $trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
-        return view('pages.watch', compact('category', 'TheLoai', 'QuocGia', 'movie', 'related', 'movieHot_sidebar', 'trailer'));
+
+        if (isset($tap)) {
+            $tapphim = $tap;
+            $tapphim = substr($tap, 4, 1);
+            $episode = Episode::where('movie_id', $movie->id)->where('episode', $tapphim)->first();
+        } else {
+            $tapphim = 1;
+            $episode = Episode::where('movie_id', $movie->id)->where('episode', $tapphim)->first();
+
+        }
+
+        return view('pages.watch', compact('category', 'TheLoai', 'QuocGia', 'movie', 'related', 'movieHot_sidebar', 'trailer', 'episode', 'tapphim'));
     }
 
     public function episode()

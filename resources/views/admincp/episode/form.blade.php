@@ -27,30 +27,39 @@
                     </div>
 
                     {{--Link Tập Phim--}}
-                        <div style="margin-bottom: 10pt">
-                            {!! Form::label('link', 'Link Phim ', []) !!}
-                        </div>
-                        <div style="display: flex; margin-bottom: 10pt">
-                            {!! Form::text('link', isset($episode) ? $episode->linkphim : '', ['class' => 'form-control', 'placeholder' => 'Nhập vào link phim...', 'style' => 'width: 100%; color: black']) !!}
-                        </div>
+                    <div style="margin-bottom: 10pt">
+                        {!! Form::label('link', 'Link Phim ', []) !!}
+                    </div>
+                    <div style="display: flex; margin-bottom: 10pt">
+                        {!! Form::text('link', isset($episode) ? $episode->linkphim : '', ['class' => 'form-control', 'placeholder' => 'Nhập vào link phim...', 'style' => 'width: 100%; color: black']) !!}
+                    </div>
 
-                        {{--Tập Phim--}}
-                        <div style="margin-bottom: 10pt;">
-                            {!! Form::label('episode', 'Tập Phim ', []) !!}
+                    {{--Tập Phim--}}
+                    <div style="margin-bottom: 10pt;">
+                        {!! Form::label('episode', 'Tập Phim ', []) !!}
+
+                    </div>
+
+                    <div style="display: flex; margin-bottom: 10pt">
+                        @if(isset($episode))
+                            {!! Form::text('episode', isset($episode) ? $episode->episode : '',
+                                ['class' => 'form-control', 'placeholder' => 'Nhập vào tập phim...', 'style' => 'width: 100%; color: black',
+                                isset($episode) ? 'readonly' : '']) !!}
+                        @else
                             <select name="episode" class="form-control"
                                     style="display: flex; margin-bottom: 10pt; margin-top: 10pt; " id="show_movie">
-
                             </select>
-                        </div>
+                        @endif
+                    </div>
 
-                        {{--Submit--}}
-                        @if(!isset($movie))
-                            <div>
-                                {!! Form::submit('Thêm Tập Phim Mới', ['class' => 'btn btn-success']) !!}
-                            </div>
-                        @else
-                            <div>
-                                {!! Form::submit('Cập Nhật Tập Phim', ['class' => 'btn btn-success']) !!}
+                    {{--Submit--}}
+                    @if(!isset($episode))
+                        <div>
+                            {!! Form::submit('Thêm Tập Phim Mới', ['class' => 'btn btn-success']) !!}
+                        </div>
+                    @else
+                        <div>
+                            {!! Form::submit('Cập Nhật Tập Phim', ['class' => 'btn btn-success']) !!}
                         </div>
                     @endif
                     {!! Form::close() !!}

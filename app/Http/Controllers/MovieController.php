@@ -8,6 +8,7 @@ use App\Models\Movie;
 use App\Models\Category;
 use App\Models\Genre;
 use App\Models\Country;
+use App\Models\Episode;
 use Carbon\Carbon;
 use Storage;
 use File;
@@ -173,6 +174,7 @@ class MovieController extends Controller
         $movie->NgayTao = Carbon::now('Asia/Ho_Chi_Minh');
         $movie->NgayCapNhat = Carbon::now('Asia/Ho_Chi_Minh');
 
+        //Thêm nhiều thể loại
         foreach ($data['genre'] as $key => $gen) {
             $movie->genre_id = $gen[0];
         }
@@ -277,6 +279,9 @@ class MovieController extends Controller
         }
         // xoá thể loại phim
         Movie_Genre::whereIn('movie_id', [$movie->id])->delete();
+
+        // xoá tập phim
+        Episode::whereIn('movie_id', [$movie->id])->delete();
 
         $movie->delete();
         return redirect()->back();

@@ -14,7 +14,8 @@ class EpisodeController extends Controller
      */
     public function index()
     {
-        //
+        $list_episode = Episode::with('movie')->orderBy('movie_id', 'ASC')->get();
+        return view('admincp.episode.index', compact('list_episode'));
     }
 
     /**
@@ -22,7 +23,7 @@ class EpisodeController extends Controller
      */
     public function create()
     {
-        $list_movie = Movie::orderBy('id', 'ASC')->pluck('title', 'id');
+        $list_movie = Movie::orderBy('id', 'DESC')->pluck('title', 'id');
         return view('admincp.episode.form', compact('list_movie'));
     }
 
@@ -39,7 +40,7 @@ class EpisodeController extends Controller
         $ep->created_at = Carbon::now('Asia/Ho_Chi_Minh');
         $ep->updated_at = Carbon::now('Asia/Ho_Chi_Minh');
         $ep->save();
-        return redirect()->back();
+        return redirect()->to('episode');
     }
 
     /**
@@ -55,7 +56,9 @@ class EpisodeController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $list_movie = Movie::orderBy('id', 'DESC')->pluck('title', 'id');
+        $episode = Episode::find($id);
+        return view('admincp.episode.form', compact('episode', 'list_movie'));
     }
 
     /**
@@ -63,7 +66,15 @@ class EpisodeController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = $request->all();
+        $ep = Episode::find($id);
+        $ep->movie_id = $data['movie_id'];
+        $ep->linkphim = $data['link'];
+        $ep->episode = $data['episode'];
+        $ep->created_at = Carbon::now('Asia/Ho_Chi_Minh');
+        $ep->updated_at = Carbon::now('Asia/Ho_Chi_Minh');
+        $ep->save();
+        return redirect()->to('episode');
     }
 
     /**
@@ -71,7 +82,8 @@ class EpisodeController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $episode = Episode::find($id)->delete();
+        return redirect()->to('episode');
     }
 
     public function select_movie()
