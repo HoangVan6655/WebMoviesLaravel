@@ -161,10 +161,11 @@
                                             </li>
                                         @elseif ($movie->ThuocPhim == 'phimle')
                                             <li class="list-info-group-item"><span>Link Phim</span> :
-                                                <a href=""
-                                                   rel="tag">HD</a>
-                                                <a href=""
-                                                   rel="tag">FullHD</a>
+                                                @foreach($episode as $key => $ep)
+                                                    <a href="{{url('xem-phim/'.$ep->movie->slug.'/tap-'.$ep->episode)}}"
+                                                       rel="tag">{{ $ep->episode }}</a>
+                                                @endforeach
+
                                             </li>
                                         @endif
                                     @else

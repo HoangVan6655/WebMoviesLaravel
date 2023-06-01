@@ -98,7 +98,9 @@ class EpisodeController extends Controller
             }
         } else {
             $output .= '<option value = "HD" >HD</option >
-                        <option value = "FullHD" >FullHD</option >';
+                        <option value = "FullHD" >FullHD</option >
+                        <option value = "Cam" >Cam</option >
+                        <option value = "HDCam" >HDCam</option >';
         }
 
         echo $output;

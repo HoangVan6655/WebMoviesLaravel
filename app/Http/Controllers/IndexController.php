@@ -112,6 +112,7 @@ class IndexController extends Controller
         //lấy 3 tập gần nhất
         $episode = Episode::with('movie')->where('movie_id', $movie->id)->orderBy('episode', 'DESC')->take(3)->get();
 
+        //lấy tập đầu
         $episode_tapdau = Episode::with('movie')->where('movie_id', $movie->id)->orderBy('episode', 'ASC')->take(1)->first();
 
         //lấy tổng tập phim đã thêm
@@ -133,9 +134,10 @@ class IndexController extends Controller
         $movieHot_sidebar = Movie::where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
         $trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
 
+        //lấy tập 1 (tap-1) hoặc tập HD (tap-HD)
         if (isset($tap)) {
             $tapphim = $tap;
-            $tapphim = substr($tap, 4, 1);
+            $tapphim = substr($tap, 4, 20);
             $episode = Episode::where('movie_id', $movie->id)->where('episode', $tapphim)->first();
         } else {
             $tapphim = 1;
