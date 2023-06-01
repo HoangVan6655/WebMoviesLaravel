@@ -17,7 +17,7 @@
                         <div class="halim-item">
                             <a class="halim-thumb" href="{{route('movie',$hot->slug)}}" title="{{$hot->title}}">
                                 <figure><img class="lazy img-responsive" src="{{asset('uploads/movie/'.$hot->image)}}"
-                                             alt="{{$hot->title}}" title="Đại Thánh Vô Song"></figure>
+                                             alt="{{$hot->title}}" title="{{$hot->title}}"></figure>
                                 <span class="status">
                                     @if($hot->resolution == 0)
                                         HD
@@ -35,16 +35,11 @@
                                 </span>
                                 @if($hot->resolution != 5)
                                     <span class="episode"><i class="fa fa-play" aria-hidden="true"></i>
+                                        {{ $hot->episode_count }}/{{ $hot->SoTap }} |
                                         @if($hot->phude == 0)
-                                            Phụ Đề - Tập 1/{{ $hot->SoTap }}
-                                            @if($hot->season != 0)
-                                                - Season {{ $hot->season }}
-                                            @endif
+                                            Phụ Đề
                                         @else
-                                            Thuyết Minh - Tập 1/{{ $hot->SoTap }}
-                                            @if($hot->season != 0)
-                                                - Season {{ $hot->season }}
-                                            @endif
+                                            Thuyết Minh
                                         @endif
                                     </span>
                                 @endif
@@ -128,19 +123,15 @@
                                             @endif
                                             </span>
                                         @if($mov->resolution != 5)
-                                            <span class="episode"><i class="fa fa-play" aria-hidden="true"></i>
-                                                    @if($mov->phude == 0)
-                                                    Phụ Đề - Tập 1/{{ $mov->SoTap }}
-                                                    @if($mov->season != 0)
-                                                        - Season {{ $mov->season }}
-                                                    @endif
+                                            <span class="episode">
+                                                <i class="fa fa-play" aria-hidden="true"></i>
+                                                {{ $mov->episode_count }}/{{ $mov->SoTap }} |
+                                                @if($mov->phude == 0)
+                                                    Phụ Đề
                                                 @else
-                                                    Thuyết Minh - Tập 1/{{ $mov->SoTap }}
-                                                    @if($mov->season != 0)
-                                                        - Season {{ $mov->season }}
-                                                    @endif
+                                                    Thuyết Minh
                                                 @endif
-                                                </span>
+                                            </span>
                                         @endif
                                         <div class="icon_overlay"></div>
                                         <div class="halim-post-title-box">

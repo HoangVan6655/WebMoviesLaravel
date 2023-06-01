@@ -7,11 +7,11 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-fit mx-auto sm:px-6 lg:px-8"
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8"
              style="background-color: rgb(17 24 39 / var(--tw-bg-opacity)); color: black">
             <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="text-gray-900 dark:text-gray-100">
-                    <table class="table text-gray-900 dark:text-gray-100" id="tableTapPhim">
+                    <table class="table table-responsive text-gray-900 dark:text-gray-100" id="tableTapPhim">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -27,15 +27,15 @@
                             <tr>
                                 <th scope="row">{{$key}}</th>
                                 <td>{{$episode->movie->title}}</td>
-                                <td><img width="50%" src="{{ asset('uploads/movie/'.$episode->movie->image) }}"></td>
+                                <td><img width="100%" src="{{ asset('uploads/movie/'.$episode->movie->image) }}"></td>
                                 <td>{{$episode->episode}}</td>
-                                <style type="text/css">
-                                    .iframe_phim iframe {
-                                        width: 60%;
-                                        height: 200px;
-                                    }
-                                </style>
-                                <td class="iframe_phim">{!! $episode->linkphim !!}</td>
+                                {{--                                <style type="text/css">--}}
+                                {{--                                    .iframe_phim iframe {--}}
+                                {{--                                        width: 60%;--}}
+                                {{--                                        height: 200px;--}}
+                                {{--                                    }--}}
+                                {{--                                </style>--}}
+                                <td class="iframe_phim" style="width: 20%">{{ $episode->linkphim }}</td>
                                 <td>
                                     <button id="submitBtn" type="button" class="btn btn-danger" onclick="showModal()">
                                         Xoá
@@ -60,7 +60,7 @@
                                         aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <p>Bạn có chắc chắn muốn xoá danh mục phim này?</p>
+                                <p>Bạn có chắc chắn muốn xoá tập phim này?</p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
@@ -85,25 +85,4 @@
     $(document).ready(function () {
         $('#tableTapPhim').DataTable();
     });
-
-    $('.order_position').sortable({
-        placeholder: 'ui-state-highlight',
-        update: function (event, ui) {
-            var array_id = [];
-            $('.order_position tr').each(function () {
-                array_id.push($(this).attr('id'));
-            })
-            $.ajax({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                url: "{{route('resortingCategory')}}",
-                method: "POST",
-                data: {array_id: array_id},
-                success: function (data) {
-                    alert('Sắp xếp thứ tự thành công');
-                }
-            })
-        }
-    })
 </script>

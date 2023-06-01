@@ -23,6 +23,7 @@
         "topview": 0,
         "season": 0,
         "SoTap": 8,
+        "episode_count": 0,
         "category": {
             "id": 1,
             "title": "Phim M\u1edbi",
@@ -146,6 +147,7 @@
         "topview": 0,
         "season": 0,
         "SoTap": 1,
+        "episode_count": 0,
         "category": {
             "id": 1,
             "title": "Phim M\u1edbi",
@@ -227,12 +229,13 @@
         "resolution": 4,
         "phude": 0,
         "NgayTao": null,
-        "NgayCapNhat": "2023-06-01 11:10:07",
+        "NgayCapNhat": "2023-06-01 22:16:04",
         "year": "2023",
-        "tags": null,
+        "tags": "Phim The Guardians Of The Galaxy Vol.3, Phim V\u1ec7 Binh D\u1ea3i Ng\u00e2n H\u00e0 3, The Guardians Of The Galaxy Vol.3, The Guardians Of The Galaxy Vol.3 Vietsub, V\u1ec7 Binh D\u1ea3i Ng\u00e2n H\u00e0 3, V\u1ec7 Binh D\u1ea3i Ng\u00e2n H\u00e0 3 Vietsub",
         "topview": 2,
-        "season": 0,
+        "season": 3,
         "SoTap": 1,
+        "episode_count": 2,
         "category": {
             "id": 2,
             "title": "Phim Chi\u1ebfu R\u1ea1p",
@@ -320,6 +323,7 @@
         "topview": 1,
         "season": 0,
         "SoTap": 1,
+        "episode_count": 1,
         "category": {
             "id": 5,
             "title": "Phim L\u1ebb M\u1edbi",
@@ -370,6 +374,7 @@
         "topview": 1,
         "season": 0,
         "SoTap": 1,
+        "episode_count": 0,
         "category": {
             "id": 5,
             "title": "Phim L\u1ebb M\u1edbi",
@@ -420,6 +425,7 @@
         "topview": null,
         "season": 0,
         "SoTap": 1,
+        "episode_count": 0,
         "category": {
             "id": 5,
             "title": "Phim L\u1ebb M\u1edbi",
@@ -470,6 +476,7 @@
         "topview": null,
         "season": 0,
         "SoTap": 1,
+        "episode_count": 0,
         "category": {
             "id": 5,
             "title": "Phim L\u1ebb M\u1edbi",
@@ -520,6 +527,7 @@
         "topview": null,
         "season": 0,
         "SoTap": 1,
+        "episode_count": 0,
         "category": {
             "id": 5,
             "title": "Phim L\u1ebb M\u1edbi",
@@ -568,8 +576,9 @@
         "year": "2023",
         "tags": null,
         "topview": null,
-        "season": 1,
+        "season": 0,
         "SoTap": 16,
+        "episode_count": 5,
         "category": {
             "id": 4,
             "title": "Phim B\u1ed9",
@@ -669,6 +678,7 @@
         "topview": null,
         "season": 0,
         "SoTap": 1,
+        "episode_count": 1,
         "category": {
             "id": 4,
             "title": "Phim B\u1ed9",
@@ -717,8 +727,9 @@
         "year": null,
         "tags": null,
         "topview": null,
-        "season": 1,
+        "season": 0,
         "SoTap": 1,
+        "episode_count": 0,
         "category": {
             "id": 4,
             "title": "Phim B\u1ed9",
@@ -769,6 +780,7 @@
         "topview": null,
         "season": 0,
         "SoTap": 0,
+        "episode_count": 0,
         "category": {
             "id": 4,
             "title": "Phim B\u1ed9",
@@ -819,6 +831,7 @@
         "topview": null,
         "season": 0,
         "SoTap": 1,
+        "episode_count": 0,
         "category": {
             "id": 4,
             "title": "Phim B\u1ed9",

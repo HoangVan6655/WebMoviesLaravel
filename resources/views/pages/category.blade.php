@@ -6,8 +6,14 @@
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-xs-6">
-                        <div class="yoast_breadcrumb hidden-xs"><span><span><a href="">{{$cate_slug->title}}</a> » <span
-                                        class="breadcrumb_last" aria-current="page">2023</span></span></span></div>
+                        <div class="yoast_breadcrumb hidden-xs">
+                            <span>
+                                <span>
+                                    <span class="breadcrumb_last" aria-current="page">Danh Mục Phim / </span>
+                                    <a href="">{{$cate_slug->title}}</a>
+                                </span>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -45,16 +51,11 @@
                                 </span>
                                     @if($cate->resolution != 5)
                                         <span class="episode"><i class="fa fa-play" aria-hidden="true"></i>
+                                        {{ $cate->episode_count }}/{{ $cate->SoTap }} |
                                         @if($cate->phude == 0)
-                                                Phụ Đề - Tập 1/{{ $cate->SoTap }}
-                                                @if($cate->season != 0)
-                                                    - Season {{ $cate->season }}
-                                                @endif
+                                                Phụ Đề
                                             @else
-                                                Thuyết Minh - Tập 1/{{ $cate->SoTap }}
-                                                @if($cate->season != 0)
-                                                    - Season {{ $cate->season }}
-                                                @endif
+                                                Thuyết Minh
                                             @endif
                                     </span>
                                     @endif

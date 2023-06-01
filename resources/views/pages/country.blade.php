@@ -48,16 +48,11 @@
                                     </span>
                                     @if($country->resolution != 5)
                                         <span class="episode"><i class="fa fa-play" aria-hidden="true"></i>
+                                            {{ $country->episode_count }}/{{ $country->SoTap }} |
                                             @if($country->phude == 0)
-                                                Phụ Đề - Tập 1/{{ $country->SoTap }}
-                                                @if($country->season != 0)
-                                                    - Season {{ $country->season }}
-                                                @endif
+                                                Phụ Đề
                                             @else
-                                                Thuyết Minh - Tập 1/{{ $country->SoTap }}
-                                                @if($country->season != 0)
-                                                    - Season {{ $country->season }}
-                                                @endif
+                                                Thuyết Minh
                                             @endif
                                         </span>
                                     @endif

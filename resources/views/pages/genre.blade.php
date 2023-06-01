@@ -49,16 +49,11 @@
                                     @if($genre->resolution != 5)
                                         <span class="episode">
                                             <i class="fa fa-play" aria-hidden="true"></i>
+                                            {{ $genre->episode_count }}/{{ $genre->SoTap }} |
                                             @if($genre->phude == 0)
-                                                Phụ Đề - Tập 1/{{ $genre->SoTap }}
-                                                @if($genre->season != 0)
-                                                    - Season {{ $genre->season }}
-                                                @endif
+                                                Phụ Đề
                                             @else
-                                                Thuyết Minh - Tập 1/{{ $genre->SoTap }}
-                                                @if($genre->season != 0)
-                                                    - Season {{ $genre->season }}
-                                                @endif
+                                                Thuyết Minh
                                             @endif
                                         </span>
                                     @endif

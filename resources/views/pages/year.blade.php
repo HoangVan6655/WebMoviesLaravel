@@ -56,16 +56,11 @@
                                     </span>
                                     @if($cate->resolution != 5)
                                         <span class="episode"><i class="fa fa-play" aria-hidden="true"></i>
+                                        {{ $cate->episode_count }}/{{ $cate->SoTap }} |
                                         @if($cate->phude == 0)
-                                                Phụ Đề - Tập 1/{{ $cate->SoTap }}
-                                                @if($cate->season != 0)
-                                                    - Season {{ $cate->season }}
-                                                @endif
+                                                Phụ Đề
                                             @else
-                                                Thuyết Minh - Tập 1/{{ $cate->SoTap }}
-                                                @if($cate->season != 0)
-                                                    - Season {{ $cate->season }}
-                                                @endif
+                                                Thuyết Minh
                                             @endif
                                         </span>
                                     @endif

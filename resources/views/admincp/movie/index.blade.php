@@ -6,23 +6,24 @@
         <a href="{{ route('movie.create') }}" class="btn btn-light" style="margin-top: 30px">Thêm Mới Phim</a>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-12 container-fluid">
         <div class="max-w-max mx-auto sm:px-6 lg:px-8"
              style="background-color: rgb(17 24 39 / var(--tw-bg-opacity)); color: black">
             <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="text-gray-900 dark:text-gray-100">
-                    <table class="table text-gray-900 dark:text-gray-100" id="tablePhim">
+                    <table class="table table-responsive text-gray-900 dark:text-gray-100" id="tablePhim">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Hình Ảnh Phim abc</th>
+                            <th scope="col">Hình Ảnh Phim</th>
                             <th scope="col">Tên Phim</th>
+                            <th scope="col">Số Tập</th>
+                            <th scope="col">Tập Phim</th>
                             <th scope="col">Định Dạng</th>
                             <th scope="col">Danh Mục Phim</th>
                             <th scope="col">Thuộc Thể Loại Phim</th>
                             <th scope="col">Thể Loại Phim</th>
                             <th scope="col">Phim Hot</th>
-                            <th scope="col">Số Tập</th>
                             <th scope="col">Năm Phim</th>
                             <th scope="col">Mùa Phim</th>
                             <th scope="col">Top Views</th>
@@ -40,10 +41,19 @@
                                 <td><img width="80%" src="{{ asset('uploads/movie/'.$movie->image) }}"></td>
 
                                 {{--Tên Phim--}}
-                                <td>{{$movie->title}}</td>
+                                <td style="width: 10%">{{$movie->title}}</td>
+
+                                {{--Số Tập Phim--}}
+                                <td style="width: 5%">{{$movie->episode_count}}/{{$movie->SoTap}}</td>
+
+                                {{--Tập Phim--}}
+                                <td style="width: 5%">
+                                    <a href="{{ route('add-episode', [$movie->id]) }}" class="btn btn-success btn-sm">Thêm
+                                        Tập Phim</a>
+                                </td>
 
                                 {{--Định Dạng Phim--}}
-                                <td>
+                                <td style="width: 8%">
                                     @if($movie->resolution == 0)
                                         HD
                                     @elseif($movie->resolution == 1)
@@ -60,10 +70,10 @@
                                 </td>
 
                                 {{--Danh Mục Phim--}}
-                                <td>{{$movie->category->title}}</td>
+                                <td style="width: 8%">{{$movie->category->title}}</td>
 
                                 {{--Thuộc Thể Loại Phim--}}
-                                <td>
+                                <td style="width: 8%">
                                     @if($movie->ThuocPhim == 'phimle')
                                         Phim Lẻ
                                     @else
@@ -72,7 +82,7 @@
                                 </td>
 
                                 {{--Thể Loại Phim--}}
-                                <td>
+                                <td style="width: 10%">
                                     @foreach($movie->movie_genre as $gen)
                                         <span class="badge badge-dark"
                                               style="background-color: #5a6870">{{$gen->title}}</span>
@@ -80,7 +90,7 @@
                                 </td>
 
                                 {{--Phim Hot--}}
-                                <td>
+                                <td style="width: 5%">
                                     @if($movie->movie_hot)
                                         Có
                                     @else
@@ -88,13 +98,10 @@
                                     @endif
                                 </td>
 
-                                {{--Số Tập Phim--}}
-                                <td>{{$movie->SoTap}}</td>
-
                                 {{--Năm Phim--}}
                                 <td>
                                     <div class="text-bg-light" style="width: 0px">
-                                        {!! Form::selectYear('year', 2000, 2023, isset($movie->year) ? $movie->year : '', ['class'=>'select-year', 'id'=> $movie->id, 'style'=>'border-radius: 10px']) !!}
+                                        {!! Form::selectYear('year', 2000, 2023, isset($movie->year) ? $movie->year : '', ['class'=>'select-year', 'id'=> $movie->id, 'style'=>'border-radius: 10px; ']) !!}
                                     </div>
                                 </td>
 

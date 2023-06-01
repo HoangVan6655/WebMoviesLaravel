@@ -13,7 +13,7 @@
              style="background-color: rgb(17 24 39 / var(--tw-bg-opacity)); color: black">
             <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="text-gray-900 dark:text-gray-100">
-                    <table class="table text-gray-900 dark:text-gray-100" id="tableQuocGiaPhim">
+                    <table class="table table-responsive text-gray-900 dark:text-gray-100" id="tableQuocGiaPhim">
                         <thead>
                         <tr>
                             <th scope="col">#</th>

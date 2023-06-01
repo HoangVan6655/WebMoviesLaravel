@@ -14,13 +14,15 @@ class IndexController extends Controller
 {
     public function home()
     {
-        $movieHot = Movie::where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->get();
+        $movieHot = Movie::withCount('episode')->where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->get();
         $movieHot_sidebar = Movie::where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
         $trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
         $category = Category::orderBy('position', 'ASC')->where('status', 1)->get();
         $TheLoai = Genre::orderBy('position', 'ASC')->get();
         $QuocGia = Country::orderBy('position', 'ASC')->get();
-        $category_home = Category::with('movie')->orderBy('id', 'ASC')->where('status', 1)->get();
+        $category_home = Category::with(['movie' => function ($q) {
+            $q->withCount('episode');
+        }])->orderBy('id', 'ASC')->where('status', 1)->get();
         return view('pages.home', compact('category', 'TheLoai', 'QuocGia', 'category_home', 'movieHot', 'movieHot_sidebar', 'trailer'));
     }
 
@@ -31,8 +33,8 @@ class IndexController extends Controller
         $QuocGia = Country::orderBy('position', 'ASC')->get();
 
         $cate_slug = Category::where('slug', $slug)->first();
-        $movie = Movie::where('category_id', $cate_slug->id)->orderBy('NgayCapNhat', 'DESC')->paginate(40);
-        $movieHot_sidebar = Movie::where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
+        $movie = Movie::withCount('episode')->where('category_id', $cate_slug->id)->orderBy('NgayCapNhat', 'DESC')->paginate(40);
+        $movieHot_sidebar = Movie::withCount('episode')->where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
         $trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
 
         return view('pages.category', compact('category', 'TheLoai', 'QuocGia', 'cate_slug', 'movie', 'movieHot_sidebar', 'trailer'));
@@ -45,8 +47,8 @@ class IndexController extends Controller
         $QuocGia = Country::orderBy('position', 'ASC')->get();
 
         $year = $year;
-        $movie = Movie::where('year', $year)->orderBy('NgayCapNhat', 'DESC')->paginate(40);
-        $movieHot_sidebar = Movie::where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
+        $movie = Movie::withCount('episode')->where('year', $year)->orderBy('NgayCapNhat', 'DESC')->paginate(40);
+        $movieHot_sidebar = Movie::withCount('episode')->where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
         $trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
 
         return view('pages.year', compact('category', 'TheLoai', 'QuocGia', 'year', 'movie', 'movieHot_sidebar', 'trailer'));
@@ -59,8 +61,8 @@ class IndexController extends Controller
         $QuocGia = Country::orderBy('position', 'ASC')->get();
 
         $tag = $tag;
-        $movie = Movie::where('tags', 'LIKE', '%' . $tag . '%')->orderBy('NgayCapNhat', 'DESC')->paginate(40);
-        $movieHot_sidebar = Movie::where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
+        $movie = Movie::withCount('episode')->where('tags', 'LIKE', '%' . $tag . '%')->orderBy('NgayCapNhat', 'DESC')->paginate(40);
+        $movieHot_sidebar = Movie::withCount('episode')->where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
         $trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
 
         return view('pages.tag', compact('category', 'TheLoai', 'QuocGia', 'tag', 'movie', 'movieHot_sidebar', 'trailer'));
@@ -73,8 +75,8 @@ class IndexController extends Controller
         $QuocGia = Country::orderBy('position', 'ASC')->get();
 
         $country_slug = Country::where('slug', $slug)->first();
-        $movie = Movie::where('country_id', $country_slug->id)->orderBy('NgayCapNhat', 'DESC')->paginate(40);
-        $movieHot_sidebar = Movie::where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
+        $movie = Movie::withCount('episode')->where('country_id', $country_slug->id)->orderBy('NgayCapNhat', 'DESC')->paginate(40);
+        $movieHot_sidebar = Movie::withCount('episode')->where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
         $trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
 
         return view('pages.country', compact('category', 'TheLoai', 'QuocGia', 'country_slug', 'movie', 'movieHot_sidebar', 'trailer'));
@@ -87,16 +89,16 @@ class IndexController extends Controller
         $QuocGia = Country::orderBy('position', 'ASC')->where('status', 1)->get();
 
         $genre_slug = Genre::where('slug', $slug)->first();
-        $movieHot_sidebar = Movie::where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
+        $movieHot_sidebar = Movie::withCount('episode')->where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
         $trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
 
         // nhiều thể loại
         $movie_genre = Movie_Genre::where('genre_id', $genre_slug->id)->get();
         $many_genre = [];
-        foreach($movie_genre as $key => $movi) {
+        foreach ($movie_genre as $key => $movi) {
             $many_genre[] = $movi->movie_id;
         }
-        $movie = Movie::whereIn('id', $many_genre)->orderBy('NgayCapNhat', 'DESC')->paginate(40);
+        $movie = Movie::withCount('episode')->whereIn('id', $many_genre)->orderBy('NgayCapNhat', 'DESC')->paginate(40);
         return view('pages.genre', compact('category', 'TheLoai', 'QuocGia', 'genre_slug', 'movie', 'movieHot_sidebar', 'trailer'));
     }
 
@@ -168,7 +170,7 @@ class IndexController extends Controller
             $TheLoai = Genre::orderBy('position', 'ASC')->get();
             $QuocGia = Country::orderBy('position', 'ASC')->get();
 
-            $movie = Movie::where('title', 'LIKE', '%'.$search.'%')->orderBy('NgayCapNhat', 'DESC')->paginate(40);
+            $movie = Movie::where('title', 'LIKE', '%' . $search . '%')->orderBy('NgayCapNhat', 'DESC')->paginate(40);
             $movieHot_sidebar = Movie::where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
             $trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
 
