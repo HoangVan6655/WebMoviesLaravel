@@ -23,7 +23,8 @@
                     </div>
 
                     <div style="display: flex; margin-bottom: 10pt; ">
-                        {!! Form::select('movie_id', ['0'=>'Chọn Phim', 'Phim'=>$list_movie], isset($episode) ? $episode->movie_id : '', ['class'=>'form-control select-movie']) !!}
+                        {!! Form::select('movie_id', ['0'=>'Chọn Phim', 'Phim'=>$list_movie],
+                            isset($episode) ? $episode->movie_id : '', ['class'=>'form-control select-movie']) !!}
                     </div>
 
                     {{--Link Tập Phim--}}

@@ -19,26 +19,29 @@
                             <th scope="col">Tên Phim</th>
                             <th scope="col">Định Dạng</th>
                             <th scope="col">Danh Mục Phim</th>
+                            <th scope="col">Thuộc Thể Loại Phim</th>
                             <th scope="col">Thể Loại Phim</th>
-                            <th scope="col">Quốc Gia Phim</th>
                             <th scope="col">Phim Hot</th>
                             <th scope="col">Số Tập</th>
                             <th scope="col">Năm Phim</th>
                             <th scope="col">Mùa Phim</th>
                             <th scope="col">Top Views</th>
-
                             <th scope="col">Quản Lý</th>
                         </tr>
                         </thead>
+
                         <tbody>
                         @foreach($list as $key => $movie)
                             <tr>
                                 {{--STT--}}
                                 <th scope="row">{{$key}}</th>
+
                                 {{--Hình Ảnh--}}
                                 <td><img width="80%" src="{{ asset('uploads/movie/'.$movie->image) }}"></td>
+
                                 {{--Tên Phim--}}
                                 <td>{{$movie->title}}</td>
+
                                 {{--Định Dạng Phim--}}
                                 <td>
                                     @if($movie->resolution == 0)
@@ -55,16 +58,27 @@
                                         Trailer
                                     @endif
                                 </td>
+
                                 {{--Danh Mục Phim--}}
                                 <td>{{$movie->category->title}}</td>
+
+                                {{--Thuộc Thể Loại Phim--}}
+                                <td>
+                                    @if($movie->ThuocPhim == 'phimle')
+                                        Phim Lẻ
+                                    @else
+                                        Phim Bộ
+                                    @endif
+                                </td>
+
                                 {{--Thể Loại Phim--}}
                                 <td>
                                     @foreach($movie->movie_genre as $gen)
-                                        <span class="badge badge-dark" style="background-color: #5a6870">{{$gen->title}}</span>
+                                        <span class="badge badge-dark"
+                                              style="background-color: #5a6870">{{$gen->title}}</span>
                                     @endforeach
                                 </td>
-                                {{--Quốc Gia Phim--}}
-                                <td>{{$movie->country->title}}</td>
+
                                 {{--Phim Hot--}}
                                 <td>
                                     @if($movie->movie_hot)
@@ -73,26 +87,31 @@
                                         Không
                                     @endif
                                 </td>
+
                                 {{--Số Tập Phim--}}
                                 <td>{{$movie->SoTap}}</td>
+
                                 {{--Năm Phim--}}
                                 <td>
                                     <div class="text-bg-light" style="width: 0px">
                                         {!! Form::selectYear('year', 2000, 2023, isset($movie->year) ? $movie->year : '', ['class'=>'select-year', 'id'=> $movie->id, 'style'=>'border-radius: 10px']) !!}
                                     </div>
                                 </td>
+
                                 {{--Mùa Phim--}}
                                 <td>
                                     <div class="text-bg-light" style="width: 0px">
                                         {!! Form::selectRange('season', 0, 20, isset($movie->season) ? $movie->season : '', ['class'=>'select-season', 'id'=> $movie->id, 'style'=>'border-radius: 10px']) !!}
                                     </div>
                                 </td>
+
                                 {{--Top Phim--}}
                                 <td>
                                     <div class="text-bg-light" style="width: 0px">
                                         {!! Form::select('topview', ['0'=>'Ngày', '1'=>'Tuần', '2'=>'Tháng'], isset($movie) ? $movie->topview : '', ['class'=>'select-topview', 'id'=>$movie->id, 'style'=>'border-radius: 10px']) !!}
                                     </div>
                                 </td>
+
                                 {{--Quản Lý Phim--}}
                                 <td>
                                     <button id="deleteBtn" type="button" class="btn btn-danger"

@@ -8,11 +8,10 @@
                     <div class="col-xs-6">
                         <div class="yoast_breadcrumb hidden-xs">
                             <span>
-                                <span>Phim Thuộc Năm »
-                                    @for($year_bread=2000; $year_bread<=2023; $year_bread++)
-                                        <span class="breadcrumb_last" aria-current="page"><a
-                                                href="{{ url('nam',$year_bread) }}">{{ $year_bread }}</a></span> »
-                                    @endfor
+                                <span>Phim Thuộc Năm /
+                                        <span class="breadcrumb_last" aria-current="page">
+                                            <a href="{{ url('nam',$year) }}">{{ $year }}</a>
+                                        </span>
                                 </span>
                             </span>
                         </div>
@@ -26,16 +25,20 @@
         <main id="main-contents" class="col-xs-12 col-sm-12 col-md-8">
             <section>
                 <div class="section-bar clearfix">
-                    <h1 class="section-title"><span>Năm : {{$year}}</span></h1>
+                    <h1 class="section-title">
+                        <span>Năm : {{$year}}</span>
+                    </h1>
                 </div>
                 <div class="halim_box">
                     @foreach($movie as $key => $cate)
                         <article class="col-md-3 col-sm-3 col-xs-6 thumb grid-item post-27021">
                             <div class="halim-item">
                                 <a class="halim-thumb" href="{{ route('movie',$cate->slug) }}" title="{{$cate->title}}">
-                                    <figure><img class="lazy img-responsive"
-                                                 src="{{asset('uploads/movie/'.$cate->image)}}" alt="{{$cate->title}}"
-                                                 title="{{$cate->title}}"></figure>
+                                    <figure>
+                                        <img class="lazy img-responsive"
+                                             src="{{asset('uploads/movie/'.$cate->image)}}" alt="{{$cate->title}}"
+                                             title="{{$cate->title}}">
+                                    </figure>
                                     <span class="status">
                                         @if($cate->resolution == 0)
                                             HD

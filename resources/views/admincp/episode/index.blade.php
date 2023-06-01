@@ -27,9 +27,15 @@
                             <tr>
                                 <th scope="row">{{$key}}</th>
                                 <td>{{$episode->movie->title}}</td>
-                                <td><img width="80%" src="{{ asset('uploads/movie/'.$episode->movie->image) }}"></td>
+                                <td><img width="50%" src="{{ asset('uploads/movie/'.$episode->movie->image) }}"></td>
                                 <td>{{$episode->episode}}</td>
-                                <td>{!! $episode->linkphim !!}</td>
+                                <style type="text/css">
+                                    .iframe_phim iframe {
+                                        width: 60%;
+                                        height: 200px;
+                                    }
+                                </style>
+                                <td class="iframe_phim">{!! $episode->linkphim !!}</td>
                                 <td>
                                     <button id="submitBtn" type="button" class="btn btn-danger" onclick="showModal()">
                                         Xoá

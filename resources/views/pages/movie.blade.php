@@ -5,15 +5,15 @@
         <div class="halim-panel-filter">
             <div class="panel-heading">
                 <div class="row">
-                    <div class="col-xs-6">
+                    <div class="col-xs-12">
                         <div class="yoast_breadcrumb hidden-xs">
                             <span>
                                 <span>
-                                    <a href="{{route('category',[$movie->category->slug])}}">{{$movie->category->title}}</a> »
+                                    <a href="{{route('category',[$movie->category->slug])}}">{{$movie->category->title}}</a> /
                                     <span>
-                                        <a href="{{route('country',[$movie->country->slug])}}">{{$movie->country->title}}</a> »
+                                        <a href="{{route('country',[$movie->country->slug])}}">{{$movie->country->title}}</a> /
                                         @foreach($movie->movie_genre as $gen)
-                                            <a href="{{route('genre',[$gen->slug])}}">{{$gen->title}}</a> »
+                                            <a href="{{route('genre',[$gen->slug])}}">{{$gen->title}}</a> /
                                         @endforeach
                                         <span class="breadcrumb_last" aria-current="page">{{$movie->title}}</span>
                                     </span>
@@ -33,20 +33,20 @@
                 <div class="clearfix wrap-content">
 
                     <div class="halim-movie-wrapper">
-                        <div class="title-block">
-                            <div id="bookmark" class="bookmark-img-animation primary_ribbon" data-id="38424">
-                                <div class="halim-pulse-ring"></div>
-                            </div>
-                            <div class="title-wrapper" style="font-weight: bold;">
-                                Bookmark
-                            </div>
-                        </div>
+                        {{--                        <div class="title-block">--}}
+                        {{--                            <div id="bookmark" class="bookmark-img-animation primary_ribbon" data-id="38424">--}}
+                        {{--                                <div class="halim-pulse-ring"></div>--}}
+                        {{--                            </div>--}}
+                        {{--                            <div class="title-wrapper" style="font-weight: bold;">--}}
+                        {{--                                Bookmark--}}
+                        {{--                            </div>--}}
+                        {{--                        </div>--}}
 
                         <div class="movie_info col-xs-12">
                             <div class="movie-poster col-md-3">
                                 <img class="movie-thumb" src="{{asset('uploads/movie/'.$movie->image)}}"
                                      alt="{{$movie->title}}">
-                                @if($movie->resolution != 5)
+                                @if($episode_current_list_count>0)
                                     <div class="bwa-content">
                                         <div class="loader"></div>
                                         <a href="{{url('xem-phim/'.$movie->slug.'/tap-'.$episode_tapdau->episode)}}"
@@ -54,9 +54,6 @@
                                             <i class="fa fa-play"></i>
                                         </a>
                                     </div>
-                                @else
-                                    <a href="#watch_trailer" class="watch_trailer btn btn-primary"
-                                       style="display: block">Xem Trailer</a>
                                 @endif
                             </div>
 
@@ -64,10 +61,12 @@
                                 <h1 class="movie-title title-1"
                                     style="display:block;line-height:35px;margin-bottom: -14px;color: #ffed4d;text-transform: uppercase;font-size: 18px;">{{$movie->title}}</h1>
                                 <h2 class="movie-title title-2" style="font-size: 12px;">{{$movie->name_original}}</h2>
-                                <ul class="list-info-group">
-                                    <li class="list-info-group-item"><span>Trạng Thái</span> :
+                                <ul class="list-info-group" style="overflow-y: scroll; max-height: 258px;">
+                                    {{--Chất Lượng Phim--}}
+                                    <li class="list-info-group-item">
+                                        <span>Chất Lượng Phim</span> :
                                         <span class="quality">
-                                            @if($movie->resolution == 0)
+                                                @if($movie->resolution == 0)
                                                 HD
                                             @elseif($movie->resolution == 1)
                                                 SD
@@ -81,53 +80,121 @@
                                                 Trailer
                                             @endif
                                         </span>
+                                    </li>
 
+                                    {{--Phụ Đề Phim--}}
+                                    <li class="list-info-group-item">
+                                        <span>Phụ Đề Phim</span> :
                                         @if($movie->resolution != 5)
                                             <span class="episode">
-                                                @if($movie->phude == 0)
+                                                    @if($movie->phude == 0)
                                                     Phụ Đề
                                                 @else
                                                     Thuyết Minh
                                                 @endif
-                                            </span>
+                                                </span>
                                         @endif
                                     </li>
 
+                                    {{--Thời Lượng Phim--}}
                                     <li class="list-info-group-item">
-                                        <span>Thời lượng</span> : {{$movie->ThoiLuong}}
+                                        <span>Thời Lượng Phim</span> : {{$movie->ThoiLuong}}
                                     </li>
-                                    <li class="list-info-group-item">
-                                        <span>Số Tập</span> : {{$movie->SoTap}}/{{$movie->SoTap}} - Hoàn Thành
-                                    </li>
-                                    @if($movie->season != 0)
-                                        <li class="list-info-group-item"><span>Season</span> : {{$movie->season}}</li>
+
+                                    {{--Nếu Thuộc Phim Bộ thì hiện tổng số tập--}}
+                                    @if($movie->ThuocPhim == 'phimbo')
+                                        <li class="list-info-group-item">
+                                            <span>Số Tập Phim</span> : {{$episode_current_list_count}}/{{$movie->SoTap}}
+                                            -
+                                            @if($episode_current_list_count == $movie->SoTap)
+                                                Hoàn Thành
+                                            @else
+                                                Đang Cập Nhật
+                                            @endif
+                                        </li>
+                                    @else
+                                        <li class="list-info-group-item">
+                                            <span>Thuộc Loại Phim</span> : Phim Lẻ
+                                        </li>
                                     @endif
 
-                                    <li class="list-info-group-item"><span>Thể loại</span> :
+                                    {{--Season Phim--}}
+                                    @if($movie->season != 0)
+                                        <li class="list-info-group-item"><span>Season Phim</span> : {{$movie->season}}
+                                        </li>
+                                    @endif
+
+                                    {{--Thể Loại Phim--}}
+                                    <li class="list-info-group-item"><span>Thể Loại Phim</span> :
                                         @foreach($movie->movie_genre as $gen)
                                             <a href="{{route('genre',$gen->slug)}}"
                                                rel="category tag">{{$gen->title}}</a>
                                         @endforeach
                                     </li>
-                                    <li class="list-info-group-item"><span>Danh mục</span> :
+
+                                    {{--Danh Mục Phim--}}
+                                    <li class="list-info-group-item"><span>Danh Mục Phim</span> :
                                         <a href="{{route('category',$movie->category->slug)}}"
                                            rel="category tag">{{$movie->category->title}}</a>
                                     </li>
-                                    <li class="list-info-group-item"><span>Quốc gia</span> :
+
+                                    {{--Quốc Gia Phim--}}
+                                    <li class="list-info-group-item"><span>Quốc Gia Phim</span> :
                                         <a href="{{route('country',$movie->country->slug)}}"
                                            rel="tag">{{$movie->country->title}}</a>
                                     </li>
-                                    <li class="list-info-group-item"><span>Tập phim mới nhất</span> :
-                                        @foreach($episode as $key => $ep)
-                                            <a href="{{url('xem-phim/'.$ep->movie->slug.'/tap-'.$ep->episode)}}"
-                                               rel="tag">Tập {{$ep->episode}}</a>
-                                        @endforeach
+
+                                    {{--Năm Phim--}}
+                                    <li class="list-info-group-item"><span>Năm Phim</span> :
+                                        <a href="{{url('nam',$movie->year)}}"
+                                           rel="tag">{{$movie->year}}</a>
                                     </li>
 
+                                    {{--Nếu thuộc phim bộ thì hiện tập phim mới nhất--}}
+                                    @if($episode_current_list_count>0)
+                                        @if($movie->ThuocPhim == 'phimbo')
+                                            <li class="list-info-group-item"><span>Tập Phim Mới Nhất</span> :
+                                                @foreach($episode as $key => $ep)
+                                                    <a href="{{url('xem-phim/'.$ep->movie->slug.'/tap-'.$ep->episode)}}"
+                                                       rel="tag">Tập {{$ep->episode}}</a>
+                                                @endforeach
+                                            </li>
+                                        @elseif ($movie->ThuocPhim == 'phimle')
+                                            <li class="list-info-group-item"><span>Link Phim</span> :
+                                                <a href=""
+                                                   rel="tag">HD</a>
+                                                <a href=""
+                                                   rel="tag">FullHD</a>
+                                            </li>
+                                        @endif
+                                    @else
+                                        <li class="list-info-group-item"><span>Tập Phim : Đang Cập Nhật</span>
+                                    @endif
                                 </ul>
                                 <div class="movie-trailer hidden"></div>
                             </div>
                         </div>
+
+                        <div class="movie-poster col-md-12">
+                            @if($movie->resolution != 5)
+                                @if($episode_current_list_count>0)
+                                    <div class="btn-group">
+                                        <a href="{{url('xem-phim/'.$movie->slug.'/tap-'.$episode_tapdau->episode)}}"
+                                           class="bwac-btn btn btn-danger"
+                                           style="display: block; margin-left: 10px; margin-right: 5px">Xem Phim</a>
+                                        <a href="#watch_trailer"
+                                           class="watch_trailer btn btn-primary"
+                                           style="display: block">Xem Trailer</a>
+                                    </div>
+                                @endif
+                            @else
+                                <div class="btn-group">
+                                    <a href="#watch_trailer" class="watch_trailer btn btn-primary"
+                                       style="display: block; margin-left: 60px">Xem Trailer</a>
+                                </div>
+                            @endif
+                        </div>
+
                     </div>
 
                     <div class="clearfix"></div>

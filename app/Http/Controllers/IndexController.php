@@ -109,9 +109,17 @@ class IndexController extends Controller
         $related = Movie::with('category', 'genre', 'country')->where('category_id', $movie->category->id)->orderBy(DB::raw('RAND()'))->whereNotIn('slug', [$slug])->get();
         $movieHot_sidebar = Movie::where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
         $trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
+        //lấy 3 tập gần nhất
         $episode = Episode::with('movie')->where('movie_id', $movie->id)->orderBy('episode', 'DESC')->take(3)->get();
+
         $episode_tapdau = Episode::with('movie')->where('movie_id', $movie->id)->orderBy('episode', 'ASC')->take(1)->first();
-        return view('pages.movie', compact('category', 'TheLoai', 'QuocGia', 'movie', 'related', 'movieHot_sidebar', 'trailer', 'episode', 'episode_tapdau'));
+
+        //lấy tổng tập phim đã thêm
+        $episode_current_list = Episode::with('movie')->where('movie_id', $movie->id)->get();
+        $episode_current_list_count = $episode_current_list->count();
+
+        return view('pages.movie',
+            compact('category', 'TheLoai', 'QuocGia', 'movie', 'related', 'movieHot_sidebar', 'trailer', 'episode', 'episode_tapdau', 'episode_current_list_count'));
     }
 
     public function watch($slug, $tap)
@@ -143,7 +151,7 @@ class IndexController extends Controller
         $category = Category::orderBy('position', 'ASC')->where('status', 1)->get();
         $TheLoai = Genre::orderBy('position', 'ASC')->where('status', 1)->get();
         $QuocGia = Country::orderBy('position', 'ASC')->where('status', 1)->get();
-        $movie = Movie::with('category', 'genre', 'country', 'movie_genre')->where('slug', $slug)->where('status', 1)->first();
+        $movie = Movie::with('category', 'genre', 'country', 'movie_genre')->where('status', 1)->first();
         $related = Movie::with('category', 'genre', 'country')->where('category_id', $movie->category->id)->orderBy(DB::raw('RAND()'))->whereNotIn('slug', [$slug])->get();
         $movieHot_sidebar = Movie::where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
         $trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();

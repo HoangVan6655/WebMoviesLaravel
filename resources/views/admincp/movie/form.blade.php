@@ -32,31 +32,31 @@
                         {!! Form::text('name_original', isset($movie) ? $movie->name_original : '', ['class' => 'form-control', 'placeholder' => 'Nhập vào tên phim gốc...', 'style' => 'width: 100%; color: black', 'id' => 'slug', 'onkeyup'=>'ChangeToSlug()']) !!}
                     </div>
 
-                        {{--Thoi Luong--}}
-                        <div style="margin-bottom: 10pt">
-                            {!! Form::label('ThoiLuong', 'Thời Lượng Phim ', []) !!}
-                        </div>
-                        <div style="display: flex; margin-bottom: 10pt">
-                            {!! Form::text('ThoiLuong', isset($movie) ? $movie->ThoiLuong : '', ['class' => 'form-control', 'placeholder' => 'Nhập vào thời lượng phim...', 'style' => 'width: 100%; color: black']) !!}
-                        </div>
+                    {{--Thoi Luong--}}
+                    <div style="margin-bottom: 10pt">
+                        {!! Form::label('ThoiLuong', 'Thời Lượng Phim ', []) !!}
+                    </div>
+                    <div style="display: flex; margin-bottom: 10pt">
+                        {!! Form::text('ThoiLuong', isset($movie) ? $movie->ThoiLuong : '', ['class' => 'form-control', 'placeholder' => 'Nhập vào thời lượng phim...', 'style' => 'width: 100%; color: black']) !!}
+                    </div>
 
-                        {{--So Tap Phim--}}
-                        <div style="margin-bottom: 10pt">
-                            {!! Form::label('SoTap', 'Số Tập Phim ', []) !!}
-                        </div>
-                        <div style="display: flex; margin-bottom: 10pt">
-                            {!! Form::text('SoTap', isset($movie) ? $movie->SoTap : '', ['class' => 'form-control', 'placeholder' => 'Nhập vào số tập phim...', 'style' => 'width: 100%; color: black']) !!}
-                        </div>
+                    {{--So Tap Phim--}}
+                    <div style="margin-bottom: 10pt">
+                        {!! Form::label('SoTap', 'Số Tập Phim ', []) !!}
+                    </div>
+                    <div style="display: flex; margin-bottom: 10pt">
+                        {!! Form::text('SoTap', isset($movie) ? $movie->SoTap : '', ['class' => 'form-control', 'placeholder' => 'Nhập vào số tập phim...', 'style' => 'width: 100%; color: black']) !!}
+                    </div>
 
-                        {{--Slug--}}
-                        <div style="margin-bottom: 10pt">
-                            {!! Form::label('slug', 'Slug ', []) !!}
-                        </div>
-                        <div style="display: flex; margin-bottom: 10pt">
-                            {!! Form::text('slug', isset($movie) ? $movie->slug : '', ['class' => 'form-control', 'placeholder' => 'Slug tên phim...', 'style' => 'width: 100%; color: black', 'id' => 'convert_slug']) !!}
-                        </div>
+                    {{--Slug--}}
+                    <div style="margin-bottom: 10pt">
+                        {!! Form::label('slug', 'Đường Dẫn Phim ', []) !!}
+                    </div>
+                    <div style="display: flex; margin-bottom: 10pt">
+                        {!! Form::text('slug', isset($movie) ? $movie->slug : '', ['class' => 'form-control', 'placeholder' => 'Slug tên phim...', 'style' => 'width: 100%; color: black', 'id' => 'convert_slug']) !!}
+                    </div>
 
-                        {{--Trailer--}}
+                    {{--Trailer--}}
                     <div style="margin-bottom: 10pt">
                         {!! Form::label('trailer', 'Trailer Phim ', []) !!}
                     </div>
@@ -82,29 +82,26 @@
 
                     {{--Category--}}
                     <div style="margin-bottom: 10pt;">
-                        {!! Form::label('Category', 'Tên Danh Mục Phim ', []) !!}
+                        {!! Form::label('Category', 'Danh Mục Phim ', []) !!}
                     </div>
 
                     <div style="display: flex; margin-bottom: 10pt; ">
                         {!! Form::select('category_id', $category, isset($movie) ? $movie->category_id : '', ['class'=>'form-control']) !!}
                     </div>
 
-                    {{--Genre--}}
+                    {{--Thuoc The Loai Phim--}}
                     <div style="margin-bottom: 10pt;">
-                        {!! Form::label('Genre', 'Tên Loại Phim', []) !!}
+                        {!! Form::label('ThuocPhim', 'Thuộc Thể Loại Phim ', []) !!}
                     </div>
 
-                    {{--                    <div style="display: flex; margin-bottom: 10pt; ">--}}
-                    {{--                        {!! Form::select('genre_id', $genre, isset($movie) ? $movie->genre_id : '', ['class'=>'form-control']) !!}--}}
-                    {{--                    </div>--}}
-                    {{--                    <div style="margin-bottom: 10pt; ">--}}
-                    {{--                        @foreach($list_genre as $key => $gen)--}}
-                    {{--                            <div style="display: block;">--}}
-                    {{--                                {!! Form::checkbox('genre[]', $gen->id) !!}--}}
-                    {{--                                {!! Form::label('genre', $gen->title) !!}--}}
-                    {{--                            </div>--}}
-                    {{--                        @endforeach--}}
-                    {{--                    </div>--}}
+                    <div style="display: flex; margin-bottom: 10pt; ">
+                        {!! Form::select('ThuocPhim', ['phimle'=>'Phim Lẻ', 'phimbo'=>'Phim Bộ'], isset($movie) ? $movie->ThuocPhim : '', ['class'=>'form-control']) !!}
+                    </div>
+
+                    {{--Genre--}}
+                    <div style="margin-bottom: 10pt;">
+                        {!! Form::label('Genre', 'Thể Loại Phim', []) !!}
+                    </div>
 
                     <div class="row" style="margin-bottom: 10pt;">
                         <div class="col-md-4">
@@ -147,7 +144,7 @@
 
                     {{--Country--}}
                     <div style="margin-bottom: 10pt;">
-                        {!! Form::label('Country', 'Tên Quốc Gia Phim ', []) !!}
+                        {!! Form::label('Country', 'Quốc Gia Phim ', []) !!}
                     </div>
 
                     <div style="display: flex; margin-bottom: 10pt; ">

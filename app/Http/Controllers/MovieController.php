@@ -166,6 +166,7 @@ class MovieController extends Controller
         $movie->tags = $data['tags'];
         $movie->description = $data['description'];
         $movie->category_id = $data['category_id'];
+        $movie->ThuocPhim = $data['ThuocPhim'];
         $movie->country_id = $data['country_id'];
         $movie->status = $data['status'];
         $movie->movie_hot = $data['movie_hot'];
@@ -235,6 +236,7 @@ class MovieController extends Controller
         $movie->tags = $data['tags'];
         $movie->description = $data['description'];
         $movie->category_id = $data['category_id'];
+        $movie->ThuocPhim = $data['ThuocPhim'];
         $movie->country_id = $data['country_id'];
         $movie->status = $data['status'];
         $movie->movie_hot = $data['movie_hot'];
