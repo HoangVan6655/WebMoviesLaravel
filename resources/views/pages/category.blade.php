@@ -26,6 +26,62 @@
                 <div class="section-bar clearfix">
                     <h1 class="section-title"><span>{{$cate_slug->title}}</span></h1>
                 </div>
+
+                <div class="section-bar clearfix">
+                    <div class="row">
+                        <form action="{{ route('locphim') }}" method="GET">
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <select class="form-control" name="order" id="exampleFormControlSelect1">
+                                        <option>-- Sắp Xếp --</option>
+                                        <option value="date">Ngày Đăng</option>
+                                        <option value="year_release">Năm Sản Xuất</option>
+                                        <option value="name_a_z">Tên Phim</option>
+                                        <option value="watch_views">Lượt Xem</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <select class="form-control" name="genre" id="exampleFormControlSelect1">
+                                        <option>-- Thể Loại --</option>
+                                        @foreach($TheLoai as $key => $gen_filter)
+                                            <option value="{{ $gen_filter->id }}">{{ $gen_filter->title }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <select class="form-control" name="country" id="exampleFormControlSelect1">
+                                        <option>-- Quốc Gia --</option>
+                                        @foreach($QuocGia as $key => $country_filter)
+                                            <option
+                                                value="{{ $country_filter->id }}">{{ $country_filter->title }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    {{--                                    <select class="form-control" id="exampleFormControlSelect1">--}}
+                                    {{--                                        <option>-- Năm --</option>--}}
+                                    {{--                                        @for($year=2000; $year<=2023;$year++)--}}
+                                    {{--                                            <option value="{{ $year }}">{{ $year }}</option>--}}
+                                    {{--                                        @endfor--}}
+                                    {{--                                    </select>--}}
+                                    {!! Form::selectYear('year', 2000, 2022, null, ['class'=>'form-control']) !!}
+                                </div>
+                            </div>
+
+                            <input type="submit" class="btn btn-sm btn-default" value="Lọc Phim">
+                        </form>
+                    </div>
+                </div>
+
                 <div class="halim_box">
                     @foreach($movie as $key => $cate)
                         <article class="col-md-3 col-sm-3 col-xs-6 thumb grid-item post-27021">

@@ -179,4 +179,9 @@ class IndexController extends Controller
             return redirect()->to('/');
         }
     }
+
+    public function filter()
+    {
+
+    }
 }
