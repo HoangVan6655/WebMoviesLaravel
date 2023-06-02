@@ -101,14 +101,14 @@
                                 {{--Năm Phim--}}
                                 <td>
                                     <div class="text-bg-light" style="width: 0px">
-                                        {!! Form::selectYear('year', 2000, 2023, isset($movie->year) ? $movie->year : '', ['class'=>'select-year', 'id'=> $movie->id, 'style'=>'border-radius: 10px; ']) !!}
+                                        {!! Form::selectYear('year', 2000, 2023, isset($movie->year) ? $movie->year : '', ['class'=>'select-year', 'id'=> $movie->id, 'style'=>'border-radius: 10px;', 'placeholder'=>'Năm']) !!}
                                     </div>
                                 </td>
 
                                 {{--Mùa Phim--}}
                                 <td>
                                     <div class="text-bg-light" style="width: 0px">
-                                        {!! Form::selectRange('season', 0, 20, isset($movie->season) ? $movie->season : '', ['class'=>'select-season', 'id'=> $movie->id, 'style'=>'border-radius: 10px']) !!}
+                                        {!! Form::selectRange('season', 0, 20, isset($movie->season) ? $movie->season : '', ['class'=>'select-season', 'id'=> $movie->id, 'style'=>'border-radius: 10px', 'placeholder'=>'Views']) !!}
                                     </div>
                                 </td>
 

@@ -11,6 +11,7 @@
             <div class="section-bar clearfix">
                 <h3 class="section-title"><span>PHIM HOT</span></h3>
             </div>
+
             <div id="halim_related_movies-2" class="owl-carousel owl-theme related-film">
                 @foreach($movieHot as $key => $hot)
                     <article class="thumb grid-item post-38498">

@@ -22,6 +22,9 @@
                 <div class="section-bar clearfix">
                     <h1 class="section-title"><span>{{$country_slug->title}}</span></h1>
                 </div>
+
+                @include('pages.include.filter')
+
                 <div class="halim_box">
                     @foreach($movie as $key => $country)
                         <article class="col-md-3 col-sm-3 col-xs-6 thumb grid-item post-27021">

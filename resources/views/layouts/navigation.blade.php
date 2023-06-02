@@ -16,23 +16,23 @@
                         {{ __('Home Page Admin') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('category.create')">
+                    <x-nav-link :href="route('category.index')">
                         {{ __('Danh Mục Phim') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('genre.create')">
+                    <x-nav-link :href="route('genre.index')">
                         {{ __('Thể Loại') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('country.create')">
+                    <x-nav-link :href="route('country.index')">
                         {{ __('Quốc Gia') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('movie.create')">
+                    <x-nav-link :href="route('movie.index')">
                         {{ __('Phim') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('episode.create')">
+                    <x-nav-link :href="route('episode.index')">
                         {{ __('Tập Phim') }}
                     </x-nav-link>
                 </div>

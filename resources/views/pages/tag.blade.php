@@ -21,6 +21,9 @@
                 <div class="section-bar clearfix">
                     <h1 class="section-title"><span>Tag: {{ $tag }}</span></h1>
                 </div>
+
+                @include('pages.include.filter')
+
                 <div class="halim_box">
                     @foreach($movie as $key => $cate)
                         <article class="col-md-3 col-sm-3 col-xs-6 thumb grid-item post-27021">
