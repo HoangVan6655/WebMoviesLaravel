@@ -170,7 +170,7 @@ class IndexController extends Controller
             $TheLoai = Genre::orderBy('position', 'ASC')->get();
             $QuocGia = Country::orderBy('position', 'ASC')->get();
 
-            $movie = Movie::where('title', 'LIKE', '%' . $search . '%')->orderBy('NgayCapNhat', 'DESC')->paginate(40);
+            $movie = Movie::withCount('episode')->where('title', 'LIKE', '%' . $search . '%')->orderBy('NgayCapNhat', 'DESC')->paginate(40);
             $movieHot_sidebar = Movie::where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
             $trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
 
@@ -182,6 +182,37 @@ class IndexController extends Controller
 
     public function filter()
     {
+        //get
+        $sapxep = $_GET['order'];
+        $genre_get = $_GET['genre'];
+        $country_get = $_GET['country'];
+        $year_get = $_GET['year'];
 
+        if ($sapxep == '' && $genre_get == '' && $country_get == '' && $year_get == '') {
+            return redirect()->back();
+        } else {
+            $category = Category::orderBy('position', 'ASC')->where('status', 1)->get();
+            $TheLoai = Genre::orderBy('position', 'ASC')->where('status', 1)->get();
+            $QuocGia = Country::orderBy('position', 'ASC')->where('status', 1)->get();
+            $movieHot_sidebar = Movie::withCount('episode')->where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'ASC')->take('30')->get();
+            $trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('NgayCapNhat', 'ASC')->take('10')->get();
+
+            // lấy dữ liệu
+            $movie = Movie::withCount('episode');
+            if ($genre_get) {
+                $movie = $movie->where('genre_id', $genre_get);
+            } else if ($country_get) {
+                $movie = $movie->where('country_id', $country_get);
+            } else if ($year_get) {
+                $movie = $movie->where('year', $year_get);
+            } else if ($order) {
+                $movie = $movie->orderBy('title', 'ASC');
+            }
+            $movie = $movie->orderBy('NgayCapNhat', 'ASC')->paginate(40);
+
+            return view('pages.filter',
+                compact('category', 'TheLoai', 'QuocGia', 'movie', 'movieHot_sidebar', 'trailer'));
+
+        }
     }
 }

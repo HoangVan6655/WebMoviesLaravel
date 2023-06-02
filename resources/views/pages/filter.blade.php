@@ -9,8 +9,8 @@
                         <div class="yoast_breadcrumb hidden-xs">
                             <span>
                                 <span>
-                                    <span class="breadcrumb_last" aria-current="page">Danh Mục Phim / </span>
-                                    <a href="">{{$cate_slug->title}}</a>
+                                    <span class="breadcrumb_last" aria-current="page"></span>
+                                    <a href="">Lọc Phim</a>
                                 </span>
                             </span>
                         </div>
@@ -24,7 +24,9 @@
         <main id="main-contents" class="col-xs-12 col-sm-12 col-md-8">
             <section>
                 <div class="section-bar clearfix">
-                    <h1 class="section-title"><span>{{$cate_slug->title}}</span></h1>
+                    <h1 class="section-title">
+                        <span>Lọc Phim</span>
+                    </h1>
                 </div>
 
                 <div class="section-bar clearfix">
