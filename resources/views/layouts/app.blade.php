@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Admin Movies') }}</title>
+    <title>{{ config('Admin Movies', 'Admin Movies') }}</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -37,9 +37,9 @@
         {{ $slot }}
     </main>
 </div>
+
 {{--Script chuyển title sang slug--}}
 <script type="text/javascript">
-
     function ChangeToSlug() {
         var slug;
         //Lấy text từ thẻ input title
@@ -89,8 +89,36 @@
 {{--Script Data Table--}}
 <script type='text/javascript' src='{{ asset ('js/jquery.dataTables.min.js') }}'></script>
 
-{{--Script Update Năm--}}
 <script type="text/javascript">
+    {{--Script select category ajax--}}
+    $('.category_choose').change(function () {
+        var category_id = $(this).val();
+        var movie_id = $(this).attr('id');
+        $.ajax({
+            url: "{{ route('category-choose') }}",
+            method: "GET",
+            data: {category_id: category_id, movie_id: movie_id},
+            success: function (data) {
+                alert('Thay đổi thành công.');
+            }
+        });
+    })
+
+    {{--Script select country ajax--}}
+    $('.country_choose').change(function () {
+        var country_id = $(this).val();
+        var movie_id = $(this).attr('id');
+        $.ajax({
+            url: "{{ route('country-choose') }}",
+            method: "GET",
+            data: {country_id: country_id, movie_id: movie_id},
+            success: function (data) {
+                alert('Thay đổi thành công.');
+            }
+        });
+    })
+
+    {{--Script select year ajax--}}
     $('.select-year').change(function () {
         var year = $(this).find(':selected').val();
         var id_phim = $(this).attr('id');
@@ -103,10 +131,8 @@
             }
         });
     })
-</script>
 
-{{--Script Update Season--}}
-<script type="text/javascript">
+    {{--Script Update Season ajax--}}
     $('.select-season').change(function () {
         var season = $(this).find(':selected').val();
         var id_phim = $(this).attr('id');
@@ -119,10 +145,8 @@
             }
         });
     })
-</script>
 
-{{--Script Update View theo ngày-tháng-năm--}}
-<script type="text/javascript">
+    {{--Script Update View theo ngày-tháng-năm ajax--}}
     $('.select-topview').change(function () {
         var topview = $(this).find(':selected').val();
         var id_phim = $(this).attr('id');
@@ -142,10 +166,8 @@
             }
         });
     })
-</script>
 
-{{--Script select Movie--}}
-<script type="text/javascript">
+    {{--Script select Movie ajax--}}
     $('.select-movie').change(function () {
         var id = $(this).val();
         $.ajax({
@@ -159,13 +181,5 @@
         });
     });
 </script>
-
-{{--Script select Movie--}}
-<script type="text/javascript">
-    $('#category_choose').change(function () {
-
-    })
-</script>
-
 </body>
 </html>

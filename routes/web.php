@@ -54,6 +54,11 @@ Route::get('add-episode/{id}', [EpisodeController::class, 'add_episode'])->name(
 Route::resource('episode', EpisodeController::class);
 Route::get('select-movie', [EpisodeController::class, 'select_movie'])->name('select-movie');
 
+//Thay đổi danh mục bằng ajax
+Route::get('/category-choose', [MovieController::class, 'category_choose'])->name('category-choose');
+//Thay đổi quốc gia bằng ajax
+Route::get('/country-choose', [MovieController::class, 'country_choose'])->name('country-choose');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

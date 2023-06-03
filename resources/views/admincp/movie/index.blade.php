@@ -18,10 +18,11 @@
                             <th scope="col">Hình Ảnh Phim</th>
                             <th scope="col">Tên Phim</th>
                             <th scope="col">Số Tập</th>
-                            <th scope="col">Tập Phim</th>
+                            <th scope="col">Thêm Tập</th>
                             <th scope="col">Định Dạng</th>
                             <th scope="col">Danh Mục Phim</th>
-                            <th scope="col">Thuộc Thể Loại Phim</th>
+                            <th scope="col">Thuộc</th>
+                            <th scope="col">Quốc Gia Phim</th>
                             <th scope="col">Thể Loại Phim</th>
                             <th scope="col">Phim Hot</th>
                             <th scope="col">Năm Phim</th>
@@ -34,7 +35,7 @@
                         @foreach($list as $key => $movie)
                             <tr>
                                 {{--Quản Lý Phim--}}
-                                <td>
+                                <td style="width: 8%">
                                     <button id="deleteBtn" type="button" class="btn btn-danger"
                                             onclick="showModal('{{ $movie->id }}')">
                                         Xoá
@@ -44,10 +45,12 @@
                                 </td>
 
                                 {{--Hình Ảnh--}}
-                                <td><img width="80%" src="{{ asset('uploads/movie/'.$movie->image) }}"></td>
+                                <td style="width: 9%">
+                                    <img width="50%" src="{{ asset('uploads/movie/'.$movie->image) }}">
+                                </td>
 
                                 {{--Tên Phim--}}
-                                <td style="width: 10%">{{$movie->title}}</td>
+                                <td style="width: 8%">{{$movie->title}}</td>
 
                                 {{--Số Tập Phim--}}
                                 <td style="width: 5%">{{$movie->episode_count}}/{{$movie->SoTap}}</td>
@@ -59,7 +62,7 @@
                                 </td>
 
                                 {{--Định Dạng Phim--}}
-                                <td style="width: 8%">
+                                <td style="width: 5%">
                                     @if($movie->resolution == 0)
                                         HD
                                     @elseif($movie->resolution == 1)
@@ -76,17 +79,22 @@
                                 </td>
 
                                 {{--Danh Mục Phim--}}
-                                <td style="width: 8%">
-                                    {!! Form::select('category_id', $category, isset($movie) ? $movie->category->id : '', ['class'=>'form-control', 'id'=>'category_choose']) !!}
+                                <td style="width: 11%">
+                                    {!! Form::select('category_id', $category, isset($movie) ? $movie->category->id : '', ['class'=>'form-control category_choose', 'id'=>$movie->id]) !!}
                                 </td>
 
                                 {{--Thuộc Thể Loại Phim--}}
-                                <td style="width: 10%">
+                                <td style="width: 5%">
                                     @if($movie->ThuocPhim == 'phimle')
                                         Phim Lẻ
                                     @else
                                         Phim Bộ
                                     @endif
+                                </td>
+
+                                {{--Quốc Gia Phim--}}
+                                <td style="width: 8.5%">
+                                    {!! Form::select('country_id', $country, isset($movie) ? $movie->country->id : '', ['class'=>'form-control country_choose', 'id'=>$movie->id]) !!}
                                 </td>
 
                                 {{--Thể Loại Phim--}}
@@ -107,26 +115,25 @@
                                 </td>
 
                                 {{--Năm Phim--}}
-                                <td>
+                                <td style="width: 7%">
                                     <div class="text-bg-light" style="width: 0px">
                                         {!! Form::selectYear('year', 2000, 2023, isset($movie->year) ? $movie->year : '', ['class'=>'select-year', 'id'=> $movie->id, 'style'=>'border-radius: 10px;', 'placeholder'=>'Năm']) !!}
                                     </div>
                                 </td>
 
                                 {{--Mùa Phim--}}
-                                <td>
+                                <td style="width: 7%">
                                     <div class="text-bg-light" style="width: 0px">
                                         {!! Form::selectRange('season', 0, 20, isset($movie->season) ? $movie->season : '', ['class'=>'select-season', 'id'=> $movie->id, 'style'=>'border-radius: 10px', 'placeholder'=>'Views']) !!}
                                     </div>
                                 </td>
 
                                 {{--Top Phim--}}
-                                <td>
+                                <td style="width: 7%">
                                     <div class="text-bg-light" style="width: 0px">
                                         {!! Form::select('topview', ['0'=>'Ngày', '1'=>'Tuần', '2'=>'Tháng'], isset($movie) ? $movie->topview : '', ['class'=>'select-topview', 'id'=>$movie->id, 'style'=>'border-radius: 10px']) !!}
                                     </div>
                                 </td>
-
 
                             </tr>
                         @endforeach

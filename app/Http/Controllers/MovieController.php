@@ -23,12 +23,13 @@ class MovieController extends Controller
         $list = Movie::with('category', 'movie_genre', 'country', 'genre')->withCount('episode')->orderBy('id', 'DESC')->get();
         $path = public_path() . "/json_file/";
         $category = Category::pluck('title', 'id');
+        $country = Country::pluck('title', 'id');
         if (!is_dir($path)) {
             mkdir($path, 0777, true);
         }
         File::put($path . 'movies.json', json_encode($list));
 
-        return view('admincp.movie.index', compact('list', 'category'));
+        return view('admincp.movie.index', compact('list', 'category', 'country'));
     }
 
     public function update_year(Request $request)
@@ -135,6 +136,22 @@ class MovieController extends Controller
                         </div>';
         }
         echo $output;
+    }
+
+    public function category_choose(Request $request)
+    {
+        $data = $request->all();
+        $movie = Movie::find($data['movie_id']);
+        $movie->category_id = $data['category_id'];
+        $movie->save();
+    }
+
+    public function country_choose(Request $request)
+    {
+        $data = $request->all();
+        $movie = Movie::find($data['movie_id']);
+        $movie->country_id = $data['country_id'];
+        $movie->save();
     }
 
     /**
