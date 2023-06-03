@@ -14,7 +14,7 @@
                     <table class="table table-responsive text-gray-900 dark:text-gray-100" id="tablePhim">
                         <thead>
                         <tr>
-{{--                            <th scope="col">#</th>--}}
+                            <th scope="col">Quản Lý</th>
                             <th scope="col">Hình Ảnh Phim</th>
                             <th scope="col">Tên Phim</th>
                             <th scope="col">Số Tập</th>
@@ -27,15 +27,21 @@
                             <th scope="col">Năm Phim</th>
                             <th scope="col">Mùa Phim</th>
                             <th scope="col">Top Views</th>
-                            <th scope="col">Quản Lý</th>
                         </tr>
                         </thead>
 
                         <tbody>
                         @foreach($list as $key => $movie)
                             <tr>
-                                {{--STT--}}
-{{--                                <th scope="row">{{$key}}</th>--}}
+                                {{--Quản Lý Phim--}}
+                                <td>
+                                    <button id="deleteBtn" type="button" class="btn btn-danger"
+                                            onclick="showModal('{{ $movie->id }}')">
+                                        Xoá
+                                    </button>
+
+                                    <a href="{{route('movie.edit', $movie->id)}}" class="btn btn-warning">Sửa</a>
+                                </td>
 
                                 {{--Hình Ảnh--}}
                                 <td><img width="80%" src="{{ asset('uploads/movie/'.$movie->image) }}"></td>
@@ -71,7 +77,6 @@
 
                                 {{--Danh Mục Phim--}}
                                 <td style="width: 8%">
-{{--                                    {{$movie->category->title}}--}}
                                     {!! Form::select('category_id', $category, isset($movie) ? $movie->category->id : '', ['class'=>'form-control']) !!}
                                 </td>
 
@@ -122,15 +127,7 @@
                                     </div>
                                 </td>
 
-                                {{--Quản Lý Phim--}}
-                                <td>
-                                    <button id="deleteBtn" type="button" class="btn btn-danger"
-                                            onclick="showModal('{{ $movie->id }}')">
-                                        Xoá
-                                    </button>
 
-                                    <a href="{{route('movie.edit', $movie->id)}}" class="btn btn-warning">Sửa</a>
-                                </td>
                             </tr>
                         @endforeach
                         </tbody>
