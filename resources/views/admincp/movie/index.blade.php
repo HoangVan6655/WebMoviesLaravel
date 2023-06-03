@@ -14,7 +14,7 @@
                     <table class="table table-responsive text-gray-900 dark:text-gray-100" id="tablePhim">
                         <thead>
                         <tr>
-                            <th scope="col">#</th>
+{{--                            <th scope="col">#</th>--}}
                             <th scope="col">Hình Ảnh Phim</th>
                             <th scope="col">Tên Phim</th>
                             <th scope="col">Số Tập</th>
@@ -35,7 +35,7 @@
                         @foreach($list as $key => $movie)
                             <tr>
                                 {{--STT--}}
-                                <th scope="row">{{$key}}</th>
+{{--                                <th scope="row">{{$key}}</th>--}}
 
                                 {{--Hình Ảnh--}}
                                 <td><img width="80%" src="{{ asset('uploads/movie/'.$movie->image) }}"></td>
@@ -70,10 +70,13 @@
                                 </td>
 
                                 {{--Danh Mục Phim--}}
-                                <td style="width: 8%">{{$movie->category->title}}</td>
+                                <td style="width: 8%">
+{{--                                    {{$movie->category->title}}--}}
+                                    {!! Form::select('category_id', $category, isset($movie) ? $movie->category->id : '', ['class'=>'form-control']) !!}
+                                </td>
 
                                 {{--Thuộc Thể Loại Phim--}}
-                                <td style="width: 8%">
+                                <td style="width: 10%">
                                     @if($movie->ThuocPhim == 'phimle')
                                         Phim Lẻ
                                     @else

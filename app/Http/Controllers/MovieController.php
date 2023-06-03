@@ -22,12 +22,13 @@ class MovieController extends Controller
     {
         $list = Movie::with('category', 'movie_genre', 'country', 'genre')->withCount('episode')->orderBy('id', 'DESC')->get();
         $path = public_path() . "/json_file/";
+        $category = Category::pluck('title', 'id');
         if (!is_dir($path)) {
             mkdir($path, 0777, true);
         }
         File::put($path . 'movies.json', json_encode($list));
 
-        return view('admincp.movie.index', compact('list'));
+        return view('admincp.movie.index', compact('list', 'category'));
     }
 
     public function update_year(Request $request)
