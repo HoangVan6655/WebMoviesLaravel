@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Admin Movies') }}</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -37,7 +37,7 @@
         {{ $slot }}
     </main>
 </div>
-
+{{--Script chuyển title sang slug--}}
 <script type="text/javascript">
 
     function ChangeToSlug() {
@@ -70,6 +70,8 @@
         document.getElementById('convert_slug').value = slug;
     }
 </script>
+
+{{--Script Boostrap--}}
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
@@ -79,9 +81,15 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
         integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
         crossorigin="anonymous"></script>
+
+{{--Script Jquery--}}
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+{{--Script Data Table--}}
 <script type='text/javascript' src='{{ asset ('js/jquery.dataTables.min.js') }}'></script>
+
+{{--Script Update Năm--}}
 <script type="text/javascript">
     $('.select-year').change(function () {
         var year = $(this).find(':selected').val();
@@ -97,6 +105,7 @@
     })
 </script>
 
+{{--Script Update Season--}}
 <script type="text/javascript">
     $('.select-season').change(function () {
         var season = $(this).find(':selected').val();
@@ -112,6 +121,7 @@
     })
 </script>
 
+{{--Script Update View theo ngày-tháng-năm--}}
 <script type="text/javascript">
     $('.select-topview').change(function () {
         var topview = $(this).find(':selected').val();
@@ -134,6 +144,7 @@
     })
 </script>
 
+{{--Script select Movie--}}
 <script type="text/javascript">
     $('.select-movie').change(function () {
         var id = $(this).val();
@@ -147,6 +158,13 @@
             }
         });
     });
+</script>
+
+{{--Script select Movie--}}
+<script type="text/javascript">
+    $('#category_choose').change(function () {
+
+    })
 </script>
 
 </body>

@@ -77,7 +77,7 @@
 
                                 {{--Danh Mục Phim--}}
                                 <td style="width: 8%">
-                                    {!! Form::select('category_id', $category, isset($movie) ? $movie->category->id : '', ['class'=>'form-control']) !!}
+                                    {!! Form::select('category_id', $category, isset($movie) ? $movie->category->id : '', ['class'=>'form-control', 'id'=>'category_choose']) !!}
                                 </td>
 
                                 {{--Thuộc Thể Loại Phim--}}
