@@ -38,8 +38,26 @@
     </main>
 </div>
 
-{{--Script chuyển title sang slug--}}
+{{--Script Boostrap--}}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+
+{{--Script Jquery--}}
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+{{--Script Data Table--}}
+<script type='text/javascript' src='{{ asset ('js/jquery.dataTables.min.js') }}'></script>
+
 <script type="text/javascript">
+    {{--Script chuyển title sang slug--}}
     function ChangeToSlug() {
         var slug;
         //Lấy text từ thẻ input title
@@ -69,27 +87,64 @@
         //In slug ra textbox có id “slug”
         document.getElementById('convert_slug').value = slug;
     }
-</script>
 
-{{--Script Boostrap--}}
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
-        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
-        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
-        crossorigin="anonymous"></script>
+    {{--Script cập nhật hình ảnh ajax--}}
+    $(document).on('change', '.file_image', function () {
+        var movie_id = $(this).data('movie_id');
+        var files = $("#file-" + movie_id)[0].files;
 
-{{--Script Jquery--}}
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        var image = document.getElementById("file-" + movie_id).files[0];
 
-{{--Script Data Table--}}
-<script type='text/javascript' src='{{ asset ('js/jquery.dataTables.min.js') }}'></script>
+        var form_data = new FormData();
 
-<script type="text/javascript">
+        form_data.append("file", document.getElementById("file-" + movie_id).files[0]);
+        form_data.append("movie_id", movie_id);
+
+        $.ajax({
+            url: "{{ route('update-image-ajax') }}",
+            method: "POST",
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            data: form_data,
+            contentType: false,
+            cache: false,
+            processData: false,
+            success: function () {
+                location.reload();
+                $('#success_image').html('<span class="text-success">Cập Nhật Hình Ảnh Thành Công</span>');
+            }
+        })
+    })
+
+    {{--Script select định dạng ajax--}}
+    $('.resolution_choose').change(function () {
+        var resolution_val = $(this).val();
+        var movie_id = $(this).attr('id');
+        $.ajax({
+            url: "{{ route('resolution-choose') }}",
+            method: "GET",
+            data: {resolution_val: resolution_val, movie_id: movie_id},
+            success: function (data) {
+                alert('Thay đổi thành công.');
+            }
+        });
+    })
+
+    {{--Script select phụ đề ajax--}}
+    $('.phude_choose').change(function () {
+        var phude_val = $(this).val();
+        var movie_id = $(this).attr('id');
+        $.ajax({
+            url: "{{ route('phude-choose') }}",
+            method: "GET",
+            data: {phude_val: phude_val, movie_id: movie_id},
+            success: function (data) {
+                alert('Thay đổi thành công.');
+            }
+        });
+    })
+
     {{--Script select category ajax--}}
     $('.category_choose').change(function () {
         var category_id = $(this).val();
@@ -104,6 +159,20 @@
         });
     })
 
+    {{--Script select thuộc phim ajax--}}
+    $('.thuocphim_choose').change(function () {
+        var thuocphim_val = $(this).val();
+        var movie_id = $(this).attr('id');
+        $.ajax({
+            url: "{{ route('thuocphim-choose') }}",
+            method: "GET",
+            data: {thuocphim_val: thuocphim_val, movie_id: movie_id},
+            success: function (data) {
+                alert('Thay đổi thành công.');
+            }
+        });
+    })
+
     {{--Script select country ajax--}}
     $('.country_choose').change(function () {
         var country_id = $(this).val();
@@ -112,6 +181,20 @@
             url: "{{ route('country-choose') }}",
             method: "GET",
             data: {country_id: country_id, movie_id: movie_id},
+            success: function (data) {
+                alert('Thay đổi thành công.');
+            }
+        });
+    })
+
+    {{--Script select movie hot ajax--}}
+    $('.phimhot_choose').change(function () {
+        var phimhot_val = $(this).val();
+        var movie_id = $(this).attr('id');
+        $.ajax({
+            url: "{{ route('phimhot-choose') }}",
+            method: "GET",
+            data: {phimhot_val: phimhot_val, movie_id: movie_id},
             success: function (data) {
                 alert('Thay đổi thành công.');
             }
@@ -163,6 +246,20 @@
             data: {topview: topview, id_phim: id_phim},
             success: function () {
                 alert('Thay đổi phim theo lượt truy cập ' + topview + ' thành công');
+            }
+        });
+    })
+
+    {{--Script select status ajax--}}
+    $('.status_choose').change(function () {
+        var status_val = $(this).val();
+        var movie_id = $(this).attr('id');
+        $.ajax({
+            url: "{{ route('status-choose') }}",
+            method: "GET",
+            data: {status_val: status_val, movie_id: movie_id},
+            success: function (data) {
+                alert('Thay đổi thành công.');
             }
         });
     })

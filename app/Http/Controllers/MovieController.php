@@ -154,6 +154,64 @@ class MovieController extends Controller
         $movie->save();
     }
 
+    public function phimhot_choose(Request $request)
+    {
+        $data = $request->all();
+        $movie = Movie::find($data['movie_id']);
+        $movie->movie_hot = $data['phimhot_val'];
+        $movie->save();
+    }
+
+    public function phude_choose(Request $request)
+    {
+        $data = $request->all();
+        $movie = Movie::find($data['movie_id']);
+        $movie->phude = $data['phude_val'];
+        $movie->save();
+    }
+
+    public function thuocphim_choose(Request $request)
+    {
+        $data = $request->all();
+        $movie = Movie::find($data['movie_id']);
+        $movie->ThuocPhim = $data['thuocphim_val'];
+        $movie->save();
+    }
+
+    public function status_choose(Request $request)
+    {
+        $data = $request->all();
+        $movie = Movie::find($data['movie_id']);
+        $movie->status = $data['status_val'];
+        $movie->save();
+    }
+
+    public function resolution_choose(Request $request)
+    {
+        $data = $request->all();
+        $movie = Movie::find($data['movie_id']);
+        $movie->resolution = $data['resolution_val'];
+        $movie->save();
+    }
+
+    public function update_image_ajax(Request $request)
+    {
+        $get_image = $request->file('file');
+        $movie_id = $request->movie_id;
+        if ($get_image) {
+            //xoá ảnh cũ
+            $movie = Movie::find($movie_id);
+            unlink('uploads/movie/' . $movie->image);
+            //thêm ảnh mới
+            $get_name_image = $get_image->getClientOriginalName();
+            $name_image = current(explode('.', $get_name_image));
+            $new_image = $name_image . rand(0, 99) . '.' . $get_image->getClientOriginalExtension();
+            $get_image->move('uploads/movie/', $new_image);
+            $movie->image = $new_image;
+            $movie->save();
+        }
+    }
+
     /**
      * Show the form for creating a new resource.
      */

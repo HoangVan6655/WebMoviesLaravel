@@ -10,8 +10,8 @@
         <div class="max-w-max mx-auto sm:px-6 lg:px-8"
              style="background-color: rgb(17 24 39 / var(--tw-bg-opacity)); color: black">
             <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="text-gray-900 dark:text-gray-100">
-                    <table class="table table-responsive text-gray-900 dark:text-gray-100" id="tablePhim">
+                <div class=" text-gray-900 dark:text-gray-100 ">
+                    <table class="table text-gray-900 dark:text-gray-100" id="tablePhim" style="width:100%">
                         <thead>
                         <tr>
                             <th scope="col">Quản Lý</th>
@@ -20,6 +20,7 @@
                             <th scope="col">Số Tập</th>
                             <th scope="col">Thêm Tập</th>
                             <th scope="col">Định Dạng</th>
+                            <th scope="col">Phụ Đề</th>
                             <th scope="col">Danh Mục Phim</th>
                             <th scope="col">Thuộc</th>
                             <th scope="col">Quốc Gia Phim</th>
@@ -28,6 +29,7 @@
                             <th scope="col">Năm Phim</th>
                             <th scope="col">Mùa Phim</th>
                             <th scope="col">Top Views</th>
+                            <th scope="col">Tình Trạng</th>
                         </tr>
                         </thead>
 
@@ -35,7 +37,7 @@
                         @foreach($list as $key => $movie)
                             <tr>
                                 {{--Quản Lý Phim--}}
-                                <td style="width: 8%">
+                                <td>
                                     <button id="deleteBtn" type="button" class="btn btn-danger"
                                             onclick="showModal('{{ $movie->id }}')">
                                         Xoá
@@ -45,60 +47,75 @@
                                 </td>
 
                                 {{--Hình Ảnh--}}
-                                <td style="width: 9%">
-                                    <img width="50%" src="{{ asset('uploads/movie/'.$movie->image) }}">
+                                <td>
+                                    <img width="80%" src="{{ asset('uploads/movie/'.$movie->image) }}">
+                                    <input type="file" id="file-{{ $movie->id }}" data-movie_id="{{ $movie->id }}"
+                                           class="form-control-file file_image" accept="image/*">
+                                    <span id="success_image"></span>
                                 </td>
 
                                 {{--Tên Phim--}}
-                                <td style="width: 8%">{{$movie->title}}</td>
+                                <td>{{$movie->title}}</td>
 
                                 {{--Số Tập Phim--}}
-                                <td style="width: 5%">{{$movie->episode_count}}/{{$movie->SoTap}}</td>
+                                <td>{{$movie->episode_count}}/{{$movie->SoTap}}</td>
 
                                 {{--Tập Phim--}}
-                                <td style="width: 5%">
+                                <td>
                                     <a href="{{ route('add-episode', [$movie->id]) }}" class="btn btn-success btn-sm">Thêm
                                         Tập Phim</a>
                                 </td>
 
                                 {{--Định Dạng Phim--}}
-                                <td style="width: 5%">
-                                    @if($movie->resolution == 0)
-                                        HD
-                                    @elseif($movie->resolution == 1)
-                                        SD
-                                    @elseif($movie->resolution == 2)
-                                        HDCam
-                                    @elseif($movie->resolution == 3)
-                                        Cam
-                                    @elseif($movie->resolution == 4)
-                                        FullHD
-                                    @else
-                                        Trailer
-                                    @endif
+                                <td>
+                                    @php
+                                        $options = array('0'=>'HD', '1'=>'SD', '2'=>'HDCam', '3'=>'Cam', '4'=>'FullHD', '5'=>'Trailer');
+                                    @endphp
+                                    <select id="{{ $movie->id }}" class="form-control resolution_choose">
+                                        @foreach($options as $key => $resolution)
+                                            <option
+                                                {{ $movie->resolution==$key ? 'selected' : '' }} value="{{ $key }}">{{ $resolution }}</option>
+                                        @endforeach
+                                    </select>
+                                </td>
+
+                                <td>
+                                    <select id="{{ $movie->id }}" class="form-control phude_choose">
+                                        @if ($movie->phude == 0)
+                                            <option value="1">Thuyết Minh</option>
+                                            <option selected value="0">Vietsub</option>
+                                        @else
+                                            <option selected value="1">Thuyết Minh</option>
+                                            <option value="0">Vietsub</option>
+                                        @endif
+                                    </select>
                                 </td>
 
                                 {{--Danh Mục Phim--}}
-                                <td style="width: 11%">
+                                <td>
                                     {!! Form::select('category_id', $category, isset($movie) ? $movie->category->id : '', ['class'=>'form-control category_choose', 'id'=>$movie->id]) !!}
                                 </td>
 
                                 {{--Thuộc Thể Loại Phim--}}
-                                <td style="width: 5%">
-                                    @if($movie->ThuocPhim == 'phimle')
-                                        Phim Lẻ
-                                    @else
-                                        Phim Bộ
-                                    @endif
+                                <td>
+                                    <select id="{{ $movie->id }}" class="form-control thuocphim_choose">
+                                        @if ($movie->ThuocPhim == 'phimbo')
+                                            <option value="phimle">Phim Lẻ</option>
+                                            <option selected value="phimbo">Phim Bộ</option>
+                                        @else
+                                            <option selected value="phimle">Phim Lẻ</option>
+                                            <option value="phimbo">Phim Bộ</option>
+                                        @endif
+                                    </select>
                                 </td>
 
                                 {{--Quốc Gia Phim--}}
-                                <td style="width: 8.5%">
+                                <td>
                                     {!! Form::select('country_id', $country, isset($movie) ? $movie->country->id : '', ['class'=>'form-control country_choose', 'id'=>$movie->id]) !!}
                                 </td>
 
                                 {{--Thể Loại Phim--}}
-                                <td style="width: 10%">
+                                <td>
                                     @foreach($movie->movie_genre as $gen)
                                         <span class="badge badge-dark"
                                               style="background-color: #5a6870">{{$gen->title}}</span>
@@ -106,33 +123,50 @@
                                 </td>
 
                                 {{--Phim Hot--}}
-                                <td style="width: 5%">
-                                    @if($movie->movie_hot)
-                                        Có
-                                    @else
-                                        Không
-                                    @endif
+                                <td>
+                                    <select id="{{ $movie->id }}" class="form-control phimhot_choose">
+                                        @if ($movie->movie_hot == 0)
+                                            <option value="1">Hot</option>
+                                            <option selected value="0">Không</option>
+                                        @else
+                                            <option selected value="1">Hot</option>
+                                            <option value="0">Không</option>
+                                        @endif
+                                    </select>
                                 </td>
 
                                 {{--Năm Phim--}}
-                                <td style="width: 7%">
+                                <td>
                                     <div class="text-bg-light" style="width: 0px">
                                         {!! Form::selectYear('year', 2000, 2023, isset($movie->year) ? $movie->year : '', ['class'=>'select-year', 'id'=> $movie->id, 'style'=>'border-radius: 10px;', 'placeholder'=>'Năm']) !!}
                                     </div>
                                 </td>
 
                                 {{--Mùa Phim--}}
-                                <td style="width: 7%">
+                                <td>
                                     <div class="text-bg-light" style="width: 0px">
-                                        {!! Form::selectRange('season', 0, 20, isset($movie->season) ? $movie->season : '', ['class'=>'select-season', 'id'=> $movie->id, 'style'=>'border-radius: 10px', 'placeholder'=>'Views']) !!}
+                                        {!! Form::selectRange('season', 0, 20, isset($movie->season) ? $movie->season : '', ['class'=>'select-season', 'id'=> $movie->id, 'style'=>'border-radius: 10px']) !!}
                                     </div>
                                 </td>
 
                                 {{--Top Phim--}}
-                                <td style="width: 7%">
+                                <td>
                                     <div class="text-bg-light" style="width: 0px">
                                         {!! Form::select('topview', ['0'=>'Ngày', '1'=>'Tuần', '2'=>'Tháng'], isset($movie) ? $movie->topview : '', ['class'=>'select-topview', 'id'=>$movie->id, 'style'=>'border-radius: 10px']) !!}
                                     </div>
+                                </td>
+
+                                {{--Tình Trạng--}}
+                                <td>
+                                    <select id="{{ $movie->id }}" class="form-control status_choose">
+                                        @if ($movie->status == 0)
+                                            <option value="1">Hiển Thị</option>
+                                            <option selected value="0">Không Hiển Thị</option>
+                                        @else
+                                            <option selected value="1">Hiển Thị</option>
+                                            <option value="0">Không Hiển Thị</option>
+                                        @endif
+                                    </select>
                                 </td>
 
                             </tr>

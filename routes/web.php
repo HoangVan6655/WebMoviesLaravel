@@ -58,6 +58,18 @@ Route::get('select-movie', [EpisodeController::class, 'select_movie'])->name('se
 Route::get('/category-choose', [MovieController::class, 'category_choose'])->name('category-choose');
 //Thay đổi quốc gia bằng ajax
 Route::get('/country-choose', [MovieController::class, 'country_choose'])->name('country-choose');
+//Thay đổi phim hot bằng ajax
+Route::get('/phimhot-choose', [MovieController::class, 'phimhot_choose'])->name('phimhot-choose');
+//Thay đổi phụ đề bằng ajax
+Route::get('/phude-choose', [MovieController::class, 'phude_choose'])->name('phude-choose');
+//Thay đổi thuộc phim bằng ajax
+Route::get('/thuocphim-choose', [MovieController::class, 'thuocphim_choose'])->name('thuocphim-choose');
+//Thay đổi status bằng ajax
+Route::get('/status-choose', [MovieController::class, 'status_choose'])->name('status-choose');
+//Thay đổi định dạng bằng ajax
+Route::get('/resolution-choose', [MovieController::class, 'resolution_choose'])->name('resolution-choose');
+//Thay đổi hình ảnh bằng ajax
+Route::post('/update-image-ajax', [MovieController::class, 'update_image_ajax'])->name('update-image-ajax');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

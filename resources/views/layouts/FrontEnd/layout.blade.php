@@ -15,17 +15,17 @@
           type="image/x-icon"/>
     <meta name="revisit-after" content="1 days"/>
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'/>
-    <title>Phim hay 2021 - Xem phim hay nhất</title>
-    <meta name="description"
-          content="Phim hay 2021 - Xem phim hay nhất, xem phim online miễn phí, phim hot , phim nhanh"/>
+
+    <title>Phim Mới - Phim Hay</title>
+    <meta name="description" content="Phim Mới - Phim Hay, xem phim online miễn phí, phim hot , phim nhanh"/>
     <link rel="canonical" href="">
     <link rel="next" href=""/>
     <meta property="og:locale" content="vi_VN"/>
-    <meta property="og:title" content="Phim hay 2020 - Xem phim hay nhất"/>
+    <meta property="og:title" content="Phim Mới - Phim Hay"/>
     <meta property="og:description"
-          content="Phim hay 2020 - Xem phim hay nhất, phim hay trung quốc, hàn quốc, việt nam, mỹ, hong kong , chiếu rạp"/>
+          content="Phim Mới - Phim Hay, phim hay trung quốc, hàn quốc, việt nam, mỹ, hong kong , chiếu rạp"/>
     <meta property="og:url" content=""/>
-    <meta property="og:site_name" content="Phim hay 2021- Xem phim hay nhất"/>
+    <meta property="og:site_name" content="Phim Mới - Phim Hay"/>
     <meta property="og:image" content=""/>
     <meta property="og:image:width" content="300"/>
     <meta property="og:image:height" content="55"/>
@@ -48,7 +48,6 @@
 </head>
 
 <body class="home blog halimthemes halimmovies" data-masonry="">
-
 {{--Header--}}
 @include('layouts.FrontEnd.inc.header')
 

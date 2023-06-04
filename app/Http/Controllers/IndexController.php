@@ -21,7 +21,7 @@ class IndexController extends Controller
         $TheLoai = Genre::orderBy('position', 'ASC')->get();
         $QuocGia = Country::orderBy('position', 'ASC')->get();
         $category_home = Category::with(['movie' => function ($q) {
-            $q->withCount('episode');
+            $q->withCount('episode')->where('status', 1);
         }])->orderBy('id', 'ASC')->where('status', 1)->get();
         return view('pages.home', compact('category', 'TheLoai', 'QuocGia', 'category_home', 'movieHot', 'movieHot_sidebar', 'trailer'));
     }
