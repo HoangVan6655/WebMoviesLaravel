@@ -5,8 +5,7 @@
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Quản Lý Danh Mục Phim</h4>
-                    <p class="card-description"> Thêm Danh Mục Phim Mới </p>
+                    <h4 class="card-title">Thêm Mới Danh Mục Phim</h4>
                     <form class="forms-sample">
                         @if(!isset($category))
                             {!! Form::open(['route' => 'category.store', 'method'=> 'POST']) !!}
@@ -49,6 +48,8 @@
                         </button>
 
                         <button class="btn btn-dark">Huỷ</button>
+                        {!! Form::close() !!}
+
                     </form>
 
                     <!-- Confirm Modal -->
@@ -86,7 +87,7 @@
                                 <strong class="me-auto">Thông báo</strong>
                                 <button type="button" class="btn-close text-dark" data-bs-dismiss="toast"
                                         aria-label="Close" style="">
-                                    <i class="mdi mdi-close" aria-hidden="true"></i>
+                                    <i class="fa fa-times" aria-hidden="true"></i>
                                 </button>
                             </div>
                             <div class="toast-body">
@@ -98,31 +99,35 @@
         </div>
     </div>
 @endsection
+
 <script>
-    var toastLiveExample = document.getElementById('submitBtn');
-    var toast = new bootstrap.Toast(document.querySelector('.toast'));
+    var toastLiveExample = document.getElementById('submitBtn')
+    var toast = new bootstrap.Toast(document.querySelector('.toast'))
 
     function showToast() {
-        toast.show();
+        toast.show()
     }
 
     function validateForm() {
         var title = document.getElementById("title").value;
         var description = document.getElementById("description").value;
         if (title == "" && description == "") {
-            var toastBody = document.querySelector('.toast-body');
-            toastBody.innerText = "Vui lòng nhập đầy đủ thông tin.";
-            toast.show();
+            var toast = new bootstrap.Toast(document.querySelector('.toast'))
+            var toastBody = document.querySelector('.toast-body')
+            toastBody.innerText = "Vui lòng nhập đầy đủ thông tin."
+            toast.show()
             return false;
         } else if (title == "") {
-            var toastBody = document.querySelector('.toast-body');
-            toastBody.innerText = "Vui lòng nhập tên danh mục.";
-            toast.show();
+            var toast = new bootstrap.Toast(document.querySelector('.toast'))
+            var toastBody = document.querySelector('.toast-body')
+            toastBody.innerText = "Vui lòng nhập tên danh mục."
+            toast.show()
             return false;
         } else if (description == "") {
-            var toastBody = document.querySelector('.toast-body');
-            toastBody.innerText = "Vui lòng nhập mô tả danh mục.";
-            toast.show();
+            var toast = new bootstrap.Toast(document.querySelector('.toast'))
+            var toastBody = document.querySelector('.toast-body')
+            toastBody.innerText = "Vui lòng nhập mô tả danh mục."
+            toast.show()
             return false;
         } else {
             $('#confirmModal').modal('show');
