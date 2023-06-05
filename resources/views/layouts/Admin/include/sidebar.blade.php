@@ -1,9 +1,8 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-        <a class="sidebar-brand brand-logo" href="index.html"><img src='{{ asset ('admin/images/logo.svg') }}'
-                                                                   alt="logo"/></a>
-        <a class="sidebar-brand brand-logo-mini" href="index.html"><img src='{{ asset ('admin/images/logo-mini.svg') }}'
-                                                                        alt="logo"/></a>
+        <a class="sidebar-brand brand-logo" href="index.html">
+            <img src='{{ asset ('admin/images/logo.svg') }}' alt="logo"/>
+        </a>
     </div>
     <ul class="nav">
         {{--Profile--}}
@@ -68,7 +67,7 @@
         <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#category" aria-expanded="false" aria-controls="category">
                       <span class="menu-icon">
-                        <i class="mdi mdi-laptop"></i>
+                        <i class="mdi mdi-collage"></i>
                       </span>
                 <span class="menu-title">Danh Mục Phim</span>
                 <i class="menu-arrow"></i>
@@ -86,7 +85,7 @@
         <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#genre" aria-expanded="false" aria-controls="genre">
                       <span class="menu-icon">
-                        <i class="mdi mdi-laptop"></i>
+                        <i class="mdi mdi-shape-plus"></i>
                       </span>
                 <span class="menu-title">Thể Loại Phim</span>
                 <i class="menu-arrow"></i>
@@ -104,7 +103,7 @@
         <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#country" aria-expanded="false" aria-controls="country">
                       <span class="menu-icon">
-                        <i class="mdi mdi-laptop"></i>
+                        <i class="mdi mdi-airballoon"></i>
                       </span>
                 <span class="menu-title">Quốc Gia Phim</span>
                 <i class="menu-arrow"></i>
@@ -121,7 +120,7 @@
         <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#movie" aria-expanded="false" aria-controls="movie">
                       <span class="menu-icon">
-                        <i class="mdi mdi-laptop"></i>
+                        <i class="mdi mdi-television"></i>
                       </span>
                 <span class="menu-title">Phim</span>
                 <i class="menu-arrow"></i>
@@ -136,7 +135,7 @@
         <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#episode" aria-expanded="false" aria-controls="episode">
                       <span class="menu-icon">
-                        <i class="mdi mdi-laptop"></i>
+                        <i class="mdi mdi-television-guide"></i>
                       </span>
                 <span class="menu-title">Tập Phim</span>
                 <i class="menu-arrow"></i>
