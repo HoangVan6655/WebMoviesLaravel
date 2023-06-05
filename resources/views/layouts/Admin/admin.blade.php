@@ -21,7 +21,7 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href='{{ asset ('admin/css/style.css') }}'>
     <!-- End layout styles -->
-    <link rel="shortcut icon" href='{{ asset ('admin/images/favicon.png') }}'/>
+    <link rel="shortcut icon" href='{{ asset ('admin/images/logo-favicon.png') }}'/>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
