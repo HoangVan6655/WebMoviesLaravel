@@ -1,6 +1,6 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-        <a class="sidebar-brand brand-logo" href="index.html">
+        <a class="sidebar-brand brand-logo" href="{{ route('dashboard') }}">
             <img src='{{ asset ('admin/images/logo.png') }}' alt="logo"/>
         </a>
     </div>

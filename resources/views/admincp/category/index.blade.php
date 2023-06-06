@@ -162,8 +162,7 @@
 </script>
 
 <script>
-    function showModal(categoryID) {
+    function showModal() {
         $('#confirmModal').modal('show');
-        $('#confirmModal form').attr('action', "{{ route('category.destroy', '') }}/" + categoryId);
     }
 </script>
