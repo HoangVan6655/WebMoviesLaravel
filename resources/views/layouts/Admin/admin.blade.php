@@ -58,8 +58,6 @@
 </div>
 
 <!-- container-scroller -->
-{{--Ckeditor--}}
-<script src="https://cdn.ckeditor.com/ckeditor5/38.0.1/classic/ckeditor.js"></script>
 <!-- plugins:js -->
 <script src='{{ asset ('admin/vendors/js/vendor.bundle.base.js') }}'></script>
 <!-- endinject -->

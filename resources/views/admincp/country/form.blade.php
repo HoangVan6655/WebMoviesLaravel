@@ -1,76 +1,62 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Quản Lý Quốc Gia Phim') }}
-        </h2>
+@extends('layouts.Admin.admin')
 
-        <a href="{{ route('country.index') }}" class="btn btn-light" style="margin-top: 30px">Danh Sách Quốc Gia
-            Phim</a>
-    </x-slot>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8"
-             style="background-color: rgb(17 24 39 / var(--tw-bg-opacity)); color: black">
-            <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
+@section('content')
+    <div class="content-wrapper">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Thêm Mới Quốc Gia Phim</h2>
                     @if(!isset($country))
                         {!! Form::open(['route' => 'country.store', 'method'=> 'POST']) !!}
                     @else
                         {!! Form::open(['route' => ['country.update', $country->id], 'method'=> 'PUT']) !!}
                     @endif
-                    {{--Title--}}
-                    <div style="margin-bottom: 10pt">
-                        {!! Form::label('title', 'Tên Quốc Gia ', []) !!}
+                    <div class="form-group row" style="color: white">
+                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Tên Quốc Gia</label>
+                        <div class="col-sm-9">
+                            {!! Form::text('title', isset($country) ? $country->title : '', ['class' => 'form-control', 'placeholder' => 'Nhập vào tên quốc gia...', 'style' => 'width: 100%;', 'id' => 'title', 'onkeyup'=>'ChangeToSlug()']) !!}
+                        </div>
                     </div>
-                    <div style="display: flex; margin-bottom: 10pt">
-                        {!! Form::text('title', isset($country) ? $country->title : '', ['class' => 'form-control', 'placeholder' => 'Nhập vào tên quốc gia...', 'style' => 'width: 100%; color: black', 'id' => 'title', 'onkeyup'=>'ChangeToSlug()']) !!}
+                    <div class="form-group row" style="color: white">
+                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Đường Dẫn Quốc Gia</label>
+                        <div class="col-sm-9" style="color: #f0f0f0">
+                            {!! Form::text('slug', isset($country) ? $country->slug : '', ['class' => 'form-control', 'placeholder' => 'Nhập vào đường dẫn quốc gia...', 'style' => 'width: 100%;', 'id' => 'convert_slug']) !!}
+                        </div>
                     </div>
-
-                    {{--Slug--}}
-                    <div style="margin-bottom: 10pt">
-                        {!! Form::label('slug', 'Slug ', []) !!}
+                    <div class="form-group row" style="color: white">
+                        <label for="exampleInputMobile" class="col-sm-3 col-form-label">Mô Tả Quốc Gia</label>
+                        <div class="col-sm-9">
+                            {!! Form::textarea('description', isset($country) ? $country->description : '', ['class' => 'ckeditor form-control', 'placeholder' => 'Nhập vào mô tả quốc gia...', 'style' => 'resize: none; width: 100%;', 'id' => 'description']) !!}
+                        </div>
                     </div>
-                    <div style="display: flex; margin-bottom: 10pt">
-                        {!! Form::text('slug', isset($country) ? $country->slug : '', ['class' => 'form-control', 'placeholder' => 'Slug tên quốc gia...', 'style' => 'width: 100%; color: black', 'id' => 'convert_slug']) !!}
+                    <div class="form-group row" style="color: white">
+                        <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Tình Trạng Quốc Gia</label>
+                        <div class="col-sm-9">
+                            {!! Form::select('status', ['1'=>'Hiển Thị', '0'=>'Không Hiển Thị'], isset($country) ? $country->status : '', ['class'=>'form-control', 'style'=>'color: white' ]) !!}
+                        </div>
                     </div>
-
-                    {{--Description--}}
-                    <div style="margin-bottom: 10pt;">
-                        {!! Form::label('description', 'Mô Tả Quốc Gia ', []) !!}
-                    </div>
-                    <div style="display: flex; margin-bottom: 10pt; ">
-                        {!! Form::textarea('description', isset($country) ? $country->description : '', ['class' => 'form-control', 'placeholder' => 'Nhập vào mô tả quốc gia...', 'style' => 'resize: none; width: 100%; color: black', 'id' => 'description']) !!}
-                    </div>
-
-                    {{--Status--}}
-                    <div style="margin-bottom: 10pt;">
-                        {!! Form::label('status', 'Tình Trạng ', []) !!}
-                    </div>
-
-                    <div style="display: flex; margin-bottom: 10pt; ">
-                        {!! Form::select('status', ['1'=>'Hiển Thị', '0'=>'Không Hiển Thị'], isset($country) ? $country->status : '', ['class'=>'form-control']) !!}
-                    </div>
-
-                    {{--Submit--}}
-                    <button id="submitBtn" type="button" class="btn btn-success" onclick="return validateForm()">
+                    <button id="submitBtn" type="button" class="btn btn-danger mr-2" onclick="return validateForm()">
                         @if(!isset($country))
-                            Thêm Quốc Gia Mới
+                            Thêm Mới
                         @else
-                            Cập Nhật Quốc Gia
+                            Cập Nhật
                         @endif
                     </button>
+
+                    <button class="btn btn-dark">Huỷ</button>
 
                     <!-- Confirm Modal -->
                     <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel"
                          aria-hidden="true">
-                        <div class="modal-dialog ">
-                            <div class="modal-content bg-gray-100 dark:bg-gray-800">
+                        <div class="modal-dialog">
+                            <div class="modal-content" style="background-color: #191c24; color: white">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="confirmModalLabel">Xác nhận thao tác</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    <button type="button" class="mdi mdi-close" data-bs-dismiss="modal"
+                                            style="background-color: #191c24; border: none; color: white"
                                             aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body">
+                                <div class="modal-body" style="background-color: #191c24;">
                                     @if(!isset($country))
                                         <p>Bạn có chắc chắn muốn thêm quốc gia mới?</p>
                                     @else
@@ -79,7 +65,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-                                    {!! Form::submit(isset($country) ? 'Cập Nhật' : 'Thêm Mới', ['class' => 'btn btn-success']) !!}
+                                    {!! Form::submit(isset($country) ? 'Cập Nhật' : 'Thêm Mới', ['class' => 'btn btn-danger']) !!}
                                 </div>
                             </div>
                         </div>
@@ -89,26 +75,29 @@
                     <div class="toast-container position-fixed top-0 end-0 mt-5 me-5 ">
                         <div class="toast bg-gray-100 dark:bg-gray-900" role="alert" aria-live="assertive"
                              aria-atomic="true" data-bs-delay="5000">
-                            <div class="toast-header bg-gray-100 dark:focus:bg-white d-flex align-items-center">
-                                <i class="fa fa-warning me-2"></i>
+                            <div class="toast-header bg-gray-100 dark:focus:bg-white d-flex align-items-center"
+                                 style="background-color: red; border: none; color: white">
+                                <i class="mdi mdi-alert-outline me-2"></i>
                                 <strong class="me-auto">Thông báo</strong>
-                                <button type="button" class="btn-close text-dark" data-bs-dismiss="toast"
-                                        aria-label="Close" style="">
-                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                <button type="button" class="btn-close text-white" data-bs-dismiss="toast"
+                                        aria-label="Close" style="color: white">
+                                    <i class="mdi-close text-white" aria-hidden="true"></i>
                                 </button>
                             </div>
                             <div class="toast-body">
                             </div>
                         </div>
                     </div>
-
                     {!! Form::close() !!}
+
                 </div>
             </div>
         </div>
     </div>
-</x-app-layout>
+@endsection
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 <script>
     var toastLiveExample = document.getElementById('submitBtn')
     var toast = new bootstrap.Toast(document.querySelector('.toast'))
@@ -143,3 +132,4 @@
         }
     }
 </script>
+

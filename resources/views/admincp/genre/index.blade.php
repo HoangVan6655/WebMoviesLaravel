@@ -43,9 +43,10 @@
                     </style>
 
                     <div class="table-responsive">
-                        <table class="table" id="tableDanhMucPhim">
+                        <table class="table" id="tableTheLoaiPhim">
                             <thead>
                             <tr>
+                                <th></th>
                                 <th scope="col"
                                     style="text-align: center; align-items: center; font-size: 20px; color: white; ">
                                     Tên Danh Mục
@@ -73,6 +74,7 @@
                                    style="text-align: center; align-items: center; font-size: 18px; color: white;">
                             @foreach($list as $key => $gen)
                                 <tr id="{{ $gen->id }}">
+                                    <th>{{$key+1 }}</th>
                                     <td>{{$gen->title}}</td>
                                     <td>{{$gen->slug}}</td>
                                     <td>{{$gen->description}}</td>
@@ -155,13 +157,12 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function () {
-        $('#tableDanhMucPhim').DataTable();
+        $('#tableTheLoaiPhim').DataTable();
     });
 </script>
 
 <script>
-    function showModal(genreID) {
+    function showModal() {
         $('#confirmModal').modal('show');
-        $('#confirmModal form').attr('action', "{{ route('genre.destroy', '') }}/" + genreID);
     }
 </script>

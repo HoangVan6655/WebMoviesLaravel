@@ -18,8 +18,8 @@ class IndexController extends Controller
         $movieHot_sidebar = Movie::where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
         $trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();
         $category = Category::orderBy('position', 'ASC')->where('status', 1)->get();
-        $TheLoai = Genre::orderBy('position', 'ASC')->get();
-        $QuocGia = Country::orderBy('position', 'ASC')->get();
+        $TheLoai = Genre::orderBy('position', 'ASC')->where('status', 1)->get();
+        $QuocGia = Country::orderBy('position', 'ASC')->where('status', 1)->get();
         $category_home = Category::with(['movie' => function ($q) {
             $q->withCount('episode')->where('status', 1);
         }])->orderBy('id', 'ASC')->where('status', 1)->get();
@@ -29,8 +29,8 @@ class IndexController extends Controller
     public function category($slug)
     {
         $category = Category::orderBy('position', 'ASC')->where('status', 1)->get();
-        $TheLoai = Genre::orderBy('position', 'ASC')->get();
-        $QuocGia = Country::orderBy('position', 'ASC')->get();
+        $TheLoai = Genre::orderBy('position', 'ASC')->where('status', 1)->get();
+        $QuocGia = Country::orderBy('position', 'ASC')->where('status', 1)->get();
 
         $cate_slug = Category::where('slug', $slug)->first();
         $movie = Movie::withCount('episode')->where('category_id', $cate_slug->id)->orderBy('NgayCapNhat', 'DESC')->paginate(40);
@@ -43,8 +43,8 @@ class IndexController extends Controller
     public function year($year)
     {
         $category = Category::orderBy('position', 'ASC')->where('status', 1)->get();
-        $TheLoai = Genre::orderBy('position', 'ASC')->get();
-        $QuocGia = Country::orderBy('position', 'ASC')->get();
+        $TheLoai = Genre::orderBy('position', 'ASC')->where('status', 1)->get();
+        $QuocGia = Country::orderBy('position', 'ASC')->where('status', 1)->get();
 
         $year = $year;
         $movie = Movie::withCount('episode')->where('year', $year)->orderBy('NgayCapNhat', 'DESC')->paginate(40);
@@ -57,8 +57,8 @@ class IndexController extends Controller
     public function tag($tag)
     {
         $category = Category::orderBy('position', 'ASC')->where('status', 1)->get();
-        $TheLoai = Genre::orderBy('position', 'ASC')->get();
-        $QuocGia = Country::orderBy('position', 'ASC')->get();
+        $TheLoai = Genre::orderBy('position', 'ASC')->where('status', 1)->get();
+        $QuocGia = Country::orderBy('position', 'ASC')->where('status', 1)->get();
 
         $tag = $tag;
         $movie = Movie::withCount('episode')->where('tags', 'LIKE', '%' . $tag . '%')->orderBy('NgayCapNhat', 'DESC')->paginate(40);
@@ -71,8 +71,8 @@ class IndexController extends Controller
     public function country($slug)
     {
         $category = Category::orderBy('position', 'ASC')->where('status', 1)->get();
-        $TheLoai = Genre::orderBy('position', 'ASC')->get();
-        $QuocGia = Country::orderBy('position', 'ASC')->get();
+        $TheLoai = Genre::orderBy('position', 'ASC')->where('status', 1)->get();
+        $QuocGia = Country::orderBy('position', 'ASC')->where('status', 1)->get();
 
         $country_slug = Country::where('slug', $slug)->first();
         $movie = Movie::withCount('episode')->where('country_id', $country_slug->id)->orderBy('NgayCapNhat', 'DESC')->paginate(40);
@@ -167,8 +167,8 @@ class IndexController extends Controller
         if (isset($_GET['search'])) {
             $search = $_GET['search'];
             $category = Category::orderBy('position', 'ASC')->where('status', 1)->get();
-            $TheLoai = Genre::orderBy('position', 'ASC')->get();
-            $QuocGia = Country::orderBy('position', 'ASC')->get();
+            $TheLoai = Genre::orderBy('position', 'ASC')->where('status', 1)->get();
+            $QuocGia = Country::orderBy('position', 'ASC')->where('status', 1)->get();
 
             $movie = Movie::withCount('episode')->where('title', 'LIKE', '%' . $search . '%')->orderBy('NgayCapNhat', 'DESC')->paginate(40);
             $movieHot_sidebar = Movie::where('movie_hot', 1)->where('status', 1)->orderBy('NgayCapNhat', 'DESC')->take('10')->get();

@@ -37,7 +37,7 @@ class GenreController extends Controller
         $genre->status = $data['status'];
         $genre->position = Genre::max('position') + 1;
         $genre->save();
-        return redirect()->back();
+        return redirect()->route('genre.index');
     }
 
     /**
@@ -70,7 +70,7 @@ class GenreController extends Controller
         $genre->status = $data['status'];
         $genre->position = $genre->position;
         $genre->save();
-        return redirect()->back();
+        return redirect()->route('genre.index');
     }
 
     /**

@@ -37,7 +37,7 @@ class CategoryController extends Controller
         $category->status = $data['status'];
         $category->position = Category::max('position') + 1;
         $category->save();
-        return redirect()->back();
+        return redirect()->route('category.index');
     }
 
     /**
@@ -70,7 +70,7 @@ class CategoryController extends Controller
         $category->status = $data['status'];
         $category->position = $category->position;
         $category->save();
-        return redirect()->back();
+        return redirect()->route('category.index');
     }
 
     /**

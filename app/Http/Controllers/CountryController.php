@@ -38,7 +38,7 @@ class CountryController extends Controller
         $country->status = $data['status'];
         $country->position = Country::max('position') + 1;
         $country->save();
-        return redirect()->back();
+        return redirect()->route('country.index');
     }
 
     /**
@@ -71,7 +71,7 @@ class CountryController extends Controller
         $country->status = $data['status'];
         $country->position = $country->position;
         $country->save();
-        return redirect()->back();
+        return redirect()->route('country.index');
     }
 
     /**

@@ -49,23 +49,23 @@
                                 <th scope="col"></th>
                                 <th scope="col"
                                     style="text-align: center; align-items: center; font-size: 20px; color: white; ">
-                                    Tên danh mục Phim
+                                    Tên Danh Mục
                                 </th>
                                 <th scope="col"
                                     style="text-align: center; align-items: center; font-size: 20px; color: white; ">
-                                    Slug
+                                    Đường Dẫn Danh Mục
                                 </th>
                                 <th scope="col"
                                     style="text-align: center; align-items: center; font-size: 20px; color: white; ">
-                                    Mô tả danh mục Phim
+                                    Mô Tả Danh Mục
                                 </th>
                                 <th scope="col"
                                     style="text-align: center; align-items: center; font-size: 20px; color: white; ">
-                                    Tình trạng danh mục Phim
+                                    Tình Trạng Danh Mục
                                 </th>
                                 <th scope="col"
                                     style="text-align: center; align-items: center; font-size: 20px; color: white; ">
-                                    Quản lý
+                                    Quản Lý
                                 </th>
                             </tr>
                             </thead>
@@ -74,7 +74,7 @@
                                    style="text-align: center; align-items: center; font-size: 18px; color: white;">
                             @foreach($list as $key => $cate)
                                 <tr id="{{ $cate->id }}">
-                                    <th scope="row">{{$key}}</th>
+                                    <th>{{$key+1}}</th>
                                     <td>{{$cate->title}}</td>
                                     <td>{{$cate->slug}}</td>
                                     <td>{{$cate->description}}</td>
