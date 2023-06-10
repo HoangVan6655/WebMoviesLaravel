@@ -236,10 +236,10 @@
                     {{--Hình Ảnh Phim--}}
                     <div class="form-group row" style="color: white">
                         <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Hình Ảnh Phim</label>
-                        <div class="col-sm-9">
+                        <div class="col-sm-9" id="choose_image">
                             {!! Form::file('image', ['class'=>'form-control-file']) !!}
 
-                            <div style="margin-bottom: 10pt;" id="choose_image">
+                            <div style="margin-bottom: 10pt;">
                                 @if(isset($movie))
                                     <img width="20%" src="{{ asset('uploads/movie/'.$movie->image) }}">
                                 @else

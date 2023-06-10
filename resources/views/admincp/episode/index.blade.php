@@ -6,7 +6,7 @@
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Liệt Kê Danh Sách Tập Phim</h4>
+                    <h2 class="card-title">Liệt Kê Danh Sách Tập Phim</h2>
 
                     <style>
                         #tableTapPhim_length label {

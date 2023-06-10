@@ -5,7 +5,7 @@
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Liệt Kê Danh Sách Danh Mục Phim</h4>
+                    <h2 class="card-title">Liệt Kê Danh Sách Danh Mục Phim</h2>
 
                     <style>
                         #tableDanhMucPhim_length label {

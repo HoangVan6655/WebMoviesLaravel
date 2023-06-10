@@ -5,16 +5,16 @@
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Liệt Kê Danh Sách Thể Loại Phim</h4>
+                    <h2 class="card-title">Liệt Kê Danh Sách Thể Loại Phim</h4>
 
-                    <style>
-                        #tableTheLoaiPhim_length label {
-                            font-size: 0;
-                        }
+                        <style>
+                            #tableTheLoaiPhim_length label {
+                                font-size: 0;
+                            }
 
-                        #tableTheLoaiPhim_length select {
-                            color: white;
-                        }
+                            #tableTheLoaiPhim_length select {
+                                color: white;
+                            }
 
                         #tableTheLoaiPhim_filter label {
                             display: flex;
