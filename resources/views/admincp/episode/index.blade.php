@@ -49,16 +49,16 @@
                             <tr>
                                 <th></th>
                                 <th scope="col"
-                                    style="text-align: center; align-items: center; font-size: 20px; color: white; ">Tên
-                                    Phim
+                                    style="text-align: center; align-items: center; font-size: 20px; color: white; ">
+                                    Tên Phim
                                 </th>
                                 <th scope="col"
                                     style="text-align: center; align-items: center; font-size: 20px; color: white; ">
                                     Hình Ảnh Phim
                                 </th>
                                 <th scope="col"
-                                    style="text-align: center; align-items: center; font-size: 20px; color: white; ">Tập
-                                    Phim
+                                    style="text-align: center; align-items: center; font-size: 20px; color: white; ">
+                                    Tập Phim
                                 </th>
                                 <th scope="col"
                                     style="text-align: center; align-items: center; font-size: 20px; color: white; ">

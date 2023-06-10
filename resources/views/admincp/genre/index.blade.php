@@ -127,7 +127,7 @@
 
                 <!-- Confirm Modal -->
                 <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel"
-                     aria-hidden="true">
+                     aria-hidden="true" data-id="{{ isset($genre) ? $genre->id : '' }}">
                     <div class="modal-dialog">
                         <div class="modal-content bg-gray-100 dark:bg-gray-800 text-white">
                             <div class="modal-header">
@@ -141,7 +141,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-                                {!! Form::open(['method'=>'DELETE', 'route'=>['genre.destroy', $gen->id]]) !!}
+                                {!! Form::open(['method'=>'DELETE', 'route'=>['genre.destroy', '__genreId']]) !!}
                                 {!! Form::submit('Xoá', ['class'=>'btn btn-danger']) !!}
                                 {!! Form::close() !!}
                             </div>
@@ -162,7 +162,11 @@
 </script>
 
 <script>
-    function showModal() {
+    function showModal(genreId) {
+        $('#confirmModal').data('id', genreId);
+        var formAction = "{{ route('genre.destroy', '') }}";
+        formAction += "/" + genreId;
+        $('#confirmModal form').attr('action', formAction);
         $('#confirmModal').modal('show');
     }
 </script>

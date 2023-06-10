@@ -128,7 +128,7 @@
 
                 <!-- Confirm Modal -->
                 <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel"
-                     aria-hidden="true">
+                     aria-hidden="true" data-id="{{ isset($country) ? $country->id : '' }}">
                     <div class="modal-dialog">
                         <div class="modal-content bg-gray-100 dark:bg-gray-800 text-white">
                             <div class="modal-header">
@@ -142,7 +142,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-                                {!! Form::open(['method'=>'DELETE', 'route'=>['country.destroy', $country->id]]) !!}
+                                {!! Form::open(['method'=>'DELETE', 'route'=>['country.destroy', '__countryId']]) !!}
                                 {!! Form::submit('Xoá', ['class'=>'btn btn-danger']) !!}
                                 {!! Form::close() !!}
                             </div>
@@ -163,7 +163,11 @@
 </script>
 
 <script>
-    function showModal() {
+    function showModal(countryId) {
+        $('#confirmModal').data('id', countryId);
+        var formAction = "{{ route('country.destroy', '') }}";
+        formAction += "/" + countryId;
+        $('#confirmModal form').attr('action', formAction);
         $('#confirmModal').modal('show');
     }
 </script>
