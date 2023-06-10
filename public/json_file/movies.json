@@ -1,5 +1,133 @@
 [
     {
+        "id": 56,
+        "title": "a\u0111\u00e1",
+        "ThoiLuong": "50 ph\u00fat\/t\u1eadp",
+        "name_original": "\u00e1\u0111\u00e1",
+        "trailer": "\u00e1\u0111\u00e1",
+        "description": "\u00e1\u0111\u00e1",
+        "status": 1,
+        "image": "meg-24992.jpg",
+        "category_id": 1,
+        "ThuocPhim": "phimle",
+        "genre_id": 1,
+        "country_id": 1,
+        "slug": "ada",
+        "movie_hot": 1,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-10 16:05:11",
+        "NgayCapNhat": "2023-06-10 16:05:11",
+        "year": null,
+        "tags": "\u1ea5s\u0111\u00e1",
+        "topview": null,
+        "season": 0,
+        "SoTap": 5,
+        "episode_count": 0,
+        "category": {
+            "id": 1,
+            "title": "Phim M\u1edbi",
+            "description": "Phim m\u1edbi c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-moi",
+            "position": 0
+        },
+        "movie_genre": [
+            {
+                "id": 1,
+                "title": "H\u00e0nh \u0110\u1ed9ng",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00e0nh \u0111\u1ed9ng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hanh-dong",
+                "position": 0,
+                "pivot": {
+                    "movie_id": 56,
+                    "genre_id": 1
+                }
+            }
+        ],
+        "country": {
+            "id": 1,
+            "title": "Vi\u1ec7t Nam",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim Vi\u1ec7t Nam th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "viet-nam",
+            "position": 0
+        },
+        "genre": {
+            "id": 1,
+            "title": "H\u00e0nh \u0110\u1ed9ng",
+            "description": "Nh\u1eefng b\u1ed9 phim h\u00e0nh \u0111\u1ed9ng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "hanh-dong",
+            "position": 0
+        }
+    },
+    {
+        "id": 55,
+        "title": "\u00e1\u0111\u00e1",
+        "ThoiLuong": "\u00e1\u0111\u00e1",
+        "name_original": "\u00e1\u0111\u00e1",
+        "trailer": "\u00e1\u0111\u00e1",
+        "description": "\u00e1\u0111\u1ea5",
+        "status": 1,
+        "image": "khac-tinh-cua-quy1703.jpg",
+        "category_id": 1,
+        "ThuocPhim": "phimle",
+        "genre_id": 9,
+        "country_id": 1,
+        "slug": "ada",
+        "movie_hot": 1,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-10 15:29:31",
+        "NgayCapNhat": "2023-06-10 15:29:31",
+        "year": null,
+        "tags": "s\u0111",
+        "topview": null,
+        "season": 0,
+        "SoTap": 2,
+        "episode_count": 0,
+        "category": {
+            "id": 1,
+            "title": "Phim M\u1edbi",
+            "description": "Phim m\u1edbi c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-moi",
+            "position": 0
+        },
+        "movie_genre": [
+            {
+                "id": 9,
+                "title": "H\u00ecnh S\u1ef1",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00ecnh s\u1ef1 \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hinh-su",
+                "position": 11,
+                "pivot": {
+                    "movie_id": 55,
+                    "genre_id": 9
+                }
+            }
+        ],
+        "country": {
+            "id": 1,
+            "title": "Vi\u1ec7t Nam",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim Vi\u1ec7t Nam th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "viet-nam",
+            "position": 0
+        },
+        "genre": {
+            "id": 9,
+            "title": "H\u00ecnh S\u1ef1",
+            "description": "Nh\u1eefng b\u1ed9 phim h\u00ecnh s\u1ef1 \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "hinh-su",
+            "position": 11
+        }
+    },
+    {
         "id": 49,
         "title": "ho\u00e0ng v\u0103n",
         "ThoiLuong": null,
@@ -7,7 +135,7 @@
         "trailer": null,
         "description": "ho\u00e0ng v\u0103n",
         "status": 1,
-        "image": "meg-28566.jpg",
+        "image": "Duty-After-School96.jpg",
         "category_id": 1,
         "ThuocPhim": "phimle",
         "genre_id": 5,
@@ -23,7 +151,7 @@
         "topview": 0,
         "season": 0,
         "SoTap": 1,
-        "episode_count": 0,
+        "episode_count": 1,
         "category": {
             "id": 1,
             "title": "Phim M\u1edbi",
@@ -56,18 +184,6 @@
                     "movie_id": 49,
                     "genre_id": 3
                 }
-            },
-            {
-                "id": 5,
-                "title": "Vi\u1ec5n T\u01b0\u1edfng",
-                "description": "Nh\u1eefng b\u1ed9 phim vi\u1ec5n t\u01b0\u1edfng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
-                "status": 1,
-                "slug": "vien-tuong",
-                "position": 17,
-                "pivot": {
-                    "movie_id": 49,
-                    "genre_id": 5
-                }
             }
         ],
         "country": {
@@ -78,26 +194,19 @@
             "slug": "viet-nam",
             "position": 0
         },
-        "genre": {
-            "id": 5,
-            "title": "Vi\u1ec5n T\u01b0\u1edfng",
-            "description": "Nh\u1eefng b\u1ed9 phim vi\u1ec5n t\u01b0\u1edfng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
-            "status": 1,
-            "slug": "vien-tuong",
-            "position": 17
-        }
+        "genre": null
     },
     {
         "id": 48,
         "title": "V\u1ec7 Binh D\u1ea3i Ng\u00e2n H\u00e0 3",
         "ThoiLuong": "150 ph\u00fat",
-        "name_original": "Guardians of the Galaxy Volume 3 2023",
+        "name_original": "Guardians of the Galaxy Volume 3 2023 Guardians of the Galaxy Volume 3 2023",
         "trailer": "JqcncLPi9zw",
         "description": "V\u1ec7 Binh D\u1ea3i Ng\u00e2n H\u00e0 3 \u2013 Guardians of the Galaxy Volume 3 (2023) sau khi mua Knowhere t\u1eeb The Collector, \u0111\u1ed9i V\u1ec7 binh d\u1ea3i Ng\u00e2n H\u00e0 c\u1ed1 g\u1eafng bi\u1ebfn n\u00f3 th\u00e0nh n\u01a1i tr\u00fa \u1ea9n an to\u00e0n cho nh\u1eefng ng\u01b0\u1eddi t\u1ecb n\u1ea1n sau c\u00fa b\u00fang tay di d\u1eddi. Nh\u01b0ng sau m\u1ed9t cu\u1ed9c t\u1ea5n c\u00f4ng t\u00e0n b\u1ea1o, Peter Quill, v\u1eabn c\u1ea3m x\u00fac v\u00ec m\u1ea5t Gamora, ph\u1ea3i t\u1eadp h\u1ee3p c\u00e1c V\u1ec7 binh \u0111\u1ec3 th\u1ef1c hi\u1ec7n s\u1ee9 m\u1ec7nh b\u1ea3o v\u1ec7 v\u0169 tr\u1ee5 v\u00e0 b\u1ea3o v\u1ec7 m\u1ed9t ng\u01b0\u1eddi trong s\u1ed1 h\u1ecd kh\u1ecfi k\u1ebb th\u00f9 chung nguy hi\u1ec3m.",
         "status": 1,
         "image": "Ve-Binh-Dai-Ngan-Ha-39224.jpg",
         "category_id": 2,
-        "ThuocPhim": "phimle",
+        "ThuocPhim": "phimbo",
         "genre_id": 1,
         "country_id": 4,
         "slug": "ve-binh-dai-ngan-ha-3",
@@ -105,13 +214,13 @@
         "resolution": 4,
         "phude": 0,
         "NgayTao": null,
-        "NgayCapNhat": "2023-06-01 22:16:04",
+        "NgayCapNhat": "2023-06-10 12:26:12",
         "year": "2023",
         "tags": "Phim The Guardians Of The Galaxy Vol.3, Phim V\u1ec7 Binh D\u1ea3i Ng\u00e2n H\u00e0 3, The Guardians Of The Galaxy Vol.3, The Guardians Of The Galaxy Vol.3 Vietsub, V\u1ec7 Binh D\u1ea3i Ng\u00e2n H\u00e0 3, V\u1ec7 Binh D\u1ea3i Ng\u00e2n H\u00e0 3 Vietsub",
         "topview": 2,
         "season": 3,
-        "SoTap": 1,
-        "episode_count": 2,
+        "SoTap": 10,
+        "episode_count": 0,
         "category": {
             "id": 2,
             "title": "Phim Chi\u1ebfu R\u1ea1p",
@@ -131,30 +240,6 @@
                 "pivot": {
                     "movie_id": 48,
                     "genre_id": 1
-                }
-            },
-            {
-                "id": 5,
-                "title": "Vi\u1ec5n T\u01b0\u1edfng",
-                "description": "Nh\u1eefng b\u1ed9 phim vi\u1ec5n t\u01b0\u1edfng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
-                "status": 1,
-                "slug": "vien-tuong",
-                "position": 17,
-                "pivot": {
-                    "movie_id": 48,
-                    "genre_id": 5
-                }
-            },
-            {
-                "id": 17,
-                "title": "Phi\u00eau L\u01b0u",
-                "description": "Nh\u1eefng b\u1ed9 phim phi\u00eau l\u01b0u \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
-                "status": 1,
-                "slug": "phieu-luu",
-                "position": 13,
-                "pivot": {
-                    "movie_id": 48,
-                    "genre_id": 17
                 }
             }
         ],

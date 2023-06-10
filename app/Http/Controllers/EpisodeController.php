@@ -45,7 +45,7 @@ class EpisodeController extends Controller
             $ep->updated_at = Carbon::now('Asia/Ho_Chi_Minh');
             $ep->save();
         }
-        return redirect()->back();
+        return redirect()->route('episode.index');
     }
 
     public function add_episode($id)
@@ -86,7 +86,7 @@ class EpisodeController extends Controller
         $ep->created_at = Carbon::now('Asia/Ho_Chi_Minh');
         $ep->updated_at = Carbon::now('Asia/Ho_Chi_Minh');
         $ep->save();
-        return redirect()->to('episode');
+        return redirect()->route('episode.index');
     }
 
     /**
@@ -95,14 +95,15 @@ class EpisodeController extends Controller
     public function destroy(string $id)
     {
         $episode = Episode::find($id)->delete();
-        return redirect()->to('episode');
+        return redirect()->route('episode.index');
     }
 
     public function select_movie()
     {
         $id = $_GET['id'];
         $movie = Movie::find($id);
-        $output = '<option>Chọn Tập Phim</option>';
+        $output = '<option value = "" >Chọn Tập Phim</option>';
+//        $output = '';
 
         if ($movie->ThuocPhim == 'phimbo') {
             for ($i = 1; $i <= $movie->SoTap; $i++) {
@@ -114,7 +115,6 @@ class EpisodeController extends Controller
                         <option value = "Cam" >Cam</option >
                         <option value = "HDCam" >HDCam</option >';
         }
-
         echo $output;
     }
 }

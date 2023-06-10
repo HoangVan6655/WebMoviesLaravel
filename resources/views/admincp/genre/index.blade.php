@@ -8,25 +8,25 @@
                     <h4 class="card-title">Liệt Kê Danh Sách Thể Loại Phim</h4>
 
                     <style>
-                        #tableDanhMucPhim_length label {
+                        #tableTheLoaiPhim_length label {
                             font-size: 0;
                         }
 
-                        #tableDanhMucPhim_length select {
+                        #tableTheLoaiPhim_length select {
                             color: white;
                         }
 
-                        #tableDanhMucPhim_filter label {
+                        #tableTheLoaiPhim_filter label {
                             display: flex;
                             align-items: center;
                         }
 
-                        #tableDanhMucPhim_filter input[type="search"] {
+                        #tableTheLoaiPhim_filter input[type="search"] {
                             width: 400px;
                             color: white;
                         }
 
-                        #tableDanhMucPhim_filter label span {
+                        #tableTheLoaiPhim_filter label span {
                             display: none;
 
                         }
@@ -49,19 +49,19 @@
                                 <th></th>
                                 <th scope="col"
                                     style="text-align: center; align-items: center; font-size: 20px; color: white; ">
-                                    Tên Danh Mục
+                                    Tên Thể Loại
                                 </th>
                                 <th scope="col"
                                     style="text-align: center; align-items: center; font-size: 20px; color: white; ">
-                                    Đường Dẫn Danh Mục
+                                    Đường Dẫn Thể Loại
                                 </th>
                                 <th scope="col"
                                     style="text-align: center; align-items: center; font-size: 20px; color: white; ">
-                                    Mô Tả Danh Mục
+                                    Mô Tả Thể Loại
                                 </th>
                                 <th scope="col"
                                     style="text-align: center; align-items: center; font-size: 20px; color: white; ">
-                                    Tình Trạng Danh Mục
+                                    Tình Trạng Thể Loại
                                 </th>
                                 <th scope="col"
                                     style="text-align: center; align-items: center; font-size: 20px; color: white; ">
@@ -137,7 +137,7 @@
                                         style="background-color: #191c24; border: none; color: white"></button>
                             </div>
                             <div class="modal-body">
-                                <p>Bạn có chắc chắn muốn xoá danh mục phim này?</p>
+                                <p>Bạn có chắc chắn muốn xoá thể loại phim này?</p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>

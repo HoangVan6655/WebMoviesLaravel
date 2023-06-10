@@ -108,24 +108,73 @@
 
     function validateForm() {
         var title = document.getElementById("title").value;
+        var slug = document.getElementById("convert_slug").value;
         var description = document.getElementById("description").value;
-        if (title == "" && description == "") {
+
+        if (title == "" && slug == "" && description == "") {
             var toast = new bootstrap.Toast(document.querySelector('.toast'))
             var toastBody = document.querySelector('.toast-body')
             toastBody.innerText = "Vui lòng nhập đầy đủ thông tin."
             toast.show()
+
+            var titleInput = document.getElementById("title");
+            titleInput.style.border = "1px solid red";
+            var slugInput = document.getElementById("convert_slug");
+            slugInput.style.border = "1px solid red";
+            var descriptionInput = document.getElementById("description");
+            descriptionInput.style.border = "1px solid red";
+
+            setTimeout(function () {
+                titleInput.style.border = ""; // Xóa viền đỏ
+            }, 5000);
+            setTimeout(function () {
+                slugInput.style.border = ""; // Xóa viền đỏ
+            }, 5000);
+            setTimeout(function () {
+                descriptionInput.style.border = ""; // Xóa viền đỏ
+            }, 5000);
             return false;
         } else if (title == "") {
             var toast = new bootstrap.Toast(document.querySelector('.toast'))
             var toastBody = document.querySelector('.toast-body')
             toastBody.innerText = "Vui lòng nhập tên thể loại."
             toast.show()
+
+            var titleInput = document.getElementById("title");
+            titleInput.style.border = "1px solid red";
+            titleInput.focus();
+
+            setTimeout(function () {
+                titleInput.style.border = ""; // Xóa viền đỏ
+            }, 5000);
+            return false;
+        } else if (slug == "") {
+            var toast = new bootstrap.Toast(document.querySelector('.toast'))
+            var toastBody = document.querySelector('.toast-body')
+            toastBody.innerText = "Vui lòng nhập đường dẫn thể loại."
+            toast.show()
+
+            var slugInput = document.getElementById("convert_slug");
+            slugInput.style.border = "1px solid red";
+            slugInput.focus();
+
+            setTimeout(function () {
+                slugInput.style.border = ""; // Xóa viền đỏ
+            }, 5000);
             return false;
         } else if (description == "") {
             var toast = new bootstrap.Toast(document.querySelector('.toast'))
             var toastBody = document.querySelector('.toast-body')
             toastBody.innerText = "Vui lòng nhập mô tả thể loại."
             toast.show()
+
+            var descriptionInput = document.getElementById("description");
+            descriptionInput.style.border = "1px solid red";
+            descriptionInput.focus();
+
+            setTimeout(function () {
+                descriptionInput.style.border = ""; // Xóa viền đỏ
+            }, 5000);
             return false;
         } else {
             $('#confirmModal').modal('show');
