@@ -1,5 +1,74 @@
 [
     {
+        "id": 57,
+        "title": "Qu\u00e1 Nhanh Qu\u00e1 Nguy Hi\u1ec3m 10",
+        "ThoiLuong": "150 ph\u00fat",
+        "name_original": "Fast And Furious 10 2023",
+        "trailer": "eoOaKN4qCKw",
+        "description": "Qu\u00e1 Nhanh Qu\u00e1 Nguy Hi\u1ec3m 10 \u2013 Fast and Furious 10 (2023) xoay quanh vi\u1ec7c Dom Toretto c\u00f9ng gia \u0111\u00ecnh anh \u1ea5y \u0111\u00e3 tr\u1edf th\u00e0nh m\u1ee5c ti\u1ebfu t\u1ea5n c\u00f4ng b\u1edfi ch\u00ednh con trai \u00f4ng tr\u00f9m ma t\u00fay, k\u1ebb tr\u01b0\u1edbc \u0111\u00e2y b\u1ecb X 10 ti\u00eau di\u1ec7t. M\u1eddi c\u00e1c b\u1ea1n c\u00f9ng \u0111\u00f3n xem b\u1ed9 phim Qu\u00e1 Nhanh Qu\u00e1 Nguy Hi\u1ec3m 10 \u2013 Fast X c\u1ef1c h\u1ea5p d\u1eabn n\u00e0y.",
+        "status": 1,
+        "image": "Qua-Nhanh-Qua-Nguy-Hiem-10-20234038.jpg",
+        "category_id": 2,
+        "ThuocPhim": "phimle",
+        "genre_id": 4,
+        "country_id": 4,
+        "slug": "qua-nhanh-qua-nguy-hiem-10",
+        "movie_hot": 1,
+        "resolution": 4,
+        "phude": 0,
+        "NgayTao": "2023-06-10 21:57:43",
+        "NgayCapNhat": "2023-06-10 21:58:41",
+        "year": "2023",
+        "tags": "Qu\u00e1 nhanh qu\u00e1 nguy hi\u1ec3m, Fast and Furios",
+        "topview": null,
+        "season": 10,
+        "SoTap": 1,
+        "episode_count": 1,
+        "category": {
+            "id": 2,
+            "title": "Phim Chi\u1ebfu R\u1ea1p",
+            "description": "Phim chi\u1ebfu r\u1ea1p \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-chieu-rap",
+            "position": 3
+        },
+        "movie_genre": [
+            {
+                "id": 9,
+                "title": "H\u00ecnh S\u1ef1",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00ecnh s\u1ef1 \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hinh-su",
+                "position": 11,
+                "pivot": {
+                    "movie_id": 57,
+                    "genre_id": 9
+                }
+            },
+            {
+                "id": 42,
+                "title": "H\u00e0nh \u0110\u1ed9ng",
+                "description": "C\u1eadp nh\u1eadt c\u00e1c phim h\u00e0nh \u0111\u1ed9ng",
+                "status": 1,
+                "slug": "hanh-dong",
+                "position": 16,
+                "pivot": {
+                    "movie_id": 57,
+                    "genre_id": 42
+                }
+            }
+        ],
+        "country": {
+            "id": 4,
+            "title": "M\u1ef9",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim M\u1ef9 th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "my",
+            "position": 1
+        },
+        "genre": null
+    },
+    {
         "id": 49,
         "title": "ho\u00e0ng v\u0103n",
         "ThoiLuong": "50 ph\u00fat\/t\u1eadp",
@@ -7,14 +76,14 @@
         "trailer": "JqcncLPi9zw",
         "description": "ho\u00e0ng v\u0103n",
         "status": 1,
-        "image": "Duty-After-School96.jpg",
+        "image": "John-Wick-447.jpg",
         "category_id": 1,
         "ThuocPhim": "phimle",
         "genre_id": 3,
         "country_id": 1,
         "slug": "hoang-van",
         "movie_hot": 1,
-        "resolution": 4,
+        "resolution": 2,
         "phude": 1,
         "NgayTao": null,
         "NgayCapNhat": "2023-06-10 17:31:45",
