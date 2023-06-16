@@ -17,8 +17,10 @@
                     <article class="thumb grid-item post-38498">
                         <div class="halim-item">
                             <a class="halim-thumb" href="{{route('movie',$hot->slug)}}" title="{{$hot->title}}">
-                                <figure><img class="lazy img-responsive" src="{{asset('uploads/movie/'.$hot->image)}}"
-                                             alt="{{$hot->title}}" title="{{$hot->title}}"></figure>
+                                <figure>
+                                    <img class="lazy img-responsive" src="{{asset('uploads/movie/'.$hot->image)}}"
+                                         alt="{{$hot->title}}" title="{{$hot->title}}">
+                                </figure>
                                 <span class="status">
                                     @if($hot->resolution == 0)
                                         HD
@@ -57,6 +59,9 @@
                 @endforeach
 
             </div>
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+                  integrity="sha512-..." crossorigin="anonymous"/>
             <script>
                 $(document).ready(function ($) {
                     var owl = $('#halim_related_movies-2');
@@ -69,8 +74,8 @@
                             autoplayHoverPause: true,
                             nav: true,
                             navText: [
-                                '<i class="hl-down-open rotate-left"></i>',
-                                '<i class="hl-down-open rotate-right"></i>'
+                                '<i class="fas fa-chevron-left"></i>',
+                                '<i class="fas fa-chevron-right"></i>'
                             ],
                             responsiveClass: true,
                             responsive: {
