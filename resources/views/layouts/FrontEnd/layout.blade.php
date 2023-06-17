@@ -148,7 +148,7 @@
             var search = $('#timkiem').val();
             if (search != '') {
                 var expression = new RegExp(search, "i");
-                $.getJSON('json_file/movies.json', function (data) {
+                $.getJSON('/json_file/movies.json', function (data) {
                     //vòng lặp
                     $.each(data, function (key, value) {
                         if (value.title.search(expression) != -1 || value.description.search(expression) != -1) {
