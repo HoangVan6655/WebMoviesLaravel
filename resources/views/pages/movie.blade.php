@@ -289,94 +289,96 @@
                         </article>
                     </div>
                 </div>
+            </section>
 
-
-    </div>
-    </section>
-    <section class="related-movies">
-        <div id="halim_related_movies-2xx" class="wrap-slider">
-            <div class="section-bar clearfix">
-                <h3 class="section-title"><span>CÓ THỂ BẠN MUỐN XEM</span></h3>
-            </div>
-            <div id="halim_related_movies-2" class="owl-carousel owl-theme related-film">
-                @foreach($related as $key => $hot)
-                    <article class="thumb grid-item post-38498">
-                        <div class="halim-item">
-                            <a class="halim-thumb" href="{{route('movie',$hot->slug)}}" title="{{$hot->title}}">
-                                <figure>
-                                    <img class="lazy img-responsive"
-                                         src="{{asset('uploads/movie/'.$hot->image)}}" alt="{{$hot->title}}"
-                                         title="Đại Thánh Vô Song">
-                                </figure>
-                                <span class="status">
-                                    @if($hot->resolution == 0)
-                                        HD
-                                    @elseif($hot->resolution == 1)
-                                        SD
-                                    @elseif($hot->resolution == 2)
-                                        HDCam
-                                    @elseif($hot->resolution == 3)
-                                        Cam
-                                    @elseif($hot->resolution == 4)
-                                        FullHD
-                                    @else
-                                        Trailer
-                                    @endif
-                                </span>
-                                @if($hot->resolution != 5)
-                                    <span class="episode"><i class="fa fa-play" aria-hidden="true"></i>
-                                        @if($hot->phude == 0)
-                                            Phụ Đề - Tập 1/{{ $hot->SoTap }}
-                                            @if($hot->season != 0)
-                                                - Season {{ $hot->season }}
+            <section class="related-movies">
+                <div id="halim_related_movies-2xx" class="wrap-slider">
+                    <div class="section-bar clearfix">
+                        <h3 class="section-title"><span>CÓ THỂ BẠN MUỐN XEM</span></h3>
+                    </div>
+                    <div id="halim_related_movies-2" class="owl-carousel owl-theme related-film">
+                        @foreach($related as $key => $hot)
+                            <article class="thumb grid-item post-38498">
+                                <div class="halim-item">
+                                    <a class="halim-thumb" href="{{route('movie',$hot->slug)}}" title="{{$hot->title}}">
+                                        <figure>
+                                            <img class="lazy img-responsive"
+                                                 src="{{asset('uploads/movie/'.$hot->image)}}" alt="{{$hot->title}}"
+                                                 title="Đại Thánh Vô Song">
+                                        </figure>
+                                        <span class="status">
+                                            @if($hot->resolution == 0)
+                                                HD
+                                            @elseif($hot->resolution == 1)
+                                                SD
+                                            @elseif($hot->resolution == 2)
+                                                HDCam
+                                            @elseif($hot->resolution == 3)
+                                                Cam
+                                            @elseif($hot->resolution == 4)
+                                                FullHD
+                                            @else
+                                                Trailer
                                             @endif
-                                        @else
-                                            Thuyết Minh - Tập 1/{{ $hot->SoTap }}
-                                            @if($hot->season != 0)
-                                                - Season {{ $hot->season }}
-                                            @endif
+                                        </span>
+                                        @if($hot->resolution != 5)
+                                            <span class="episode"><i class="fa fa-play" aria-hidden="true"></i>
+                                                @if($hot->phude == 0)
+                                                    Phụ Đề - Tập 1/{{ $hot->SoTap }}
+                                                @else
+                                                    Thuyết Minh - Tập 1/{{ $hot->SoTap }}
+                                                @endif
+                                            </span>
                                         @endif
-                                    </span>
-                                @endif
-                                <div class="icon_overlay"></div>
-                                <div class="halim-post-title-box">
-                                    <div class="halim-post-title ">
-                                        <p class="entry-title">{{$hot->title}}</p>
-                                        <p class="original_title">{{$hot->name_original}}</p>
-                                    </div>
+                                        <div class="icon_overlay"></div>
+                                        <div class="halim-post-title-box">
+                                            <div class="halim-post-title ">
+                                                <p class="entry-title">{{$hot->title}}</p>
+                                                <p class="original_title">{{$hot->name_original}}</p>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                    </article>
-                @endforeach
+                            </article>
+                        @endforeach
 
-            </div>
-            <link rel="stylesheet"
-                  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-                  integrity="sha512-..." crossorigin="anonymous"/>
-            <script>
-                $(document).ready(function ($) {
-                    var owl = $('#halim_related_movies-2');
-                    owl.owlCarousel({
-                        loop: true,
-                        margin: 4,
-                        autoplay: true,
-                        autoplayTimeout: 4000,
-                        autoplayHoverPause: true,
-                        nav: true,
-                        navText: [
-                            '<i class="fas fa-chevron-left"></i>',
-                            '<i class="fas fa-chevron-right"></i>'
-                        ],
-                        responsiveClass: true,
-                        responsive: {0: {items: 2}, 480: {items: 3}, 600: {items: 4}, 1000: {items: 4}}
-                    })
-                });
-            </script>
-        </div>
-    </section>
-    </main>
-    {{--Sidebar--}}
-    @include('pages.include.sidebar')
+                    </div>
+                    <link rel="stylesheet"
+                          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+                          integrity="sha512-..." crossorigin="anonymous"/>
+                    <script>
+                        $(document).ready(function ($) {
+                            var owl = $('#halim_related_movies-2');
+                            owl.owlCarousel({
+                                loop: true,
+                                margin: 4,
+                                autoplay: true,
+                                autoplayTimeout: 4000,
+                                autoplayHoverPause: true,
+                                nav: true,
+                                navText: [
+                                    '<i class="fas fa-chevron-left"></i>',
+                                    '<i class="fas fa-chevron-right"></i>'
+                                ],
+                                responsiveClass: true,
+                                responsive: {
+                                    0: {
+                                        items: 2
+                                    },
+                                    480: {
+                                        items: 3
+                                    },
+                                    600: {
+                                        items: 4
+                                    },
+                                }
+                            })
+                        });
+                    </script>
+                </div>
+            </section>
+        </main>
+        {{--Sidebar--}}
+        @include('pages.include.sidebar')
     </div>
 @endsection
