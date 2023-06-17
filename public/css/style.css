@@ -12,7 +12,7 @@ body.halimthemes {
     line-height: 1.6;
     letter-spacing: 0.6px;
     overflow-x: hidden;
-    background: #222d38 url(assets/images/halimBg.png) fixed center;
+    background: #222d38 fixed center;
 }
 a {
     color: #87c3f9;
@@ -529,8 +529,7 @@ input {
     padding: 5px;
     position: absolute;
     text-align: center;
-    background: rgba(23, 37, 49, 0.94) url(assets/images/ripple.svg) no-repeat 50%
-    50%;
+    background: rgba(23, 37, 49, 0.94) no-repeat 50% 50%;
     width: 100%;
     height: 100%;
     top: 0;
@@ -912,7 +911,7 @@ input.search-btn.pull-right {
     position: absolute;
     right: 0;
     border: 1px solid #008cca;
-    background: #008cca url(assets/images/search.png) 49% no-repeat;
+    background: #008cca 49% no-repeat;
     background-size: 13px;
     padding: 5px 16px;
     margin: 0;
@@ -1622,7 +1621,7 @@ tr.title {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #000 url(assets/images/play-icon.png) no-repeat center center;
+    background: #000 no-repeat center center;
     background-size: 30px;
     opacity: 0;
     -webkit-transition: all 0.5s ease-in-out;
@@ -2583,7 +2582,7 @@ span
     top: 50%;
     margin-left: -40px;
     margin-top: -40px;
-    background: url(owl.video.play.png) no-repeat;
+    background: no-repeat;
     cursor: pointer;
     z-index: 1;
     -webkit-backface-visibility: hidden;
@@ -3257,7 +3256,7 @@ a .hl-dot-3 {
 }
 .stars-large,
 .stars-large span {
-    background-image: url(assets/images/stars-large.png);
+
 }
 .post-single-rate {
     float: left;
@@ -3273,7 +3272,7 @@ a .hl-dot-3 {
     cursor: pointer;
 }
 .taq-load {
-    background: url(assets/images/loading.gif) center no-repeat;
+    background: center no-repeat;
     width: 98px;
     height: 22px;
     display: block;
@@ -3464,7 +3463,7 @@ a .hl-dot-3 {
     border-radius: 20px !important;
     transition: 0.7s all;
     padding: 10px 40px;
-    background: #12171b6e url(assets/images/search.svg) 5px 2px no-repeat;
+    background: #12171b6e 5px 2px no-repeat;
 }
 .halim-search-form .form-control:focus {
     border-radius: 3px !important;
@@ -3939,7 +3938,7 @@ a .hl-dot-3 {
     font-size: 30px;
 }
 .primary_ribbon {
-    background: url(assets/images/title_overview_sprite.png) no-repeat;
+    background: no-repeat;
     width: 40px;
     height: 58px;
     background-position: -8px -66px;
@@ -4007,7 +4006,7 @@ a .hl-dot-3 {
     font-family: sans-serif;
     display: inline-block;
     float: left;
-    background: url(assets/images/title_overview_sprite.png) no-repeat;
+    background: no-repeat;
     height: 32px;
     line-height: 31px;
     background-position: -15px -120px;
@@ -4440,7 +4439,7 @@ a .hl-dot-3 {
     -webkit-transform: rotate(90deg) scale(1) skew(1deg) translate(0);
 }
 .halim--notice {
-    background: #224361 url(assets/images/warning.png) no-repeat;
+    background: #224361 no-repeat;
     background-position: 8px 40%;
     padding: 15px;
     padding-left: 50px;
@@ -4450,7 +4449,7 @@ a .hl-dot-3 {
     margin-bottom: 10px;
 }
 .halim-film-notice {
-    background: #fbecd8 url(assets/images/warning.png) no-repeat;
+    background: #fbecd8 no-repeat;
     background-position: 8px 40%;
     padding: 15px;
     padding-left: 50px;
@@ -4459,7 +4458,7 @@ a .hl-dot-3 {
     font-size: 13.5px;
 }
 .halim_showtime_movies {
-    background: #22466b url(assets/images/weekly-calendar.png) no-repeat;
+    background: #22466b no-repeat;
     background-position: 10px 42%;
     background-size: 25px;
     padding: 10px 15px;
@@ -4603,8 +4602,7 @@ a .hl-dot-3 {
 }
 .halim-ajax-popular-post-loading,
 .halim-ajax-get-post-loading {
-    background: rgba(21, 29, 37, 0.78) url(assets/images/ajax-loader.gif)
-    no-repeat 95% 2%;
+    background: rgba(21, 29, 37, 0.78) no-repeat 95% 2%;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -4838,9 +4836,10 @@ img {
 .halim-light-mode #mobile-search-form.halim-search-form input {
     background-color: #4d7496;
 }
+
 @media (max-width: 767px) {
-    .home.halim-light-mode .main-navigation .navbar-nav >;
-    .active >;
+    .home.halim-light-mode .main-navigation .navbar-nav >
+    .active >
     a {
         display: none;
     }
@@ -5540,10 +5539,8 @@ ul.list-info-group {
     }
 }
 .stars-large-vang span {
-    background-image: url(assets/images/stars-large-vang.png);
 }
 .stars-large-vang {
-    background-image: url(assets/images/stars-large-vang.png);
 }
 @media (max-width: 767px) {
     .footer-logo {
