@@ -121,19 +121,12 @@ class MovieController extends Controller
                         <a href="' . url('phim/' . $mov->slug) . '" title="' . $mov->title . '">
                             <div class="item-link">
                                 <img src="' . url('uploads/movie/' . $mov->image) . '" class="lazy post-thumb" alt="' . $mov->title . '" title="' . $mov->title . '"/>
-                                <span class="is_trailer">
-                                    ' . $text . '
-                                </span>
+                                <span class="is_trailer">' . $text . '</span>
                             </div>
                             <p class="title">' . $mov->title . '</p>
                         </a>
                         <div class="viewsCount" style="color: #9d9d9d;">' . $mov->count_views . ' lượt xem</div>
-                        <div style="float: left;">
-                            <span class="user-rate-image post-large-rate stars-large-vang" style="display: block;">
-                                <span style="width: 0%"></span>
-                            </span>
-                        </div>
-                        </div>';
+                    </div>';
         }
         echo $output;
     }

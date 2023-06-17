@@ -210,12 +210,25 @@
                                         </li>
                                     @endfor
                                 </ul>
+
                                     <span class="total_rating"
-                                          style="margin-left: 250px; margin-top: 10px; justify-content: center"> Đánh Giá: {{ $rating }}/{{ $count_total }} Lượt</span>
+                                          style="margin-left: 250px; margin-top: 10px; justify-content: center">
+                                    Đánh Giá: {{ $rating }}/{{ $count_total }} Lượt
+                                </span>
                             </div>
                         </div>
 
                     </div>
+                </div>
+                <div style="display: flex;">
+                    @php
+                        $current_url = Request::url();
+                    @endphp
+                    <div style="margin-left: 10px" class="fb-like" data-href="{{ $current_url }}"
+                         data-width="" data-layout="button_count" data-action="" data-size="large" data-share="true">
+                    </div>
+                    <div style="margin-left: 460px" class="fb-save" data-uri="{{ $current_url }}"
+                         data-size="large"></div>
                 </div>
 
                 <div class="clearfix"></div>

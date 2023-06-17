@@ -43,12 +43,6 @@
                                     lượt quan tâm
                                 @endif
                             </div>
-                            <div style="float: left;">
-                                 <span class="user-rate-image post-large-rate stars-large-vang"
-                                       style="display: block;/* width: 100%; */">
-                                 <span style="width: 0%"></span>
-                                 </span>
-                            </div>
                         </div>
                     @endforeach
                 </div>
@@ -102,12 +96,6 @@
                                     @endphp
                                     lượt quan tâm
                                 @endif
-                            </div>
-                            <div style="float: left;">
-                                 <span class="user-rate-image post-large-rate stars-large-vang"
-                                       style="display: block;/* width: 100%; */">
-                                 <span style="width: 0%"></span>
-                                 </span>
                             </div>
                         </div>
                     @endforeach
