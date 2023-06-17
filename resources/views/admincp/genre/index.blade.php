@@ -117,7 +117,7 @@
                                     method: "POST",
                                     data: {array_id: array_id},
                                     success: function (data) {
-                                        alert('Sắp xếp thứ tự thành công');
+                                        toastr.success('Sắp Xếp Thể Loại Thành Công', 'Thông Báo', {timeOut: 5000});
                                     }
                                 })
                             }

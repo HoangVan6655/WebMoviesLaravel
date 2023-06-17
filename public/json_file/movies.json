@@ -20,10 +20,10 @@
         "NgayCapNhat": "2023-06-10 21:58:41",
         "year": "2023",
         "tags": "Qu\u00e1 nhanh qu\u00e1 nguy hi\u1ec3m, Fast and Furios",
-        "topview": null,
+        "topview": 0,
         "season": 10,
         "SoTap": 1,
-        "episode_count": 2,
+        "episode_count": 1,
         "category": {
             "id": 2,
             "title": "Phim Chi\u1ebfu R\u1ea1p",
@@ -39,7 +39,7 @@
                 "description": "Nh\u1eefng b\u1ed9 phim h\u00ecnh s\u1ef1 \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
                 "status": 1,
                 "slug": "hinh-su",
-                "position": 11,
+                "position": 8,
                 "pivot": {
                     "movie_id": 57,
                     "genre_id": 9
@@ -77,8 +77,8 @@
         "description": "ho\u00e0ng v\u0103n",
         "status": 1,
         "image": "John-Wick-447.jpg",
-        "category_id": 1,
-        "ThuocPhim": "phimle",
+        "category_id": 25,
+        "ThuocPhim": "phimbo",
         "genre_id": 3,
         "country_id": 1,
         "slug": "hoang-van",
@@ -94,12 +94,12 @@
         "SoTap": 1,
         "episode_count": 0,
         "category": {
-            "id": 1,
-            "title": "Phim M\u1edbi",
-            "description": "Phim m\u1edbi c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "id": 25,
+            "title": "Phim B\u1ed9",
+            "description": "Phim b\u1ed9 c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
             "status": 1,
-            "slug": "phim-moi",
-            "position": 0
+            "slug": "phim-bo",
+            "position": 1
         },
         "movie_genre": [
             {
@@ -120,7 +120,7 @@
                 "description": "Nh\u1eefng b\u1ed9 phim ho\u1ea1t h\u00ecnh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
                 "status": 1,
                 "slug": "hoat-hinh",
-                "position": 9,
+                "position": 7,
                 "pivot": {
                     "movie_id": 49,
                     "genre_id": 6
@@ -132,7 +132,7 @@
                 "description": "Nh\u1eefng b\u1ed9 phim h\u00e0i h\u01b0\u1edbc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
                 "status": 1,
                 "slug": "hai-huoc",
-                "position": 10,
+                "position": 9,
                 "pivot": {
                     "movie_id": 49,
                     "genre_id": 8
@@ -144,7 +144,7 @@
                 "description": "Nh\u1eefng b\u1ed9 phim h\u00ecnh s\u1ef1 \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
                 "status": 1,
                 "slug": "hinh-su",
-                "position": 11,
+                "position": 8,
                 "pivot": {
                     "movie_id": 49,
                     "genre_id": 9
@@ -156,7 +156,7 @@
                 "description": "Nh\u1eefng b\u1ed9 phim v\u00f5 thu\u1eadt \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
                 "status": 1,
                 "slug": "vo-thuat",
-                "position": 5,
+                "position": 3,
                 "pivot": {
                     "movie_id": 49,
                     "genre_id": 10
@@ -228,7 +228,7 @@
                 "description": "Nh\u1eefng b\u1ed9 phim gia \u0111\u00ecnh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
                 "status": 1,
                 "slug": "gia-dinh",
-                "position": 8,
+                "position": 6,
                 "pivot": {
                     "movie_id": 49,
                     "genre_id": 18
@@ -240,7 +240,7 @@
                 "description": "Nh\u1eefng b\u1ed9 phim chi\u1ebfn tranh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
                 "status": 1,
                 "slug": "chien-tranh",
-                "position": 7,
+                "position": 5,
                 "pivot": {
                     "movie_id": 49,
                     "genre_id": 19
@@ -252,7 +252,7 @@
                 "description": "Nh\u1eefng b\u1ed9 phim 18+ \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
                 "status": 1,
                 "slug": "18",
-                "position": 6,
+                "position": 4,
                 "pivot": {
                     "movie_id": 49,
                     "genre_id": 20

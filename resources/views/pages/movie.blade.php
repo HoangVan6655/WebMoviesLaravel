@@ -206,10 +206,12 @@
                                             data-rating="{{$rating}}"
                                             class="rating"
                                             style="cursor:pointer; {{$color}}
-                                        font-size:30px;">&#9733;
+                                            font-size:30px;">&#9733;
                                         </li>
                                     @endfor
                                 </ul>
+                                    <span class="total_rating"
+                                          style="margin-left: 250px; margin-top: 10px; justify-content: center"> Đánh Giá: {{ $rating }}/{{ $count_total }} Lượt</span>
                             </div>
                         </div>
 

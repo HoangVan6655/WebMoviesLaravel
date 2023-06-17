@@ -32,6 +32,7 @@ Route::get('/nam/{year}', [IndexController::class, 'year']);
 Route::get('/tag/{tag}', [IndexController::class, 'tag']);
 Route::get('/tim-kiem', [IndexController::class, 'search'])->name('tim-kiem');
 Route::get('/locphim', [IndexController::class, 'filter'])->name('locphim');
+Route::post('/add-rating', [IndexController::class, 'add_rating'])->name('add-rating');
 
 Route::get('/update-year-phim', [MovieController::class, 'update_year']);
 Route::get('/update-season-phim', [MovieController::class, 'update_season']);

@@ -38,6 +38,7 @@ class CountryController extends Controller
         $country->status = $data['status'];
         $country->position = Country::max('position') + 1;
         $country->save();
+        toastr()->success('Thêm Mới Quốc Gia Thành Công!', 'Thông Báo', ['timeOut' => 5000]);
         return redirect()->route('country.index');
     }
 
@@ -71,6 +72,7 @@ class CountryController extends Controller
         $country->status = $data['status'];
         $country->position = $country->position;
         $country->save();
+        toastr()->success('Cập Nhật Quốc Gia Thành Công!', 'Thông Báo', ['timeOut' => 5000]);
         return redirect()->route('country.index');
     }
 
@@ -80,6 +82,7 @@ class CountryController extends Controller
     public function destroy(string $id)
     {
         Country::find($id)->delete();
+        toastr()->success('Xoá Quốc Gia Thành Công!', 'Thông Báo', ['timeOut' => 5000]);
         return redirect()->back();
     }
 

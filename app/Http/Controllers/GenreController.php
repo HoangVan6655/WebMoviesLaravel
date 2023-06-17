@@ -37,6 +37,7 @@ class GenreController extends Controller
         $genre->status = $data['status'];
         $genre->position = Genre::max('position') + 1;
         $genre->save();
+        toastr()->success('Thêm Mới Thể Loại Thành Công!', 'Thông Báo', ['timeOut' => 5000]);
         return redirect()->route('genre.index');
     }
 
@@ -70,6 +71,7 @@ class GenreController extends Controller
         $genre->status = $data['status'];
         $genre->position = $genre->position;
         $genre->save();
+        toastr()->success('Cập Nhật Thể Loại Thành Công!', 'Thông Báo', ['timeOut' => 5000]);
         return redirect()->route('genre.index');
     }
 
@@ -79,6 +81,7 @@ class GenreController extends Controller
     public function destroy(string $id)
     {
         Genre::find($id)->delete();
+        toastr()->success('Xoá Thể Loại Thành Công!', 'Thông Báo', ['timeOut' => 5000]);
         return redirect()->back();
     }
 

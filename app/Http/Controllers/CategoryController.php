@@ -37,6 +37,7 @@ class CategoryController extends Controller
         $category->status = $data['status'];
         $category->position = Category::max('position') + 1;
         $category->save();
+        toastr()->success('Thêm Danh Mục Thành Công!', 'Thông Báo', ['timeOut' => 5000]);
         return redirect()->route('category.index');
     }
 
@@ -70,6 +71,7 @@ class CategoryController extends Controller
         $category->status = $data['status'];
         $category->position = $category->position;
         $category->save();
+        toastr()->success('Cập Nhật Danh Mục Thành Công!', 'Thông Báo', ['timeOut' => 5000]);
         return redirect()->route('category.index');
     }
 
@@ -79,6 +81,7 @@ class CategoryController extends Controller
     public function destroy(string $id)
     {
         Category::find($id)->delete();
+        toastr()->warning('Xoá Danh Mục Thành Công!', 'Thông Báo', ['timeOut' => 5000]);
         return redirect()->back();
     }
 

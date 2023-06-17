@@ -268,6 +268,7 @@ class MovieController extends Controller
 
         //thêm nhiều thể loại phim
         $movie->movie_genre()->attach($data['genre']);
+        toastr()->success('Thêm Mới Phim Thành Công!', 'Thông Báo', ['timeOut' => 5000]);
 
         return redirect()->route('movie.index');
     }
@@ -340,6 +341,7 @@ class MovieController extends Controller
 
         //thêm nhiều thể loại phim
         $movie->movie_genre()->sync($data['genre']);
+        toastr()->success('Cập Nhật Phim Thành Công!', 'Thông Báo', ['timeOut' => 5000]);
 
         return redirect()->route('movie.index');
     }
@@ -361,6 +363,7 @@ class MovieController extends Controller
         Episode::whereIn('movie_id', [$movie->id])->delete();
 
         $movie->delete();
+        toastr()->success('Xoá Phim Thành Công!', 'Thông Báo', ['timeOut' => 5000]);
         return redirect()->back();
     }
 }

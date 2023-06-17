@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </head>
 
 <body>
@@ -167,7 +169,7 @@
             method: "GET",
             data: {resolution_val: resolution_val, movie_id: movie_id},
             success: function (data) {
-                alert('Thay đổi thành công.');
+                toastr.success('Thay Đổi Định Dạng Thành Công', 'Thông Báo', {timeOut: 5000});
             }
         });
     })
@@ -181,7 +183,7 @@
             method: "GET",
             data: {phude_val: phude_val, movie_id: movie_id},
             success: function (data) {
-                alert('Thay đổi thành công.');
+                toastr.success('Thay Đổi Phụ Đề Thành Công', 'Thông Báo', {timeOut: 5000});
             }
         });
     })
@@ -195,7 +197,7 @@
             method: "GET",
             data: {category_id: category_id, movie_id: movie_id},
             success: function (data) {
-                alert('Thay đổi thành công.');
+                toastr.success('Thay Đổi Danh Mục Thành Công', 'Thông Báo', {timeOut: 5000});
             }
         });
     })
@@ -209,7 +211,7 @@
             method: "GET",
             data: {thuocphim_val: thuocphim_val, movie_id: movie_id},
             success: function (data) {
-                alert('Thay đổi thành công.');
+                toastr.success('Thay Đổi Thuộc Phim Thành Công', 'Thông Báo', {timeOut: 5000});
             }
         });
     })
@@ -223,7 +225,7 @@
             method: "GET",
             data: {country_id: country_id, movie_id: movie_id},
             success: function (data) {
-                alert('Thay đổi thành công.');
+                toastr.success('Thay Đổi Quốc Gia Thành Công', 'Thông Báo', {timeOut: 5000});
             }
         });
     })
@@ -237,7 +239,7 @@
             method: "GET",
             data: {phimhot_val: phimhot_val, movie_id: movie_id},
             success: function (data) {
-                alert('Thay đổi thành công.');
+                toastr.success('Thay Đổi Phim Hot Thành Công', 'Thông Báo', {timeOut: 5000});
             }
         });
     })
@@ -251,7 +253,7 @@
             method: "GET",
             data: {year: year, id_phim: id_phim},
             success: function () {
-                alert('Thay đổi năm phim theo năm ' + year + ' thành công');
+                toastr.success('Thay Đổi Năm Thành Công', 'Thông Báo', {timeOut: 5000});
             }
         });
     })
@@ -265,7 +267,7 @@
             method: "GET",
             data: {season: season, id_phim: id_phim},
             success: function () {
-                alert('Thay đổi mùa phim theo mùa ' + season + ' thành công');
+                toastr.success('Thay Đổi Season Thành Công', 'Thông Báo', {timeOut: 5000});
             }
         });
     })
@@ -286,7 +288,7 @@
             method: "GET",
             data: {topview: topview, id_phim: id_phim},
             success: function () {
-                alert('Thay đổi phim theo lượt truy cập ' + topview + ' thành công');
+                toastr.success('Thay Đổi Phim Theo Lượt Truy Cập Thành Công!', 'Thông Báo', {timeOut: 5000});
             }
         });
     })
@@ -300,7 +302,7 @@
             method: "GET",
             data: {status_val: status_val, movie_id: movie_id},
             success: function (data) {
-                alert('Thay đổi thành công.');
+                toastr.success('Thay Đổi Trạng Thái Thành Công', 'Thông Báo', {timeOut: 5000});
             }
         });
     })
