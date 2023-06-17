@@ -86,7 +86,7 @@ class MovieController extends Controller
                             </div>
                             <p class="title">' . $mov->title . '</p>
                         </a>
-                        <div class="viewsCount" style="color: #9d9d9d;">3.2k lượt xem</div>
+                        <div class="viewsCount" style="color: #9d9d9d;">' . $mov->count_views . ' lượt xem</div>
                         <div style="float: left;">
                             <span class="user-rate-image post-large-rate stars-large-vang" style="display: block;">
                                 <span style="width: 0%"></span>
@@ -127,7 +127,7 @@ class MovieController extends Controller
                             </div>
                             <p class="title">' . $mov->title . '</p>
                         </a>
-                        <div class="viewsCount" style="color: #9d9d9d;">3.2k lượt xem</div>
+                        <div class="viewsCount" style="color: #9d9d9d;">' . $mov->count_views . ' lượt xem</div>
                         <div style="float: left;">
                             <span class="user-rate-image post-large-rate stars-large-vang" style="display: block;">
                                 <span style="width: 0%"></span>
@@ -319,6 +319,7 @@ class MovieController extends Controller
         $movie->resolution = $data['resolution'];
         $movie->phude = $data['phude'];
         $movie->NgayCapNhat = Carbon::now('Asia/Ho_Chi_Minh');
+        $movie->count_views = rand(100, 99999);
 
         foreach ($data['genre'] as $key => $gen) {
             $movie->genre_id = $gen[0];

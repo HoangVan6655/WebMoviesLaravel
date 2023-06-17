@@ -129,6 +129,12 @@ class IndexController extends Controller
 
         $count_total = Rating::where('movie_id', $movie->id)->count();
 
+        //increase movie views
+        $count_views = $movie->count_views;
+        $count_views = $count_views + 1;
+        $movie->count_views = $count_views;
+        $movie->save();
+
         return view('pages.movie',
             compact('category', 'TheLoai', 'QuocGia', 'movie', 'related', 'movieHot_sidebar',
                 'trailer', 'episode', 'episode_tapdau', 'episode_current_list_count', 'rating', 'count_total'));
