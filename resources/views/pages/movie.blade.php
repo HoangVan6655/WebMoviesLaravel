@@ -34,18 +34,7 @@
                 <div class="clearfix wrap-content">
 
                     <div class="halim-movie-wrapper">
-                        {{--                        <div class="title-block">--}}
-                        {{--                            <div id="bookmark" class="bookmark-img-animation primary_ribbon" data-id="38424">--}}
-                        {{--                                <div class="halim-pulse-ring"></div>--}}
-                        {{--                            </div>--}}
-                        {{--                            <div class="title-wrapper" style="font-weight: bold;">--}}
-                        {{--                                Bookmark--}}
-                        {{--                            </div>--}}
-                        {{--                        </div>--}}
-
                         <div class="movie_info col-xs-12">
-
-
                             <div class="movie-poster col-md-3">
                                 <img class="movie-thumb" src="{{asset('uploads/movie/'.$movie->image)}}"
                                      alt="{{$movie->title}}">
@@ -69,7 +58,7 @@
                                     <li class="list-info-group-item">
                                         <span>Chất Lượng Phim</span> :
                                         <span class="quality">
-                                                @if($movie->resolution == 0)
+                                            @if($movie->resolution == 0)
                                                 HD
                                             @elseif($movie->resolution == 1)
                                                 SD
@@ -90,12 +79,12 @@
                                         <span>Phụ Đề Phim</span> :
                                         @if($movie->resolution != 5)
                                             <span class="episode">
-                                                    @if($movie->phude == 0)
+                                                @if($movie->phude == 0)
                                                     Phụ Đề
                                                 @else
                                                     Thuyết Minh
                                                 @endif
-                                                </span>
+                                            </span>
                                         @endif
                                     </li>
 
@@ -314,11 +303,13 @@
                     <article class="thumb grid-item post-38498">
                         <div class="halim-item">
                             <a class="halim-thumb" href="{{route('movie',$hot->slug)}}" title="{{$hot->title}}">
-                                <figure><img class="lazy img-responsive"
-                                             src="{{asset('uploads/movie/'.$hot->image)}}" alt="{{$hot->title}}"
-                                             title="Đại Thánh Vô Song"></figure>
+                                <figure>
+                                    <img class="lazy img-responsive"
+                                         src="{{asset('uploads/movie/'.$hot->image)}}" alt="{{$hot->title}}"
+                                         title="Đại Thánh Vô Song">
+                                </figure>
                                 <span class="status">
-                                            @if($hot->resolution == 0)
+                                    @if($hot->resolution == 0)
                                         HD
                                     @elseif($hot->resolution == 1)
                                         SD
@@ -331,10 +322,10 @@
                                     @else
                                         Trailer
                                     @endif
-                                        </span>
+                                </span>
                                 @if($hot->resolution != 5)
                                     <span class="episode"><i class="fa fa-play" aria-hidden="true"></i>
-                                                @if($hot->phude == 0)
+                                        @if($hot->phude == 0)
                                             Phụ Đề - Tập 1/{{ $hot->SoTap }}
                                             @if($hot->season != 0)
                                                 - Season {{ $hot->season }}
@@ -345,7 +336,7 @@
                                                 - Season {{ $hot->season }}
                                             @endif
                                         @endif
-                                            </span>
+                                    </span>
                                 @endif
                                 <div class="icon_overlay"></div>
                                 <div class="halim-post-title-box">
@@ -360,6 +351,9 @@
                 @endforeach
 
             </div>
+            <link rel="stylesheet"
+                  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+                  integrity="sha512-..." crossorigin="anonymous"/>
             <script>
                 $(document).ready(function ($) {
                     var owl = $('#halim_related_movies-2');
@@ -370,7 +364,10 @@
                         autoplayTimeout: 4000,
                         autoplayHoverPause: true,
                         nav: true,
-                        navText: ['<i class="hl-down-open rotate-left"></i>', '<i class="hl-down-open rotate-right"></i>'],
+                        navText: [
+                            '<i class="fas fa-chevron-left"></i>',
+                            '<i class="fas fa-chevron-right"></i>'
+                        ],
                         responsiveClass: true,
                         responsive: {0: {items: 2}, 480: {items: 3}, 600: {items: 4}, 1000: {items: 4}}
                     })

@@ -8,12 +8,13 @@
                     <div class="col-xs-12">
                         <div class="yoast_breadcrumb hidden-xs">
                             <span>
+                                <a href="{{ route('homepage') }}">Trang Chủ</a> /
                                 <span>
-                                    <a href="{{route('category',[$movie->category->slug])}}">{{$movie->category->title}}</a> »
+                                    <a href="{{route('category',[$movie->category->slug])}}">{{$movie->category->title}}</a> /
                                     <span>
-                                        <a href="{{route('country',[$movie->country->slug])}}">{{$movie->country->title}}</a> »
+                                        <a href="{{route('country',[$movie->country->slug])}}">{{$movie->country->title}}</a> /
                                         @foreach($movie->movie_genre as $gen)
-                                            <a href="{{route('genre',[$gen->slug])}}">{{$gen->title}}</a> »
+                                            <a href="{{route('genre',[$gen->slug])}}">{{$gen->title}}</a> /
                                         @endforeach
                                         <span class="breadcrumb_last" aria-current="page">{{$movie->title}}</span>
                                     </span>
@@ -27,6 +28,7 @@
                 <div class="ajax"></div>
             </div>
         </div>
+
         <main id="main-contents" class="col-xs-12 col-sm-12 col-md-8">
             <section id="content" class="test">
                 <div class="clearfix wrap-content">
@@ -36,6 +38,7 @@
                             height: 500px;
                         }
                     </style>
+
                     <div class="iframe_phim">
                         {!! $episode->linkphim !!}
                     </div>
@@ -45,6 +48,7 @@
                             <li class="fb-like" data-href="" data-layout="button_count" data-action="like"
                                 data-size="small" data-show-faces="true" data-share="true"></li>
                         </ul>
+
                         <ul class="col-xs-12 col-md-8">
                             <div id="autonext" class="btn-cs autonext">
                                 <i class="icon-autonext-sm"></i>
@@ -66,6 +70,7 @@
                             </div>
                         </ul>
                     </div>
+
                     <div class="collapse" id="moretool">
                         <ul class="nav nav-pills x-nav-justified">
                             <li class="fb-like" data-href="" data-layout="button_count" data-action="like"
@@ -88,15 +93,31 @@
                                     {{$movie->title}}
                                 </a>
                             </h1>
+
+                            <style>
+                                .title-wrapper-xem {
+                                    border-bottom: 0px;
+                                }
+
+                                .entry-title a {
+                                    display: inline-block;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            </style>
                         </div>
                     </div>
+
                     <div class="entry-content htmlwrap clearfix collapse" id="expand-post-content">
                         <article id="post-37976" class="item-content post-37976"></article>
                     </div>
+
                     <div class="clearfix"></div>
                     <div class="text-center">
                         <div id="halim-ajax-list-server"></div>
                     </div>
+
                     <div id="halim-list-server">
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation" class="active server-1">
@@ -160,10 +181,8 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="clearfix"></div>
-                    <div class="htmlwrap clearfix">
-                        <div id="lightout"></div>
-                    </div>
 
                     {{--Comments Phim--}}
                     <div class="section-bar clearfix">
@@ -171,6 +190,7 @@
                             <span style="color:#ffed4d">Bình Luận Phim</span>
                         </h2>
                     </div>
+
                     <div class="entry-content htmlwrap clearfix" style="background-color: white">
                         <div class="video-item halim-entry-box">
                             @php
@@ -184,6 +204,7 @@
                     </div>
                 </div>
             </section>
+
             <section class="related-movies">
                 <div id="halim_related_movies-2xx" class="wrap-slider">
                     <div class="section-bar clearfix">
@@ -197,7 +218,7 @@
                                         <figure>
                                             <img class="lazy img-responsive"
                                                  src="{{asset('uploads/movie/'.$hot->image)}}" alt="{{$hot->title}}"
-                                                 title="Đại Thánh Vô Song">
+                                                 title="{{$hot->title}}">
                                         </figure>
                                         <span class="status">
                                             @if($hot->resolution == 0)
@@ -214,19 +235,13 @@
                                                 Trailer
                                             @endif
                                         </span>
-                                        @if($hot->resolution != 5)
+                                        @if($hot->resolution != 4)
                                             <span class="episode">
                                                 <i class="fa fa-play" aria-hidden="true"></i>
                                                     @if($hot->phude == 0)
                                                     Phụ Đề - Tập 1/{{ $hot->SoTap }}
-                                                    @if($hot->season != 0)
-                                                        - Season {{ $hot->season }}
-                                                    @endif
                                                 @else
                                                     Thuyết Minh - Tập 1/{{ $hot->SoTap }}
-                                                    @if($hot->season != 0)
-                                                        - Season {{ $hot->season }}
-                                                    @endif
                                                 @endif
                                             </span>
                                         @endif
@@ -243,6 +258,9 @@
                         @endforeach
 
                     </div>
+                    <link rel="stylesheet"
+                          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+                          integrity="sha512-..." crossorigin="anonymous"/>
                     <script>
                         $(document).ready(function ($) {
                             var owl = $('#halim_related_movies-2');
@@ -253,7 +271,10 @@
                                 autoplayTimeout: 4000,
                                 autoplayHoverPause: true,
                                 nav: true,
-                                navText: ['<i class="hl-down-open rotate-left"></i>', '<i class="hl-down-open rotate-right"></i>'],
+                                navText: [
+                                    '<i class="fas fa-chevron-left"></i>',
+                                    '<i class="fas fa-chevron-right"></i>'
+                                ],
                                 responsiveClass: true,
                                 responsive: {0: {items: 2}, 480: {items: 3}, 600: {items: 4}, 1000: {items: 4}}
                             })

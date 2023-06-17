@@ -7,9 +7,12 @@
                 <div class="ajax"></div>
             </div>
         </div>
+
         <div id="halim_related_movies-2xx" class="wrap-slider">
             <div class="section-bar clearfix">
-                <h3 class="section-title"><span>PHIM HOT</span></h3>
+                <h3 class="section-title">
+                    <span>PHIM HOT</span>
+                </h3>
             </div>
 
             <div id="halim_related_movies-2" class="owl-carousel owl-theme related-film">
@@ -19,7 +22,8 @@
                             <a class="halim-thumb" href="{{route('movie',$hot->slug)}}" title="{{$hot->title}}">
                                 <figure>
                                     <img class="lazy img-responsive" src="{{asset('uploads/movie/'.$hot->image)}}"
-                                         alt="{{$hot->title}}" title="{{$hot->title}}">
+                                         alt="{{$hot->title}}"
+                                         title="{{$hot->title}}">
                                 </figure>
                                 <span class="status">
                                     @if($hot->resolution == 0)
@@ -60,8 +64,10 @@
 
             </div>
 
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            <link rel="stylesheet"
+                  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
                   integrity="sha512-..." crossorigin="anonymous"/>
+
             <script>
                 $(document).ready(function ($) {
                     var owl = $('#halim_related_movies-2');
@@ -110,11 +116,13 @@
                             <article class="col-md-3 col-sm-3 col-xs-6 thumb grid-item post-37606">
                                 <div class="halim-item">
                                     <a class="halim-thumb" href="{{route('movie',$mov->slug)}}">
-                                        <figure><img class="lazy img-responsive"
-                                                     src="{{ asset('uploads/movie/'.$mov->image) }}"
-                                                     alt="{{ $mov->title }}" title="{{ $mov->title }}"></figure>
+                                        <figure>
+                                            <img class="lazy img-responsive"
+                                                 src="{{ asset('uploads/movie/'.$mov->image) }}"
+                                                 alt="{{ $mov->title }}" title="{{ $mov->title }}">
+                                        </figure>
                                         <span class="status">
-                                                 @if($mov->resolution == 0)
+                                            @if($mov->resolution == 0)
                                                 HD
                                             @elseif($mov->resolution == 1)
                                                 SD
@@ -127,7 +135,7 @@
                                             @else
                                                 Trailer
                                             @endif
-                                            </span>
+                                        </span>
                                         @if($mov->resolution != 5)
                                             <span class="episode">
                                                 <i class="fa fa-play" aria-hidden="true"></i>

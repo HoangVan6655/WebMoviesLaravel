@@ -6,21 +6,29 @@
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-xs-6">
-                        <div class="yoast_breadcrumb hidden-xs"><span><span><a
-                                        href="">{{$genre_slug->title}}</a> » <span class="breadcrumb_last"
-                                                                                   aria-current="page">2023</span></span></span>
+                        <div class="yoast_breadcrumb hidden-xs">
+                            <span>
+                                <a href="{{ route('homepage') }}">Trang Chủ </a> /
+                                <span>
+                                    <a href="">{{$genre_slug->title}}</a>
+                                </span>
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div id="ajax-filter" class="panel-collapse collapse" aria-expanded="true" role="menu">
                 <div class="ajax"></div>
             </div>
         </div>
+
         <main id="main-contents" class="col-xs-12 col-sm-12 col-md-8">
             <section>
                 <div class="section-bar clearfix">
-                    <h1 class="section-title"><span>{{$genre_slug->title}}</span></h1>
+                    <h1 class="section-title">
+                        <span>{{$genre_slug->title}}</span>
+                    </h1>
                 </div>
 
                 @include('pages.include.filter')
@@ -31,9 +39,11 @@
                             <div class="halim-item">
                                 <a class="halim-thumb" href="{{ route('movie',$genre->slug) }}"
                                    title="{{$genre->title}}">
-                                    <figure><img class="lazy img-responsive"
-                                                 src="{{asset('uploads/movie/'.$genre->image)}}" alt="{{$genre->title}}"
-                                                 title="{{$genre->title}}"></figure>
+                                    <figure>
+                                        <img class="lazy img-responsive"
+                                             src="{{asset('uploads/movie/'.$genre->image)}}" alt="{{$genre->title}}"
+                                             title="{{$genre->title}}">
+                                    </figure>
                                     <span class="status">
                                         @if($genre->resolution == 0)
                                             HD
@@ -74,14 +84,6 @@
                 </div>
                 <div class="clearfix"></div>
                 <div class="text-center">
-                    {{--                    <ul class='page-numbers'>--}}
-                    {{--                        <li><span aria-current="page" class="page-numbers current">1</span></li>--}}
-                    {{--                        <li><a class="page-numbers" href="">2</a></li>--}}
-                    {{--                        <li><a class="page-numbers" href="">3</a></li>--}}
-                    {{--                        <li><span class="page-numbers dots">&hellip;</span></li>--}}
-                    {{--                        <li><a class="page-numbers" href="">55</a></li>--}}
-                    {{--                        <li><a class="next page-numbers" href=""><i class="hl-down-open rotate-right"></i></a></li>--}}
-                    {{--                    </ul>--}}
                     {!! $movie->links("pagination::bootstrap-4") !!}
                 </div>
             </section>

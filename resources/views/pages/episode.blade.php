@@ -6,9 +6,20 @@
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-xs-6">
-                        <div class="yoast_breadcrumb hidden-xs"><span><span><a href="">Phim hay</a> » <span><a
-                                            href="danhmuc.php">Trung Quốc</a> » <span class="breadcrumb_last"
-                                                                                      aria-current="page">Tôi Và Chúng Ta Ở Bên Nhau</span></span></span></span>
+                        <div class="yoast_breadcrumb hidden-xs">
+                            <span>
+                                <a href="{{ route('homepage') }}">Trang Chủ</a> /
+                                <span>
+                                    <a href="{{route('category',[$movie->category->slug])}}">{{$movie->category->title}}</a> /
+                                    <span>
+                                        <a href="{{route('country',[$movie->country->slug])}}">{{$movie->country->title}}</a> /
+                                        @foreach($movie->movie_genre as $gen)
+                                            <a href="{{route('genre',[$gen->slug])}}">{{$gen->title}}</a> /
+                                        @endforeach
+                                        <span class="breadcrumb_last" aria-current="page">{{$movie->title}}</span>
+                                    </span>
+                                </span>
+                            </span>
                         </div>
                     </div>
                 </div>

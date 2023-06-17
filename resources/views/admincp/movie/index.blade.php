@@ -153,7 +153,7 @@
                                     </td>
 
                                     {{--Mô tả phim--}}
-                                    <td style="color: white; align-items: center; text-align: center; white-space:pre-wrap; word-wrap:break-word">
+                                    <td style="color: white; align-items: center; text-align: center; white-space:inherit; word-wrap:break-word">
                                         {{$movie->description}}
                                     </td>
 

@@ -9,8 +9,9 @@
                         <div class="yoast_breadcrumb hidden-xs">
                             <span>
                                 <span>
-                                    <span class="breadcrumb_last" aria-current="page"></span>
-                                    <a href="">Lọc Phim</a>
+                                    <a href="{{ route('homepage') }}">Trang Chủ </a> /
+                                        <span class="breadcrumb_last" aria-current="page"></span>
+                                        <a href="">Lọc Phim</a>
                                 </span>
                             </span>
                         </div>
@@ -36,11 +37,13 @@
                         <article class="col-md-3 col-sm-3 col-xs-6 thumb grid-item post-27021">
                             <div class="halim-item">
                                 <a class="halim-thumb" href="{{ route('movie',$cate->slug) }}" title="{{$cate->title}}">
-                                    <figure><img class="lazy img-responsive"
-                                                 src="{{asset('uploads/movie/'.$cate->image)}}" alt="{{$cate->title}}"
-                                                 title="{{$cate->title}}"></figure>
+                                    <figure>
+                                        <img class="lazy img-responsive"
+                                             src="{{asset('uploads/movie/'.$cate->image)}}" alt="{{$cate->title}}"
+                                             title="{{$cate->title}}">
+                                    </figure>
                                     <span class="status">
-                                    @if($cate->resolution == 0)
+                                        @if($cate->resolution == 0)
                                             HD
                                         @elseif($cate->resolution == 1)
                                             SD
@@ -53,16 +56,16 @@
                                         @else
                                             Trailer
                                         @endif
-                                </span>
+                                    </span>
                                     @if($cate->resolution != 5)
                                         <span class="episode"><i class="fa fa-play" aria-hidden="true"></i>
-                                        {{ $cate->episode_count }}/{{ $cate->SoTap }} |
-                                        @if($cate->phude == 0)
+                                            {{ $cate->episode_count }}/{{ $cate->SoTap }} |
+                                            @if($cate->phude == 0)
                                                 Phụ Đề
                                             @else
                                                 Thuyết Minh
                                             @endif
-                                    </span>
+                                        </span>
                                     @endif
                                     <div class="icon_overlay"></div>
                                     <div class="halim-post-title-box">
@@ -78,14 +81,6 @@
                 </div>
                 <div class="clearfix"></div>
                 <div class="text-center">
-                    {{--                    <ul class='page-numbers'>--}}
-                    {{--                        <li><span aria-current="page" class="page-numbers current">1</span></li>--}}
-                    {{--                        <li><a class="page-numbers" href="">2</a></li>--}}
-                    {{--                        <li><a class="page-numbers" href="">3</a></li>--}}
-                    {{--                        <li><span class="page-numbers dots">&hellip;</span></li>--}}
-                    {{--                        <li><a class="page-numbers" href="">55</a></li>--}}
-                    {{--                        <li><a class="next page-numbers" href=""><i class="hl-down-open rotate-right"></i></a></li>--}}
-                    {{--                    </ul>--}}
                     {!! $movie->links("pagination::bootstrap-4") !!}
                 </div>
             </section>

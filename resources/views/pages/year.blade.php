@@ -8,9 +8,10 @@
                     <div class="col-xs-6">
                         <div class="yoast_breadcrumb hidden-xs">
                             <span>
-                                <span>Phim Thuộc Năm /
+                                <span>
+                                    <a href="{{ route('homepage') }}">Trang Chủ </a> /
                                         <span class="breadcrumb_last" aria-current="page">
-                                            <a href="{{ url('nam',$year) }}">{{ $year }}</a>
+                                            <a href="{{ url('nam',$year) }}">Phim Năm {{ $year }}</a>
                                         </span>
                                 </span>
                             </span>
