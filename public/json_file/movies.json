@@ -23,6 +23,7 @@
         "topview": 0,
         "season": 10,
         "SoTap": 1,
+        "count_views": 93,
         "episode_count": 1,
         "category": {
             "id": 2,
@@ -83,7 +84,7 @@
         "country_id": 1,
         "slug": "hoang-van",
         "movie_hot": 1,
-        "resolution": 2,
+        "resolution": 3,
         "phude": 1,
         "NgayTao": null,
         "NgayCapNhat": "2023-06-10 17:31:45",
@@ -92,6 +93,7 @@
         "topview": 0,
         "season": 0,
         "SoTap": 1,
+        "count_views": 12317,
         "episode_count": 0,
         "category": {
             "id": 25,
@@ -300,6 +302,7 @@
         "topview": 2,
         "season": 3,
         "SoTap": 10,
+        "count_views": 123125,
         "episode_count": 0,
         "category": {
             "id": 2,
