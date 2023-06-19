@@ -29,6 +29,15 @@
                     </ul>
                 </div>
             </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-3">
+                <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width=""
+                     data-height="70px" data-small-header="true" data-adapt-container-width="true"
+                     data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a
+                            href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+                </div>
+            </div>
         </div>
 
         <div class="col-md-12">
@@ -37,5 +46,6 @@
                 <a href="https://www.facebook.com/HoangVan6501/" rel="nofollow">Hoàng Văn</a>
             </p>
         </div>
+
     </div>
 </footer>
