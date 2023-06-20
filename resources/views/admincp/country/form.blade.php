@@ -18,6 +18,12 @@
                         </div>
                     </div>
                     <div class="form-group row" style="color: white">
+                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Tên Lá Cờ</label>
+                        <div class="col-sm-9">
+                            {!! Form::text('icon', isset($country) ? $country->icon : '', ['class' => 'form-control', 'placeholder' => 'Nhập vào tên cờ viết tắt...', 'style' => 'width: 100%;', 'id' => 'icon']) !!}
+                        </div>
+                    </div>
+                    <div class="form-group row" style="color: white">
                         <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Đường Dẫn Quốc Gia</label>
                         <div class="col-sm-9" style="color: #f0f0f0">
                             {!! Form::text('slug', isset($country) ? $country->slug : '', ['class' => 'form-control', 'placeholder' => 'Nhập vào đường dẫn quốc gia...', 'style' => 'width: 100%;', 'id' => 'convert_slug']) !!}
@@ -84,7 +90,7 @@
                                     <i class="mdi-close text-white" aria-hidden="true"></i>
                                 </button>
                             </div>
-                            <div class="toast-body">
+                            <div class="toast-body" style="color: white">
                             </div>
                         </div>
                     </div>
@@ -110,8 +116,9 @@
         var title = document.getElementById("title").value;
         var slug = document.getElementById("convert_slug").value;
         var description = document.getElementById("description").value;
+        var icon = document.getElementById("icon").value;
 
-        if (title == "" && slug == "" && description == "") {
+        if (title == "" && slug == "" && description == "" && icon == "") {
             var toast = new bootstrap.Toast(document.querySelector('.toast'))
             var toastBody = document.querySelector('.toast-body')
             toastBody.innerText = "Vui lòng nhập đầy đủ thông tin."
@@ -123,6 +130,8 @@
             slugInput.style.border = "1px solid red";
             var descriptionInput = document.getElementById("description");
             descriptionInput.style.border = "1px solid red";
+            var iconInput = document.getElementById("icon");
+            iconInput.style.border = "1px solid red";
 
             setTimeout(function () {
                 titleInput.style.border = ""; // Xóa viền đỏ
@@ -132,6 +141,9 @@
             }, 5000);
             setTimeout(function () {
                 descriptionInput.style.border = ""; // Xóa viền đỏ
+            }, 5000);
+            setTimeout(function () {
+                iconInput.style.border = ""; // Xóa viền đỏ
             }, 5000);
             return false;
         } else if (title == "") {
@@ -146,6 +158,20 @@
 
             setTimeout(function () {
                 titleInput.style.border = ""; // Xóa viền đỏ
+            }, 5000);
+            return false;
+        } else if (icon == "") {
+            var toast = new bootstrap.Toast(document.querySelector('.toast'))
+            var toastBody = document.querySelector('.toast-body')
+            toastBody.innerText = "Vui lòng nhập từ viết tắt."
+            toast.show()
+
+            var iconInput = document.getElementById("icon");
+            iconInput.style.border = "1px solid red";
+            iconInput.focus();
+
+            setTimeout(function () {
+                iconInput.style.border = ""; // Xóa viền đỏ
             }, 5000);
             return false;
         } else if (slug == "") {

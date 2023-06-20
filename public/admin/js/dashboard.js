@@ -61,11 +61,13 @@
                 }
             });
         }
+
         if ($("#transaction-history").length) {
+
             var areaData = {
                 labels: ["Paypal", "Stripe", "Cash"],
                 datasets: [{
-                    data: [55, 25, 20],
+                    data: [20, 25, 20],
                     backgroundColor: [
                         "#111111", "#00d25b", "#ffab00"
                     ]
@@ -131,6 +133,7 @@
                 plugins: transactionhistoryChartPlugins
             });
         }
+
         if ($("#transaction-history-arabic").length) {
             var areaData = {
                 labels: ["Paypal", "Stripe", "Cash"],
@@ -201,6 +204,7 @@
                 plugins: transactionhistoryChartPlugins
             });
         }
+
         if ($('#owl-carousel-basic').length) {
             $('#owl-carousel-basic').owlCarousel({
                 loop: true,

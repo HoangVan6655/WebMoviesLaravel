@@ -33,6 +33,7 @@ class CountryController extends Controller
         $data = $request->all();
         $country = new Country();
         $country->title = $data['title'];
+        $country->icon = $data['icon'];
         $country->slug = $data['slug'];
         $country->description = $data['description'];
         $country->status = $data['status'];
@@ -67,6 +68,8 @@ class CountryController extends Controller
         $data = $request->all();
         $country = Country::find($id);
         $country->title = $data['title'];
+        $country->icon = $data['icon'];
+        var_dump($country->icon);
         $country->slug = $data['slug'];
         $country->description = $data['description'];
         $country->status = $data['status'];
