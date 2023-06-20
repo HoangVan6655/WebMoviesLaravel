@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: localhost
--- Thời gian đã tạo: Th6 02, 2023 lúc 07:21 PM
+-- Thời gian đã tạo: Th6 20, 2023 lúc 07:58 PM
 -- Phiên bản máy phục vụ: 10.4.27-MariaDB
 -- Phiên bản PHP: 8.2.0
 
@@ -45,10 +45,9 @@ CREATE TABLE `categories`
 
 INSERT INTO `categories` (`id`, `title`, `description`, `status`, `slug`, `position`)
 VALUES (1, 'Phim Mới', 'Phim mới cập nhật hằng ngày', 1, 'phim-moi', 0),
-       (2, 'Phim Chiếu Rạp', 'Phim chiếu rạp được cập nhật hằng ngày', 1, 'phim-chieu-rap', 1),
-       (3, 'Phim Thuyết Minh', 'Phim thuyết minh cập nhật hằng ngày', 1, 'phim-thuyet-minh', 4),
-       (4, 'Phim Bộ', 'Phim bộ được cập nhật hằng ngày', 1, 'phim-bo', 2),
-       (5, 'Phim Lẻ Mới', 'Phim lẻ mới được cập nhật thường xuyên', 1, 'phim-le-moi', 3);
+       (2, 'Phim Chiếu Rạp', 'Phim chiếu rạp được cập nhật hằng ngày', 1, 'phim-chieu-rap', 3),
+       (25, 'Phim Bộ', 'Phim bộ cập nhật hằng ngày', 1, 'phim-bo', 1),
+       (26, 'Phim Lẻ', 'Phim lẻ cập nhật thường xuyên', 1, 'phim-le', 2);
 
 -- --------------------------------------------------------
 
@@ -60,6 +59,7 @@ CREATE TABLE `countries`
 (
     `id`          int(11) NOT NULL,
     `title`       varchar(100) NOT NULL,
+    `icon`        varchar(10) DEFAULT NULL,
     `description` varchar(255) NOT NULL,
     `status`      int(11) NOT NULL,
     `slug`        varchar(255) NOT NULL,
@@ -70,19 +70,18 @@ CREATE TABLE `countries`
 -- Đang đổ dữ liệu cho bảng `countries`
 --
 
-INSERT INTO `countries` (`id`, `title`, `description`, `status`, `slug`, `position`)
-VALUES (1, 'Việt Nam', 'Cập nhật các phim Việt Nam thường xuyên', 1, 'viet-nam', 0),
-       (3, 'Ấn Độ', 'Cập nhật các phim Ấn Độ thường xuyên', 1, 'an-do', 8),
-       (4, 'Mỹ', 'Cập nhật các phim Mỹ thường xuyên', 1, 'my', 1),
-       (5, 'Hồng Kông', 'Cập nhật các phim Hồng Kông thường xuyên', 1, 'hong-kong', 2),
-       (6, 'Nhật Bản', 'Cập nhật các phim Nhật Bản thường xuyên', 1, 'nhat-ban', 3),
-       (7, 'Trung Quốc', 'Cập nhật các phim Trung Quốc thường xuyên', 1, 'trung-quoc', 4),
-       (8, 'Hàn Quốc', 'Cập nhật các phim Hàn Quốc thường xuyên', 1, 'han-quoc', 5),
-       (9, 'Đài Loan', 'Cập nhật các phim Đài Loan thường xuyên', 1, 'dai-loan', 6),
-       (10, 'Thái Lan', 'Cập nhật các phim Thái Lan thường xuyên', 1, 'thai-lan', 7),
-       (11, 'Philippin', 'Cập nhật các phim Philippin thường xuyên', 1, 'philippin', 9),
-       (14, 'Nga', 'Cập nhật các phim Nga thường xuyên', 1, 'nga', 11),
-       (16, 'Indonesia', 'Cập nhật các phim Indonesia thường xuyên', 1, 'indonesia', 10);
+INSERT INTO `countries` (`id`, `title`, `icon`, `description`, `status`, `slug`, `position`)
+VALUES (1, 'Việt Nam', 'vn', 'Cập nhật các phim Việt Nam thường xuyên', 1, 'viet-nam', 0),
+       (3, 'Ấn Độ', 'in', 'Cập nhật các phim Ấn Độ thường xuyên', 1, 'an-do', 8),
+       (4, 'Mỹ', 'us', 'Cập nhật các phim Mỹ thường xuyên', 1, 'my', 1),
+       (5, 'Hồng Kông', 'hk', 'Cập nhật các phim Hồng Kông thường xuyên', 1, 'hong-kong', 2),
+       (6, 'Nhật Bản', 'jp', 'Cập nhật các phim Nhật Bản thường xuyên', 1, 'nhat-ban', 3),
+       (7, 'Trung Quốc', 'cn', 'Cập nhật các phim Trung Quốc thường xuyên', 1, 'trung-quoc', 4),
+       (8, 'Hàn Quốc', 'kr', 'Cập nhật các phim Hàn Quốc thường xuyên', 1, 'han-quoc', 5),
+       (9, 'Đài Loan', 'tw', 'Cập nhật các phim Đài Loan thường xuyên', 1, 'dai-loan', 6),
+       (10, 'Thái Lan', 'th', 'Cập nhật các phim Thái Lan thường xuyên', 1, 'thai-lan', 7),
+       (11, 'Philippin', 'ph', 'Cập nhật các phim Philippin thường xuyên', 1, 'philippin', 9),
+       (16, 'Indonesia', 'id', 'Cập nhật các phim Indonesia thường xuyên', 1, 'indonesia', 10);
 
 -- --------------------------------------------------------
 
@@ -105,33 +104,9 @@ CREATE TABLE `episodes`
 --
 
 INSERT INTO `episodes` (`id`, `movie_id`, `linkphim`, `episode`, `updated_at`, `created_at`)
-VALUES (1, 48,
-        '<iframe width=\"80%\" height=\"500\" src=\"https://www.youtube.com/embed/89aYxQcGGA4\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>',
-        'FullHD', '2023-05-31 17:23:19', '2023-05-31 17:23:19'),
-       (2, 32,
-        '<iframe width=\"100%\" height=\"500\" src=\"https://www.youtube.com/embed/BbH2bLqRaDc\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>',
-        '1', '2023-05-31 17:26:16', '2023-05-31 17:26:16'),
-       (3, 32,
-        '<iframe width=\"100%\" height=\"500\" src=\"https://www.youtube.com/embed/BbH2bLqRaDc\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>',
-        '2', '2023-05-31 21:50:29', '2023-05-31 21:50:29'),
-       (4, 32,
-        '<iframe width=\"90%\" height=\"500\" src=\"https://www.youtube.com/embed/BbH2bLqRaDc\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>',
-        '3', '2023-05-31 17:26:32', '2023-05-31 17:26:32'),
-       (6, 32,
-        '<iframe width=\"100%\" height=\"500\" src=\"https://www.youtube.com/embed/BbH2bLqRaDc\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>',
-        '4', '2023-05-31 20:07:06', '2023-05-31 20:07:06'),
-       (8, 42,
-        '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/BbH2bLqRaDc\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>',
-        '1', '2023-06-01 11:07:15', '2023-06-01 11:07:15'),
-       (9, 31,
-        '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/GpmY5HOK55k\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>',
-        'FullHD', '2023-06-01 15:35:11', '2023-06-01 15:35:11'),
-       (10, 48,
-        '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/BbH2bLqRaDc\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>',
-        'HD', '2023-06-01 16:18:20', '2023-06-01 16:18:20'),
-       (11, 32,
-        '<iframe width=\"100%\" height=\"500\" src=\"https://www.youtube.com/embed/BbH2bLqRaDc\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>',
-        '5', '2023-06-01 21:26:41', '2023-06-01 21:26:41');
+VALUES (28, 57,
+        '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/eoOaKN4qCKw\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>',
+        'HD', '2023-06-10 22:00:28', '2023-06-10 22:00:28');
 
 -- --------------------------------------------------------
 
@@ -171,25 +146,21 @@ CREATE TABLE `genres`
 --
 
 INSERT INTO `genres` (`id`, `title`, `description`, `status`, `slug`, `position`)
-VALUES (1, 'Hành Động', 'Những bộ phim hành động được cập nhật thường xuyên', 1, 'hanh-dong', 0),
-       (3, 'Tâm Lý', 'Những bộ phim tâm lý được cập nhật thường xuyên', 1, 'tam-ly', 1),
-       (5, 'Viễn Tưởng', 'Những bộ phim viễn tưởng được cập nhật thường xuyên', 1, 'vien-tuong', 2),
-       (6, 'Hoạt Hình', 'Những bộ phim hoạt hình được cập nhật thường xuyên', 1, 'hoat-hinh', 3),
-       (7, 'Kinh Dị', 'Những bộ phim kinh dị được cập nhật thường xuyên', 1, 'kinh-di', 4),
-       (8, 'Hài Hước', 'Những bộ phim hài hước được cập nhật thường xuyên', 1, 'hai-huoc', 5),
-       (9, 'Hình Sự', 'Những bộ phim hình sự được cập nhật thường xuyên', 1, 'hinh-su', 6),
-       (10, 'Võ Thuật', 'Những bộ phim võ thuật được cập nhật thường xuyên', 1, 'vo-thuat', 7),
-       (11, 'Cổ Trang', 'Những bộ phim cổ trang được cập nhật thường xuyên', 1, 'co-trang', 8),
-       (12, 'Phim Ma', 'Những bộ phim ma được cập nhật thường xuyên', 1, 'phim-ma', 9),
-       (13, 'Tình Cảm', 'Những bộ phim tình cảm được cập nhật thường xuyên', 1, 'tinh-cam', 10),
+VALUES (3, 'Tâm Lý', 'Những bộ phim tâm lý được cập nhật thường xuyên', 1, 'tam-ly', 1),
+       (6, 'Hoạt Hình', 'Những bộ phim hoạt hình được cập nhật thường xuyên', 1, 'hoat-hinh', 7),
+       (8, 'Hài Hước', 'Những bộ phim hài hước được cập nhật thường xuyên', 1, 'hai-huoc', 9),
+       (9, 'Hình Sự', 'Những bộ phim hình sự được cập nhật thường xuyên', 1, 'hinh-su', 8),
+       (10, 'Võ Thuật', 'Những bộ phim võ thuật được cập nhật thường xuyên', 1, 'vo-thuat', 3),
+       (11, 'Cổ Trang', 'Những bộ phim cổ trang được cập nhật thường xuyên', 1, 'co-trang', 0),
+       (12, 'Phim Ma', 'Những bộ phim ma được cập nhật thường xuyên', 1, 'phim-ma', 12),
+       (13, 'Tình Cảm', 'Những bộ phim tình cảm được cập nhật thường xuyên', 1, 'tinh-cam', 2),
        (14, 'Thể Thao - Âm Nhạc', 'Những bộ phim thể thao - âm nhạc được cập nhật thường xuyên', 1, 'the-thao-am-nhac',
-        11),
-       (15, 'Thần Thoại', 'Những bộ phim thần thoại được cập nhật thường xuyên', 1, 'than-thoai', 12),
-       (16, 'Tài Liệu', 'Những bộ phim tài liệu được cập nhật thường xuyên', 1, 'tai-lieu', 13),
-       (17, 'Phiêu Lưu', 'Những bộ phim phiêu lưu được cập nhật thường xuyên', 1, 'phieu-luu', 14),
-       (18, 'Gia Đình', 'Những bộ phim gia đình được cập nhật thường xuyên', 1, 'gia-dinh', 15),
-       (19, 'Chiến Tranh', 'Những bộ phim chiến tranh được cập nhật thường xuyên', 1, 'chien-tranh', 16),
-       (20, '18+', 'Những bộ phim 18+ được cập nhật thường xuyên', 1, '18', 17);
+        15),
+       (15, 'Thần Thoại', 'Những bộ phim thần thoại được cập nhật thường xuyên', 1, 'than-thoai', 14),
+       (18, 'Gia Đình', 'Những bộ phim gia đình được cập nhật thường xuyên', 1, 'gia-dinh', 6),
+       (19, 'Chiến Tranh', 'Những bộ phim chiến tranh được cập nhật thường xuyên', 1, 'chien-tranh', 5),
+       (20, '18+', 'Những bộ phim 18+ được cập nhật thường xuyên', 1, '18', 4),
+       (42, 'Hành Động', 'Cập nhật các phim hành động', 1, 'hanh-dong', 16);
 
 -- --------------------------------------------------------
 
@@ -244,7 +215,8 @@ CREATE TABLE `movies`
     `tags`          text         DEFAULT NULL,
     `topview`       int(11) DEFAULT NULL,
     `season`        int(11) NOT NULL,
-    `SoTap`         int(11) NOT NULL DEFAULT 1
+    `SoTap`         int(11) NOT NULL DEFAULT 1,
+    `count_views`   int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -253,57 +225,20 @@ CREATE TABLE `movies`
 
 INSERT INTO `movies` (`id`, `title`, `ThoiLuong`, `name_original`, `trailer`, `description`, `status`, `image`,
                       `category_id`, `ThuocPhim`, `genre_id`, `country_id`, `slug`, `movie_hot`, `resolution`, `phude`,
-                      `NgayTao`, `NgayCapNhat`, `year`, `tags`, `topview`, `season`, `SoTap`)
-VALUES (28, 'Vương Hậu: Charlotte: Câu Chuyện Bridgerton', '50 phút/tập', 'Queen Charlotte: A Bridgerton Story 2023',
-        NULL,
-        'Tóm tắt\r\nVương Hậu: Charlotte: Câu Chuyện Bridgerton – Queen Charlotte: A Bridgerton Story (2023) trong tiền truyện này của “Bridgerton”, cuộc hôn nhân của vương hậu trẻ Charlotte với quốc vương George của nước Anh mở ra một chuyện tình ấn tượng và biến đổi xã hội thượng lưu.',
-        1, 'Vuong-Hau-Charlotte1120.jpg', 4, 'phimbo', 3, 4, 'vuong-hau-charlotte-cau-chuyen-bridgerton', 1, 0, 0, NULL,
-        '2023-05-23 23:17:08', NULL, NULL, NULL, 0, 1),
-       (29, 'Học Viện Đào Tạo Ngôi Sao', '50 phút/tập', 'House of Stars the Series 2023', NULL,
-        'Tóm tắt\r\nHọc Viện Đào Tạo Ngôi Sao – House of Stars (2023) mỗi căn nhà đều có những quy tắc riêng. Vậy nếu đó là căn nhà của một người quản lý của các ngôi sao hàng đầu, nơi mà nhiều diễn viên hàng đầu đều tập trung.\r\n\r\nHọ phải sống chung với nhau dưới những quy tắc và cạnh tranh cho công việc của mình. Trái tim và khát vọng của họ đều mong muốn trở thành số một trong ngành công nghiệp. Nhưng luôn có một bí mật đằng sau màn đêm. Liệu họ có thể kiềm chế những khao khát trong đầu? Liệu họ có thể giấu kín những bí mật của chính mình?',
-        1, 'House-of-Stars-the-Series3240.jpg', 4, 'phimbo', 3, 7, 'hoc-vien-dao-tao-ngoi-sao', 1, 0, 0, NULL,
-        '2023-05-23 23:17:22', NULL, NULL, NULL, 0, 0),
-       (30, 'La Pluie: Cơn Mưa Khi Ấy, Em Yêu Anh', '50 phút/tập', 'La Pluie The Series 2023', NULL,
-        'Tóm tắt\r\nLa Pluie: Cơn Mưa Khi Ấy, Em Yêu Anh – La Pluie The Series (2023) kể về câu chuyện của “Phat” và “Saeng Tai”, cặp đôi được định mệnh gắn kết bởi cơn mưa cùng nhiều câu chuyện tình cờ xảy đến giữa bầu không khí mưa gió để khẳng định rằng dưới hôm mưa ấy, ta yêu nhau.',
-        1, 'La-Pluie7559.jpg', 4, 'phimbo', 3, 7, 'la-pluie-con-mua-khi-ay-em-yeu-anh', 1, 0, 1, NULL,
-        '2023-05-23 23:17:31', NULL, NULL, NULL, 0, 1),
-       (31, 'Cậu Bé Gạc Nai Phần 2', '', 'Sweet Tooth Season 2 2023', NULL,
-        'Tóm tắt\r\nCậu Bé Gạc Nai Phần 2 – Sweet Tooth Season 2 (2023) trong hành trình phiêu lưu đầy hiểm nguy trên khắp thế giới hậu tận thế, cậu bé nửa người nửa nai đáng yêu tìm kiếm khởi đầu mới cùng một người bảo vệ cộc cằn.',
-        1, 'Cau-be-gac-nai-phan-24534.jpg', 4, 'phimle', 5, 4, 'cau-be-gac-nai-phan-2', 1, 0, 0, NULL, NULL, NULL, NULL,
-        NULL, 0, 1),
-       (32, 'Học Kỳ Sinh Tử', NULL, 'Duty After School 2023', 'BbH2bLqRaDc',
-        'Học Kỳ Sinh Tử – Duty After School (2023) dựa trên webcomic “Duty After School” của Ha Il-Kwon, lấy bối cảnh Hàn Quốc bị tấn công bởi những sinh vật lạ từ trên trời rơi xuống, gây ra thảm họa thương vong toàn quốc. Để giúp đỡ các lực lượng quân sự, chính phủ Hàn chỉ định tất cả các sinh viên cũng như học sinh trung học phải trở thành quân dự bị. Thay vì ngòi bút, nay học sinh Hàn Quốc phải cầm vũ khí để tiêu diệt những sinh vật này.',
-        1, 'Duty-After-School8702.jpg', 4, 'phimbo', 1, 8, 'hoc-ky-sinh-tu', 1, 0, 0, NULL, '2023-05-31 17:25:35',
-        '2023', NULL, NULL, 0, 16),
-       (33, 'Lính Bắn Tỉa Siberia', '', 'Siberian Sniper 2021', NULL,
-        'Tóm tắt\r\nLính Bắn Tỉa Siberia – Siberian Sniper (2021) trong thời kỳ đỉnh cao của Thế chiến thứ hai, người lính bắn tỉa cuối cùng còn sống sót của một đơn vị Liên Xô được cử đi thực hiện một nhiệm vụ liều chết nhằm phá vỡ một thành trì của Đức để cứu những người lính của mình.',
-        1, 'Siberian-Sniper8777.jpg', 5, 'phimbo', 19, 14, 'linh-ban-tia-siberia', 0, 1, 0, NULL, NULL, NULL, NULL,
-        NULL, 0, 1),
-       (38, 'Người Mẹ Sát Thủ', '', 'The Mother 2023', NULL,
-        'Tóm tắt\r\nNgười Mẹ Sát Thủ – The Mother (2023) một sát thủ được đào tạo trong quân đội phải ra mặt để bảo vệ cô con gái mà cô chưa từng gặp khỏi bọn tội phạm tàn nhẫn muốn trả thù.',
-        1, 'The-mother-20235612.jpg', 5, 'phimbo', 1, 4, 'nguoi-me-sat-thu', 1, 0, 0, NULL, NULL, NULL, NULL, NULL, 0,
-        1),
-       (40, 'Tay Sai Của Quỷ', '', 'Renfield 2023', NULL,
-        'Tóm tắt\r\nTay Sai Của Quỷ – Renfield (2023) Renfield phát ốm vì mối quan hệ đồng phụ thuộc kéo dài hàng thế kỷ với Dracula. Với hy vọng tạo dựng một cuộc sống mới ở thế giới con người, tại New Orleans thời hiện đại, cuộc sống của Renfield trở nên phức tạp hơn khi anh phải lòng một cảnh sát giao thông. Mà trong lúc đó, anh ta vẫn phải đối phó với những yêu cầu, đòi hỏi quái lạ từ Dracula – một ông chủ thực sự đến từ địa ngục.',
-        1, 'Tay-Sai-Cua-Quy5373.jpg', 5, 'phimle', 7, 4, 'tay-sai-cua-quy', 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0,
-        1),
-       (41, 'Nộ Hỏa', '', 'Raging Fire 2023', NULL,
-        'Tóm tắt\r\nNộ Hỏa – Raging Fire (2023) kể về câu chuyện của đội trưởng Tề Vĩ Bân (do Hình Hãn Khanh thủ vai) và đội phó Trần Mẫn (do Lý Manh Manh thủ vai). Sau khi nhận được cuộc gọi báo cáo về vụ việc buôn bán ma túy, hai người họ dẫn theo các thành viên trong nhóm tiến hành một cuộc điều tra bí mật về mục tiêu bị nghi ngờ. và gặp gỡ các trùm ma túy Duẫn Khôn (do Cố Bân thủ vai) và Duẫn Dực (do Trữ Tiến thủ vai). Đây là một cuộc đấu trí và so gan trong công cuộc chống ma túy.\r\n\r\nTề Vĩ Bân lẻn vào khoang chở hàng khi nghi phạm đang chất hàng lên xe, bám theo chiếc xe đến sào huyệt sản xuất ma túy, lợi dụng địa hình hiểm trở phối hợp với đồng đội chờ cơ hội đột kích triệt phá nhà xưởng. Anh cứ ngỡ mình đã phá được trọng án, nhưng anh nào biết rằng tất cả những điều này là một âm mưu của xã hội đen. Đối mặt với việc bắt hụt anh em nhà họ Duẫn, đồng đội thì thương tích đầy mình, anh rơi vào vòng xoáy tự trách. Càng không ngờ rằng, Nghiêm Khang, một mục tiêu dài hạn khác vốn bị giám sát trong một thời gian dài lại đột ngột qua đời, lúc này, nguồn manh mối về vụ án ma túy ngầm Tân Hải bất ngờ bị gián đoạn. Qua điều tra, đội chống ma túy cuối cùng đã tìm ra điểm đột phá của vụ án, kẻ môi giới mới – Cá Chạch rơi vào diện tình nghi. Cá Chạch là ai? Ai mới là kẻ thực sự đứng đằng sau vụ án ma túy Tân Hải?',
-        1, 'No-hoa8968.jpg', 5, 'phimbo', 1, 7, 'no-hoa', 0, 0, 0, NULL, NULL, NULL, NULL, 1, 0, 1),
-       (42, 'Địch Nhân Kiệt: Vận Hà Kinh Long', '', 'Legend of Detective Dee 2023', NULL,
-        'Tóm tắt\r\nĐịch Nhân Kiệt: Vận Hà Kinh Long – Legend of Detective Dee (2023) nói về hoàng hậu Võ Tắc Thiên và một trăm quan chức tuần tra Vận Hà vào ban đêm, hàng ngàn người ở Lạc Dương đã đổ xô đến chỉ để được nhìn thấy mặt Võ Tắc Thiên, không ngờ trong kênh xuất hiện một con quái vật hình rồng chạm với thuyền rồng.\r\n\r\nNgười dân Lạc Dương bàn tán rất nhiều, cho rằng đó là điềm gở. Như một dấu hiệu, Hoàng hậu Võ Tắc Thiên vô cùng tức giận, khẩn cấp gọi Địch Nhân Kiệt trở lại cung điện để điều tra kỹ lưỡng vụ án của Rồng xuất hiện ở sông. Địch Nhân Kiệt được giao một nhiệm vụ nguy hiểm, sử dụng trí thông minh và sức hút độc đáo của mình, không sợ quyền lực, không sợ hãi đối mặt với các vị thần và ma quỷ, vượt qua những cám dỗ để khám phá sự thật và tìm ra thủ phạm thực sự.',
-        1, 'Dich-Nhan-Kiet-Van-Ha-Kinh-Long480.jpg', 5, 'phimbo', 5, 7, 'dich-nhan-kiet-van-ha-kinh-long', 0, 0, 0,
-        NULL, NULL, NULL, NULL, 1, 0, 1),
-       (48, 'Vệ Binh Dải Ngân Hà 3', '150 phút', 'Guardians of the Galaxy Volume 3 2023', 'JqcncLPi9zw',
+                      `NgayTao`, `NgayCapNhat`, `year`, `tags`, `topview`, `season`, `SoTap`, `count_views`)
+VALUES (48, 'Vệ Binh Dải Ngân Hà 3 Vệ Binh Dải Ngân Hà 3', '150 phút',
+        'Guardians of the Galaxy Volume 3 2023 Guardians of the Galaxy Volume 3 2023', 'JqcncLPi9zw',
         'Vệ Binh Dải Ngân Hà 3 – Guardians of the Galaxy Volume 3 (2023) sau khi mua Knowhere từ The Collector, đội Vệ binh dải Ngân Hà cố gắng biến nó thành nơi trú ẩn an toàn cho những người tị nạn sau cú búng tay di dời. Nhưng sau một cuộc tấn công tàn bạo, Peter Quill, vẫn cảm xúc vì mất Gamora, phải tập hợp các Vệ binh để thực hiện sứ mệnh bảo vệ vũ trụ và bảo vệ một người trong số họ khỏi kẻ thù chung nguy hiểm.',
-        1, 'Ve-Binh-Dai-Ngan-Ha-39224.jpg', 2, 'phimle', 1, 4, 've-binh-dai-ngan-ha-3', 1, 4, 0, NULL,
-        '2023-06-01 22:16:04', '2023',
+        1, 'Ve-Binh-Dai-Ngan-Ha-39224.jpg', 2, 'phimbo', 1, 4, 've-binh-dai-ngan-ha-3', 1, 4, 0, NULL,
+        '2023-06-10 12:26:12', '2023',
         'Phim The Guardians Of The Galaxy Vol.3, Phim Vệ Binh Dải Ngân Hà 3, The Guardians Of The Galaxy Vol.3, The Guardians Of The Galaxy Vol.3 Vietsub, Vệ Binh Dải Ngân Hà 3, Vệ Binh Dải Ngân Hà 3 Vietsub',
-        2, 3, 1),
-       (49, 'hoàng văn', NULL, 'hoang van', NULL, 'hoàng văn', 1, 'meg-28566.jpg', 1, 'phimle', 5, 1, 'hoang-van', 1, 4,
-        1, NULL, '2023-05-31 18:05:14', NULL, NULL, 0, 0, 1),
-       (51, 'áđá', '120 phút', 'áđâsd', NULL, 'áđâsd', 1, 'John-Wick-43656.jpg', 1, 'phimle', 8, 1, 'ada', 1, 5, 0,
-        '2023-05-22 22:54:03', '2023-06-01 14:48:05', '2023', NULL, 0, 0, 8);
+        2, 3, 10, 123126),
+       (49, 'hoàng văn', '50 phút/tập', 'hoang van', 'JqcncLPi9zw', 'hoàng văn', 1, 'John-Wick-447.jpg', 25, 'phimbo',
+        3, 1, 'hoang-van', 1, 3, 1, NULL, '2023-06-10 17:31:45', NULL, NULL, 0, 0, 1, 12317),
+       (57, 'Quá Nhanh Quá Nguy Hiểm 10', '150 phút', 'Fast And Furious 10 2023', 'eoOaKN4qCKw',
+        'Quá Nhanh Quá Nguy Hiểm 10 – Fast and Furious 10 (2023) xoay quanh việc Dom Toretto cùng gia đình anh ấy đã trở thành mục tiếu tấn công bởi chính con trai ông trùm ma túy, kẻ trước đây bị X 10 tiêu diệt. Mời các bạn cùng đón xem bộ phim Quá Nhanh Quá Nguy Hiểm 10 – Fast X cực hấp dẫn này.',
+        1, 'Qua-Nhanh-Qua-Nguy-Hiem-10-20234038.jpg', 2, 'phimle', 4, 4, 'qua-nhanh-qua-nguy-hiem-10', 1, 4, 0,
+        '2023-06-10 21:57:43', '2023-06-10 21:58:41', '2023', 'Quá nhanh quá nguy hiểm, Fast and Furios', 0, 10, 1, 96);
 
 -- --------------------------------------------------------
 
@@ -323,22 +258,21 @@ CREATE TABLE `movie_genre`
 --
 
 INSERT INTO `movie_genre` (`id`, `movie_id`, `genre_id`)
-VALUES (20, 51, 1),
-       (21, 51, 3),
-       (22, 51, 5),
-       (23, 51, 6),
-       (24, 51, 7),
-       (25, 51, 8),
-       (37, 32, 1),
-       (38, 32, 3),
-       (39, 32, 8),
-       (40, 32, 13),
-       (41, 49, 1),
-       (42, 49, 3),
-       (43, 49, 5),
-       (44, 48, 1),
-       (45, 48, 5),
-       (46, 48, 17);
+VALUES (42, 49, 3),
+       (49, 49, 6),
+       (50, 49, 8),
+       (51, 49, 9),
+       (52, 49, 10),
+       (53, 49, 11),
+       (54, 49, 12),
+       (55, 49, 13),
+       (56, 49, 14),
+       (57, 49, 15),
+       (59, 49, 18),
+       (60, 49, 19),
+       (61, 49, 20),
+       (63, 57, 9),
+       (64, 57, 42);
 
 -- --------------------------------------------------------
 
@@ -384,6 +318,20 @@ CREATE TABLE `personal_access_tokens`
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `rating`
+--
+
+CREATE TABLE `rating`
+(
+    `id`         int(11) NOT NULL,
+    `rating`     int(11) NOT NULL,
+    `movie_id`   int(11) NOT NULL,
+    `ip_address` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `users`
 --
 
@@ -405,8 +353,11 @@ CREATE TABLE `users`
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`,
                      `updated_at`)
-VALUES (1, 'Hoàng Văn', 'lebuihoangvan@gmail.com', NULL, '$2y$10$imwEcgEWkdJELCx8wvi1s.EZx2JVdbe6gHQppu8s.LuBFZBlG.bq2',
-        'uLnorM8L3jKUpXbyBX8jyJC4woQxIwzWQQg5L11JVA3lxSjh7kIbx2gczMUa', '2023-05-06 01:04:21', '2023-05-06 01:04:21');
+VALUES (1, 'Hoàng Văn', 'lebuihoangvan@gmail.com', NULL, '$2y$10$DynIryS8KZKCvBcGj5/92.3cBJcdCMhzfnQyxmVPDlT3PThbabLh6',
+        'xdGs74SSmVpAnH2s0uKH36bxdYKwqGqAQb6XewzJ9GLptd5i7fECZDrrFGdx', '2023-05-06 01:04:21', '2023-06-19 10:26:10'),
+       (2, 'Lê Bùi Hoàng Văn', 'Vankuner0605@gmail.com', NULL,
+        '$2y$10$bJxSMJMU7aQo1tFEULx0vOVOtRLeDMNBTZoT0cG0EiRYoaXN/3qq.', NULL, '2023-06-05 07:35:00',
+        '2023-06-05 07:35:00');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -481,6 +432,12 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
+-- Chỉ mục cho bảng `rating`
+--
+ALTER TABLE `rating`
+    ADD PRIMARY KEY (`id`);
+
+--
 -- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
@@ -495,19 +452,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `categories`
 --
 ALTER TABLE `categories`
-    MODIFY `id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+    MODIFY `id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT cho bảng `countries`
 --
 ALTER TABLE `countries`
-    MODIFY `id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+    MODIFY `id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT cho bảng `episodes`
 --
 ALTER TABLE `episodes`
-    MODIFY `id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+    MODIFY `id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT cho bảng `failed_jobs`
@@ -519,7 +476,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT cho bảng `genres`
 --
 ALTER TABLE `genres`
-    MODIFY `id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+    MODIFY `id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT cho bảng `migrations`
@@ -531,13 +488,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT cho bảng `movies`
 --
 ALTER TABLE `movies`
-    MODIFY `id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+    MODIFY `id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT cho bảng `movie_genre`
 --
 ALTER TABLE `movie_genre`
-    MODIFY `id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+    MODIFY `id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT cho bảng `personal_access_tokens`
@@ -546,10 +503,16 @@ ALTER TABLE `personal_access_tokens`
     MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT cho bảng `rating`
+--
+ALTER TABLE `rating`
+    MODIFY `id` int (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-    MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+    MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
