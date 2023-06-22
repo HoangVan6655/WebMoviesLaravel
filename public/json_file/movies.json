@@ -23,7 +23,7 @@
         "topview": 0,
         "season": 10,
         "SoTap": 1,
-        "count_views": 93,
+        "count_views": 96,
         "episode_count": 1,
         "category": {
             "id": 2,
@@ -40,7 +40,7 @@
                 "description": "Nh\u1eefng b\u1ed9 phim h\u00ecnh s\u1ef1 \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
                 "status": 1,
                 "slug": "hinh-su",
-                "position": 8,
+                "position": 7,
                 "pivot": {
                     "movie_id": 57,
                     "genre_id": 9
@@ -62,6 +62,7 @@
         "country": {
             "id": 4,
             "title": "M\u1ef9",
+            "icon": "us",
             "description": "C\u1eadp nh\u1eadt c\u00e1c phim M\u1ef9 th\u01b0\u1eddng xuy\u00ean",
             "status": 1,
             "slug": "my",
@@ -122,7 +123,7 @@
                 "description": "Nh\u1eefng b\u1ed9 phim ho\u1ea1t h\u00ecnh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
                 "status": 1,
                 "slug": "hoat-hinh",
-                "position": 7,
+                "position": 6,
                 "pivot": {
                     "movie_id": 49,
                     "genre_id": 6
@@ -146,7 +147,7 @@
                 "description": "Nh\u1eefng b\u1ed9 phim h\u00ecnh s\u1ef1 \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
                 "status": 1,
                 "slug": "hinh-su",
-                "position": 8,
+                "position": 7,
                 "pivot": {
                     "movie_id": 49,
                     "genre_id": 9
@@ -230,7 +231,7 @@
                 "description": "Nh\u1eefng b\u1ed9 phim gia \u0111\u00ecnh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
                 "status": 1,
                 "slug": "gia-dinh",
-                "position": 6,
+                "position": 5,
                 "pivot": {
                     "movie_id": 49,
                     "genre_id": 18
@@ -242,7 +243,7 @@
                 "description": "Nh\u1eefng b\u1ed9 phim chi\u1ebfn tranh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
                 "status": 1,
                 "slug": "chien-tranh",
-                "position": 5,
+                "position": 4,
                 "pivot": {
                     "movie_id": 49,
                     "genre_id": 19
@@ -254,7 +255,7 @@
                 "description": "Nh\u1eefng b\u1ed9 phim 18+ \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
                 "status": 1,
                 "slug": "18",
-                "position": 4,
+                "position": 8,
                 "pivot": {
                     "movie_id": 49,
                     "genre_id": 20
@@ -264,6 +265,7 @@
         "country": {
             "id": 1,
             "title": "Vi\u1ec7t Nam",
+            "icon": "vn",
             "description": "C\u1eadp nh\u1eadt c\u00e1c phim Vi\u1ec7t Nam th\u01b0\u1eddng xuy\u00ean",
             "status": 1,
             "slug": "viet-nam",
@@ -302,7 +304,7 @@
         "topview": 2,
         "season": 3,
         "SoTap": 10,
-        "count_views": 123125,
+        "count_views": 123126,
         "episode_count": 0,
         "category": {
             "id": 2,
@@ -316,6 +318,7 @@
         "country": {
             "id": 4,
             "title": "M\u1ef9",
+            "icon": "us",
             "description": "C\u1eadp nh\u1eadt c\u00e1c phim M\u1ef9 th\u01b0\u1eddng xuy\u00ean",
             "status": 1,
             "slug": "my",

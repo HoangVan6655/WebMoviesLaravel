@@ -75,12 +75,5 @@
                 </div>
             </div>
         </nav>
-
-        {{--        <div class="collapse navbar-collapse" id="search-form">--}}
-        {{--            <div id="mobile-search-form" class="halim-search-form"></div>--}}
-        {{--        </div>--}}
-        {{--        <div class="collapse navbar-collapse" id="user-info">--}}
-        {{--            <div id="mobile-user-login"></div>--}}
-        {{--        </div>--}}
     </div>
 </div>

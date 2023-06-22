@@ -32,14 +32,18 @@
 
             <div class="col-xs-12 col-sm-4 col-md-3" style="flex-basis: calc(33.33% - 20px); margin-bottom: 20px;">
                 <div class="ud-widget">
-                    <h4 class="ud-widget-title" style="margin-top: 40px">Danh Mục Phim</h4>
+                    <h4 class="ud-widget-title" style="margin-top: 40px">Thể Loại Phim</h4>
                     <ul class="ud-widget-links" style="list-style: none; padding-left: 0;">
-                        @foreach($category as $key => $cate)
-                            <li class="mega">
-                                <a title="{{$cate->title}}" href="{{ route('category', $cate->slug) }}">
-                                    {{$cate->title}}
-                                </a>
-                            </li>
+                        @foreach($TheLoai as $key => $gen)
+                            @if($key < 5)
+                                <li class="mega">
+                                    <a title="{{$gen->title}}" href="{{ route('genre', $gen->slug) }}">
+                                        Phim {{$gen->title}}
+                                    </a>
+                                </li>
+                            @else
+                                @break
+                            @endif
                         @endforeach
                     </ul>
                 </div>
@@ -47,14 +51,18 @@
 
             <div class="col-xs-12 col-sm-4 col-md-3" style="flex-basis: calc(33.33% - 20px); margin-bottom: 20px;">
                 <div class="ud-widget">
-                    <h4 class="ud-widget-title" style="margin-top: 40px">Danh Mục Phim</h4>
+                    <h4 class="ud-widget-title" style="margin-top: 40px">Quốc Gia Phim</h4>
                     <ul class="ud-widget-links" style="list-style: none; padding-left: 0;">
-                        @foreach($category as $key => $cate)
-                            <li class="mega">
-                                <a title="{{$cate->title}}" href="{{ route('category', $cate->slug) }}">
-                                    {{$cate->title}}
-                                </a>
-                            </li>
+                        @foreach($QuocGia as $key => $country)
+                            @if($key < 5)
+                                <li class="mega">
+                                    <a title="{{$country->title}}" href="{{ route('country', $country->slug) }}">
+                                        Phim {{$country->title}}
+                                    </a>
+                                </li>
+                            @else
+                                @break
+                            @endif
                         @endforeach
                     </ul>
                 </div>
