@@ -15,6 +15,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
+        // danh sách quốc gia
         $listCountry = Country::orderBy('position', 'ASC')->get();
         $countMoviesByCountry = [];
         foreach ($listCountry as $country) {
@@ -24,9 +25,10 @@ class DashboardController extends Controller
 
             $countMoviesByCountry[$country->id] = $count;
         }
+
+        // danh sách danh mục
         $listCategory = Category::orderBy('position', 'ASC')->get();
         $countMoviesByCategory = [];
-
         foreach ($listCategory as $cate) {
             $count = Movie::whereHas('category', function ($query) use ($cate) {
                 $query->where('id', $cate->id);
@@ -34,7 +36,17 @@ class DashboardController extends Controller
 
             $countMoviesByCategory[$cate->id] = $count;
         }
-        return view('dashboard', compact('listCountry', 'listCategory', 'countMoviesByCountry', 'countMoviesByCategory'));
+
+        // danh sách thể loại
+        $listGenre = Genre::orderBy('position', 'ASC')->get();
+
+        // đếm tổng
+        $countryCount = Country::all()->count();
+        $categoryCount = Category::all()->count();
+        $genreCount = Genre::all()->count();
+        $movieCount = Movie::all()->count();
+
+        return view('dashboard', compact('listCountry', 'countryCount', 'categoryCount', 'genreCount', 'movieCount', 'listCategory', 'listGenre', 'countMoviesByCountry', 'countMoviesByCategory'));
     }
 
     /**
