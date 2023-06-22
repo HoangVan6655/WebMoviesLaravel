@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Country;
 use App\Models\Genre;
 use App\Models\Movie;
+use App\Models\Movie_Genre;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -39,6 +40,12 @@ class DashboardController extends Controller
 
         // danh sách thể loại
         $listGenre = Genre::orderBy('position', 'ASC')->get();
+        $countMoviesByGenre = [];
+        foreach ($listGenre as $genre) {
+            $count = Movie_Genre::where('genre_id', $genre->id)->count();
+
+            $countMoviesByGenre[$genre->id] = $count;
+        }
 
         // đếm tổng
         $countryCount = Country::all()->count();
@@ -46,7 +53,7 @@ class DashboardController extends Controller
         $genreCount = Genre::all()->count();
         $movieCount = Movie::all()->count();
 
-        return view('dashboard', compact('listCountry', 'countryCount', 'categoryCount', 'genreCount', 'movieCount', 'listCategory', 'listGenre', 'countMoviesByCountry', 'countMoviesByCategory'));
+        return view('dashboard', compact('listCountry', 'countryCount', 'categoryCount', 'genreCount', 'movieCount', 'listCategory', 'listGenre', 'countMoviesByCountry', 'countMoviesByCategory', 'countMoviesByGenre'));
     }
 
     /**

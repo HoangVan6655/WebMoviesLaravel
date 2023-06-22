@@ -94,7 +94,8 @@
                                                                     <tr>
                                                                         <td>{{ $key + 1 }}</td>
                                                                         <td class="text-center">{{ $genre->title }}</td>
-                                                                        <td class="text-right font-weight-medium">Phim
+                                                                        <td class="text-right font-weight-medium">
+                                                                            {{ $countMoviesByGenre[$genre->id] }} Phim
                                                                         </td>
                                                                     </tr>
                                                                     </tbody>
@@ -111,7 +112,8 @@
                                                                     <tr>
                                                                         <td>{{ $key + 1 }}</td>
                                                                         <td class="text-center">{{ $genre->title }}</td>
-                                                                        <td class="text-right font-weight-medium">Phim
+                                                                        <td class="text-right font-weight-medium">
+                                                                            {{ $countMoviesByGenre[$genre->id] }} Phim
                                                                         </td>
                                                                     </tr>
                                                                     </tbody>
