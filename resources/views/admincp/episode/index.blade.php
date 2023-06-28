@@ -83,7 +83,7 @@
                                         style="max-width: 100%; white-space:pre-wrap; word-wrap:break-word">{{ $episode->linkphim }}</td>
                                     <td>
                                         <button id="submitBtn" type="button" class="btn btn-danger"
-                                                onclick="showModal({{ $episode->id }})">
+                                                onclick="showModal({{ $episode->id }}, '{{ $episode->movie->title }}')">
                                             Xoá
                                         </button>
 
@@ -97,10 +97,10 @@
                     </div>
 
                     <!-- Confirm Modal -->
-                    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel"
+                    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="confirmModalLabel"
                          aria-hidden="true" data-id="{{ isset($episode) ? $episode->id : '' }}">
                         <div class="modal-dialog">
-                            <div class="modal-content bg-gray-100 dark:bg-gray-800 text-white">
+                            <div class="modal-content" style="background-color: #191c24; color: white">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="confirmModalLabel">Xác nhận thao tác</h5>
                                     <button type="button" class="mdi mdi-close" data-bs-dismiss="modal"
@@ -108,7 +108,7 @@
                                             style="background-color: #191c24; border: none; color: white"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <p>Bạn có chắc chắn muốn xoá tập phim này?</p>
+                                    <p>Bạn có chắc chắn muốn xoá tập phim '<span id="episodeTitle"></span>' này?</p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
@@ -135,11 +135,12 @@
 </script>
 
 <script>
-    function showModal(episodeId) {
-        $('#confirmModal').data('id', episodeId);
+    function showModal(episodeId, episodeName) {
+        $('#deleteModal').data('id', episodeId, 'title', episodeName);
         var formAction = "{{ route('episode.destroy', '') }}";
         formAction += "/" + episodeId;
-        $('#confirmModal form').attr('action', formAction);
-        $('#confirmModal').modal('show');
+        $('#deleteModal form').attr('action', formAction);
+        $('#deleteModal').modal('show');
+        $('#deleteModal').find('.modal-body p').text("Bạn có chắc chắn muốn xoá tập phim '" + episodeName + "' này?");
     }
 </script>

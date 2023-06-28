@@ -87,7 +87,7 @@
                                     </td>
                                     <td>
                                         <button id="submitBtn" type="button" class="btn btn-danger"
-                                                onclick="showModal({{ $country->id }})">
+                                                onclick="showModal({{ $country->id }}, '{{ $country->title }}')">
                                             Xoá
                                         </button>
 
@@ -127,10 +127,10 @@
                 </div>
 
                 <!-- Confirm Modal -->
-                <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel"
+                <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="confirmModalLabel"
                      aria-hidden="true" data-id="{{ isset($country) ? $country->id : '' }}">
                     <div class="modal-dialog">
-                        <div class="modal-content bg-gray-100 dark:bg-gray-800 text-white">
+                        <div class="modal-content" style="background-color: #191c24; color: white">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="confirmModalLabel">Xác nhận thao tác</h5>
                                 <button type="button" class="mdi mdi-close" data-bs-dismiss="modal"
@@ -138,7 +138,7 @@
                                         style="background-color: #191c24; border: none; color: white"></button>
                             </div>
                             <div class="modal-body">
-                                <p>Bạn có chắc chắn muốn xoá quốc gia phim này?</p>
+                                <p>Bạn có chắc chắn muốn xoá quốc gia '<span id="countryTitle"></span>' này?</p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
@@ -163,11 +163,12 @@
 </script>
 
 <script>
-    function showModal(countryId) {
-        $('#confirmModal').data('id', countryId);
+    function showModal(countryId, countryName) {
+        $('#deleteModal').data('id', countryId, 'title', countryName);
         var formAction = "{{ route('country.destroy', '') }}";
         formAction += "/" + countryId;
-        $('#confirmModal form').attr('action', formAction);
-        $('#confirmModal').modal('show');
+        $('#deleteModal form').attr('action', formAction);
+        $('#deleteModal').modal('show');
+        $('#deleteModal').find('.modal-body p').text("Bạn có chắc chắn muốn xoá quốc gia '" + countryName + "' này?");
     }
 </script>

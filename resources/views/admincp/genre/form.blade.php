@@ -5,7 +5,11 @@
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h2 class="card-title">Thêm Mới Thể Loại Phim</h2>
+                    @if(!isset($genre))
+                        <h2 class="card-title">Thêm Mới Thể Loại Phim</h2>
+                    @else
+                        <h2 class="card-title">Cập Nhật Thể Loại Phim</h2>
+                    @endif
                     @if(!isset($genre))
                         {!! Form::open(['route' => 'genre.store', 'method'=> 'POST']) !!}
                     @else

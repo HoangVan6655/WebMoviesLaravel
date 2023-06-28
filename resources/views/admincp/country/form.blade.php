@@ -5,7 +5,11 @@
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h2 class="card-title">Thêm Mới Quốc Gia Phim</h2>
+                    @if(!isset($country))
+                        <h2 class="card-title">Thêm Mới Quốc Gia Phim</h2>
+                    @else
+                        <h2 class="card-title">Cập Nhật Quốc Gia Phim</h2>
+                    @endif
                     @if(!isset($country))
                         {!! Form::open(['route' => 'country.store', 'method'=> 'POST']) !!}
                     @else

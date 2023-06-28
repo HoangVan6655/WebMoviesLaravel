@@ -5,7 +5,12 @@
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h2 class="card-title">Thêm Mới Tập Phim</h2>
+                    @if(!isset($episode))
+                        <h2 class="card-title">Thêm Mới Tập Phim</h2>
+                    @else
+                        <h2 class="card-title">Cập Nhật Tập Phim</h2>
+                    @endif
+
                     @if(!isset($episode))
                         {!! Form::open(['route' => 'episode.store', 'method'=> 'POST', 'enctype'=>'multipart/form-data']) !!}
                     @else

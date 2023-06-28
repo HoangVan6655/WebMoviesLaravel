@@ -5,7 +5,11 @@
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h2 class="card-title">Thêm Mới Danh Mục Phim</h2>
+                    @if(!isset($category))
+                        <h2 class="card-title">Thêm Mới Danh Mục him</h2>
+                    @else
+                        <h2 class="card-title">Cập Nhật Danh Mục Phim</h2>
+                    @endif
                     @if(!isset($category))
                         {!! Form::open(['route' => 'category.store', 'method'=> 'POST']) !!}
                     @else

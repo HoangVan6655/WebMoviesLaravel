@@ -5,7 +5,12 @@
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h2 class="card-title">Thêm Mới Phim</h2>
+                    @if(!isset($movie))
+                        <h2 class="card-title">Thêm Mới Phim</h2>
+                    @else
+                        <h2 class="card-title">Cập Nhật Phim</h2>
+                    @endif
+
                     @if(!isset($movie))
                         {!! Form::open(['route' => 'movie.store', 'method'=> 'POST', 'enctype'=>'multipart/form-data']) !!}
                     @else
@@ -148,42 +153,24 @@
                         <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Thể Loại Phim</label>
                         <div class="col-sm-9">
                             <div class="row" style="margin-bottom: 10pt;" id="checked_genre">
-                                <div class="col-md-4">
-                                    @foreach($list_genre->take($list_genre->count()/3) as $gen)
-                                        <div style="display: block;">
-                                            @if(isset($movie))
-                                                {!! Form::checkbox('genre[]', $gen->id, isset($movie_genre) && $movie_genre->contains($gen->id) ? true : false) !!}
-                                            @else
-                                                {!! Form::checkbox('genre[]', $gen->id, '') !!}
-                                            @endif
-                                            {!! Form::label('genre', $gen->title, ['style'=>'margin-top: 5px']) !!}
-                                        </div>
-                                    @endforeach
-                                </div>
-                                <div class="col-md-4">
-                                    @foreach($list_genre->slice($list_genre->count()/3, $list_genre->count()/3) as $gen)
-                                        <div style="display: block;">
-                                            @if(isset($movie))
-                                                {!! Form::checkbox('genre[]', $gen->id, isset($movie_genre) && $movie_genre->contains($gen->id) ? true : false) !!}
-                                            @else
-                                                {!! Form::checkbox('genre[]', $gen->id, '') !!}
-                                            @endif
-                                            {!! Form::label('genre', $gen->title, ['style'=>'margin-top: 5px']) !!}
-                                        </div>
-                                    @endforeach
-                                </div>
-                                <div class="col-md-4">
-                                    @foreach($list_genre->slice(2 * $list_genre->count()/3) as $gen)
-                                        <div style="display: block;">
-                                            @if(isset($movie))
-                                                {!! Form::checkbox('genre[]', $gen->id, isset($movie_genre) && $movie_genre->contains($gen->id) ? true : false) !!}
-                                            @else
-                                                {!! Form::checkbox('genre[]', $gen->id, '') !!}
-                                            @endif
-                                            {!! Form::label('genre', $gen->title, ['style'=>'margin-top: 5px']) !!}
-                                        </div>
-                                    @endforeach
-                                </div>
+                                @php
+                                    $chunkedGenres = $list_genre->chunk($list_genre->count() / 3);
+                                @endphp
+
+                                @foreach($chunkedGenres as $chunk)
+                                    <div class="col-md-4">
+                                        @foreach($chunk as $gen)
+                                            <div style="display: block;">
+                                                @if(isset($movie))
+                                                    {!! Form::checkbox('genre[]', $gen->id, isset($movie_genre) && $movie_genre->contains($gen->id) ? true : false) !!}
+                                                @else
+                                                    {!! Form::checkbox('genre[]', $gen->id, '') !!}
+                                                @endif
+                                                {!! Form::label('genre', $gen->title, ['style'=>'margin-top: 5px']) !!}
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
