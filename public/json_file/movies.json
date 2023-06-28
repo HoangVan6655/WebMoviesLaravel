@@ -1,5 +1,2994 @@
 [
     {
+        "id": 93,
+        "title": "M\u00e1u V\u00e0 V\u00e0ng",
+        "ThoiLuong": "100 ph\u00fat",
+        "name_original": "Blood & Gold 2023",
+        "trailer": "eDsrUYd2VbE",
+        "description": "M\u00e1u V\u00e0 V\u00e0ng \u2013 Blood & Gold (2023) trong giai \u0111o\u1ea1n cu\u1ed1i \u0111\u1ea7y t\u00e0n kh\u1ed1c c\u1ee7a Th\u1ebf chi\u1ebfn II, m\u1ed9t vi\u00ean l\u00ednh \u0111\u00e0o ng\u0169 ng\u01b0\u1eddi \u0110\u1ee9c v\u00e0 m\u1ed9t ph\u1ee5 n\u1eef tr\u1ebb b\u1ecb k\u00e9o v\u00e0o tr\u1eadn chi\u1ebfn \u0111\u1eabm m\u00e1u v\u1edbi nh\u00f3m \u0110\u1ee9c Qu\u1ed1c x\u00e3 \u0111ang s\u0103n l\u00f9ng v\u00e0ng b\u1ecb gi\u1ea5u.",
+        "status": 1,
+        "image": "ubsnl8tEVI4C7dZQansuRp4z8bJ2343.jpg",
+        "category_id": 42,
+        "ThuocPhim": "phimbo",
+        "genre_id": 5,
+        "country_id": 4,
+        "slug": "mau-va-vang",
+        "movie_hot": 0,
+        "resolution": 5,
+        "phude": 0,
+        "NgayTao": "2023-06-28 22:21:05",
+        "NgayCapNhat": "2023-06-28 22:21:05",
+        "year": null,
+        "tags": "Phim Ch\u00ednh K\u1ecbch, Phim H\u00e0nh \u0110\u1ed9ng, Phim Netflix",
+        "topview": 1,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 42,
+            "title": "Phim Netflix",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim tr\u00ean Netflix",
+            "status": 1,
+            "slug": "phim-netflix",
+            "position": 7
+        },
+        "movie_genre": [
+            {
+                "id": 42,
+                "title": "H\u00e0nh \u0110\u1ed9ng",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00e0nh \u0111\u1ed9ng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hanh-dong",
+                "position": 5,
+                "pivot": {
+                    "movie_id": 93,
+                    "genre_id": 42
+                }
+            },
+            {
+                "id": 56,
+                "title": "Ch\u00ednh K\u1ecbch",
+                "description": "C\u1eadp nh\u1eadt c\u00e1c phim th\u1ec3 lo\u1ea1i Ch\u00ednh K\u1ecbch m\u01a1i nh\u1ea5t",
+                "status": 1,
+                "slug": "chinh-kich",
+                "position": 26,
+                "pivot": {
+                    "movie_id": 93,
+                    "genre_id": 56
+                }
+            }
+        ],
+        "country": {
+            "id": 4,
+            "title": "M\u1ef9",
+            "icon": "us",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim M\u1ef9 th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "my",
+            "position": 5
+        },
+        "genre": null
+    },
+    {
+        "id": 92,
+        "title": "FUBAR",
+        "ThoiLuong": "65 ph\u00fat",
+        "name_original": "FUBAR 2023",
+        "trailer": "f6A56zcGeWE",
+        "description": "FUBAR (2023) khi b\u1ed9 \u0111\u00f4i b\u1ed1 v\u00e0 con g\u00e1i ph\u00e1t hi\u1ec7n ra c\u1ea3 hai \u0111\u1ec1u b\u00ed m\u1eadt l\u00e0m vi\u1ec7c cho CIA, nhi\u1ec7m v\u1ee5 n\u1eb1m v\u00f9ng v\u1ed1n nguy hi\u1ec3m b\u1ed7ng tr\u1edf th\u00e0nh chuy\u1ec7n gia \u0111\u00ecnh \u0111\u1ea7y bi h\u00e0i.",
+        "status": 1,
+        "image": "FUBAR5397.jpg",
+        "category_id": 42,
+        "ThuocPhim": "phimbo",
+        "genre_id": 5,
+        "country_id": 4,
+        "slug": "fubar",
+        "movie_hot": 0,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 22:17:24",
+        "NgayCapNhat": "2023-06-28 22:17:24",
+        "year": null,
+        "tags": "Phim Ch\u00ednh K\u1ecbch, Phim H\u00e0i, Phim Netflix",
+        "topview": 0,
+        "season": 0,
+        "SoTap": 8,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 42,
+            "title": "Phim Netflix",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim tr\u00ean Netflix",
+            "status": 1,
+            "slug": "phim-netflix",
+            "position": 7
+        },
+        "movie_genre": [
+            {
+                "id": 8,
+                "title": "H\u00e0i H\u01b0\u1edbc",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00e0i h\u01b0\u1edbc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hai-huoc",
+                "position": 17,
+                "pivot": {
+                    "movie_id": 92,
+                    "genre_id": 8
+                }
+            },
+            {
+                "id": 56,
+                "title": "Ch\u00ednh K\u1ecbch",
+                "description": "C\u1eadp nh\u1eadt c\u00e1c phim th\u1ec3 lo\u1ea1i Ch\u00ednh K\u1ecbch m\u01a1i nh\u1ea5t",
+                "status": 1,
+                "slug": "chinh-kich",
+                "position": 26,
+                "pivot": {
+                    "movie_id": 92,
+                    "genre_id": 56
+                }
+            }
+        ],
+        "country": {
+            "id": 4,
+            "title": "M\u1ef9",
+            "icon": "us",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim M\u1ef9 th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "my",
+            "position": 5
+        },
+        "genre": null
+    },
+    {
+        "id": 91,
+        "title": "Nh\u1eefng \u0110i\u1ec1u T\u00f4i Ch\u01b0a T\u1eebng: Ph\u1ea7n 4",
+        "ThoiLuong": "58 ph\u00fat",
+        "name_original": "Never Have I Ever Season 4 2023",
+        "trailer": "IemUKB4kCWM",
+        "description": "Nh\u1eefng \u0110i\u1ec1u T\u00f4i Ch\u01b0a T\u1eebng: Ph\u1ea7n 4 \u2013 Never Have I Ever Season 4 (2023) cu\u1ed1i c\u00f9ng \u0111\u00e3 \u0111\u1ebfn n\u0103m cu\u1ed1i c\u1ea5p. Gi\u1eefa nh\u1eefng c\u00e2u h\u1ecfi h\u00f3c b\u00faa v\u1ec1 tr\u01b0\u1eddng \u0111\u1ea1i h\u1ecdc, kh\u1ee7ng ho\u1ea3ng b\u1ea3n s\u1eafc v\u00e0 m\u1ed1i t\u00ecnh kh\u00f3 qu\u00ean, li\u1ec7u Devi v\u00e0 nh\u00f3m \u0111\u00e3 s\u1eb5n s\u00e0ng \u0111\u1ed1i m\u1eb7t v\u1edbi t\u01b0\u01a1ng lai?",
+        "status": 1,
+        "image": "Nhung-Dieu-Toi-Chua-Tung-Phan-4646.jpg",
+        "category_id": 42,
+        "ThuocPhim": "phimbo",
+        "genre_id": 5,
+        "country_id": 4,
+        "slug": "nhung-dieu-toi-chua-tung-phan-4",
+        "movie_hot": 0,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 22:15:27",
+        "NgayCapNhat": "2023-06-28 22:15:27",
+        "year": null,
+        "tags": "Phim Ch\u00ednh K\u1ecbch, Phim H\u00e0i, Phim Netflix, Phim T\u00e2m L\u00fd",
+        "topview": 2,
+        "season": 0,
+        "SoTap": 10,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 42,
+            "title": "Phim Netflix",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim tr\u00ean Netflix",
+            "status": 1,
+            "slug": "phim-netflix",
+            "position": 7
+        },
+        "movie_genre": [
+            {
+                "id": 3,
+                "title": "T\u00e2m L\u00fd",
+                "description": "Nh\u1eefng b\u1ed9 phim t\u00e2m l\u00fd \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "tam-ly",
+                "position": 6,
+                "pivot": {
+                    "movie_id": 91,
+                    "genre_id": 3
+                }
+            },
+            {
+                "id": 8,
+                "title": "H\u00e0i H\u01b0\u1edbc",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00e0i h\u01b0\u1edbc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hai-huoc",
+                "position": 17,
+                "pivot": {
+                    "movie_id": 91,
+                    "genre_id": 8
+                }
+            },
+            {
+                "id": 56,
+                "title": "Ch\u00ednh K\u1ecbch",
+                "description": "C\u1eadp nh\u1eadt c\u00e1c phim th\u1ec3 lo\u1ea1i Ch\u00ednh K\u1ecbch m\u01a1i nh\u1ea5t",
+                "status": 1,
+                "slug": "chinh-kich",
+                "position": 26,
+                "pivot": {
+                    "movie_id": 91,
+                    "genre_id": 56
+                }
+            }
+        ],
+        "country": {
+            "id": 4,
+            "title": "M\u1ef9",
+            "icon": "us",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim M\u1ef9 th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "my",
+            "position": 5
+        },
+        "genre": null
+    },
+    {
+        "id": 90,
+        "title": "Black Clover: Thanh Ki\u1ebfm C\u1ee7a Ma Ph\u00e1p V\u01b0\u01a1ng",
+        "ThoiLuong": "113",
+        "name_original": "Black Clover: Sword of the Wizard King 2023",
+        "trailer": "6g3xi65r80o",
+        "description": "Black Clover: Thanh Ki\u1ebfm C\u1ee7a Ma Ph\u00e1p V\u01b0\u01a1ng \u2013 Black Clover: Sword of the Wizard King (2023) khi m\u1ed9t c\u1eadu b\u00e9 kh\u00f4ng bi\u1ebft d\u00f9ng ma thu\u1eadt song c\u00f3 tr\u00e1i tim qu\u1ea3 c\u1ea3m c\u1ed1 gi\u00e0nh danh hi\u1ec7u Ma ph\u00e1p V\u01b0\u01a1ng, b\u1ed1n Ma ph\u00e1p V\u01b0\u01a1ng b\u1ecb tr\u1ee5c xu\u1ea5t th\u1eddi x\u01b0a quay l\u1ea1i \u0111\u1ec3 nghi\u1ec1n n\u00e1t V\u01b0\u01a1ng qu\u1ed1c Clover.",
+        "status": 1,
+        "image": "Black-Clover-Thanh-Kiem-cua-Ma-Phap-Vuong9791.jpg",
+        "category_id": 42,
+        "ThuocPhim": "phimle",
+        "genre_id": 4,
+        "country_id": 6,
+        "slug": "black-clover-thanh-kiem-cua-ma-phap-vuong",
+        "movie_hot": 0,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 22:13:10",
+        "NgayCapNhat": "2023-06-28 22:13:10",
+        "year": null,
+        "tags": "Phim Ho\u1ea1t H\u00ecnh, Phim Netflix, Phim Vi\u1ec5n T\u01b0\u1edfng",
+        "topview": 0,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 42,
+            "title": "Phim Netflix",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim tr\u00ean Netflix",
+            "status": 1,
+            "slug": "phim-netflix",
+            "position": 7
+        },
+        "movie_genre": [
+            {
+                "id": 46,
+                "title": "Vi\u1ec5n T\u01b0\u1edfng",
+                "description": "Nh\u1eefng b\u1ed9 phim khoa h\u1ecdc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "vien-tuong",
+                "position": 10,
+                "pivot": {
+                    "movie_id": 90,
+                    "genre_id": 46
+                }
+            }
+        ],
+        "country": {
+            "id": 6,
+            "title": "Nh\u1eadt B\u1ea3n",
+            "icon": "jp",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim Nh\u1eadt B\u1ea3n th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "nhat-ban",
+            "position": 7
+        },
+        "genre": null
+    },
+    {
+        "id": 89,
+        "title": "Qua \u00d4 C\u1eeda S\u1ed5: Ph\u1ea7n 2",
+        "ThoiLuong": "110",
+        "name_original": "Through My Window: Across the Sea (2023)",
+        "trailer": "5LvVaQPNqHU",
+        "description": "Qua \u00d4 C\u1eeda S\u1ed5: Ph\u1ea7n 2 \u2013 Through My Window: Across the Sea (2023) sau m\u1ed9t n\u0103m xa c\u00e1ch, Raquel v\u00e0 Ares \u0111o\u00e0n t\u1ee5 trong chuy\u1ebfn \u0111i bi\u1ec3n \u01b0\u1edbt \u00e1t. \u0110\u1ed1i m\u1eb7t v\u1edbi nh\u1eefng l\u1eddi t\u00e1n t\u1ec9nh m\u1edbi m\u1ebb v\u00e0 n\u1ed7i b\u1ea5t an, li\u1ec7u t\u00ecnh y\u00eau c\u1ee7a h\u1ecd c\u00f3 th\u1eafng th\u1ebf?",
+        "status": 1,
+        "image": "qua-o-cua-so-21071.jpg",
+        "category_id": 42,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 4,
+        "slug": "qua-o-cua-so-phan-2",
+        "movie_hot": 1,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 22:11:02",
+        "NgayCapNhat": "2023-06-28 22:11:02",
+        "year": null,
+        "tags": "Phim Ch\u00ednh K\u1ecbch, Phim Netflix, Phim T\u00e2m L\u00fd",
+        "topview": 1,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 42,
+            "title": "Phim Netflix",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim tr\u00ean Netflix",
+            "status": 1,
+            "slug": "phim-netflix",
+            "position": 7
+        },
+        "movie_genre": [
+            {
+                "id": 3,
+                "title": "T\u00e2m L\u00fd",
+                "description": "Nh\u1eefng b\u1ed9 phim t\u00e2m l\u00fd \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "tam-ly",
+                "position": 6,
+                "pivot": {
+                    "movie_id": 89,
+                    "genre_id": 3
+                }
+            },
+            {
+                "id": 56,
+                "title": "Ch\u00ednh K\u1ecbch",
+                "description": "C\u1eadp nh\u1eadt c\u00e1c phim th\u1ec3 lo\u1ea1i Ch\u00ednh K\u1ecbch m\u01a1i nh\u1ea5t",
+                "status": 1,
+                "slug": "chinh-kich",
+                "position": 26,
+                "pivot": {
+                    "movie_id": 89,
+                    "genre_id": 56
+                }
+            }
+        ],
+        "country": {
+            "id": 4,
+            "title": "M\u1ef9",
+            "icon": "us",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim M\u1ef9 th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "my",
+            "position": 5
+        },
+        "genre": null
+    },
+    {
+        "id": 88,
+        "title": "Ng\u00f4i Tr\u01b0\u1eddng B\u00ed \u1ea8n",
+        "ThoiLuong": "40 ph\u00fat",
+        "name_original": "Home School 2023",
+        "trailer": "JrkJHCCyjlw",
+        "description": "Ng\u00f4i Tr\u01b0\u1eddng B\u00ed \u1ea8n \u2013 Home School (2023) xoay quanh m\u1ed9t ng\u00f4i tr\u01b0\u1eddng n\u1ed9i tr\u00fa n\u1eb1m gi\u1eefa m\u1ed9t khu r\u1eebng h\u1ebbo l\u00e1nh. Ba n\u0103m m\u1ed9t l\u1ea7n, tr\u01b0\u1eddng ch\u1ecdn nh\u1eefng h\u1ecdc sinh m\u1edbi \u0111\u00e1p \u1ee9ng c\u00e1c ti\u00eau ch\u00ed c\u1ee7a h\u1ecd, m\u1ed7i th\u1ebf h\u1ec7 bao g\u1ed3m kh\u00f4ng qu\u00e1 m\u01b0\u1eddi ba h\u1ecdc sinh. C\u00e1c sinh vi\u00ean d\u00e0nh t\u1ed5ng c\u1ed9ng ba n\u0103m t\u1ea1i tr\u01b0\u1eddng.\r\n\r\nNg\u00f4i tr\u01b0\u1eddng nh\u1eb1m thu h\u00fat nh\u1eefng sinh vi\u00ean gi\u00e0u c\u00f3 v\u1edbi ch\u01b0\u01a1ng tr\u00ecnh gi\u1ea3ng d\u1ea1y \u0111\u1ed9c \u0111\u00e1o v\u00e0 t\u1ea5t c\u1ea3 nh\u1eefng ti\u1ec7n nghi nh\u01b0 \u1edf nh\u00e0. Tuy nhi\u00ean, Home School c\u00f3 v\u1ebb gi\u1ed1ng m\u1ed9t nh\u00e0 t\u00f9 h\u01a1n l\u00e0 m\u1ed9t tr\u01b0\u1eddng h\u1ecdc v\u1edbi nh\u1eefng quy t\u1eafc nghi\u00eam ng\u1eb7t v\u00e0 s\u1ef1 c\u00f4 l\u1eadp ho\u00e0n to\u00e0n.",
+        "status": 1,
+        "image": "ngoi-truong-bi-an41.jpg",
+        "category_id": 25,
+        "ThuocPhim": "phimbo",
+        "genre_id": 5,
+        "country_id": 10,
+        "slug": "ngoi-truong-bi-an",
+        "movie_hot": 0,
+        "resolution": 5,
+        "phude": 0,
+        "NgayTao": "2023-06-28 22:08:15",
+        "NgayCapNhat": "2023-06-28 22:08:15",
+        "year": null,
+        "tags": "Phim B\u00ed \u1ea8n, Phim K\u1ecbch T\u00ednh, Phim Kinh D\u1ecb, Phim T\u00e2m L\u00fd",
+        "topview": 2,
+        "season": 0,
+        "SoTap": 8,
+        "count_views": 1,
+        "episode_count": 2,
+        "category": {
+            "id": 25,
+            "title": "Phim B\u1ed9",
+            "description": "Phim b\u1ed9 c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-bo",
+            "position": 1
+        },
+        "movie_genre": [
+            {
+                "id": 3,
+                "title": "T\u00e2m L\u00fd",
+                "description": "Nh\u1eefng b\u1ed9 phim t\u00e2m l\u00fd \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "tam-ly",
+                "position": 6,
+                "pivot": {
+                    "movie_id": 88,
+                    "genre_id": 3
+                }
+            },
+            {
+                "id": 52,
+                "title": "Kinh d\u1ecb",
+                "description": "Nh\u1eefng b\u1ed9 phim kinh d\u1ecb \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kinh-di",
+                "position": 20,
+                "pivot": {
+                    "movie_id": 88,
+                    "genre_id": 52
+                }
+            },
+            {
+                "id": 53,
+                "title": "B\u00ed \u1ea8n",
+                "description": "Nh\u1eefng b\u1ed9 phim b\u00ed \u1ea9n \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "bi-an",
+                "position": 24,
+                "pivot": {
+                    "movie_id": 88,
+                    "genre_id": 53
+                }
+            },
+            {
+                "id": 55,
+                "title": "K\u1ecbch T\u00ednh",
+                "description": "Nh\u1eefg b\u1ed9 phim k\u1ecbch t\u00ednh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kich-tinh",
+                "position": 25,
+                "pivot": {
+                    "movie_id": 88,
+                    "genre_id": 55
+                }
+            }
+        ],
+        "country": {
+            "id": 10,
+            "title": "Th\u00e1i Lan",
+            "icon": "th",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim Th\u00e1i Lan th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "thai-lan",
+            "position": 3
+        },
+        "genre": null
+    },
+    {
+        "id": 87,
+        "title": "Soi S\u00e1ng Cho Em",
+        "ThoiLuong": "30 ph\u00fat",
+        "name_original": "A Date With the Future 2023",
+        "trailer": "o4gorkpFgbs",
+        "description": "Soi S\u00e1ng Cho Em \u2013 A Date With The Future xoay quanh m\u1ed1i t\u00ecnh s\u00e2u s\u1eafc c\u1ee7a T\u1eeb Lai v\u00e0 C\u1eadn Th\u1eddi Xuy\u00ean. M\u01b0\u1eddi n\u0103m tr\u01b0\u1edbc, T\u1eeb Lai b\u1ecb m\u1eafc k\u1eb9t trong m\u1ed9t tr\u1eadn \u0111\u1ed9ng \u0111\u1ea5t v\u00e0 \u0111\u01b0\u1ee3c c\u1ee9u b\u1edfi l\u00ednh c\u1ee9u ho\u1ea3 C\u1eadn Th\u1eddi Xuy\u00ean c\u00f9ng ch\u00fa ch\u00f3 t\u00ecm ki\u1ebfm c\u1ee9u n\u1ea1n \u201cTruy Phong\u201d. \u0110\u1ec3 xoa d\u1ecbu T\u1eeb Lai \u0111ang b\u1ecb th\u01b0\u01a1ng, C\u1eadn Th\u1eddi Xuy\u00ean \u0111\u00e3 h\u1ee9a v\u1edbi c\u00f4 h\u1eb9n \u01b0\u1edbc m\u01b0\u1eddi n\u0103m.\r\n\r\nM\u01b0\u1eddi n\u0103m sau, T\u1eeb Lai k\u1ebft th\u00fac ch\u01b0\u01a1ng tr\u00ecnh h\u1ecdc, quay v\u1ec1 n\u01b0\u1edbc, tr\u1edf th\u00e0nh m\u1ed9t c\u00f4 ph\u00f3ng vi\u00ean ki\u00eam hu\u1ea5n luy\u1ec7n vi\u00ean ch\u00f3 qu\u1ed1c t\u1ebf. Sau nhi\u1ec1u l\u1ea7n ti\u1ebfp x\u00fac trong nh\u1eefng t\u00ecnh hu\u1ed1ng kh\u1ea9n c\u1ea5p, c\u00f9ng nhau tr\u1ea3i qua th\u1eed th\u00e1ch sinh t\u1eed, h\u1ecd nh\u1eadn ra t\u00ecnh c\u1ea3m d\u00e0nh cho nhau.",
+        "status": 1,
+        "image": "Soi-Sang-Cho-Em1936.jpg",
+        "category_id": 25,
+        "ThuocPhim": "phimbo",
+        "genre_id": 5,
+        "country_id": 7,
+        "slug": "soi-sang-cho-em",
+        "movie_hot": 0,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 22:04:27",
+        "NgayCapNhat": "2023-06-28 22:04:27",
+        "year": null,
+        "tags": "Phim Ch\u00ednh K\u1ecbch, Phim T\u00e2m L\u00fd, Phim T\u00ecnh C\u1ea3m",
+        "topview": 0,
+        "season": 0,
+        "SoTap": 36,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 25,
+            "title": "Phim B\u1ed9",
+            "description": "Phim b\u1ed9 c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-bo",
+            "position": 1
+        },
+        "movie_genre": [
+            {
+                "id": 3,
+                "title": "T\u00e2m L\u00fd",
+                "description": "Nh\u1eefng b\u1ed9 phim t\u00e2m l\u00fd \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "tam-ly",
+                "position": 6,
+                "pivot": {
+                    "movie_id": 87,
+                    "genre_id": 3
+                }
+            },
+            {
+                "id": 13,
+                "title": "T\u00ecnh C\u1ea3m",
+                "description": "Nh\u1eefng b\u1ed9 phim t\u00ecnh c\u1ea3m \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "tinh-cam",
+                "position": 7,
+                "pivot": {
+                    "movie_id": 87,
+                    "genre_id": 13
+                }
+            },
+            {
+                "id": 56,
+                "title": "Ch\u00ednh K\u1ecbch",
+                "description": "C\u1eadp nh\u1eadt c\u00e1c phim th\u1ec3 lo\u1ea1i Ch\u00ednh K\u1ecbch m\u01a1i nh\u1ea5t",
+                "status": 1,
+                "slug": "chinh-kich",
+                "position": 26,
+                "pivot": {
+                    "movie_id": 87,
+                    "genre_id": 56
+                }
+            }
+        ],
+        "country": {
+            "id": 7,
+            "title": "Trung Qu\u1ed1c",
+            "icon": "cn",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim Trung Qu\u1ed1c th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "trung-quoc",
+            "position": 2
+        },
+        "genre": null
+    },
+    {
+        "id": 86,
+        "title": "C\u00f4ng T\u1ed1 Tinh Anh",
+        "ThoiLuong": "55 ph\u00fat",
+        "name_original": "Prosecution Elite 2023",
+        "trailer": "gJ6l70w9xMQ",
+        "description": "C\u00f4ng T\u1ed1 Tinh Anh \u2013 Prosecution Elite (2023) n\u00f3i v\u1ec1 n\u1eef ki\u1ec3m s\u00e1t vi\u00ean An N\u1ecb c\u1ee7a vi\u1ec7n Ki\u1ec3m s\u00e1t Giang Th\u00e0nh nh\u1eadn \u0111\u01b0\u1ee3c ch\u1ec9 th\u1ecb c\u1ee7a ki\u1ec3m s\u00e1t tr\u01b0\u1edfng l\u00e0 H\u1ee9a \u00c1i L\u00e2m, tham gia tr\u01b0\u1edbc th\u1eddi h\u1ea1n v\u00e0o vi\u1ec7c \u0111i\u1ec1u tra m\u1ed9t v\u1ee5 \u00e1n m\u1ea5t t\u00edch v\u00e0 nh\u1ea3y c\u1ea7u \u201ct\u1ef1 s\u00e1t\u201d c\u1ee7a sinh vi\u00ean \u0111\u1ea1i h\u1ecdc. Trong qu\u00e1 tr\u00ecnh \u0111i\u1ec1u tra, c\u00f4 \u0111\u00e3 ph\u00e1t hi\u1ec7n ra m\u1ed9t ph\u1ea7n m\u1ec1m livestream \u201cTh\u00e1p ng\u00e0\u201d \u0111ang l\u1ee3i d\u1ee5ng ph\u1ea7n Back-end trong tr\u00f2 ch\u01a1i c\u1ee7a Hu\u1ec7 Quy\u1ec1n. An N\u1ecb \u0111\u00e3 b\u1eaft tay v\u00e0o \u0111i\u1ec1u tra t\u1eeb nh\u1eefng h\u00e0nh vi ph\u1ea1m ph\u00e1p c\u1ee7a t\u1ed5ng gi\u00e1m \u0111\u1ed1c m\u1ea3ng game c\u1ee7a Hu\u1ec7 Quy\u1ec1n l\u00e0 Tri\u1ec7u K\u00fd Kh\u1ea3i, r\u00e0 so\u00e1t m\u1ed1i quan h\u1ec7 c\u1ee7a ng\u01b0\u1eddi n\u00e0y v\u1edbi t\u1ed5 ch\u1ee9c chuy\u00ean livestream b\u1eaft n\u1ea1t ng\u01b0\u1eddi kh\u00e1c \u1edf n\u01b0\u1edbc ngo\u00e0i, cu\u1ed1i c\u00f9ng \u0111\u00e3 b\u1eaft g\u1ecdn nh\u1eefng ph\u1ea7n t\u1eed t\u1ed9i ph\u1ea1m c\u1ee7a ph\u1ea7n m\u1ec1m \u201cTh\u00e1p ng\u00e0\u201d n\u00e0y.\r\n\r\nSau s\u1ef1 vi\u1ec7c, gi\u00e1 c\u1ed5 phi\u1ebfu c\u1ee7a t\u1eadp \u0111o\u00e0n Hu\u1ec7 Quy\u1ec1n gi\u1ea3m m\u1ea1nh, khi\u1ebfn ch\u1ee7 t\u1ecbch c\u1ee7a t\u1eadp \u0111o\u00e0n l\u00e0 Do\u00e3n Hu\u1ec7 Quy\u1ec1n ph\u1ea3i l\u1ea5y danh ngh\u0129a l\u00e0m t\u1eeb thi\u1ec7n \u0111\u1ec3 quy\u00ean g\u00f3p ti\u1ec1n cho \u201cH\u1ecdc vi\u1ec7n Giang Hi\u1ebfu\u201d, m\u1ed9t n\u01a1i chuy\u00ean d\u00f9ng th\u1ee7 \u0111o\u1ea1n b\u1ea5t h\u1ee3p ph\u00e1p \u0111\u1ec3 ng\u01b0\u1ee3c \u0111\u00e3i tr\u1ebb v\u1ecb th\u00e0nh ni\u00ean. Nh\u1edd c\u00f3 nhi\u1ec1u h\u1ecdc sinh trong tr\u01b0\u1eddng nh\u01b0 L\u00fd Hi\u1ec3u V\u0103n ch\u1ecbu \u0111\u1ee9ng ra v\u1ea1ch tr\u1ea7n vi\u1ec7c nh\u00e0 tr\u01b0\u1eddng d\u00f9ng th\u1ee7 \u0111o\u1ea1n b\u1ea5t h\u1ee3p ph\u00e1p \u0111\u1ec3 kh\u1ed1ng ch\u1ebf h\u1ecdc sinh, n\u00ean khi v\u1ee5 vi\u1ec7c \u0111\u01b0\u1ee3c x\u00e9t x\u1eed tr\u00ean t\u00f2a \u00e1n, An N\u1ecb \u0111\u00e3 \u0111\u01b0a ra \u0111\u01b0\u1ee3c b\u1eb1ng ch\u1ee9ng x\u00e1c \u0111\u00e1ng, khi\u1ebfn \u201cH\u1ecdc vi\u1ec7n Giang Hi\u1ebfu\u201d ph\u1ea3i \u0111\u00f3ng c\u1eeda.\r\n\r\nNh\u1eefng ng\u01b0\u1eddi c\u00f3 li\u00ean quan \u0111\u1ec1u b\u1ecb x\u1eed l\u00fd theo ph\u00e1p lu\u1eadt. Nghi\u00eam T\u1ea7n, ng\u01b0\u1eddi ti\u1ebfp qu\u1ea3n m\u1ea3ng game c\u1ee7a t\u1eadp \u0111o\u00e0n Hu\u1ec7 Quy\u1ec1n, \u0111\u00e3 bi\u1ec3n th\u1ee7 c\u1ee7a c\u00f4ng \u0111\u1ec3 \u0111\u1ea7u t\u01b0 v\u00e0o vi\u1ec7c khai th\u00e1c qu\u1eb7ng \u0111\u1ed3ng. Tuy nhi\u00ean, d\u1ef1 \u00e1n \u0111\u1ea7u t\u01b0 n\u00e0y ch\u1ec9 l\u00e0 m\u1ed9t h\u00ecnh th\u1ee9c l\u1eeba \u0111\u1ea3o theo m\u00f4 h\u00ecnh Ponzi do t\u1ed5 ch\u1ee9c t\u1ed9i ph\u1ea1m l\u1eeba \u0111\u1ea3o t\u00e0i ch\u00ednh tr\u00ean m\u1ea1ng thi\u1ebft l\u1eadp n\u00ean. An N\u1ecb l\u1ea1i mang theo \u0111\u1ea7y \u0111\u1ee7 b\u1eb1ng ch\u1ee9ng \u0111\u1ec3 ra n\u01b0\u1edbc ngo\u00e0i, ti\u1ebfn h\u00e0nh m\u1ed9t phi\u00ean t\u00f2a xuy\u00ean qu\u1ed1c gia. Nh\u1edd s\u1ef1 h\u1ee3p t\u00e1c gi\u1eefa c\u01a1 quan t\u01b0 ph\u00e1p Trung Qu\u1ed1c v\u00e0 n\u01b0\u1edbc ngo\u00e0i, Ti\u1ec1n Thi\u00eam T\u00edn \u0111\u00e3 b\u1ecb tr\u1ee5c xu\u1ea5t v\u1ec1 n\u01b0\u1edbc, to\u00e0n b\u1ed9 t\u00e0i s\u1ea9n c\u1ee7a h\u1eafn c\u0169ng b\u1ecb phong t\u1ecfa.",
+        "status": 1,
+        "image": "Cong-To-Tinh-Anh4343.jpg",
+        "category_id": 25,
+        "ThuocPhim": "phimbo",
+        "genre_id": 5,
+        "country_id": 7,
+        "slug": "cong-to-tinh-anh",
+        "movie_hot": 0,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 22:01:40",
+        "NgayCapNhat": "2023-06-28 22:01:40",
+        "year": null,
+        "tags": "Phim B\u00ed \u1ea8n, Phim Ch\u00ednh K\u1ecbch, Phim K\u1ecbch T\u00ednh, Phim T\u00e2m L\u00fd",
+        "topview": 1,
+        "season": 0,
+        "SoTap": 15,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 25,
+            "title": "Phim B\u1ed9",
+            "description": "Phim b\u1ed9 c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-bo",
+            "position": 1
+        },
+        "movie_genre": [
+            {
+                "id": 3,
+                "title": "T\u00e2m L\u00fd",
+                "description": "Nh\u1eefng b\u1ed9 phim t\u00e2m l\u00fd \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "tam-ly",
+                "position": 6,
+                "pivot": {
+                    "movie_id": 86,
+                    "genre_id": 3
+                }
+            },
+            {
+                "id": 53,
+                "title": "B\u00ed \u1ea8n",
+                "description": "Nh\u1eefng b\u1ed9 phim b\u00ed \u1ea9n \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "bi-an",
+                "position": 24,
+                "pivot": {
+                    "movie_id": 86,
+                    "genre_id": 53
+                }
+            },
+            {
+                "id": 55,
+                "title": "K\u1ecbch T\u00ednh",
+                "description": "Nh\u1eefg b\u1ed9 phim k\u1ecbch t\u00ednh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kich-tinh",
+                "position": 25,
+                "pivot": {
+                    "movie_id": 86,
+                    "genre_id": 55
+                }
+            },
+            {
+                "id": 56,
+                "title": "Ch\u00ednh K\u1ecbch",
+                "description": "C\u1eadp nh\u1eadt c\u00e1c phim th\u1ec3 lo\u1ea1i Ch\u00ednh K\u1ecbch m\u01a1i nh\u1ea5t",
+                "status": 1,
+                "slug": "chinh-kich",
+                "position": 26,
+                "pivot": {
+                    "movie_id": 86,
+                    "genre_id": 56
+                }
+            }
+        ],
+        "country": {
+            "id": 7,
+            "title": "Trung Qu\u1ed1c",
+            "icon": "cn",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim Trung Qu\u1ed1c th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "trung-quoc",
+            "position": 2
+        },
+        "genre": null
+    },
+    {
+        "id": 85,
+        "title": "B\u1ea1n Trai T\u00f4i L\u00e0 H\u1ed3 Ly 2",
+        "ThoiLuong": "45 ph\u00fat",
+        "name_original": "Tale of the Nine Tailed 1938 2023",
+        "trailer": "UIp2o2wOtzY",
+        "description": "B\u1ea1n Trai T\u00f4i L\u00e0 H\u1ed3 Ly 2 \u2013 Tale of the Nine Tailed 1938 (2023) l\u1ea5y b\u1ed1i c\u1ea3nh v\u00e0o n\u0103m 1930, k\u1ec3 v\u1ec1 qu\u00e1 tr\u00ecnh Lee Yeon (Lee Dong Wook) tr\u1edf th\u00e0nh ng\u01b0\u1eddi th\u1ed1ng tr\u1ecb ng\u1ecdn n\u00fai v\u00e0 c\u00e2u chuy\u1ec7n v\u1ec1 Lee Rang (Kim Bum) kh\u00f4ng \u0111\u01b0\u1ee3c ti\u1ebft l\u1ed9 trong ph\u1ea7n tr\u01b0\u1edbc.\r\n\r\nKim Soyeon s\u1ebd v\u00e0o vai Ryu Hongju, ng\u01b0\u1eddi \u0111\u01b0\u1ee3c \u0111\u1ed3n \u0111\u1ea1i l\u00e0 tr\u1ebb m\u00e3i kh\u00f4ng gi\u00e0. Ryu Hongju l\u00e0 ch\u1ee7 c\u1ee7a m\u1ed9t nh\u00e0 h\u00e0ng sang tr\u1ecdng \u1edf Gyeongseong (t\u00ean c\u0169 c\u1ee7a th\u00e0nh ph\u1ed1 Seoul) v\u00e0 l\u00e0 ng\u01b0\u1eddi t\u1eebng l\u00e0 ng\u01b0\u1eddi cai qu\u1ea3n ng\u1ecdn n\u00fai ph\u00eda t\u00e2y. Ryu Hongju v\u00e0 Lee Yeon l\u00e0 2 trong 4 ch\u00faa s\u01a1n l\u00e2m tr\u00ean B\u00e1n \u0111\u1ea3o Tri\u1ec1u Ti\u00ean!!",
+        "status": 1,
+        "image": "Ban-Trai-Toi-La-Ho-Ly-2-20239677.jpg",
+        "category_id": 25,
+        "ThuocPhim": "phimbo",
+        "genre_id": 5,
+        "country_id": 8,
+        "slug": "ban-trai-toi-la-ho-ly-2",
+        "movie_hot": 0,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 21:58:10",
+        "NgayCapNhat": "2023-06-28 21:58:10",
+        "year": null,
+        "tags": "Phim B\u00ed \u1ea8n, Phim Ch\u00ednh K\u1ecbch, Phim T\u00e2m L\u00fd, Phim T\u00ecnh C\u1ea3m",
+        "topview": 2,
+        "season": 0,
+        "SoTap": 12,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 25,
+            "title": "Phim B\u1ed9",
+            "description": "Phim b\u1ed9 c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-bo",
+            "position": 1
+        },
+        "movie_genre": [
+            {
+                "id": 3,
+                "title": "T\u00e2m L\u00fd",
+                "description": "Nh\u1eefng b\u1ed9 phim t\u00e2m l\u00fd \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "tam-ly",
+                "position": 6,
+                "pivot": {
+                    "movie_id": 85,
+                    "genre_id": 3
+                }
+            },
+            {
+                "id": 13,
+                "title": "T\u00ecnh C\u1ea3m",
+                "description": "Nh\u1eefng b\u1ed9 phim t\u00ecnh c\u1ea3m \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "tinh-cam",
+                "position": 7,
+                "pivot": {
+                    "movie_id": 85,
+                    "genre_id": 13
+                }
+            },
+            {
+                "id": 53,
+                "title": "B\u00ed \u1ea8n",
+                "description": "Nh\u1eefng b\u1ed9 phim b\u00ed \u1ea9n \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "bi-an",
+                "position": 24,
+                "pivot": {
+                    "movie_id": 85,
+                    "genre_id": 53
+                }
+            },
+            {
+                "id": 56,
+                "title": "Ch\u00ednh K\u1ecbch",
+                "description": "C\u1eadp nh\u1eadt c\u00e1c phim th\u1ec3 lo\u1ea1i Ch\u00ednh K\u1ecbch m\u01a1i nh\u1ea5t",
+                "status": 1,
+                "slug": "chinh-kich",
+                "position": 26,
+                "pivot": {
+                    "movie_id": 85,
+                    "genre_id": 56
+                }
+            }
+        ],
+        "country": {
+            "id": 8,
+            "title": "H\u00e0n Qu\u1ed1c",
+            "icon": "kr",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim H\u00e0n Qu\u1ed1c th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "han-quoc",
+            "position": 1
+        },
+        "genre": null
+    },
+    {
+        "id": 84,
+        "title": "Hi\u1ec7p S\u0129 \u00c1o \u0110en",
+        "ThoiLuong": "62 ph\u00fat",
+        "name_original": "Black Knight 2023",
+        "trailer": "Se26Op9sEC8",
+        "description": "Hi\u1ec7p S\u0129 \u00c1o \u0110en \u2013 Black Knight (2023) \u1edf t\u01b0\u01a1ng lai t\u0103m t\u1ed1i b\u1ecb \u00f4 nhi\u1ec5m kh\u00f4ng kh\u00ed t\u00e0n ph\u00e1, chuy\u1ec7n s\u1ed1ng c\u00f2n c\u1ee7a lo\u00e0i ng\u01b0\u1eddi ph\u1ee5 thu\u1ed9c v\u00e0o nh\u00f3m Hi\u1ec7p s\u0129 \u00e1o \u0111en v\u00e0 h\u1ecd kh\u00e1c xa nh\u1eefng ng\u01b0\u1eddi giao h\u00e0ng b\u00ecnh th\u01b0\u1eddng.",
+        "status": 1,
+        "image": "hiep-si-ao-den4772.jpg",
+        "category_id": 42,
+        "ThuocPhim": "phimbo",
+        "genre_id": 5,
+        "country_id": 8,
+        "slug": "hiep-si-ao-den",
+        "movie_hot": 1,
+        "resolution": 5,
+        "phude": 0,
+        "NgayTao": "2023-06-28 21:55:32",
+        "NgayCapNhat": "2023-06-28 21:55:32",
+        "year": null,
+        "tags": "Phim Ch\u00ednh K\u1ecbch, Phim H\u00e0nh \u0110\u1ed9ng, Phim Khoa H\u1ecdc",
+        "topview": 0,
+        "season": 0,
+        "SoTap": 6,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 42,
+            "title": "Phim Netflix",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim tr\u00ean Netflix",
+            "status": 1,
+            "slug": "phim-netflix",
+            "position": 7
+        },
+        "movie_genre": [
+            {
+                "id": 42,
+                "title": "H\u00e0nh \u0110\u1ed9ng",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00e0nh \u0111\u1ed9ng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hanh-dong",
+                "position": 5,
+                "pivot": {
+                    "movie_id": 84,
+                    "genre_id": 42
+                }
+            },
+            {
+                "id": 54,
+                "title": "Khoa H\u1ecdc",
+                "description": "Nh\u1eefng b\u1ed9 phim khoa h\u1ecdc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "khoa-hoc",
+                "position": 9,
+                "pivot": {
+                    "movie_id": 84,
+                    "genre_id": 54
+                }
+            },
+            {
+                "id": 56,
+                "title": "Ch\u00ednh K\u1ecbch",
+                "description": "C\u1eadp nh\u1eadt c\u00e1c phim th\u1ec3 lo\u1ea1i Ch\u00ednh K\u1ecbch m\u01a1i nh\u1ea5t",
+                "status": 1,
+                "slug": "chinh-kich",
+                "position": 26,
+                "pivot": {
+                    "movie_id": 84,
+                    "genre_id": 56
+                }
+            }
+        ],
+        "country": {
+            "id": 8,
+            "title": "H\u00e0n Qu\u1ed1c",
+            "icon": "kr",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim H\u00e0n Qu\u1ed1c th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "han-quoc",
+            "position": 1
+        },
+        "genre": null
+    },
+    {
+        "id": 83,
+        "title": "The Idol",
+        "ThoiLuong": "56 ph\u00fat",
+        "name_original": "The Idol 2023",
+        "trailer": "_FelvYr_k2g",
+        "description": "The Idol (Jennie Ruby Jane \/ Blackpink) l\u00e0 m\u1ed9t b\u1ed9 phim truy\u1ec1n h\u00ecnh d\u00e0i t\u1eadp c\u1ee7a M\u1ef9 \u0111\u01b0\u1ee3c t\u1ea1o ra b\u1edfi Abel \u201cThe Weeknd\u201d Tesfaye , Reza Fahim v\u00e0 Sam Levinson.\r\n\r\nLo\u1ea1t phim t\u1eadp trung v\u00e0o m\u1ed9t th\u1ea7n t\u01b0\u1ee3ng nh\u1ea1c pop \u0111\u1ea7y tham v\u1ecdng ( Lily-Rose Depp ) v\u00e0 m\u1ed1i quan h\u1ec7 ph\u1ee9c t\u1ea1p c\u1ee7a c\u00f4 v\u1edbi m\u1ed9t b\u1eadc th\u1ea7y t\u1ef1 l\u1ef1c v\u00e0 th\u1ee7 l\u0129nh gi\u00e1o ph\u00e1i Tedros (Tesfaye). Xu\u1ea5t hi\u1ec7n v\u1edbi c\u00e1c vai ph\u1ee5 l\u00e0 Suzanna Son , Troye Sivan , Moses Sumney , Jane Adams , Dan Levy , Jennie Ruby Jane , Eli Roth , Rachel Sennott , Hari Nef , Da\u2019Vine Joy Randolph ,Mike Dean , Ramsey v\u00e0 Hank Azaria",
+        "status": 1,
+        "image": "the-idol4343.jpg",
+        "category_id": 25,
+        "ThuocPhim": "phimbo",
+        "genre_id": 5,
+        "country_id": 4,
+        "slug": "the-idol",
+        "movie_hot": 1,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 21:52:40",
+        "NgayCapNhat": "2023-06-28 21:52:40",
+        "year": null,
+        "tags": "Phim Ch\u00ednh K\u1ecbch, Phim T\u00e2m L\u00fd",
+        "topview": null,
+        "season": 0,
+        "SoTap": 6,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 25,
+            "title": "Phim B\u1ed9",
+            "description": "Phim b\u1ed9 c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-bo",
+            "position": 1
+        },
+        "movie_genre": [
+            {
+                "id": 3,
+                "title": "T\u00e2m L\u00fd",
+                "description": "Nh\u1eefng b\u1ed9 phim t\u00e2m l\u00fd \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "tam-ly",
+                "position": 6,
+                "pivot": {
+                    "movie_id": 83,
+                    "genre_id": 3
+                }
+            },
+            {
+                "id": 56,
+                "title": "Ch\u00ednh K\u1ecbch",
+                "description": "C\u1eadp nh\u1eadt c\u00e1c phim th\u1ec3 lo\u1ea1i Ch\u00ednh K\u1ecbch m\u01a1i nh\u1ea5t",
+                "status": 1,
+                "slug": "chinh-kich",
+                "position": 26,
+                "pivot": {
+                    "movie_id": 83,
+                    "genre_id": 56
+                }
+            }
+        ],
+        "country": {
+            "id": 4,
+            "title": "M\u1ef9",
+            "icon": "us",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim M\u1ef9 th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "my",
+            "position": 5
+        },
+        "genre": null
+    },
+    {
+        "id": 82,
+        "title": "Cu\u1ed9c X\u00e2m L\u01b0\u1ee3c B\u00ed M\u1eadt",
+        "ThoiLuong": "56 ph\u00fat",
+        "name_original": "Secret Invasion 2023",
+        "trailer": "Tp_YZNqNBhw",
+        "description": "Cu\u1ed9c X\u00e2m L\u01b0\u1ee3c B\u00ed M\u1eadt \u2013 Secret Invasion (2023) truy\u1ec1n h\u00ecnh M\u1ef9 do Kyle Bradstreet t\u1ea1o ra cho d\u1ecbch v\u1ee5 ph\u00e1t tr\u1ef1c tuy\u1ebfn Disney+, d\u1ef1a tr\u00ean c\u1ed1t truy\u1ec7n c\u00f9ng t\u00ean c\u1ee7a Marvel Comics. \u0110\u00e2y l\u00e0 lo\u1ea1t phim truy\u1ec1n h\u00ecnh th\u1ee9 ch\u00edn trong V\u0169 tr\u1ee5 \u0110i\u1ec7n \u1ea3nh Marvel do Marvel Studios s\u1ea3n xu\u1ea5t, chia s\u1ebb t\u00ednh li\u00ean t\u1ee5c v\u1edbi c\u00e1c phim c\u1ee7a lo\u1ea1t phim.",
+        "status": 1,
+        "image": "Secret-Invasion5024.jpg",
+        "category_id": 25,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 4,
+        "slug": "cuoc-xam-luoc-bi-mat",
+        "movie_hot": 0,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 21:50:08",
+        "NgayCapNhat": "2023-06-28 21:50:08",
+        "year": null,
+        "tags": "Phim Ch\u00ednh K\u1ecbch, Phim H\u00e0nh \u0110\u1ed9ng, Phim Khoa H\u1ecdc",
+        "topview": 1,
+        "season": 0,
+        "SoTap": 6,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 25,
+            "title": "Phim B\u1ed9",
+            "description": "Phim b\u1ed9 c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-bo",
+            "position": 1
+        },
+        "movie_genre": [
+            {
+                "id": 42,
+                "title": "H\u00e0nh \u0110\u1ed9ng",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00e0nh \u0111\u1ed9ng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hanh-dong",
+                "position": 5,
+                "pivot": {
+                    "movie_id": 82,
+                    "genre_id": 42
+                }
+            },
+            {
+                "id": 54,
+                "title": "Khoa H\u1ecdc",
+                "description": "Nh\u1eefng b\u1ed9 phim khoa h\u1ecdc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "khoa-hoc",
+                "position": 9,
+                "pivot": {
+                    "movie_id": 82,
+                    "genre_id": 54
+                }
+            },
+            {
+                "id": 56,
+                "title": "Ch\u00ednh K\u1ecbch",
+                "description": "C\u1eadp nh\u1eadt c\u00e1c phim th\u1ec3 lo\u1ea1i Ch\u00ednh K\u1ecbch m\u01a1i nh\u1ea5t",
+                "status": 1,
+                "slug": "chinh-kich",
+                "position": 26,
+                "pivot": {
+                    "movie_id": 82,
+                    "genre_id": 56
+                }
+            }
+        ],
+        "country": {
+            "id": 4,
+            "title": "M\u1ef9",
+            "icon": "us",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim M\u1ef9 th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "my",
+            "position": 5
+        },
+        "genre": null
+    },
+    {
+        "id": 81,
+        "title": "Tyler Rake: Nhi\u1ec7m V\u1ee5 Gi\u1ea3i C\u1ee9u 2",
+        "ThoiLuong": "123 ph\u00fat",
+        "name_original": "Extraction 2 2023",
+        "trailer": "Y274jZs5s7s",
+        "description": "Tyler Rake: Nhi\u1ec7m V\u1ee5 Gi\u1ea3i C\u1ee9u 2 \u2013 Extraction 2 (2023) sau khi su\u00fdt ch\u1ebft, \u0111\u1eb7c c\u00f4ng \u01b0u t\u00fa Tyler Rake nh\u1eadn m\u1ed9t nhi\u1ec7m v\u1ee5 nguy hi\u1ec3m kh\u00e1c: gi\u1ea3i c\u1ee9u gia \u0111\u00ecnh \u0111ang b\u1ecb giam gi\u1eef c\u1ee7a tay x\u00e3 h\u1ed9i \u0111en t\u00e0n nh\u1eabn.",
+        "status": 1,
+        "image": "Untitled-15608.jpg",
+        "category_id": 26,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 30,
+        "slug": "tyler-rake-nhiem-vu-giai-cuu-2",
+        "movie_hot": 0,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 21:35:25",
+        "NgayCapNhat": "2023-06-28 21:35:25",
+        "year": "2023",
+        "tags": "Phim H\u00e0nh \u0110\u1ed9ng, Phim K\u1ecbch T\u00ednh, Phim T\u00e2m L\u00fd",
+        "topview": 2,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 26,
+            "title": "Phim L\u1ebb",
+            "description": "Phim l\u1ebb c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "phim-le",
+            "position": 2
+        },
+        "movie_genre": [
+            {
+                "id": 3,
+                "title": "T\u00e2m L\u00fd",
+                "description": "Nh\u1eefng b\u1ed9 phim t\u00e2m l\u00fd \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "tam-ly",
+                "position": 6,
+                "pivot": {
+                    "movie_id": 81,
+                    "genre_id": 3
+                }
+            },
+            {
+                "id": 42,
+                "title": "H\u00e0nh \u0110\u1ed9ng",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00e0nh \u0111\u1ed9ng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hanh-dong",
+                "position": 5,
+                "pivot": {
+                    "movie_id": 81,
+                    "genre_id": 42
+                }
+            },
+            {
+                "id": 55,
+                "title": "K\u1ecbch T\u00ednh",
+                "description": "Nh\u1eefg b\u1ed9 phim k\u1ecbch t\u00ednh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kich-tinh",
+                "position": 25,
+                "pivot": {
+                    "movie_id": 81,
+                    "genre_id": 55
+                }
+            }
+        ],
+        "country": {
+            "id": 30,
+            "title": "Austria",
+            "icon": "at",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim Austria th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "austria",
+            "position": 11
+        },
+        "genre": null
+    },
+    {
+        "id": 80,
+        "title": "Qu\u00e1i V\u1eadt S\u00f4ng Mekong",
+        "ThoiLuong": "105 ph\u00fat",
+        "name_original": "The Lake 2022",
+        "trailer": "Uux_6u-q1Rg",
+        "description": "Qu\u00e1i V\u1eadt S\u00f4ng Mekong \u2013 The Lake (2022) \u0111\u1eb7t b\u1ed1i c\u1ea3nh t\u1ea1i l\u00e0ng Buengkan, m\u1ed9t t\u1ec9nh thu\u1ed9c mi\u1ec1n B\u1eafc Th\u00e1i Lan, Qu\u00e1i V\u1eadt S\u00f4ng Mekong ch\u00ednh th\u1ee9c tr\u1edf th\u00e0nh c\u01a1n \u00e1c m\u1ed9ng \u0111\u1ed1i v\u1edbi d\u00e2n l\u00e0ng v\u00e0 \u0111\u01b0\u1ee3c coi l\u00e0 kh\u01a1i ngu\u1ed3n c\u1ee7a th\u1ea3m h\u1ecda ngay khi n\u00f3 ph\u00e1 h\u1ee7y m\u1ecdi th\u1ee9 v\u00e0 khi\u1ebfn m\u1ecdi ng\u01b0\u1eddi b\u1ecb m\u1ea5t k\u1ebft n\u1ed1i ho\u00e0n to\u00e0n v\u1edbi th\u1ebf gi\u1edbi b\u00ean ngo\u00e0i. S\u1ef1 ki\u1ec7n ch\u1ea5n \u0111\u1ed9ng to\u00e0n Th\u00e1i Lan n\u00e0y \u0111\u00e3 khi\u1ebfn c\u00e1c c\u01a1 quan ch\u1ee9c n\u0103ng c\u00f9ng nh\u1eefng nh\u00e0 khoa h\u1ecdc v\u00f4 t\u00ecnh \u0111\u1ebfn Bueng Kan \u0111\u1ec3 ti\u1ebfn h\u00e0nh nghi\u00ean c\u1ee9u ph\u1ea3i huy \u0111\u1ed9ng t\u1ea5t c\u1ea3 c\u00e1c l\u1ef1c l\u01b0\u1ee3ng \u0111\u1ec3 b\u1eaft con qu\u00e1i v\u1eadt \u0111i\u00ean r\u1ed3 n\u00e0y tr\u01b0\u1edbc khi qu\u00e1 mu\u1ed9n.",
+        "status": 1,
+        "image": "phim-quai-vat-song-me-kong5628.jpg",
+        "category_id": 2,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 10,
+        "slug": "quai-vat-song-mekong",
+        "movie_hot": 0,
+        "resolution": 5,
+        "phude": 0,
+        "NgayTao": "2023-06-28 21:32:23",
+        "NgayCapNhat": "2023-06-28 21:32:23",
+        "year": null,
+        "tags": "Phim Chi\u1ebfu R\u1ea1p, Phim K\u1ecbch T\u00ednh, Phim Kinh D\u1ecb, Phim vi\u1ec5n T\u01b0\u1edfng",
+        "topview": 0,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 2,
+            "title": "Phim Chi\u1ebfu R\u1ea1p",
+            "description": "Phim chi\u1ebfu r\u1ea1p \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-chieu-rap",
+            "position": 5
+        },
+        "movie_genre": [
+            {
+                "id": 46,
+                "title": "Vi\u1ec5n T\u01b0\u1edfng",
+                "description": "Nh\u1eefng b\u1ed9 phim khoa h\u1ecdc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "vien-tuong",
+                "position": 10,
+                "pivot": {
+                    "movie_id": 80,
+                    "genre_id": 46
+                }
+            },
+            {
+                "id": 52,
+                "title": "Kinh d\u1ecb",
+                "description": "Nh\u1eefng b\u1ed9 phim kinh d\u1ecb \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kinh-di",
+                "position": 20,
+                "pivot": {
+                    "movie_id": 80,
+                    "genre_id": 52
+                }
+            },
+            {
+                "id": 55,
+                "title": "K\u1ecbch T\u00ednh",
+                "description": "Nh\u1eefg b\u1ed9 phim k\u1ecbch t\u00ednh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kich-tinh",
+                "position": 25,
+                "pivot": {
+                    "movie_id": 80,
+                    "genre_id": 55
+                }
+            }
+        ],
+        "country": {
+            "id": 10,
+            "title": "Th\u00e1i Lan",
+            "icon": "th",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim Th\u00e1i Lan th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "thai-lan",
+            "position": 3
+        },
+        "genre": null
+    },
+    {
+        "id": 79,
+        "title": "C\u00e1 M\u1eadp Si\u00eau B\u1ea1o Ch\u00faa 2: V\u1ef1c S\u00e2u",
+        "ThoiLuong": "150 ph\u00fat",
+        "name_original": "Meg 2: The Trench 2023",
+        "trailer": "dG91B3hHyY4",
+        "description": "C\u00e1 M\u1eadp Si\u00eau B\u1ea1o Ch\u00faa 2: V\u1ef1c S\u00e2u \u2013 Meg 2: The Trench (2023) ti\u1ebfp t\u1ee5c nhi\u1ec7m v\u1ee5 \u0111\u00e3 \u0111\u01b0\u1ee3c \u0111\u1ec1 c\u1eadp trong ph\u1ea7n phim tr\u01b0\u1edbc, nh\u00f3m c\u1ee7a Jonas Taylor (Jason Statham th\u1ee7 vai) ti\u1ebfp c\u1eadn g\u1ea7n khu v\u1ef1c R\u00e3nh Mariana, n\u01a1i h\u1ecd \u0111\u1ee5ng \u0111\u1ed9 m\u1ed9t qu\u00e1i v\u1eadt b\u00ed \u1ea9n, khi\u1ebfn m\u1ed9t th\u00e0nh vi\u00ean trong nh\u00f3m thi\u1ec7t m\u1ea1ng ngay sau \u0111\u00f3. C\u00e1i ch\u1ebft c\u1ee7a ng\u01b0\u1eddi \u0111\u1ed3ng \u0111\u1ed9i b\u00e1o hi\u1ec7u cho c\u1ea3 nh\u00f3m v\u1ec1 m\u1ed9t m\u1ed1i \u0111e d\u1ecda to l\u1edbn \u0111ang gi\u1ea5u m\u00ecnh trong nh\u1eefng v\u00e1ch \u0111\u00e1 t\u1ed1i t\u0103m. Th\u1ebf nh\u01b0ng, trong c\u1ea3 nh\u1eefng vi\u1ec5n c\u1ea3nh hoang \u0111\u01b0\u1eddng nh\u1ea5t, h\u1ecd c\u0169ng kh\u00f4ng th\u1ec3 ng\u1edd nh\u1eefng m\u1ed1i nguy \u0111ang ch\u1ef1c ch\u1edd \u0111e d\u1ecda h\u1ecd c\u00f3 th\u1ec3 t\u00e0n \u00e1c \u0111\u1ebfn m\u1ee9c n\u00e0o.",
+        "status": 1,
+        "image": "meg-24377.jpg",
+        "category_id": 2,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 7,
+        "slug": "ca-map-sieu-bao-chua-2-vuc-sau",
+        "movie_hot": 1,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 21:06:54",
+        "NgayCapNhat": "2023-06-28 21:06:54",
+        "year": "2023",
+        "tags": "Phim Chi\u1ebfu R\u1ea1p, Phim H\u00e0nh \u0110\u1ed9ng, Phim K\u1ecbch T\u00ednh, Phim Kinh D\u1ecb",
+        "topview": 1,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 2,
+            "title": "Phim Chi\u1ebfu R\u1ea1p",
+            "description": "Phim chi\u1ebfu r\u1ea1p \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-chieu-rap",
+            "position": 5
+        },
+        "movie_genre": [
+            {
+                "id": 42,
+                "title": "H\u00e0nh \u0110\u1ed9ng",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00e0nh \u0111\u1ed9ng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hanh-dong",
+                "position": 5,
+                "pivot": {
+                    "movie_id": 79,
+                    "genre_id": 42
+                }
+            },
+            {
+                "id": 52,
+                "title": "Kinh d\u1ecb",
+                "description": "Nh\u1eefng b\u1ed9 phim kinh d\u1ecb \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kinh-di",
+                "position": 20,
+                "pivot": {
+                    "movie_id": 79,
+                    "genre_id": 52
+                }
+            },
+            {
+                "id": 55,
+                "title": "K\u1ecbch T\u00ednh",
+                "description": "Nh\u1eefg b\u1ed9 phim k\u1ecbch t\u00ednh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kich-tinh",
+                "position": 25,
+                "pivot": {
+                    "movie_id": 79,
+                    "genre_id": 55
+                }
+            }
+        ],
+        "country": {
+            "id": 7,
+            "title": "Trung Qu\u1ed1c",
+            "icon": "cn",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim Trung Qu\u1ed1c th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "trung-quoc",
+            "position": 2
+        },
+        "genre": null
+    },
+    {
+        "id": 78,
+        "title": "Qu\u00e1i Th\u00fa",
+        "ThoiLuong": "103 ph\u00fat",
+        "name_original": "Pet Sematary 1989",
+        "trailer": "JMao8sg4DPA",
+        "description": "Qu\u00e1i Th\u00fa \u2013 Pet Sematary (1989) Louis t\u00ecm th\u1ea5y m\u1ed9t khu \u0111\u1ea5t ch\u00f4n c\u1ea5t c\u00f3 th\u1ec3 l\u00e0m ng\u01b0\u1eddi ch\u1ebft s\u1ed1ng l\u1ea1i \u2013 nh\u01b0ng v\u1edbi m\u1ed9t ch\u00fat ma qu\u1ef7 th\u00eam v\u00e0o. Bi k\u1ecbch khi\u1ebfn Louis s\u1edbm ph\u1ea3i s\u1eed d\u1ee5ng quy\u1ec1n n\u0103ng c\u1ee7a khu \u0111\u1ea5t \u0111\u00f3.",
+        "status": 1,
+        "image": "quai-thu6617.jpg",
+        "category_id": 26,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 1,
+        "slug": "quai-thu",
+        "movie_hot": 1,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 21:04:28",
+        "NgayCapNhat": "2023-06-28 21:04:28",
+        "year": null,
+        "tags": "Phim Ch\u00ednh K\u1ecbch, Phim K\u1ecbch T\u00ednh, Phim Kinh D\u1ecb, Phim T\u00e2m L\u00fd",
+        "topview": 2,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 26,
+            "title": "Phim L\u1ebb",
+            "description": "Phim l\u1ebb c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "phim-le",
+            "position": 2
+        },
+        "movie_genre": [
+            {
+                "id": 3,
+                "title": "T\u00e2m L\u00fd",
+                "description": "Nh\u1eefng b\u1ed9 phim t\u00e2m l\u00fd \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "tam-ly",
+                "position": 6,
+                "pivot": {
+                    "movie_id": 78,
+                    "genre_id": 3
+                }
+            },
+            {
+                "id": 52,
+                "title": "Kinh d\u1ecb",
+                "description": "Nh\u1eefng b\u1ed9 phim kinh d\u1ecb \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kinh-di",
+                "position": 20,
+                "pivot": {
+                    "movie_id": 78,
+                    "genre_id": 52
+                }
+            },
+            {
+                "id": 55,
+                "title": "K\u1ecbch T\u00ednh",
+                "description": "Nh\u1eefg b\u1ed9 phim k\u1ecbch t\u00ednh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kich-tinh",
+                "position": 25,
+                "pivot": {
+                    "movie_id": 78,
+                    "genre_id": 55
+                }
+            },
+            {
+                "id": 56,
+                "title": "Ch\u00ednh K\u1ecbch",
+                "description": "C\u1eadp nh\u1eadt c\u00e1c phim th\u1ec3 lo\u1ea1i Ch\u00ednh K\u1ecbch m\u01a1i nh\u1ea5t",
+                "status": 1,
+                "slug": "chinh-kich",
+                "position": 26,
+                "pivot": {
+                    "movie_id": 78,
+                    "genre_id": 56
+                }
+            }
+        ],
+        "country": {
+            "id": 1,
+            "title": "Vi\u1ec7t Nam",
+            "icon": "vn",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim Vi\u1ec7t Nam th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "viet-nam",
+            "position": 0
+        },
+        "genre": null
+    },
+    {
+        "id": 77,
+        "title": "Th\u1ebf Th\u00e2n",
+        "ThoiLuong": "114 ph\u00fat",
+        "name_original": "The Other Child 2022",
+        "trailer": "imNDfoYZBgk",
+        "description": "Th\u1ebf Th\u00e2n \u2013 The Other Child (2022) m\u1ed9t c\u1eb7p v\u1ee3 ch\u1ed3ng quy\u1ebft \u0111\u1ecbnh nh\u1eadn con nu\u00f4i \u0111\u1ec3 v\u01b0\u1ee3t qua n\u1ed7i m\u1ea5t m\u00e1t \u0111\u1ee9a con th\u1ee9 ba m\u00e0 h\u1ecd \u0111\u00e3 m\u1ea5t trong m\u1ed9t v\u1ee5 tai n\u1ea1n. H\u1ecd nh\u1eadn nu\u00f4i m\u1ed9t c\u1eadu b\u00e9 khi\u1ebfm th\u1ecb v\u1edbi hy v\u1ecdng r\u1eb1ng vi\u1ec7c nu\u00f4i n\u1ea5ng c\u1eadu b\u00e9 s\u1ebd b\u00f9 \u0111\u1eafp \u0111\u01b0\u1ee3c t\u00ecnh y\u00eau th\u01b0\u01a1ng kh\u00f4ng \u0111\u1ee7 m\u00e0 h\u1ecd d\u00e0nh cho \u0111\u1ee9a con \u0111\u00e3 m\u1ea5t c\u1ee7a m\u00ecnh. C\u1eadu con nu\u00f4i c\u00f3 m\u1ed9t gi\u00e1c quan nh\u1ea1y b\u00e9n v\u00e0 b\u1eaft \u0111\u1ea7u nh\u1eadn th\u1ea5y r\u1eb1ng c\u00f3 m\u1ed9t s\u1ef1 hi\u1ec7n di\u1ec7n kh\u00e1c trong nh\u00e0.\r\n\r\nAnh ta ph\u00e1t hi\u1ec7n ra r\u1eb1ng s\u1ef1 hi\u1ec7n di\u1ec7n l\u00e0 m\u1ed9t c\u1eadu b\u00e9 \u0111\u00e3 ch\u1ebft m\u1ed9t n\u0103m tr\u01b0\u1edbc v\u00e0 tri\u1ec7u t\u1eadp c\u1eadu ta tr\u1edf l\u1ea1i gia \u0111\u00ecnh. Ng\u01b0\u1eddi m\u1eb9 b\u1ecb \u00e1m \u1ea3nh b\u1edfi vi\u1ec7c giao ti\u1ebfp v\u1edbi \u0111\u1ee9a con \u0111\u00e3 m\u1ea5t c\u1ee7a m\u00ecnh. Ng\u01b0\u1eddi cha v\u00e0 nh\u1eefng \u0111\u1ee9a tr\u1ebb kh\u00e1c tin r\u1eb1ng c\u1eadu b\u00e9 \u0111\u01b0\u1ee3c nh\u1eadn nu\u00f4i \u0111ang n\u00f3i d\u1ed1i, v\u00e0 b\u1eaft \u0111\u1ea7u lo s\u1ee3 v\u1ec1 n\u1ed7i \u00e1m \u1ea3nh ng\u00e0y c\u00e0ng l\u1edbn c\u1ee7a ng\u01b0\u1eddi m\u1eb9 \u0111\u1ed1i v\u1edbi \u0111\u1ee9a con \u0111\u00e3 m\u1ea5t v\u00e0 c\u1eadu b\u00e9 \u0111\u01b0\u1ee3c nh\u1eadn nu\u00f4i. Nh\u1eefng \u0111\u1ee9a tr\u1ebb c\u1ea3m th\u1ea5y b\u1eaft bu\u1ed9c ph\u1ea3i n\u00f3i v\u1edbi cha m\u1eb9 ch\u00fang v\u1ec1 b\u00ed m\u1eadt v\u1ec1 \u0111\u1ee9a tr\u1ebb \u0111\u00e3 m\u1ea5t, \u0111i\u1ec1u n\u00e0y \u0111\u00e3 thay \u0111\u1ed5i m\u1ecdi th\u1ee9 \u0111\u1ed1i v\u1edbi gia \u0111\u00ecnh.",
+        "status": 1,
+        "image": "The-Than7753.jpg",
+        "category_id": 1,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 8,
+        "slug": "the-than",
+        "movie_hot": 0,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 20:58:31",
+        "NgayCapNhat": "2023-06-28 20:58:31",
+        "year": null,
+        "tags": "Phim B\u00ed \u1ea8n, Phim Ch\u00ednh K\u1ecbch, Phim K\u1ecbch T\u00ednh, Phim Kinh D\u1ecb",
+        "topview": null,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 1,
+            "title": "Phim M\u1edbi",
+            "description": "Phim m\u1edbi c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-moi",
+            "position": 0
+        },
+        "movie_genre": [
+            {
+                "id": 52,
+                "title": "Kinh d\u1ecb",
+                "description": "Nh\u1eefng b\u1ed9 phim kinh d\u1ecb \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kinh-di",
+                "position": 20,
+                "pivot": {
+                    "movie_id": 77,
+                    "genre_id": 52
+                }
+            },
+            {
+                "id": 53,
+                "title": "B\u00ed \u1ea8n",
+                "description": "Nh\u1eefng b\u1ed9 phim b\u00ed \u1ea9n \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "bi-an",
+                "position": 24,
+                "pivot": {
+                    "movie_id": 77,
+                    "genre_id": 53
+                }
+            },
+            {
+                "id": 55,
+                "title": "K\u1ecbch T\u00ednh",
+                "description": "Nh\u1eefg b\u1ed9 phim k\u1ecbch t\u00ednh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kich-tinh",
+                "position": 25,
+                "pivot": {
+                    "movie_id": 77,
+                    "genre_id": 55
+                }
+            },
+            {
+                "id": 56,
+                "title": "Ch\u00ednh K\u1ecbch",
+                "description": "C\u1eadp nh\u1eadt c\u00e1c phim th\u1ec3 lo\u1ea1i Ch\u00ednh K\u1ecbch m\u01a1i nh\u1ea5t",
+                "status": 1,
+                "slug": "chinh-kich",
+                "position": 26,
+                "pivot": {
+                    "movie_id": 77,
+                    "genre_id": 56
+                }
+            }
+        ],
+        "country": {
+            "id": 8,
+            "title": "H\u00e0n Qu\u1ed1c",
+            "icon": "kr",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim H\u00e0n Qu\u1ed1c th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "han-quoc",
+            "position": 1
+        },
+        "genre": null
+    },
+    {
+        "id": 76,
+        "title": "Chi\u1ebfn Binh B\u00e1o \u0110en: Wakanda B\u1ea5t Di\u1ec7t",
+        "ThoiLuong": "162 ph\u00fat",
+        "name_original": "Black Panther: Wakanda Forever 2022",
+        "trailer": "_Z3QKkl1WyM",
+        "description": "Chi\u1ebfn Binh B\u00e1o \u0110en: Wakanda B\u1ea5t Di\u1ec7t \u2013 Black Panther: Wakanda Forever n\u00f3i v\u1ec1 N\u1eef ho\u00e0ng Ramonda, Shuri, M\u2019Baku, Okoye v\u00e0 Dora Milaje chi\u1ebfn \u0111\u1ea5u \u0111\u1ec3 b\u1ea3o v\u1ec7 qu\u1ed1c gia c\u1ee7a h\u1ecd kh\u1ecfi s\u1ef1 can thi\u1ec7p c\u1ee7a c\u00e1c th\u1ebf l\u1ef1c th\u1ebf gi\u1edbi sau c\u00e1i ch\u1ebft c\u1ee7a Vua T\u2019Challa. Khi ng\u01b0\u1eddi Wakanda c\u1ed1 g\u1eafng n\u1eafm b\u1eaft ch\u01b0\u01a1ng ti\u1ebfp theo c\u1ee7a h\u1ecd, c\u00e1c anh h\u00f9ng ph\u1ea3i h\u1ee3p t\u00e1c v\u1edbi nhau v\u1edbi s\u1ef1 gi\u00fap \u0111\u1ee1 c\u1ee7a War Dog Nakia v\u00e0 Everett Ross v\u00e0 t\u1ea1o ra m\u1ed9t con \u0111\u01b0\u1eddng m\u1edbi cho v\u01b0\u01a1ng qu\u1ed1c Wakanda.",
+        "status": 1,
+        "image": "Chien-Binh-Bao-Den-Wakanda-Bat-Diet401.jpg",
+        "category_id": 2,
+        "ThuocPhim": "phimle",
+        "genre_id": 4,
+        "country_id": 4,
+        "slug": "chien-binh-bao-den-wakanda-bat-diet",
+        "movie_hot": 0,
+        "resolution": 5,
+        "phude": 0,
+        "NgayTao": "2023-06-28 20:53:13",
+        "NgayCapNhat": "2023-06-28 20:53:13",
+        "year": null,
+        "tags": "Phim Chi\u1ebfu R\u1ea1p, Phim H\u00e0nh \u0110\u1ed9ng, Phim Phi\u00eau L\u01b0u, Phim Vi\u1ec5n T\u01b0\u1edfng",
+        "topview": 1,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": 1,
+        "episode_count": 0,
+        "category": {
+            "id": 2,
+            "title": "Phim Chi\u1ebfu R\u1ea1p",
+            "description": "Phim chi\u1ebfu r\u1ea1p \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-chieu-rap",
+            "position": 5
+        },
+        "movie_genre": [
+            {
+                "id": 42,
+                "title": "H\u00e0nh \u0110\u1ed9ng",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00e0nh \u0111\u1ed9ng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hanh-dong",
+                "position": 5,
+                "pivot": {
+                    "movie_id": 76,
+                    "genre_id": 42
+                }
+            },
+            {
+                "id": 44,
+                "title": "Phi\u00eau L\u01b0u",
+                "description": "Nh\u1eefng b\u1ed9 phim phi\u00eau l\u01b0u \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "phieu-luu",
+                "position": 4,
+                "pivot": {
+                    "movie_id": 76,
+                    "genre_id": 44
+                }
+            },
+            {
+                "id": 46,
+                "title": "Vi\u1ec5n T\u01b0\u1edfng",
+                "description": "Nh\u1eefng b\u1ed9 phim khoa h\u1ecdc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "vien-tuong",
+                "position": 10,
+                "pivot": {
+                    "movie_id": 76,
+                    "genre_id": 46
+                }
+            }
+        ],
+        "country": {
+            "id": 4,
+            "title": "M\u1ef9",
+            "icon": "us",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim M\u1ef9 th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "my",
+            "position": 5
+        },
+        "genre": null
+    },
+    {
+        "id": 75,
+        "title": "Black Adam",
+        "ThoiLuong": "125 ph\u00fat",
+        "name_original": "Black Adam 2022",
+        "trailer": "X0tOpBuYasI",
+        "description": "Black Adam do Dwayne Johnson s\u1ebd g\u00f3p m\u1eb7t trong t\u00e1c ph\u1ea9m h\u00e0nh \u0111\u1ed9ng \u2013 phi\u00eau l\u01b0u m\u1edbi c\u1ee7a New Line Cinema, mang t\u00ean BLACK ADAM. \u0110\u00e2y l\u00e0 b\u1ed9 phim \u0111\u1ea7u ti\u00ean tr\u00ean m\u00e0n \u1ea3nh r\u1ed9ng khai th\u00e1c c\u00e2u chuy\u1ec7n c\u1ee7a si\u00eau anh h\u00f9ng DC n\u00e0y.\r\n\r\nD\u01b0\u1edbi s\u1ef1 s\u00e1ng t\u1ea1o c\u1ee7a \u0111\u1ea1o di\u1ec5n Jaume Collet-Serra (\u0111\u1ea1o di\u1ec5n c\u1ee7a Jungle Cruise). G\u1ea7n 5.000 n\u0103m sau khi b\u1ecb c\u1ea7m t\u00f9 v\u1edbi quy\u1ec1n n\u0103ng t\u1ed1i th\u01b0\u1ee3ng t\u1eeb nh\u1eefng v\u1ecb th\u1ea7n c\u1ed5 \u0111\u1ea1i, Black Adam (Dwayne Johnson) s\u1ebd \u0111\u01b0\u1ee3c gi\u1ea3i ph\u00f3ng kh\u1ecfi n\u1ea5m m\u1ed3 ch\u1ebft ch\u00f3c c\u1ee7a m\u00ecnh, mang t\u1edbi th\u1ebf gi\u1edbi hi\u1ec7n \u0111\u1ea1i m\u1ed9t ki\u1ec3u nh\u1eadn th\u1ee9c v\u1ec1 c\u00f4ng l\u00fd ho\u00e0n to\u00e0n m\u1edbi.",
+        "status": 1,
+        "image": "Phim-Black-Adam7244.jpg",
+        "category_id": 2,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 4,
+        "slug": "black-adam",
+        "movie_hot": 0,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 20:49:01",
+        "NgayCapNhat": "2023-06-28 20:49:01",
+        "year": null,
+        "tags": "Phim Chi\u1ebfu R\u1ea1p, Phim H\u00e0nh \u0110\u1ed9ng, Phim Khoa H\u1ecdc, Phim Vi\u1ec5n T\u01b0\u1edfng",
+        "topview": 2,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 2,
+            "title": "Phim Chi\u1ebfu R\u1ea1p",
+            "description": "Phim chi\u1ebfu r\u1ea1p \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-chieu-rap",
+            "position": 5
+        },
+        "movie_genre": [
+            {
+                "id": 42,
+                "title": "H\u00e0nh \u0110\u1ed9ng",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00e0nh \u0111\u1ed9ng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hanh-dong",
+                "position": 5,
+                "pivot": {
+                    "movie_id": 75,
+                    "genre_id": 42
+                }
+            },
+            {
+                "id": 46,
+                "title": "Vi\u1ec5n T\u01b0\u1edfng",
+                "description": "Nh\u1eefng b\u1ed9 phim khoa h\u1ecdc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "vien-tuong",
+                "position": 10,
+                "pivot": {
+                    "movie_id": 75,
+                    "genre_id": 46
+                }
+            },
+            {
+                "id": 54,
+                "title": "Khoa H\u1ecdc",
+                "description": "Nh\u1eefng b\u1ed9 phim khoa h\u1ecdc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "khoa-hoc",
+                "position": 9,
+                "pivot": {
+                    "movie_id": 75,
+                    "genre_id": 54
+                }
+            }
+        ],
+        "country": {
+            "id": 4,
+            "title": "M\u1ef9",
+            "icon": "us",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim M\u1ef9 th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "my",
+            "position": 5
+        },
+        "genre": null
+    },
+    {
+        "id": 74,
+        "title": "Tr\u1ea1m T\u00e0u Ma",
+        "ThoiLuong": "80 ph\u00fat",
+        "name_original": "The Ghost Station 2023",
+        "trailer": "gHeWP9R6-eU",
+        "description": "Tr\u1ea1m T\u00e0u Ma \u2013 The Ghost Station (2023) l\u1eddi \u0111\u1ed3n ma \u00e1m v\u1ec1 nh\u00e0 ga Oksu ng\u00e0y c\u00e0ng nhi\u1ec1u khi nh\u1eefng v\u1ee5 \u00e1n kinh ho\u00e0ng li\u00ean t\u1ee5c x\u1ea3y ra. M\u1ed9t \u0111\u01b0\u1eddng ray c\u0169 k\u1ef9, m\u1ed9t chi\u1ebfc gi\u1ebfng b\u1ecf hoang, nh\u1eefng con s\u1ed1 g\u00e2y \u00e1m \u1ea3nh hay nh\u1eefng v\u1ebft th\u01b0\u01a1ng k\u1ef3 d\u1ecb tr\u00ean thi th\u1ec3 ng\u01b0\u1eddi x\u1ea5u s\u1ed1\u2026 T\u1ea5t c\u1ea3 d\u1eabn \u0111\u1ebfn m\u1ed9t b\u00ed m\u1eadt \u0111au l\u00f2ng b\u1ecb ch\u00f4n v\u00f9i nhi\u1ec1u n\u0103m tr\u01b0\u1edbc.",
+        "status": 1,
+        "image": "Tram-tau-ma1362.jpg",
+        "category_id": 2,
+        "ThuocPhim": "phimbo",
+        "genre_id": 5,
+        "country_id": 8,
+        "slug": "tram-tau-ma",
+        "movie_hot": 1,
+        "resolution": 5,
+        "phude": 0,
+        "NgayTao": "2023-06-28 20:45:53",
+        "NgayCapNhat": "2023-06-28 21:43:12",
+        "year": "2023",
+        "tags": "Phim Chi\u1ebfu R\u1ea1p, Phim K\u1ecbch T\u00ednh, Phim Kinh D\u1ecb, Phim T\u00e2m L\u00fd",
+        "topview": null,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": 17057,
+        "episode_count": 0,
+        "category": {
+            "id": 2,
+            "title": "Phim Chi\u1ebfu R\u1ea1p",
+            "description": "Phim chi\u1ebfu r\u1ea1p \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-chieu-rap",
+            "position": 5
+        },
+        "movie_genre": [
+            {
+                "id": 3,
+                "title": "T\u00e2m L\u00fd",
+                "description": "Nh\u1eefng b\u1ed9 phim t\u00e2m l\u00fd \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "tam-ly",
+                "position": 6,
+                "pivot": {
+                    "movie_id": 74,
+                    "genre_id": 3
+                }
+            },
+            {
+                "id": 52,
+                "title": "Kinh d\u1ecb",
+                "description": "Nh\u1eefng b\u1ed9 phim kinh d\u1ecb \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kinh-di",
+                "position": 20,
+                "pivot": {
+                    "movie_id": 74,
+                    "genre_id": 52
+                }
+            },
+            {
+                "id": 55,
+                "title": "K\u1ecbch T\u00ednh",
+                "description": "Nh\u1eefg b\u1ed9 phim k\u1ecbch t\u00ednh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kich-tinh",
+                "position": 25,
+                "pivot": {
+                    "movie_id": 74,
+                    "genre_id": 55
+                }
+            }
+        ],
+        "country": {
+            "id": 8,
+            "title": "H\u00e0n Qu\u1ed1c",
+            "icon": "kr",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim H\u00e0n Qu\u1ed1c th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "han-quoc",
+            "position": 1
+        },
+        "genre": null
+    },
+    {
+        "id": 73,
+        "title": "Avatar: D\u00f2ng Ch\u1ea3y C\u1ee7a N\u01b0\u1edbc",
+        "ThoiLuong": "192 ph\u00fat",
+        "name_original": "Avatar: The Way of Water 2022",
+        "trailer": "o5F8MOz_IDw",
+        "description": "Avatar: D\u00f2ng Ch\u1ea3y C\u1ee7a N\u01b0\u1edbc \u2013 Avatar: The Way of Water l\u1ea5y b\u1ed1i c\u1ea3nh 10 n\u0103m sau nh\u1eefng s\u1ef1 ki\u1ec7n x\u1ea3y ra \u1edf ph\u1ea7n \u0111\u1ea7u ti\u00ean. Phim k\u1ec3 c\u00e2u chuy\u1ec7n v\u1ec1 gia \u0111\u00ecnh m\u1edbi c\u1ee7a Jake Sully (Sam Worthington th\u1ee7 vai) c\u00f9ng nh\u1eefng r\u1eafc r\u1ed1i theo sau v\u00e0 bi k\u1ecbch h\u1ecd ph\u1ea3i ch\u1ecbu \u0111\u1ef1ng khi phe lo\u00e0i ng\u01b0\u1eddi x\u00e2m l\u01b0\u1ee3c h\u00e0nh tinh Pandora.",
+        "status": 1,
+        "image": "avatar-24544.jpg",
+        "category_id": 2,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 4,
+        "slug": "avatar-dong-chay-cua-nuoc",
+        "movie_hot": 0,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 12:32:08",
+        "NgayCapNhat": "2023-06-28 12:32:08",
+        "year": null,
+        "tags": "Phim Chi\u1ebfu R\u1ea1p, Phim H\u00e0nh \u0110\u1ed9ng, Phim Khoa H\u1ecdc, Phim Phi\u00eau L\u01b0u",
+        "topview": 1,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 2,
+            "title": "Phim Chi\u1ebfu R\u1ea1p",
+            "description": "Phim chi\u1ebfu r\u1ea1p \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-chieu-rap",
+            "position": 5
+        },
+        "movie_genre": [
+            {
+                "id": 42,
+                "title": "H\u00e0nh \u0110\u1ed9ng",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00e0nh \u0111\u1ed9ng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hanh-dong",
+                "position": 5,
+                "pivot": {
+                    "movie_id": 73,
+                    "genre_id": 42
+                }
+            },
+            {
+                "id": 44,
+                "title": "Phi\u00eau L\u01b0u",
+                "description": "Nh\u1eefng b\u1ed9 phim phi\u00eau l\u01b0u \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "phieu-luu",
+                "position": 4,
+                "pivot": {
+                    "movie_id": 73,
+                    "genre_id": 44
+                }
+            },
+            {
+                "id": 54,
+                "title": "Khoa H\u1ecdc",
+                "description": "Nh\u1eefng b\u1ed9 phim khoa h\u1ecdc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "khoa-hoc",
+                "position": 9,
+                "pivot": {
+                    "movie_id": 73,
+                    "genre_id": 54
+                }
+            }
+        ],
+        "country": {
+            "id": 4,
+            "title": "M\u1ef9",
+            "icon": "us",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim M\u1ef9 th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "my",
+            "position": 5
+        },
+        "genre": null
+    },
+    {
+        "id": 72,
+        "title": "Kh\u1eafc Tinh C\u1ee7a Qu\u1ef7",
+        "ThoiLuong": "104 ph\u00fat",
+        "name_original": "The Pope's Exorcist 2023",
+        "trailer": "YJXqvnT_rsk",
+        "description": "Kh\u1eafc Tinh C\u1ee7a Qu\u1ef7 \u2013 The Pope\u2019s Exorcist (2023) l\u1ea5y c\u1ea3m h\u1ee9ng t\u1eeb nh\u1eefng h\u1ed3 s\u01a1 c\u00f3 th\u1eadt c\u1ee7a Cha Gabriele Amorth, Tr\u01b0\u1edfng Tr\u1eeb T\u00e0 c\u1ee7a Vatican (Russell Crowe, \u0111o\u1ea1t gi\u1ea3i Oscar\u00ae), b\u1ed9 phim \u201cThe Pope\u2019s Exorcist\u201d theo ch\u00e2n Amorth trong cu\u1ed9c \u0111i\u1ec1u tra v\u1ec1 v\u1ee5 qu\u1ef7 \u00e1m kinh ho\u00e0ng c\u1ee7a m\u1ed9t c\u1eadu b\u00e9 v\u00e0 d\u1ea7n kh\u00e1m ph\u00e1 ra nh\u1eefng b\u00ed m\u1eadt h\u00e0ng th\u1ebf k\u1ef7 m\u00e0 Vatican \u0111\u00e3 c\u1ed1 g\u1eafng gi\u1ea5u k\u00edn.",
+        "status": 1,
+        "image": "khac-tinh-cua-quy1595.jpg",
+        "category_id": 2,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 4,
+        "slug": "khac-tinh-cua-quy",
+        "movie_hot": 1,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 12:28:37",
+        "NgayCapNhat": "2023-06-28 12:28:37",
+        "year": null,
+        "tags": "Phim B\u00ed \u1ea8n, Phim Chi\u1ebfu R\u1ea1p, Phim K\u1ecbch T\u00ednh, Phim Kinh D\u1ecb",
+        "topview": 2,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 2,
+            "title": "Phim Chi\u1ebfu R\u1ea1p",
+            "description": "Phim chi\u1ebfu r\u1ea1p \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-chieu-rap",
+            "position": 5
+        },
+        "movie_genre": [
+            {
+                "id": 52,
+                "title": "Kinh d\u1ecb",
+                "description": "Nh\u1eefng b\u1ed9 phim kinh d\u1ecb \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kinh-di",
+                "position": 20,
+                "pivot": {
+                    "movie_id": 72,
+                    "genre_id": 52
+                }
+            },
+            {
+                "id": 53,
+                "title": "B\u00ed \u1ea8n",
+                "description": "Nh\u1eefng b\u1ed9 phim b\u00ed \u1ea9n \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "bi-an",
+                "position": 24,
+                "pivot": {
+                    "movie_id": 72,
+                    "genre_id": 53
+                }
+            },
+            {
+                "id": 55,
+                "title": "K\u1ecbch T\u00ednh",
+                "description": "Nh\u1eefg b\u1ed9 phim k\u1ecbch t\u00ednh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kich-tinh",
+                "position": 25,
+                "pivot": {
+                    "movie_id": 72,
+                    "genre_id": 55
+                }
+            }
+        ],
+        "country": {
+            "id": 4,
+            "title": "M\u1ef9",
+            "icon": "us",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim M\u1ef9 th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "my",
+            "position": 5
+        },
+        "genre": null
+    },
+    {
+        "id": 71,
+        "title": "G\u1ea5u Pooh: M\u00e1u V\u00e0 M\u1eadt",
+        "ThoiLuong": "84 ph\u00fat",
+        "name_original": "Winnie the Pooh: Blood and Honey 2023",
+        "trailer": "Ud-FBr74K8o&t=1s",
+        "description": "G\u1ea5u Pooh: M\u00e1u V\u00e0 M\u1eadt \u2013 Winnie the Pooh: Blood and Honey (2023) nh\u1eefng ng\u00e0y phi\u00eau l\u01b0u v\u00e0 vui v\u1ebb \u0111\u00e3 k\u1ebft th\u00fac, khi Christopher Robin, gi\u1edd l\u00e0 m\u1ed9t ch\u00e0ng trai tr\u1ebb, \u0111\u00e3 \u0111\u1ec3 l\u1ea1i G\u1ea5u Pooh v\u00e0 Piglet ph\u00eda sau cho ch\u00fang t\u1ef1 lo li\u1ec7u. Th\u1eddi gian tr\u00f4i qua, c\u1ea3m th\u1ea5y t\u1ee9c gi\u1eadn v\u00e0 b\u1ecb b\u1ecf r\u01a1i, c\u1ea3 hai d\u1ea7n tr\u1edf n\u00ean hoang d\u00e3 v\u00e0 th\u00e8m kh\u00e1t th\u1ee9c \u0103n. V\u00e0 khi Christopher tr\u1edf l\u1ea1i c\u0169ng l\u00e0 l\u00fac c\u01a1n th\u1ecbnh n\u1ed9 c\u1ee7a nh\u1eefng sinh v\u1eadt n\u00e0y b\u1eaft \u0111\u1ea7u.",
+        "status": 1,
+        "image": "Winnie-the-Pooh-Blood-and-Honey6603.jpg",
+        "category_id": 1,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 31,
+        "slug": "gau-pooh-mau-va-mat",
+        "movie_hot": 0,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 12:15:23",
+        "NgayCapNhat": "2023-06-28 12:15:23",
+        "year": null,
+        "tags": "Phim K\u1ecbch T\u00ednh, Phim Kinh D\u1ecb, Phim T\u00e2m L\u00fd",
+        "topview": null,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 1,
+            "title": "Phim M\u1edbi",
+            "description": "Phim m\u1edbi c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-moi",
+            "position": 0
+        },
+        "movie_genre": [
+            {
+                "id": 3,
+                "title": "T\u00e2m L\u00fd",
+                "description": "Nh\u1eefng b\u1ed9 phim t\u00e2m l\u00fd \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "tam-ly",
+                "position": 6,
+                "pivot": {
+                    "movie_id": 71,
+                    "genre_id": 3
+                }
+            },
+            {
+                "id": 52,
+                "title": "Kinh d\u1ecb",
+                "description": "Nh\u1eefng b\u1ed9 phim kinh d\u1ecb \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kinh-di",
+                "position": 20,
+                "pivot": {
+                    "movie_id": 71,
+                    "genre_id": 52
+                }
+            },
+            {
+                "id": 55,
+                "title": "K\u1ecbch T\u00ednh",
+                "description": "Nh\u1eefg b\u1ed9 phim k\u1ecbch t\u00ednh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kich-tinh",
+                "position": 25,
+                "pivot": {
+                    "movie_id": 71,
+                    "genre_id": 55
+                }
+            }
+        ],
+        "country": {
+            "id": 31,
+            "title": "Anh",
+            "icon": "UK",
+            "description": "C\u00e1c phim thu\u1ed9c n\u01b0\u1edbc Anh",
+            "status": 1,
+            "slug": "anh",
+            "position": 12
+        },
+        "genre": null
+    },
+    {
+        "id": 70,
+        "title": "John Wick: Ph\u1ea7n 4",
+        "ThoiLuong": "169 ph\u00fat",
+        "name_original": "John Wick: Chapter 4 2023",
+        "trailer": "qEVUtrk8_B4",
+        "description": "John Wick: Ph\u1ea7n 4 \u2013 John Wick: Chapter 4 l\u00e0 c\u00e2u chuy\u1ec7n c\u1ee7a John Wick (Keanu Reeves) \u0111\u00e3 kh\u00e1m ph\u00e1 ra con \u0111\u01b0\u1eddng \u0111\u1ec3 \u0111\u00e1nh b\u1ea1i High Table. Nh\u01b0ng tr\u01b0\u1edbc khi c\u00f3 th\u1ec3 ki\u1ebfm \u0111\u01b0\u1ee3c t\u1ef1 do, Wick ph\u1ea3i \u0111\u1ed1i \u0111\u1ea7u v\u1edbi k\u1ebb th\u00f9 m\u1edbi v\u1edbi nh\u1eefng li\u00ean minh h\u00f9ng m\u1ea1nh tr\u00ean to\u00e0n c\u1ea7u v\u00e0 nh\u1eefng l\u1ef1c l\u01b0\u1ee3ng bi\u1ebfn nh\u1eefng ng\u01b0\u1eddi b\u1ea1n c\u0169 th\u00e0nh k\u1ebb th\u00f9.",
+        "status": 1,
+        "image": "John-Wick-46921.jpg",
+        "category_id": 2,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 4,
+        "slug": "john-wick-phan-4",
+        "movie_hot": 1,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 12:12:25",
+        "NgayCapNhat": "2023-06-28 12:12:25",
+        "year": "2023",
+        "tags": "Phim Chi\u1ebfu R\u1ea1p, Phim H\u00e0nh \u0110\u1ed9ng, Phim H\u00ecnh S\u1ef1, Phim K\u1ecbch T\u00ednh",
+        "topview": 1,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": 1,
+        "episode_count": 0,
+        "category": {
+            "id": 2,
+            "title": "Phim Chi\u1ebfu R\u1ea1p",
+            "description": "Phim chi\u1ebfu r\u1ea1p \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-chieu-rap",
+            "position": 5
+        },
+        "movie_genre": [
+            {
+                "id": 9,
+                "title": "H\u00ecnh S\u1ef1",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00ecnh s\u1ef1 \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hinh-su",
+                "position": 11,
+                "pivot": {
+                    "movie_id": 70,
+                    "genre_id": 9
+                }
+            },
+            {
+                "id": 42,
+                "title": "H\u00e0nh \u0110\u1ed9ng",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00e0nh \u0111\u1ed9ng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hanh-dong",
+                "position": 5,
+                "pivot": {
+                    "movie_id": 70,
+                    "genre_id": 42
+                }
+            },
+            {
+                "id": 55,
+                "title": "K\u1ecbch T\u00ednh",
+                "description": "Nh\u1eefg b\u1ed9 phim k\u1ecbch t\u00ednh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kich-tinh",
+                "position": 25,
+                "pivot": {
+                    "movie_id": 70,
+                    "genre_id": 55
+                }
+            }
+        ],
+        "country": {
+            "id": 4,
+            "title": "M\u1ef9",
+            "icon": "us",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim M\u1ef9 th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "my",
+            "position": 5
+        },
+        "genre": null
+    },
+    {
+        "id": 69,
+        "title": "Transformers 7: Qu\u00e1i Th\u00fa Tr\u1ed7i D\u1eady",
+        "ThoiLuong": "110 ph\u00fat",
+        "name_original": "Transformers: Rise of the Beasts 2023",
+        "trailer": "itnqEauWQZM",
+        "description": "Transformers 7: Qu\u00e1i Th\u00fa Tr\u1ed7i D\u1eady \u2013 Transformers: Rise of the Beasts (2023) d\u1ef1a tr\u00ean s\u1ef1 ki\u1ec7n Beast Wars trong lo\u1ea1t phim ho\u1ea1t h\u00ecnh \u201cTransformers\u201d, n\u01a1i m\u00e0 c\u00e1c robot c\u00f3 kh\u1ea3 n\u0103ng bi\u1ebfn th\u00e0nh \u0111\u1ed9ng v\u1eadt kh\u1ed5ng l\u1ed3 c\u00f9ng chi\u1ebfn \u0111\u1ea5u ch\u1ed1ng l\u1ea1i m\u1ed9t m\u1ed1i \u0111e d\u1ecda ti\u1ec1m t\u00e0ng.",
+        "status": 1,
+        "image": "Phim-Transformers-77470.jpg",
+        "category_id": 2,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 4,
+        "slug": "transformers-7-quai-thu-troi-day",
+        "movie_hot": 1,
+        "resolution": 5,
+        "phude": 0,
+        "NgayTao": "2023-06-28 12:09:27",
+        "NgayCapNhat": "2023-06-28 12:09:27",
+        "year": "2023",
+        "tags": "Phim Chi\u1ebfu R\u1ea1p, Phim H\u00e0nh \u0110\u1ed9ng, Phim Khoa H\u1ecdc, Phim K\u1ecbch T\u00ednh",
+        "topview": 2,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 2,
+            "title": "Phim Chi\u1ebfu R\u1ea1p",
+            "description": "Phim chi\u1ebfu r\u1ea1p \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-chieu-rap",
+            "position": 5
+        },
+        "movie_genre": [
+            {
+                "id": 42,
+                "title": "H\u00e0nh \u0110\u1ed9ng",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00e0nh \u0111\u1ed9ng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hanh-dong",
+                "position": 5,
+                "pivot": {
+                    "movie_id": 69,
+                    "genre_id": 42
+                }
+            },
+            {
+                "id": 54,
+                "title": "Khoa H\u1ecdc",
+                "description": "Nh\u1eefng b\u1ed9 phim khoa h\u1ecdc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "khoa-hoc",
+                "position": 9,
+                "pivot": {
+                    "movie_id": 69,
+                    "genre_id": 54
+                }
+            },
+            {
+                "id": 55,
+                "title": "K\u1ecbch T\u00ednh",
+                "description": "Nh\u1eefg b\u1ed9 phim k\u1ecbch t\u00ednh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kich-tinh",
+                "position": 25,
+                "pivot": {
+                    "movie_id": 69,
+                    "genre_id": 55
+                }
+            }
+        ],
+        "country": {
+            "id": 4,
+            "title": "M\u1ef9",
+            "icon": "us",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim M\u1ef9 th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "my",
+            "position": 5
+        },
+        "genre": null
+    },
+    {
+        "id": 68,
+        "title": "\u00d4ng K\u1eb9",
+        "ThoiLuong": "99 ph\u00fat",
+        "name_original": "The Boogeyman 2023",
+        "trailer": "cFqCmIU0-_M",
+        "description": "\u00d4ng K\u1eb9 \u2013 The Boogeyman (2023) t\u1eeb nguy\u00ean t\u00e1c truy\u1ec7n ng\u1eafn c\u1ee7a b\u1eadc th\u1ea7y truy\u1ec7n kinh d\u1ecb Stephen King, \u201c\u00d4ng K\u1eb9\u201d k\u1ec3 v\u1ec1 c\u00e2u chuy\u1ec7n c\u1ee7a gia \u0111\u00ecnh Harper khi m\u1ed9t th\u1ef1c th\u1ec3 si\u00eau nhi\u00ean b\u00e1m theo v\u00e0 li\u00ean t\u1ee5c ph\u00e1 r\u1ed1i gia \u0111\u00ecnh h\u1ecd. Khi m\u00e0 con qu\u00e1i v\u1eadt n\u00e0y l\u1ea5p l\u00f3 trong b\u00f3ng t\u1ed1i v\u00e0 ch\u1ef1c ch\u1edd l\u00e0m h\u1ea1i c\u00f4 b\u00e9 Sawyer nh\u01b0 ch\u1ef1c ch\u1edd m\u1ed9t con m\u1ed3i, ch\u1ecb g\u00e1i Sadie v\u00e0 b\u1ed1 Will s\u1ebd ph\u1ea3i h\u00e0nh \u0111\u1ed9ng \u0111\u1ec3 ng\u0103n ch\u1eb7n \u0111i\u1ec1u n\u00e0y tr\u01b0\u1edbc khi qu\u00e1 mu\u1ed9n.",
+        "status": 1,
+        "image": "Phim-ong-ke2840.jpg",
+        "category_id": 2,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 4,
+        "slug": "ong-ke",
+        "movie_hot": 1,
+        "resolution": 3,
+        "phude": 0,
+        "NgayTao": "2023-06-28 12:07:10",
+        "NgayCapNhat": "2023-06-28 12:07:10",
+        "year": null,
+        "tags": "Phim B\u00ed \u1ea8n, Phim Chi\u1ebfu R\u1ea1p, Phim K\u1ecbch T\u00ednh, Phim Kinh D\u1ecb",
+        "topview": null,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 2,
+            "title": "Phim Chi\u1ebfu R\u1ea1p",
+            "description": "Phim chi\u1ebfu r\u1ea1p \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-chieu-rap",
+            "position": 5
+        },
+        "movie_genre": [
+            {
+                "id": 52,
+                "title": "Kinh d\u1ecb",
+                "description": "Nh\u1eefng b\u1ed9 phim kinh d\u1ecb \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kinh-di",
+                "position": 20,
+                "pivot": {
+                    "movie_id": 68,
+                    "genre_id": 52
+                }
+            },
+            {
+                "id": 53,
+                "title": "B\u00ed \u1ea8n",
+                "description": "Nh\u1eefng b\u1ed9 phim b\u00ed \u1ea9n \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "bi-an",
+                "position": 24,
+                "pivot": {
+                    "movie_id": 68,
+                    "genre_id": 53
+                }
+            },
+            {
+                "id": 55,
+                "title": "K\u1ecbch T\u00ednh",
+                "description": "Nh\u1eefg b\u1ed9 phim k\u1ecbch t\u00ednh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kich-tinh",
+                "position": 25,
+                "pivot": {
+                    "movie_id": 68,
+                    "genre_id": 55
+                }
+            }
+        ],
+        "country": {
+            "id": 4,
+            "title": "M\u1ef9",
+            "icon": "us",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim M\u1ef9 th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "my",
+            "position": 5
+        },
+        "genre": null
+    },
+    {
+        "id": 67,
+        "title": "S\u1ef1 T\u00edch C\u00e1 Tr\u00edch",
+        "ThoiLuong": "77 ph\u00fat",
+        "name_original": "Unspoken Stories: The Legend of Herring 2022",
+        "trailer": "xK7-PNP5f2w&t=7s",
+        "description": "S\u1ef1 T\u00edch C\u00e1 Tr\u00edch \u2013 The Legend of Herring (2022) n\u00f3i v\u1ec1 Li\u1ec5u Thi\u00ean Chi l\u00e0 \u0111\u1ec7 t\u1eed c\u1ee7a B\u1ea5t Ng\u00f4n M\u00f4n chuy\u00ean h\u00e0ng y\u00eau di\u1ec7t ma, t\u00ecnh c\u1edd g\u1eb7p Ti\u1ec3u Thanh, m\u1ed9t ng\u01b0 y\u00eau mu\u1ed1n tu luy\u1ec7n th\u00e0nh r\u1ed3ng. Ti\u1ec3u Thanh \u0111\u00e3 n\u00f3i d\u1ed1i r\u1eb1ng c\u00f4 \u1ea5y c\u0169ng l\u00e0 m\u1ed9t ph\u00e1p s\u01b0 tr\u1eeb y\u00eau \u0111\u1ec3 ng\u01b0\u1eddi kh\u00e1c kh\u00f4ng ph\u00e1t hi\u1ec7n ra th\u00e2n ph\u1eadn ng\u01b0 y\u00eau c\u1ee7a m\u00ecnh Sau \u0111\u00f3, c\u1ea3 hai c\u00f9ng nhau phi\u00eau b\u1ea1t v\u00e0 tr\u1ea3i qua nhi\u1ec1u kh\u00f3 kh\u0103n tr\u1edf ng\u1ea1i.\r\n\r\nTr\u00ean \u0111\u01b0\u1eddng \u0111i, tr\u00e1i tim nh\u00e2n h\u1eadu c\u1ee7a Ti\u1ec3u Thanh kh\u00f4ng ch\u1ec9 thay \u0111\u1ed5i suy ngh\u0129 c\u1ee7a Li\u1ec5u Thi\u00ean Chi r\u1eb1ng qu\u00e1i v\u1eadt l\u00e0 x\u1ea5u xa m\u00e0 c\u00f2n tr\u1edf th\u00e0nh ch\u1ed7 d\u1ef1a l\u1eabn nhau. Cu\u1ed1i c\u00f9ng, c\u1ea3 hai \u0111\u00e3 chung tay \u0111\u00e1nh b\u1ea1i \u00e2m m\u01b0u c\u1ee7a \u00e1c long v\u00e0 b\u1ea3o v\u1ec7 nh\u1eefng ng\u01b0\u1eddi d\u00e2n th\u01b0\u1eddng tr\u00ean th\u1ebf gi\u1edbi, k\u1ec3 c\u1ea3 Ti\u1ec3u Thanh s\u1eb5n s\u00e0ng hy sinh th\u00e2n r\u1ed3ng \u0111\u1ec3 \u0111\u1ed5i l\u1ea5y s\u1ef1 h\u1ed3i sinh c\u1ee7a Li\u1ec5u Thi\u00ean Chi;",
+        "status": 1,
+        "image": "su-tich-ca-trich8143.jpg",
+        "category_id": 26,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 7,
+        "slug": "su-tich-ca-trich",
+        "movie_hot": 0,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 11:56:37",
+        "NgayCapNhat": "2023-06-28 11:56:37",
+        "year": null,
+        "tags": "Phim Ch\u00ednh K\u1ecbch, Phim C\u1ed5 Trang, Phim T\u00e2m L\u00fd, Phim T\u00ecnh C\u1ea3m",
+        "topview": 1,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 26,
+            "title": "Phim L\u1ebb",
+            "description": "Phim l\u1ebb c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "phim-le",
+            "position": 2
+        },
+        "movie_genre": [
+            {
+                "id": 3,
+                "title": "T\u00e2m L\u00fd",
+                "description": "Nh\u1eefng b\u1ed9 phim t\u00e2m l\u00fd \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "tam-ly",
+                "position": 6,
+                "pivot": {
+                    "movie_id": 67,
+                    "genre_id": 3
+                }
+            },
+            {
+                "id": 11,
+                "title": "C\u1ed5 Trang",
+                "description": "Nh\u1eefng b\u1ed9 phim c\u1ed5 trang \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "co-trang",
+                "position": 0,
+                "pivot": {
+                    "movie_id": 67,
+                    "genre_id": 11
+                }
+            },
+            {
+                "id": 13,
+                "title": "T\u00ecnh C\u1ea3m",
+                "description": "Nh\u1eefng b\u1ed9 phim t\u00ecnh c\u1ea3m \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "tinh-cam",
+                "position": 7,
+                "pivot": {
+                    "movie_id": 67,
+                    "genre_id": 13
+                }
+            },
+            {
+                "id": 56,
+                "title": "Ch\u00ednh K\u1ecbch",
+                "description": "C\u1eadp nh\u1eadt c\u00e1c phim th\u1ec3 lo\u1ea1i Ch\u00ednh K\u1ecbch m\u01a1i nh\u1ea5t",
+                "status": 1,
+                "slug": "chinh-kich",
+                "position": 26,
+                "pivot": {
+                    "movie_id": 67,
+                    "genre_id": 56
+                }
+            }
+        ],
+        "country": {
+            "id": 7,
+            "title": "Trung Qu\u1ed1c",
+            "icon": "cn",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim Trung Qu\u1ed1c th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "trung-quoc",
+            "position": 2
+        },
+        "genre": null
+    },
+    {
+        "id": 66,
+        "title": "Long Sinh C\u1eedu T\u1eed",
+        "ThoiLuong": "100 ph\u00fat",
+        "name_original": "The Dragon Nine 2022",
+        "trailer": "XaQoqhw1gcE",
+        "description": "Long Sinh C\u1eedu T\u1eed \u2013 The Dragon Nine (2022) huy\u1ebft th\u1ed1ng cu\u1ed1i c\u00f9ng c\u1ee7a gia t\u1ed9c r\u1ed3ng Phong Nh\u1ea5t Ph\u00e0m \u0111\u00e3 v\u00f4 t\u00ecnh nu\u1ed1t ph\u1ea3i vi\u00ean thu\u1ed1c th\u1ea7n c\u1ee7a t\u1ed5 ti\u00ean v\u00e0 sinh ra Long C\u1eedu T\u1eed t\u00e0i gi\u1ecfi. C\u1eedu T\u1eed \u0111\u00e3 c\u00f3 th\u1ec3 n\u00f3i khi v\u1eeba sinh ra, v\u00e0 truy\u1ec1n thuy\u1ebft k\u1ec3 r\u1eb1ng m\u00e1u th\u1ecbt c\u1ee7a C\u1eedu T\u1eed khi thanh l\u1ecdc v\u00e0 dung h\u1ee3p c\u00f9ng nhau c\u00f3 th\u1ec3 tr\u01b0\u1eddng sinh.\r\n\r\n\u0110i\u1ec1u n\u00e0y khi\u1ebfn C\u1eedu T\u1eed b\u1ecb nhi\u1ec1u th\u1ebf l\u1ef1c x\u1ea5u th\u00e8m mu\u1ed1n, v\u00ec v\u1eady gia \u0111\u00ecnh b\u1eaft \u0111\u1ea7u m\u1ed9t cu\u1ed9c h\u00e0nh tr\u00ecnh tr\u1ed1n tho\u00e1t. H\u00e0nh tr\u00ecnh ch\u1ea1y tr\u1ed1n \u0111i\u00ean cu\u1ed3ng c\u00f9ng tr\u1ea3i nghi\u1ec7m c\u1eadn k\u1ec1 c\u00e1i ch\u1ebft khi\u1ebfn c\u1ea3 gia \u0111\u00ecnh tr\u1edf n\u00ean h\u01b0ng th\u1ecbnh, \u0111\u1ed3ng th\u1eddi c\u0169ng khi\u1ebfn C\u1eedu T\u1eed t\u00e0i n\u0103ng hi\u1ec3u \u0111\u01b0\u1ee3c tr\u00e1ch nhi\u1ec7m vai tr\u00f2 t\u1ed3n t\u1ea1i c\u1ee7a m\u1ed7i ng\u01b0\u1eddi. Cu\u1ed1i c\u00f9ng, C\u1eedu T\u1eed \u0111\u00e3 c\u00f3 th\u1ec3 b\u1ea3o v\u1ec7 m\u1ecdi ng\u01b0\u1eddi b\u1eb1ng tinh th\u1ea7n \u0111\u1ed3ng \u0111\u1ed9i v\u00e0 s\u1ef1 h\u1ee3p t\u00e1c.",
+        "status": 1,
+        "image": "Long-sinh-cuu-tu5023.jpg",
+        "category_id": 26,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 7,
+        "slug": "long-sinh-cuu-tu",
+        "movie_hot": 0,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 11:54:09",
+        "NgayCapNhat": "2023-06-28 11:54:09",
+        "year": null,
+        "tags": "Phim Ch\u00ednh K\u1ecbch, Phim C\u1ed5 Trang, Phim H\u00e0i, Phim Vi\u1ec5n T\u01b0\u1edfng",
+        "topview": 2,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 26,
+            "title": "Phim L\u1ebb",
+            "description": "Phim l\u1ebb c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "phim-le",
+            "position": 2
+        },
+        "movie_genre": [
+            {
+                "id": 8,
+                "title": "H\u00e0i H\u01b0\u1edbc",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00e0i h\u01b0\u1edbc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hai-huoc",
+                "position": 17,
+                "pivot": {
+                    "movie_id": 66,
+                    "genre_id": 8
+                }
+            },
+            {
+                "id": 11,
+                "title": "C\u1ed5 Trang",
+                "description": "Nh\u1eefng b\u1ed9 phim c\u1ed5 trang \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "co-trang",
+                "position": 0,
+                "pivot": {
+                    "movie_id": 66,
+                    "genre_id": 11
+                }
+            },
+            {
+                "id": 46,
+                "title": "Vi\u1ec5n T\u01b0\u1edfng",
+                "description": "Nh\u1eefng b\u1ed9 phim khoa h\u1ecdc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "vien-tuong",
+                "position": 10,
+                "pivot": {
+                    "movie_id": 66,
+                    "genre_id": 46
+                }
+            },
+            {
+                "id": 56,
+                "title": "Ch\u00ednh K\u1ecbch",
+                "description": "C\u1eadp nh\u1eadt c\u00e1c phim th\u1ec3 lo\u1ea1i Ch\u00ednh K\u1ecbch m\u01a1i nh\u1ea5t",
+                "status": 1,
+                "slug": "chinh-kich",
+                "position": 26,
+                "pivot": {
+                    "movie_id": 66,
+                    "genre_id": 56
+                }
+            }
+        ],
+        "country": {
+            "id": 7,
+            "title": "Trung Qu\u1ed1c",
+            "icon": "cn",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim Trung Qu\u1ed1c th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "trung-quoc",
+            "position": 2
+        },
+        "genre": null
+    },
+    {
+        "id": 65,
+        "title": "Phong Th\u1ea7n Ngo\u1ea1i Truy\u1ec7n: L\u00f4i Ch\u1ea5n T\u1eed",
+        "ThoiLuong": "80 ph\u00fat",
+        "name_original": "League of Gods: Leizhenzi 2023",
+        "trailer": "bpU_c46QaHk",
+        "description": "Phong Th\u1ea7n Ngo\u1ea1i Truy\u1ec7n: L\u00f4i Ch\u1ea5n T\u1eed \u2013 League of Gods: Leizhenzi (2023) H\u1ea1 \u0110inh ban \u0111\u1ea7u l\u00e0 con c\u1ee7a m\u1ed9t gia \u0111\u00ecnh t\u01b0\u1edbng qu\u00e2n \u1edf th\u00e0nhT\u00e2y K\u00ec. Nh\u1eefng k\u1ebb man r\u1ee3 \u0111\u00e3 x\u00e2m chi\u1ebfm v\u00e0 gi\u1ebft cha m\u1eb9 c\u1ee7a H\u1ea1 \u0110inh v\u00e0 t\u1ea5t c\u1ea3 binh l\u00ednh c\u1ee7a th\u00e0nhT\u00e2y K\u00ec. H\u1ea1 \u0110inh ch\u1ea1y tr\u1ed1n \u0111\u1ebfn tr\u1ea5n Th\u00e1i B\u00ecnh v\u00e0 l\u1edbn l\u00ean \u1edf \u0111\u00e2y v\u00e0 hay b\u1ecb con trai t\u00f9 tr\u01b0\u1edfng b\u1eaft n\u1ea1t..\r\n\r\nTuy nhi\u00ean, \u0111\u1ec3 b\u1ea3o v\u1ec7 ng\u01b0\u1eddi d\u00e2n \u1edf th\u1ecb tr\u1ea5n Th\u00e1i B\u00ecnh, H\u1ea1 \u0110inh \u0111\u00e3 chi\u1ebfn \u0111\u1ea5u ch\u1ed1ng l\u1ea1i nh\u1eefng con r\u1ed3ng v\u00e0 s\u00f3i x\u1ea5u xa, khi nh\u1eefng k\u1ebb man r\u1ee3 x\u00e2m chi\u1ebfm th\u1ecb tr\u1ea5n Th\u00e1i B\u00ecnh, H\u1ea1 \u0110inh cu\u1ed1i c\u00f9ng c\u0169ng bi\u1ebft r\u1eb1ng m\u00ecnh l\u00e0 ng\u01b0\u1eddi \u0111\u01b0\u1ee3c Thor l\u1ef1a ch\u1ecdn. Anh m\u1ecdc ra \u0111\u00f4i c\u00e1nh, t\u1ea1o ra s\u1ea5m s\u00e9t, gi\u1ebft t\u1ea5t c\u1ea3 nh\u1eefng k\u1ebb man r\u1ee3, v\u00e0 c\u0169ng gi\u1ebft ch\u1ebft ph\u00f9 th\u1ee7y \u0111\u1ed9c \u00e1c. \u0110\u00e1ng ti\u1ebfc cu\u1ed1i c\u00f9ng ng\u01b0\u1eddi y\u00eau A L\u00ea b\u1ecb m\u1ee5 ph\u00f9 th\u1ee7y l\u00e0m cho \u0111au l\u00f2ng m\u00e0 ch\u1ebft, H\u1ea1 \u0110inh d\u00f9ng \u0111\u00f4i c\u00e1nh c\u1ee7a m\u00ecnh b\u1ea3o v\u1ec7 A L\u00ea, bi\u1ebfn th\u00e0nh ng\u01b0\u1eddi \u0111\u00e1, tr\u0103m n\u0103m sau, s\u1ea5m s\u00e9t \u0111\u00e1nh t\u1edbi, h\u00f2n \u0111\u00e1 n\u1ee9t ra m\u00e0 sinh ra \u0111\u1ebfn m\u1ed9t c\u1eadu b\u00e9 t\u00ean L\u00f4i Ch\u1ea5n T\u1eed. K\u1ec3 t\u1eeb \u0111\u00f3, L\u00f4i Ch\u1ea5n T\u1eed t\u1ea1o ra s\u1ee9c m\u1ea1nh c\u1ee7a s\u1ea5m s\u00e9t v\u00e0 \u0111\u00e3 gi\u00fap \u0111\u1ee1 m\u1ecdi ng\u01b0\u1eddi",
+        "status": 1,
+        "image": "Phong-Than-Ngoai-Truyen-Loi-Chan-Tu1436.jpg",
+        "category_id": 1,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 7,
+        "slug": "phong-than-ngoai-truyen-loi-chan-tu",
+        "movie_hot": 0,
+        "resolution": 5,
+        "phude": 0,
+        "NgayTao": "2023-06-28 11:50:58",
+        "NgayCapNhat": "2023-06-28 11:50:58",
+        "year": null,
+        "tags": "Phim C\u1ed5 Trang, Phim K\u1ecbch T\u00ednh, Phim Vi\u1ec5n T\u01b0\u1edfng",
+        "topview": null,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 1,
+            "title": "Phim M\u1edbi",
+            "description": "Phim m\u1edbi c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-moi",
+            "position": 0
+        },
+        "movie_genre": [
+            {
+                "id": 11,
+                "title": "C\u1ed5 Trang",
+                "description": "Nh\u1eefng b\u1ed9 phim c\u1ed5 trang \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "co-trang",
+                "position": 0,
+                "pivot": {
+                    "movie_id": 65,
+                    "genre_id": 11
+                }
+            },
+            {
+                "id": 46,
+                "title": "Vi\u1ec5n T\u01b0\u1edfng",
+                "description": "Nh\u1eefng b\u1ed9 phim khoa h\u1ecdc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "vien-tuong",
+                "position": 10,
+                "pivot": {
+                    "movie_id": 65,
+                    "genre_id": 46
+                }
+            },
+            {
+                "id": 55,
+                "title": "K\u1ecbch T\u00ednh",
+                "description": "Nh\u1eefg b\u1ed9 phim k\u1ecbch t\u00ednh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kich-tinh",
+                "position": 25,
+                "pivot": {
+                    "movie_id": 65,
+                    "genre_id": 55
+                }
+            }
+        ],
+        "country": {
+            "id": 7,
+            "title": "Trung Qu\u1ed1c",
+            "icon": "cn",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim Trung Qu\u1ed1c th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "trung-quoc",
+            "position": 2
+        },
+        "genre": null
+    },
+    {
+        "id": 64,
+        "title": "S\u01a1n T\u01b0\u1edbc Ma Th\u00e2y",
+        "ThoiLuong": "85 ph\u00fat",
+        "name_original": "Zombie Chickadee 2022",
+        "trailer": "BVDDLWBic1w",
+        "description": "S\u01a1n T\u01b0\u1edbc Ma Th\u00e2y \u2013 Zombie Chickadee (2022) ng\u01b0\u1eddi hu\u1ea5n luy\u1ec7n chim h\u00e0ng \u0111\u1ea7u Mao S\u01a1n H\u00e0o ph\u1ea3i \u0111\u1ed1i m\u1eb7t v\u1edbi cu\u1ed9c t\u1ea5n c\u00f4ng c\u1ee7a m\u1ed9t lo\u00e0i \u0111\u1ed9t bi\u1ebfn tr\u00ean \u0110\u1ea3o Ph\u01b0\u1ee3ng Ho\u00e0ng. M\u1ecdi ng\u01b0\u1eddi bi\u1ebfn m\u1ea5t m\u1ed9t c\u00e1ch b\u00ed \u1ea9n, n\u1ed7i s\u1ee3 h\u00e3i bao tr\u00f9m m\u1ecdi ng\u01b0\u1eddi. \u0110\u1ec3 t\u00ecm ra s\u1ef1 th\u1eadt, Anh H\u00e0o v\u00e0 \u0111\u1ed9i tr\u01b0\u1edfng \u0111\u1ed9i an ninh, M\u1ea1nh Ti\u1ec1n B\u0103ng, \u0111\u00e3 c\u00f9ng nhau h\u1ee3p t\u00e1c. S\u1ef1 th\u1eadt t\u1eebng b\u01b0\u1edbc \u0111\u01b0\u1ee3c h\u00e9 l\u1ed9\u2026",
+        "status": 1,
+        "image": "Son-Tuoc-Ma-Thay7277.jpg",
+        "category_id": 26,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 7,
+        "slug": "son-tuoc-ma-thay",
+        "movie_hot": 0,
+        "resolution": 5,
+        "phude": 0,
+        "NgayTao": "2023-06-28 11:48:45",
+        "NgayCapNhat": "2023-06-28 11:48:45",
+        "year": null,
+        "tags": "Phim B\u00ed \u1ea8n, Phim Ch\u00ednh K\u1ecbch, Phim C\u1ed5 Trang, Phim K\u1ecbch T\u00ednh, Phim Kinh D\u1ecb",
+        "topview": 1,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 26,
+            "title": "Phim L\u1ebb",
+            "description": "Phim l\u1ebb c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "phim-le",
+            "position": 2
+        },
+        "movie_genre": [
+            {
+                "id": 11,
+                "title": "C\u1ed5 Trang",
+                "description": "Nh\u1eefng b\u1ed9 phim c\u1ed5 trang \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "co-trang",
+                "position": 0,
+                "pivot": {
+                    "movie_id": 64,
+                    "genre_id": 11
+                }
+            },
+            {
+                "id": 52,
+                "title": "Kinh d\u1ecb",
+                "description": "Nh\u1eefng b\u1ed9 phim kinh d\u1ecb \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kinh-di",
+                "position": 20,
+                "pivot": {
+                    "movie_id": 64,
+                    "genre_id": 52
+                }
+            },
+            {
+                "id": 53,
+                "title": "B\u00ed \u1ea8n",
+                "description": "Nh\u1eefng b\u1ed9 phim b\u00ed \u1ea9n \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "bi-an",
+                "position": 24,
+                "pivot": {
+                    "movie_id": 64,
+                    "genre_id": 53
+                }
+            },
+            {
+                "id": 55,
+                "title": "K\u1ecbch T\u00ednh",
+                "description": "Nh\u1eefg b\u1ed9 phim k\u1ecbch t\u00ednh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kich-tinh",
+                "position": 25,
+                "pivot": {
+                    "movie_id": 64,
+                    "genre_id": 55
+                }
+            },
+            {
+                "id": 56,
+                "title": "Ch\u00ednh K\u1ecbch",
+                "description": "C\u1eadp nh\u1eadt c\u00e1c phim th\u1ec3 lo\u1ea1i Ch\u00ednh K\u1ecbch m\u01a1i nh\u1ea5t",
+                "status": 1,
+                "slug": "chinh-kich",
+                "position": 26,
+                "pivot": {
+                    "movie_id": 64,
+                    "genre_id": 56
+                }
+            }
+        ],
+        "country": {
+            "id": 7,
+            "title": "Trung Qu\u1ed1c",
+            "icon": "cn",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim Trung Qu\u1ed1c th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "trung-quoc",
+            "position": 2
+        },
+        "genre": null
+    },
+    {
+        "id": 63,
+        "title": "Qu\u1ef7 N\u00fai",
+        "ThoiLuong": "71 ph\u00fat",
+        "name_original": "Wild Ghost 2023",
+        "trailer": "zPGqy6Taxj0",
+        "description": "Qu\u1ef7 N\u00fai \u2013 Wild Ghost (2023) 20 n\u0103m tr\u01b0\u1edbc, m\u1ed9t thi\u00ean th\u1ea1ch kh\u00f4ng gian mang trong m\u00ecnh 3 vi\u00ean pha l\u00ea r\u01a1i xu\u1ed1ng nh\u00e2n gian, 20 n\u0103m sau s\u01a1n qu\u1ef7 l\u1ed9 di\u1ec7n d\u1eabn \u0111\u1ebfn bao huy\u1ebft \u00e1n, ch\u00e2n t\u01b0\u1edbng b\u1ecb che gi\u1ea5u l\u00fac \u0111\u1ea7u d\u1ea7n d\u1ea7n \u0111\u01b0\u1ee3c h\u00e9 m\u1edf\u2026",
+        "status": 1,
+        "image": "quy-nui8049.jpg",
+        "category_id": 1,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 7,
+        "slug": "quy-nui",
+        "movie_hot": 1,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 11:45:12",
+        "NgayCapNhat": "2023-06-28 11:45:12",
+        "year": null,
+        "tags": "Phim Ch\u00ednh K\u1ecbch, Phim C\u1ed5 Trang, Phim H\u00e0nh \u0110\u1ed9ng, Phim Vi\u1ec5n T\u01b0\u1edfng",
+        "topview": 1,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 1,
+            "title": "Phim M\u1edbi",
+            "description": "Phim m\u1edbi c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-moi",
+            "position": 0
+        },
+        "movie_genre": [
+            {
+                "id": 11,
+                "title": "C\u1ed5 Trang",
+                "description": "Nh\u1eefng b\u1ed9 phim c\u1ed5 trang \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "co-trang",
+                "position": 0,
+                "pivot": {
+                    "movie_id": 63,
+                    "genre_id": 11
+                }
+            },
+            {
+                "id": 42,
+                "title": "H\u00e0nh \u0110\u1ed9ng",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00e0nh \u0111\u1ed9ng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hanh-dong",
+                "position": 5,
+                "pivot": {
+                    "movie_id": 63,
+                    "genre_id": 42
+                }
+            },
+            {
+                "id": 46,
+                "title": "Vi\u1ec5n T\u01b0\u1edfng",
+                "description": "Nh\u1eefng b\u1ed9 phim khoa h\u1ecdc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "vien-tuong",
+                "position": 10,
+                "pivot": {
+                    "movie_id": 63,
+                    "genre_id": 46
+                }
+            },
+            {
+                "id": 56,
+                "title": "Ch\u00ednh K\u1ecbch",
+                "description": "C\u1eadp nh\u1eadt c\u00e1c phim th\u1ec3 lo\u1ea1i Ch\u00ednh K\u1ecbch m\u01a1i nh\u1ea5t",
+                "status": 1,
+                "slug": "chinh-kich",
+                "position": 26,
+                "pivot": {
+                    "movie_id": 63,
+                    "genre_id": 56
+                }
+            }
+        ],
+        "country": {
+            "id": 7,
+            "title": "Trung Qu\u1ed1c",
+            "icon": "cn",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim Trung Qu\u1ed1c th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "trung-quoc",
+            "position": 2
+        },
+        "genre": null
+    },
+    {
+        "id": 62,
+        "title": "Ng\u01b0\u1eddi Gi\u1ea5y Ho\u00e0n H\u1ed3n",
+        "ThoiLuong": "96 ph\u00fat",
+        "name_original": "Get in the Dark 2023",
+        "trailer": "mKga6oHX5Xw",
+        "description": "Ng\u01b0\u1eddi Gi\u1ea5y Ho\u00e0n H\u1ed3n \u2013 Get in the Dark (2023) k\u1ec3 v\u1ec1 m\u1ed9t ph\u00f3ng vi\u00ean nghe th\u1ea5y ba c\u00e2u chuy\u1ec7n kinh d\u1ecb khi \u0111i\u1ec1u tra m\u1ed9t v\u1ee5 \u00e1n v\u1ec1 linh h\u1ed3n b\u00fap b\u00ea gi\u1ea5y 20 n\u0103m tr\u01b0\u1edbc. Khi \u0111\u00f3 c\u00f4 Qiao \u0111\u00e3 ch\u1ebft m\u1ed9t c\u00e1ch v\u00f4 \u00edch, v\u00e0 ng\u01b0\u1eddi qu\u1ea3n gia c\u1ee7a c\u00f4 \u0111\u00e3 tr\u1ea3 ti\u1ec1n cho m\u1ed9t th\u1ee3 th\u1ee7 c\u00f4ng b\u1eb1ng gi\u1ea5y \u0111\u1ec3 l\u00e0m m\u1ed9t con b\u00fap b\u00ea b\u1eb1ng gi\u1ea5y \u0111\u1ec3 ch\u00f4n c\u00f9ng c\u00f4. Linh h\u1ed3n c\u1ee7a c\u00f4 Qiao \u0111\u01b0\u1ee3c h\u1ed3i sinh \u0111\u1ec3 tr\u1ea3 th\u00f9 khi \u0111\u00f4i m\u1eaft c\u1ee7a con b\u00fap b\u00ea b\u1ecb r\u00fat ra, v\u00e0 h\u00e0ng lo\u1ea1t s\u1ef1 ki\u1ec7n kh\u1ee7ng khi\u1ebfp b\u1eaft \u0111\u1ea7u x\u1ea3y ra.",
+        "status": 1,
+        "image": "nguoi-giay-hoan-hon3467.jpg",
+        "category_id": 1,
+        "ThuocPhim": "phimbo",
+        "genre_id": 5,
+        "country_id": 7,
+        "slug": "nguoi-giay-hoan-hon",
+        "movie_hot": 1,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 11:39:00",
+        "NgayCapNhat": "2023-06-28 11:39:00",
+        "year": null,
+        "tags": "Phim Ch\u00ednh K\u1ecbch, Phim C\u1ed5 Trang, Phim K\u1ecbch T\u00ednh, Phim Kinh D\u1ecb",
+        "topview": 2,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 1,
+            "title": "Phim M\u1edbi",
+            "description": "Phim m\u1edbi c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-moi",
+            "position": 0
+        },
+        "movie_genre": [
+            {
+                "id": 11,
+                "title": "C\u1ed5 Trang",
+                "description": "Nh\u1eefng b\u1ed9 phim c\u1ed5 trang \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "co-trang",
+                "position": 0,
+                "pivot": {
+                    "movie_id": 62,
+                    "genre_id": 11
+                }
+            },
+            {
+                "id": 52,
+                "title": "Kinh d\u1ecb",
+                "description": "Nh\u1eefng b\u1ed9 phim kinh d\u1ecb \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kinh-di",
+                "position": 20,
+                "pivot": {
+                    "movie_id": 62,
+                    "genre_id": 52
+                }
+            },
+            {
+                "id": 55,
+                "title": "K\u1ecbch T\u00ednh",
+                "description": "Nh\u1eefg b\u1ed9 phim k\u1ecbch t\u00ednh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kich-tinh",
+                "position": 25,
+                "pivot": {
+                    "movie_id": 62,
+                    "genre_id": 55
+                }
+            },
+            {
+                "id": 56,
+                "title": "Ch\u00ednh K\u1ecbch",
+                "description": "C\u1eadp nh\u1eadt c\u00e1c phim th\u1ec3 lo\u1ea1i Ch\u00ednh K\u1ecbch m\u01a1i nh\u1ea5t",
+                "status": 1,
+                "slug": "chinh-kich",
+                "position": 26,
+                "pivot": {
+                    "movie_id": 62,
+                    "genre_id": 56
+                }
+            }
+        ],
+        "country": {
+            "id": 7,
+            "title": "Trung Qu\u1ed1c",
+            "icon": "cn",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim Trung Qu\u1ed1c th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "trung-quoc",
+            "position": 2
+        },
+        "genre": null
+    },
+    {
+        "id": 61,
+        "title": "Ng\u01b0 Y\u00eau",
+        "ThoiLuong": "84 ph\u00fat",
+        "name_original": "The Legend of Aqua Witch 2022",
+        "trailer": "ilEIVvSwUoY",
+        "description": "Ng\u01b0 Y\u00eau \u2013 The Legend of Aqua Witch (2022) \u0111\u00e3 c\u00f3 r\u1ea5t nhi\u1ec1u tin \u0111\u1ed3n. G\u1ea7n \u0111\u1ebfn t\u1ebft trung thu, theo phong t\u1ee5c, Th\u00e1i t\u1eed s\u1ebd \u0111\u1ec3 tang ng\u01b0\u1eddi m\u1eb9 \u0111\u00e3 khu\u1ea5t c\u1ee7a m\u00ecnh b\u00ean d\u00f2ng s\u00f4ng trong V\u01b0\u1eddn th\u01b0\u1ee3ng uy\u1ec3n. Qu\u00e1ch Tr\u01b0\u1edfng Chi lo l\u1eafng cho s\u1ef1 an to\u00e0n c\u1ee7a Th\u00e1i t\u1eed v\u00e0 ra l\u1ec7nh cho ra l\u1ec7nh cho \u0110\u1ea1i L\u00fd T\u1ef1 gi\u1ea3i quy\u1ebft v\u1ee5 vi\u1ec7c c\u00e0ng s\u1edbm c\u00e0ng t\u1ed1t. \u0110\u1ea1i L\u00ed T\u1ef1 Ch\u00ednh Ti\u1ebft D\u01b0\u01a1ng c\u00f9ng v\u1edbi \u0110inh Nha Nhi li\u00ean th\u1ee7 \u0111\u1ec3 c\u00f9ng t\u00ecm ra hung th\u1ee7.\r\n\r\nTrong qu\u00e1 tr\u00ecnh \u0111i\u1ec1u tra ph\u00e1t hi\u1ec7n ra \u1edf d\u01b0\u1edbi s\u00f4ng c\u00f3 m\u1ed9t qu\u00e1i th\u00fa kh\u1ed5ng l\u1ed3 \u0103n th\u1ecbt ng\u01b0\u1eddi \u0111\u01b0\u1ee3c ng\u01b0\u1eddi ta nu\u00f4i, m\u00e0 ng\u01b0\u1eddi nu\u00f4i c\u00e1 qu\u00e1i th\u00fa l\u1ea1i l\u00e0 con qu\u1ef7 v\u00f5 c\u00f4ng cao c\u01b0\u1eddng bi\u1ebfn h\u00f3a t\u00e0i t\u00ecnh. V\u00ec m\u1ed9t tr\u1eadn \u0111\u1ed9ng \u0111\u1ea5t, con qu\u1ef7 c\u00e1 \u0111\u00e3 tho\u00e1t ra kh\u1ecfi l\u1ed3ng khi\u1ebfn th\u1ea3m k\u1ecbch x\u1ea3y ra. M\u1ee5c \u0111\u00edch c\u1ee7a h\u1eafn l\u00e0 mu\u1ed1n qu\u00e1i th\u00fa c\u00e1 \u0103n th\u1ecbt Th\u00e1i t\u1eed. Li\u00ean quan \u0111\u1ebfn vi\u1ec7c k\u1ebf v\u1ecb ngai v\u00e0ng, Ti\u1ebft D\u01b0\u01a1ng b\u1ecb vu oan v\u00e0 b\u1ecb t\u1ed1ng v\u00e0o nh\u00e0 giam. May m\u1eafn thay, Qu\u00e1ch Tr\u01b0\u1edfng Chi \u0111\u00e3 gi\u00fap v\u00e0 b\u00ed m\u1eadt c\u1eed ng\u01b0\u1eddi \u0111\u1ebfn gi\u00fap \u0111\u1ee1. V\u00e0o \u0111\u00eam Trung thu tr\u00ean s\u00f4ng Kh\u00fac, m\u1ed9t tr\u1eadn chi\u1ebfn c\u1ee7a ng\u01b0\u1eddi v\u00e0 c\u00e1 \u0111\u00e3 ng\u0103n ch\u1eb7n \u00e2m m\u01b0u gi\u1ebft Th\u00e1i t\u1eed.",
+        "status": 1,
+        "image": "ngu-yeu4929.jpg",
+        "category_id": 26,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 7,
+        "slug": "ngu-yeu",
+        "movie_hot": 1,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 11:36:36",
+        "NgayCapNhat": "2023-06-28 11:36:36",
+        "year": null,
+        "tags": "Phim B\u00ed \u1ea8n, Phim C\u1ed5 Trang, Phim K\u1ecbch T\u00ednh, Phim Kinh D\u1ecb",
+        "topview": 0,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 26,
+            "title": "Phim L\u1ebb",
+            "description": "Phim l\u1ebb c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "phim-le",
+            "position": 2
+        },
+        "movie_genre": [
+            {
+                "id": 11,
+                "title": "C\u1ed5 Trang",
+                "description": "Nh\u1eefng b\u1ed9 phim c\u1ed5 trang \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "co-trang",
+                "position": 0,
+                "pivot": {
+                    "movie_id": 61,
+                    "genre_id": 11
+                }
+            },
+            {
+                "id": 52,
+                "title": "Kinh d\u1ecb",
+                "description": "Nh\u1eefng b\u1ed9 phim kinh d\u1ecb \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kinh-di",
+                "position": 20,
+                "pivot": {
+                    "movie_id": 61,
+                    "genre_id": 52
+                }
+            },
+            {
+                "id": 53,
+                "title": "B\u00ed \u1ea8n",
+                "description": "Nh\u1eefng b\u1ed9 phim b\u00ed \u1ea9n \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "bi-an",
+                "position": 24,
+                "pivot": {
+                    "movie_id": 61,
+                    "genre_id": 53
+                }
+            },
+            {
+                "id": 55,
+                "title": "K\u1ecbch T\u00ednh",
+                "description": "Nh\u1eefg b\u1ed9 phim k\u1ecbch t\u00ednh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kich-tinh",
+                "position": 25,
+                "pivot": {
+                    "movie_id": 61,
+                    "genre_id": 55
+                }
+            }
+        ],
+        "country": {
+            "id": 7,
+            "title": "Trung Qu\u1ed1c",
+            "icon": "cn",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim Trung Qu\u1ed1c th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "trung-quoc",
+            "position": 2
+        },
+        "genre": null
+    },
+    {
+        "id": 60,
+        "title": "Th\u00e1i Hi S\u01b0: V\u00e2n C\u01a1 Hi\u1ec7n Th\u1ebf",
+        "ThoiLuong": "90 ph\u00fat",
+        "name_original": "Master of Juggling 2023",
+        "trailer": "QqiHKKiFvYQ",
+        "description": "Th\u00e1i Hi S\u01b0: V\u00e2n C\u01a1 Hi\u1ec7n Th\u1ebf \u2013 Master of Juggling (2023) v\u00e0o nh\u1eefng n\u0103m \u0111\u1ea7u c\u1ee7a th\u1eddi Thi\u00ean Th\u1ecbnh, L\u00e2m Ki\u00ean v\u1edbi s\u1ef1 gi\u00fap \u0111\u1ee1 c\u1ee7a \u201cb\u1eadc th\u1ea7y tung h\u1ee9ng\u201d H\u1ed3ng Y \u0111\u00e3 khu\u1ea5t ph\u1ee5c \u0111\u01b0\u1ee3c v\u00f9ng C\u1eedu Ch\u00e2u v\u00e0 H\u1ed3ng Y \u0111\u01b0\u1ee3c t\u00f4n l\u00e0m qu\u1ed1c s\u01b0, th\u00e0nh l\u1eadp h\u1ed9i V\u00e2n C\u01a1 \u0111\u1ec3 \u0111\u00e0o t\u1ea1o \u201cb\u1eadc th\u1ea7y tung h\u1ee9ng\u201d. V\u00e0i n\u0103m sau, L\u00e2m Ki\u00ean l\u00e2m b\u1ec7nh n\u1eb1m li\u1ec7t gi\u01b0\u1eddng, nh\u1ecb ho\u00e0ng t\u1eed L\u00e2m Qu\u1ea3ng \u00e2m m\u01b0u v\u1edbi th\u01b0\u1ee3ng th\u01b0 tri\u1ec1u \u0111\u00ecnh \u0111\u1ec3 chi\u1ebfm \u0111o\u1ea1t ngai v\u00e0ng.\r\n\r\n\u0110\u1ec3 tho\u00e1t kh\u1ecfi k\u1ebb g\u00e2y r\u1ed1i l\u1edbn H\u1ed3ng Y, th\u01b0\u1ee3ng th\u01b0 \u0111\u00e3 mua chu\u1ed9c th\u00e0nh c\u00f4ng \u0111\u1ec7 t\u1eed c\u1ee7a H\u1ed3ng Y l\u00e0 Ch\u00e2u Ph\u01b0\u01a1ng v\u00e0 bi\u1ebft \u0111\u01b0\u1ee3c n\u01a1i ghi ch\u00e9p l\u1ea1i k\u1ef9 thu\u1eadt tung h\u1ee9ng. Ch\u00e2u Ph\u01b0\u01a1ng \u0111\u1ebfn th\u1ecb tr\u1ea5n Long Du \u0111\u1ec3 t\u00ecm h\u1ed3 s\u01a1 ghi ch\u00e9p k\u1ef9 thu\u1eadt tung h\u1ee9ng kh\u00f4ng c\u00f3 k\u1ebft qu\u1ea3, nh\u01b0ng v\u00f4 t\u00ecnh ph\u00e1t hi\u1ec7n ph\u00e1t hi\u1ec7n ra ng\u01b0\u1eddi gi\u1ed1ng h\u1ec7t H\u1ed3ng Y v\u00e0 l\u00ean k\u1ebf ho\u1ea1ch b\u1eaft c\u00f3c. \u0110\u1ed3ng th\u1eddi, th\u01b0\u1ee3ng th\u01b0 v\u00e0 nh\u1eefng ng\u01b0\u1eddi kh\u00e1c \u0111ang th\u1ef1c hi\u1ec7n m\u1ed9t \u00e2m m\u01b0u g\u00e2y s\u1ed1c..",
+        "status": 1,
+        "image": "Thai-Hi-Su-Van-Co-Hien-The2294.jpg",
+        "category_id": 26,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 7,
+        "slug": "thai-hi-su-van-co-hien-the",
+        "movie_hot": 1,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 11:33:18",
+        "NgayCapNhat": "2023-06-28 11:33:18",
+        "year": null,
+        "tags": "Phim Ch\u00ednh K\u1ecbch, Phim C\u1ed5 Trang, Phim K\u1ecbch T\u00ednh, Phim Vi\u1ec5n T\u01b0\u1edfng",
+        "topview": 1,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 26,
+            "title": "Phim L\u1ebb",
+            "description": "Phim l\u1ebb c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "phim-le",
+            "position": 2
+        },
+        "movie_genre": [
+            {
+                "id": 11,
+                "title": "C\u1ed5 Trang",
+                "description": "Nh\u1eefng b\u1ed9 phim c\u1ed5 trang \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "co-trang",
+                "position": 0,
+                "pivot": {
+                    "movie_id": 60,
+                    "genre_id": 11
+                }
+            },
+            {
+                "id": 46,
+                "title": "Vi\u1ec5n T\u01b0\u1edfng",
+                "description": "Nh\u1eefng b\u1ed9 phim khoa h\u1ecdc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "vien-tuong",
+                "position": 10,
+                "pivot": {
+                    "movie_id": 60,
+                    "genre_id": 46
+                }
+            },
+            {
+                "id": 55,
+                "title": "K\u1ecbch T\u00ednh",
+                "description": "Nh\u1eefg b\u1ed9 phim k\u1ecbch t\u00ednh \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "kich-tinh",
+                "position": 25,
+                "pivot": {
+                    "movie_id": 60,
+                    "genre_id": 55
+                }
+            },
+            {
+                "id": 56,
+                "title": "Ch\u00ednh K\u1ecbch",
+                "description": "C\u1eadp nh\u1eadt c\u00e1c phim th\u1ec3 lo\u1ea1i Ch\u00ednh K\u1ecbch m\u01a1i nh\u1ea5t",
+                "status": 1,
+                "slug": "chinh-kich",
+                "position": 26,
+                "pivot": {
+                    "movie_id": 60,
+                    "genre_id": 56
+                }
+            }
+        ],
+        "country": {
+            "id": 7,
+            "title": "Trung Qu\u1ed1c",
+            "icon": "cn",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim Trung Qu\u1ed1c th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "trung-quoc",
+            "position": 2
+        },
+        "genre": null
+    },
+    {
+        "id": 59,
+        "title": "M\u00e3n Giang H\u1ed3ng",
+        "ThoiLuong": "157 ph\u00fat",
+        "name_original": "Full River Red 2023",
+        "trailer": "1nrBhJE2w7E",
+        "description": "M\u00e3n Giang H\u1ed3ng \u2013 Full River Red (2023) l\u1ea5y b\u1ed1i c\u1ea3nh th\u1eddi Thi\u1ec7u H\u01b0ng, nh\u00e0 Nam T\u1ed1ng (Trung Qu\u1ed1c), b\u1ed1n n\u0103m sau khi T\u01b0\u1edbng qu\u00e2n Nh\u1ea1c Phi qua \u0111\u1eddi. V\u00e0o \u0111\u00eam tr\u01b0\u1edbc cu\u1ed9c \u0111\u00e0m ph\u00e1n d\u1eabn \u0111\u1ea7u b\u1edfi T\u1ec3 t\u01b0\u1edbng T\u1ea7n C\u1ed1i v\u1edbi nh\u00e0 T\u1ea5n, s\u1ee9 gi\u1ea3 c\u1ee7a n\u01b0\u1edbc n\u00e0y b\u1ecb ph\u00e1t hi\u1ec7n ch\u1ebft t\u1ea1i dinh th\u1ef1 c\u1ee7a \u00f4ng ta, v\u00e0 b\u1ee9c th\u01b0 b\u00ed m\u1eadt mang theo \u0111\u00e3 bi\u1ebfn m\u1ea5t. Ng\u01b0\u1eddi l\u00ednh Tr\u01b0\u01a1ng \u0110\u1ea1i v\u00e0 ph\u00f3 ch\u1ec9 huy qu\u00e2n \u0111\u1ed9i T\u00f4n Qu\u00e2n t\u00ecnh c\u1edd b\u1ecb cu\u1ed1n v\u00e0o \u00e2m m\u01b0u to l\u1edbn n\u00e0y v\u00e0 \u0111\u01b0\u1ee3c l\u1ec7nh cho c\u1ea3 hai ph\u1ea3i t\u00ecm ra k\u1ebb gi\u1ebft ng\u01b0\u1eddi trong v\u00f2ng m\u1ed9t gi\u1edd.",
+        "status": 1,
+        "image": "Phim-man-giang-hong6594.jpg",
+        "category_id": 2,
+        "ThuocPhim": "phimle",
+        "genre_id": 5,
+        "country_id": 7,
+        "slug": "man-giang-hong",
+        "movie_hot": 1,
+        "resolution": 0,
+        "phude": 0,
+        "NgayTao": "2023-06-28 11:28:22",
+        "NgayCapNhat": "2023-06-28 11:28:22",
+        "year": null,
+        "tags": "Phim B\u00ed \u1ea8n, Phim Chi\u1ebfu R\u1ea1p, Phim Ch\u00ednh K\u1ecbch, Phim C\u1ed5 Trang, Phim H\u00e0i",
+        "topview": 2,
+        "season": 0,
+        "SoTap": 1,
+        "count_views": null,
+        "episode_count": 0,
+        "category": {
+            "id": 2,
+            "title": "Phim Chi\u1ebfu R\u1ea1p",
+            "description": "Phim chi\u1ebfu r\u1ea1p \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt h\u1eb1ng ng\u00e0y",
+            "status": 1,
+            "slug": "phim-chieu-rap",
+            "position": 5
+        },
+        "movie_genre": [
+            {
+                "id": 8,
+                "title": "H\u00e0i H\u01b0\u1edbc",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00e0i h\u01b0\u1edbc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hai-huoc",
+                "position": 17,
+                "pivot": {
+                    "movie_id": 59,
+                    "genre_id": 8
+                }
+            },
+            {
+                "id": 11,
+                "title": "C\u1ed5 Trang",
+                "description": "Nh\u1eefng b\u1ed9 phim c\u1ed5 trang \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "co-trang",
+                "position": 0,
+                "pivot": {
+                    "movie_id": 59,
+                    "genre_id": 11
+                }
+            },
+            {
+                "id": 53,
+                "title": "B\u00ed \u1ea8n",
+                "description": "Nh\u1eefng b\u1ed9 phim b\u00ed \u1ea9n \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "bi-an",
+                "position": 24,
+                "pivot": {
+                    "movie_id": 59,
+                    "genre_id": 53
+                }
+            }
+        ],
+        "country": {
+            "id": 7,
+            "title": "Trung Qu\u1ed1c",
+            "icon": "cn",
+            "description": "C\u1eadp nh\u1eadt c\u00e1c phim Trung Qu\u1ed1c th\u01b0\u1eddng xuy\u00ean",
+            "status": 1,
+            "slug": "trung-quoc",
+            "position": 2
+        },
+        "genre": null
+    },
+    {
         "id": 58,
         "title": "Nhanh Nh\u01b0 Ch\u1edbp 2023",
         "ThoiLuong": "144 ph\u00fat",
@@ -23,7 +3012,7 @@
         "topview": null,
         "season": 0,
         "SoTap": 1,
-        "count_views": null,
+        "count_views": 1,
         "episode_count": 0,
         "category": {
             "id": 2,
@@ -76,7 +3065,7 @@
                 "description": "Nh\u1eefng b\u1ed9 phim khoa h\u1ecdc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
                 "status": 1,
                 "slug": "khoa-hoc",
-                "position": 8,
+                "position": 9,
                 "pivot": {
                     "movie_id": 58,
                     "genre_id": 54
@@ -118,7 +3107,7 @@
         "topview": 1,
         "season": 10,
         "SoTap": 1,
-        "count_views": 106,
+        "count_views": 107,
         "episode_count": 1,
         "category": {
             "id": 2,
@@ -167,29 +3156,29 @@
     },
     {
         "id": 48,
-        "title": "V\u1ec7 Binh D\u1ea3i Ng\u00e2n H\u00e0 3 V\u1ec7 Binh D\u1ea3i Ng\u00e2n H\u00e0 3",
+        "title": "V\u1ec7 Binh D\u1ea3i Ng\u00e2n H\u00e0 3",
         "ThoiLuong": "150 ph\u00fat",
         "name_original": "Guardians of the Galaxy Volume 3 2023 Guardians of the Galaxy Volume 3 2023",
         "trailer": "JqcncLPi9zw",
         "description": "V\u1ec7 Binh D\u1ea3i Ng\u00e2n H\u00e0 3 \u2013 Guardians of the Galaxy Volume 3 (2023) sau khi mua Knowhere t\u1eeb The Collector, \u0111\u1ed9i V\u1ec7 binh d\u1ea3i Ng\u00e2n H\u00e0 c\u1ed1 g\u1eafng bi\u1ebfn n\u00f3 th\u00e0nh n\u01a1i tr\u00fa \u1ea9n an to\u00e0n cho nh\u1eefng ng\u01b0\u1eddi t\u1ecb n\u1ea1n sau c\u00fa b\u00fang tay di d\u1eddi. Nh\u01b0ng sau m\u1ed9t cu\u1ed9c t\u1ea5n c\u00f4ng t\u00e0n b\u1ea1o, Peter Quill, v\u1eabn c\u1ea3m x\u00fac v\u00ec m\u1ea5t Gamora, ph\u1ea3i t\u1eadp h\u1ee3p c\u00e1c V\u1ec7 binh \u0111\u1ec3 th\u1ef1c hi\u1ec7n s\u1ee9 m\u1ec7nh b\u1ea3o v\u1ec7 v\u0169 tr\u1ee5 v\u00e0 b\u1ea3o v\u1ec7 m\u1ed9t ng\u01b0\u1eddi trong s\u1ed1 h\u1ecd kh\u1ecfi k\u1ebb th\u00f9 chung nguy hi\u1ec3m.",
         "status": 1,
-        "image": "Ve-Binh-Dai-Ngan-Ha-39224.jpg",
+        "image": "Ve-Binh-Dai-Ngan-Ha-35323.jpg",
         "category_id": 2,
         "ThuocPhim": "phimle",
-        "genre_id": 1,
+        "genre_id": 5,
         "country_id": 4,
         "slug": "ve-binh-dai-ngan-ha-3",
         "movie_hot": 1,
         "resolution": 4,
         "phude": 0,
         "NgayTao": null,
-        "NgayCapNhat": "2023-06-10 12:26:12",
+        "NgayCapNhat": "2023-06-28 22:55:18",
         "year": "2023",
         "tags": "Phim The Guardians Of The Galaxy Vol.3, Phim V\u1ec7 Binh D\u1ea3i Ng\u00e2n H\u00e0 3, The Guardians Of The Galaxy Vol.3, The Guardians Of The Galaxy Vol.3 Vietsub, V\u1ec7 Binh D\u1ea3i Ng\u00e2n H\u00e0 3, V\u1ec7 Binh D\u1ea3i Ng\u00e2n H\u00e0 3 Vietsub",
         "topview": 2,
         "season": 3,
         "SoTap": 10,
-        "count_views": 123126,
+        "count_views": 87779,
         "episode_count": 0,
         "category": {
             "id": 2,
@@ -199,7 +3188,56 @@
             "slug": "phim-chieu-rap",
             "position": 5
         },
-        "movie_genre": [],
+        "movie_genre": [
+            {
+                "id": 42,
+                "title": "H\u00e0nh \u0110\u1ed9ng",
+                "description": "Nh\u1eefng b\u1ed9 phim h\u00e0nh \u0111\u1ed9ng \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "hanh-dong",
+                "position": 5,
+                "pivot": {
+                    "movie_id": 48,
+                    "genre_id": 42
+                }
+            },
+            {
+                "id": 44,
+                "title": "Phi\u00eau L\u01b0u",
+                "description": "Nh\u1eefng b\u1ed9 phim phi\u00eau l\u01b0u \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "phieu-luu",
+                "position": 4,
+                "pivot": {
+                    "movie_id": 48,
+                    "genre_id": 44
+                }
+            },
+            {
+                "id": 46,
+                "title": "Vi\u1ec5n T\u01b0\u1edfng",
+                "description": "Nh\u1eefng b\u1ed9 phim khoa h\u1ecdc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "vien-tuong",
+                "position": 10,
+                "pivot": {
+                    "movie_id": 48,
+                    "genre_id": 46
+                }
+            },
+            {
+                "id": 54,
+                "title": "Khoa H\u1ecdc",
+                "description": "Nh\u1eefng b\u1ed9 phim khoa h\u1ecdc \u0111\u01b0\u1ee3c c\u1eadp nh\u1eadt th\u01b0\u1eddng xuy\u00ean",
+                "status": 1,
+                "slug": "khoa-hoc",
+                "position": 9,
+                "pivot": {
+                    "movie_id": 48,
+                    "genre_id": 54
+                }
+            }
+        ],
         "country": {
             "id": 4,
             "title": "M\u1ef9",
